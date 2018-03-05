@@ -1,0 +1,27 @@
+% Encoding: UTF-8
+
+@InProceedings{shukla2015comparative,
+  author       = {Shukla, Anupriya and Pandey, Hari Mohan and Mehrotra, Deepti},
+  title        = {Comparative review of selection techniques in genetic algorithm},
+  booktitle    = {Futuristic Trends on Computational Analysis and Knowledge Management (ABLAZE), 2015 International Conference on},
+  year         = {2015},
+  pages        = {515--519},
+  organization = {IEEE},
+  file         = {:/home/raimbault/ComplexSystems/SimulationModels/Biblio/Docs/GA/PID3565091.pdf:PDF},
+  groups       = {GA},
+}
+
+@Article{chengbenchmark,
+  author = {Cheng, Ran and Li, Miqing and Tian, Ye and Xiang, Xiaoshu and Zhang, Xingyi and Yang, Shengxiang and Jin, Yaochu and Yao, Xin},
+  title  = {Benchmark Functions for CEC’2018 Competition on Many-Objective Optimization},
+  file   = {:Docs/Benchmarking/CEC2018-MaOO-Tech-Report.pdf:PDF},
+  groups = {Benchmarks},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:GA\;0\;;
+1 ExplicitGroup:Benchmarks\;0\;;
+}
