@@ -1,10 +1,13 @@
 \input{header.tex}
 
 
-\title{Towards \bigskip\\
+\title{Extending methods to explore spatial models of simulation\bigskip\\
 \textit{Postdoc project}
 }
-\author{\noun{Juste Raimbault}}
+\author{\noun{Juste Raimbault}$^{1,2}$\\
+$^1$ UPS CNRS 3611 ISC-PIF\\
+$^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
 \date{}
 
 
@@ -22,13 +25,22 @@
 \section{Introduction}
 
 
+The study of complexity has recently observed stunning developments, in particular with the use of modeling and simulation. According to \cite{rey2015plateforme}, the example of theoretical and quantitative geography is a perfect illustration of how methodological, technical, empirical and theoretical advances necessarily strongly bind together: the use of computation centers in the seventies would be comparable to the current democratisation of grid computing. \cite{raimbault2017applied} conceptualizes this concept within a knowledge framework, built by induction from the case study of the genesis of the Evolutive Urban Theory developed for twenty years to study systems of cities \cite{pumain1997pour}. This geographical knowledge is in particular tied with considerable methodological and epistemological innovations.
+
+
+Indeed, the development of the OpenMole software for model exploration \cite{reuillon2013openmole} is accompanied by a progressive shift in simulation practices. According to \noun{Reuillon} (interview cited in \cite{raimbault2017applied}), three fundamental innovative axis distinguish this new philosophy and technology compared to existing approaches in simulation: (i) the embedding of models within workflows, making model coupling and multi-modeling easier; (ii) the provision of novel heuristic methods for model exploration; and (iii) the transparent access to various intensive computation infrastructures. \cite{banos2017knowledge} emphasizes how this ``knowledge accelerator'' favors the construction of a robust and experimental social science, by the introduction of tools to deal with main requirements for it coined out by \cite{banos2013pour}: multiple heterogenous models can be compared and coupled in an interdisciplinar approach within a new incremental methodology introduced by \cite{cottineau2015modular}, models and workflows are open to ensure reproducibility, the behavior of models is better known with specific methods such as the Pattern Space Exploration algorithm developed by \cite{10.1371/journal.pone.0138212} that provide the output feasible space of a model or the Calibration Profile algorithm \cite{reuillon2015}, multi-objective approaches to model optimization are implemented in genetic algorithms for model calibration \cite{schmitt2014half}.
+
+Several open issues remain in the development of these new paradigms, in particular for the application to spatial models. Following \cite{varenne2017theories}, epistemological innovations have in history largely been induced by the inclusion of space in simulation models. In other words, the spatial aspect has implications on the nature of knowledge itself beyond the sole models. Indeed, in the case of territorial systems, the multi-scalar and non-stationary nature of processes makes multi-modeling and model coupling highly relevant, what in return raises the open question of model parsimony \cite{pumain2017urban}. In a similar vein, sensitivity analysis methods for spatial models are surprisingly underdeveloped as \cite{cottineau2017initial} shows.
+
+This research project aims at contributing to these open issues in the context of the new epistemology for model exploration described above. We describe below the different research axis.
+
 
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Project}
 
 
-\subsection{Research axis}
+\subsection{The interaction of complementary research axis}
 
 This project has the general goal of improving the way to extract knowledge from spatial simulation models. More precisely, it is structured around three complementary axis that tackle some of the open issues given above. This axis are, in an arbitrary order :
 \begin{itemize}
@@ -37,40 +49,60 @@ This project has the general goal of improving the way to extract knowledge from
 \item the investigation of how to consider model structure in the evaluation of simulation models, or how to avoid overfitting in multi-modeling practices \cite{raimbault2017indirect}.
 \end{itemize}
 
-The insertion within the general dynamic of the OpenMole project, and elements of answer to the overall problematic, arise more from the \emph{interaction} between each research axis 
-
-
-
-\subsection{Models studied}
-
-
-\paragraph{Spatialized large models}
+The insertion within the general dynamic of the OpenMole project, and elements of answer to the overall problematic, arise as much from the \emph{interaction} between each research axis than from each axis itself : 
 
 \begin{itemize}
-\item Dynex forcity 
-\item h24 mobility model
-\item Lutecia model \cite{lenechet:halshs-01272236}
+\item At the interface of synthetic data generation and of the study of the model structure lies crucial issues on model coupling and meta-modeling: for example, testing the sensitivity of a given model to the spatial structure of data may imply coupling it with an upstream model to generate this structure. This naturally increases the number of parameters and may change the nature of calibration problems. These questions relate to OpenMole's philosophy of embedding model within workflows.
+\item This last point is also behind the relation between methods benchmarks and model structure, since at the crossroad of these axis we are confronted to establish types or classes of models to be tested: are there particular type of problems more suited to particular heuristic methods ?
+\item Finally, between synthetic data and methods benchmarks lies the development of methods for the exploration of simulation models, which is one other cornerstone of OpenMole's approach.
+\end{itemize}
+
+
+%\paragraph{Spatial models}
+
+Our project could not necessary focus of spatial models, however these will be of particular interest for at least two reasons: (i) methods to generate synthetic data are still underdeveloped on the spatial character; and (ii) a large number of spatial simulation models remain unexplored.
+
+
+
+\subsection{Possible models to be studied}
+
+Several models may be of a particular interest as case studies to explore our research axis. 
+
+\paragraph{Spatial large models}
+
+From a technical viewpoint, a significant challenge remains in embedding models that are relatively large (in terms of conceptual complexity and of practical implementation) and computationally costly. The following models have this property and show interesting thematic features.
+
+\begin{itemize}
+\item Dynex forcity: its exploration furthermore challenges the idea of ``models as black boxes'', or how informative exploration heuristics can be to understand model behavior and structure at an aggregated level, what can also been put within a data-driven perspective.
+\item H24 mobility epidemiological model: synthetic spatial data is implied at different stages of this model.
+\item The Lutecia model \cite{lenechet:halshs-01272236} is a co-evolution model for transportation network and urban activities that takes into account network governance processes and is relatively computationally greedy.
 \end{itemize}
 
 
 \paragraph{Synthetic data generation}
 
+The following models are example of recently studied models that can be used as synthetic spatial data generation methods.
+
 \begin{itemize}
-\item Density generation \cite{raimbault2017calibration}
-\item Correlated synthetic data \cite{raimbault2016generation}
+\item Density generation \cite{raimbault2017calibration}.
+\item Network generation \cite{raimbault2018urban}.
+\item Correlated synthetic data \cite{raimbault2016generation}.
 \end{itemize}
 
 
-\paragraph{Model structure and overfitting}
+\paragraph{Model structure and over-fitting}
+
+A particular interest can be found in comparing models of growth for systems of cities based on spatial interactions, since these have a very similar structure but include different processes. Their integration in a multi-modeling paradigm can shed light on methods and measures of model performance that take into account model structure. Such models include for example:
 
 \begin{itemize}
-\item Interaction/co-evolution model
-\item Marius
-\item Favaro-Pumain \cite{raimbault2016generation}
+\item Interaction model \cite{raimbault2016generation} and co-evolution model \cite{raimbault2018models}
+\item the Marius model family \cite{cottineau2015modular}
+\item the Favaro-Pumain model for the diffusion of innovation \cite{favaro2011gibrat} 
 \end{itemize}
 
 
-\paragraph{Data extrapolation}
+%\paragraph{Data extrapolation}
+% on hold for now
 
 
 
@@ -81,10 +113,22 @@ The insertion within the general dynamic of the OpenMole project, and elements o
 \section{Organisation}
 
 
+\subsection{Integration within Dynamicity}
+
+Two research axis are direct contributions to the issues tackled within Dynamicity: the benchmark of methods and the development of spatial sensitivity methods. The last axis relates to the broader multi-modeling context of OpenMole.
+
+\subsection{Deliverables} 
+
+\begin{itemize}
+\item Any method developed or tested on a closed model (that should be as few as possible, ideally only Dynex) should be similarly applied to a similar open case.
+\item Most methods developed should be integrated as OpenMole plugins.
+\item Valorisation: \textit{to be discussed}
+\end{itemize}
 
 
+\subsection{Planning}
 
-
+Time assignment and preliminary planning: \textit{to be discussed}
 
 
 

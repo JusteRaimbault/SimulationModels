@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: project.aux
+The style file: apalike.bst
+Database file #1: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib
+Database file #2: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib
+Repeated entry---line 224 of file /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib
+ : @inproceedings{lenechet:halshs-01272236
+ :                                        ,
+I'm skipping whatever remains of this entry
+Database file #3: /home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib.bib
+You've used 20 entries,
+            1935 wiz_defined-function locations,
+            579 strings with 7580 characters,
+and the built_in function-call counts, 7315 in all, are:
+= -- 709
+> -- 254
+< -- 16
++ -- 91
+- -- 82
+* -- 567
+:= -- 1279
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 138
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 319
+empty$ -- 560
+format.name$ -- 108
+if$ -- 1444
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 103
+num.names$ -- 60
+pop$ -- 147
+preamble$ -- 1
+purify$ -- 141
+quote$ -- 0
+skip$ -- 221
+stack$ -- 0
+substring$ -- 465
+swap$ -- 36
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 0
+while$ -- 58
+width$ -- 0
+write$ -- 255
+(There was 1 error message)

@@ -1,0 +1,124 @@
+\begin{thebibliography}{}
+
+\bibitem[Banos, 2013]{banos2013pour}
+Banos, A. (2013).
+\newblock Pour des pratiques de mod{\'e}lisation et de simulation
+  lib{\'e}r{\'e}es en g{\'e}ographies et shs.
+\newblock {\em HDR. Universit{\'e} Paris}, 1.
+
+\bibitem[Banos, 2017]{banos2017knowledge}
+Banos, A. (2017).
+\newblock Knowledge accelerator' in geography and social sciences: Further and
+  faster, but also deeper and wider.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 119--123.
+  Springer.
+
+\bibitem[Ch{\'e}rel et~al., 2015]{10.1371/journal.pone.0138212}
+Ch{\'e}rel, G., Cottineau, C., and Reuillon, R. (2015).
+\newblock Beyond corroboration: Strengthening model validation by looking for
+  unexpected patterns.
+\newblock {\em PLoS ONE}, 10(9):e0138212.
+
+\bibitem[Cottineau et~al., 2017]{cottineau2017initial}
+Cottineau, C., Raimbault, J., Le~Texier, M., Le~Nechet, F., and Reuillon, R.
+  (2017).
+\newblock Initial spatial conditions in simulation models: the missing leg of
+  sensitivity analyses?
+\newblock In {\em Geocomputation Conference}.
+
+\bibitem[Cottineau et~al., 2015]{cottineau2015modular}
+Cottineau, C., Reuillon, R., Chapron, P., Rey-Coyrehourcq, S., and Pumain, D.
+  (2015).
+\newblock A modular modelling framework for hypotheses testing in the
+  simulation of urbanisation.
+\newblock {\em Systems}, 3(4):348--377.
+
+\bibitem[Favaro and Pumain, 2011]{favaro2011gibrat}
+Favaro, J.-M. and Pumain, D. (2011).
+\newblock Gibrat revisited: An urban growth model incorporating spatial
+  interaction and innovation cycles.
+\newblock {\em Geographical Analysis}, 43(3):261--286.
+
+\bibitem[Le~N{\'e}chet and Raimbault, 2015]{lenechet:halshs-01272236}
+Le~N{\'e}chet, F. and Raimbault, J. (2015).
+\newblock {Modeling the emergence of metropolitan transport autorithy in a
+  polycentric urban region}.
+\newblock In {\em {European Colloqueum on Theoretical and Quantitative
+  Geography}}, Bari, Italy.
+
+\bibitem[Pumain, 1997]{pumain1997pour}
+Pumain, D. (1997).
+\newblock Pour une th{\'e}orie {\'e}volutive des villes.
+\newblock {\em Espace g{\'e}ographique}, 26(2):119--134.
+
+\bibitem[Pumain and Reuillon, 2017]{pumain2017urban}
+Pumain, D. and Reuillon, R. (2017).
+\newblock {\em Urban Dynamics and Simulation Models}.
+\newblock Springer International.
+
+\bibitem[Raimbault, 2016]{raimbault2016generation}
+Raimbault, J. (2016).
+\newblock Generation of correlated synthetic data.
+\newblock In {\em Actes des Journ{\'e}es de Rochebrune 2016}.
+
+\bibitem[Raimbault, 2017]{raimbault2017applied}
+Raimbault, J. (2017).
+\newblock An applied knowledge framework to study complex systems.
+\newblock In {\em Complex Systems Design \& Management}, pages 31--45.
+
+\bibitem[Raimbault, 2018]{raimbault2017calibration}
+Raimbault, J. (2018).
+\newblock Calibration of a density-based model of urban morphogenesis.
+\newblock {\em PLoS ONE, in revision}.
+
+\bibitem[{Raimbault}, 2018]{raimbault2017indirect}
+{Raimbault}, J. (2018).
+\newblock Indirect evidence of network effects in a system of cities.
+\newblock {\em Environment and Planning B, in revision}.
+
+\bibitem[Raimbault, 2018a]{raimbault2018models}
+Raimbault, J. (2018a).
+\newblock Models for the co-evolution of cities and networks.
+\newblock In {\em forthcoming in Handbook on Cities and Networks, Rozenblat C.,
+  Neal Z., eds.}
+
+\bibitem[Raimbault, 2018b]{raimbault2018urban}
+Raimbault, J. (2018b).
+\newblock An urban morphogenesis model capturing interactions between networks
+  and territories.
+\newblock In {\em forthcoming in Mathematics of Urban Morphology. D'Acci L.,
+  ed. Springer Nature - Birkh{\"a}user Mathematics.}
+
+\bibitem[Reuillon et~al., 2013]{reuillon2013openmole}
+Reuillon, R., Leclaire, M., and Rey-Coyrehourcq, S. (2013).
+\newblock Openmole, a workflow engine specifically tailored for the distributed
+  exploration of simulation models.
+\newblock {\em Future Generation Computer Systems}, 29(8):1981--1990.
+
+\bibitem[Reuillon et~al., 2015]{reuillon2015}
+Reuillon, R., Schmitt, C., De~Aldama, R., and Mouret, J.-B. (2015).
+\newblock A new method to evaluate simulation models: The calibration profile
+  (cp) algorithm.
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  18(1):12.
+
+\bibitem[Rey-Coyrehourcq, 2015]{rey2015plateforme}
+Rey-Coyrehourcq, S. (2015).
+\newblock {\em Une plateforme int{\'e}gr{\'e}e pour la construction et
+  l'{\'e}valuation de mod{\`e}les de simulation en g{\'e}ographie}.
+\newblock PhD thesis, Universit{\'e} Paris 1 Panth{\'e}on-Sorbonne.
+
+\bibitem[Schmitt et~al., 2015]{schmitt2014half}
+Schmitt, C., Rey-Coyrehourcq, S., Reuillon, R., and Pumain, D. (2015).
+\newblock Half a billion simulations: Evolutionary algorithms and distributed
+  computing for calibrating the simpoplocal geographical model.
+\newblock {\em Environment and Planning B: Planning and Design},
+  42(2):300--315.
+
+\bibitem[Varenne, 2017]{varenne2017theories}
+Varenne, F. (2017).
+\newblock {\em Th{\'e}ories et mod{\`e}les en sciences humaines. Le cas de la
+  g{\'e}ographie}.
+\newblock Editions Mat{\'e}riologiques.
+
+\end{thebibliography}

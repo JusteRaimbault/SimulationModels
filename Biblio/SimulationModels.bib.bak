@@ -126,6 +126,78 @@
   groups       = {NoisyGA},
 }
 
+@InCollection{foster2012three,
+  author    = {Foster, Nate and Matsuda, Kazutaka and Voigtl{\"a}nder, Janis},
+  title     = {Three complementary approaches to bidirectional programming},
+  booktitle = {Generic and indexed programming},
+  publisher = {Springer},
+  year      = {2012},
+  pages     = {1--46},
+  file      = {:Docs/ComputerScience/a04331821a294bad4d08975637b4f363ec5a.pdf:PDF},
+  groups    = {ComputerScience},
+}
+
+@InProceedings{oliveira2008scala,
+  author       = {Oliveira, Bruno CdS and Gibbons, Jeremy},
+  title        = {Scala for generic programmers},
+  booktitle    = {Proceedings of the ACM SIGPLAN workshop on Generic programming},
+  year         = {2008},
+  pages        = {25--36},
+  organization = {ACM},
+  file         = {:Docs/ComputerScience/scalagp.pdf:PDF},
+  groups       = {ComputerScience},
+}
+
+@Article{gibbons2009essence,
+  author    = {Gibbons, Jeremy and Oliveira, Bruno C d S},
+  title     = {The essence of the iterator pattern},
+  journal   = {Journal of functional programming},
+  year      = {2009},
+  volume    = {19},
+  number    = {3-4},
+  pages     = {377--402},
+  file      = {:Docs/ComputerScience/iterator.pdf:PDF},
+  groups    = {ComputerScience},
+  publisher = {Cambridge University Press},
+}
+
+@Article{smith2009improving,
+  author    = {Smith, Dianna M and Clarke, Graham P and Harland, Kirk},
+  title     = {Improving the synthetic data generation process in spatial microsimulation models},
+  journal   = {Environment and Planning A},
+  year      = {2009},
+  volume    = {41},
+  number    = {5},
+  pages     = {1251--1268},
+  file      = {:Docs/SyntheticData/smith2009.pdf:PDF},
+  groups    = {SyntheticData},
+  publisher = {SAGE Publications Sage UK: London, England},
+}
+
+@InProceedings{seada2015effect,
+  author       = {Seada, Haitham and Deb, Kalyanmoy},
+  title        = {Effect of selection operator on NSGA-III in single, multi, and many-objective optimization},
+  booktitle    = {Evolutionary Computation (CEC), 2015 IEEE Congress on},
+  year         = {2015},
+  pages        = {2915--2922},
+  organization = {IEEE},
+  file         = {:Docs/GA/c2015002.pdf:PDF},
+  groups       = {GA},
+}
+
+@Article{deb2002fast,
+  author    = {Deb, Kalyanmoy and Pratap, Amrit and Agarwal, Sameer and Meyarivan, TAMT},
+  title     = {A fast and elitist multiobjective genetic algorithm: NSGA-II},
+  journal   = {IEEE transactions on evolutionary computation},
+  year      = {2002},
+  volume    = {6},
+  number    = {2},
+  pages     = {182--197},
+  file      = {:Docs/GA/deb2002.pdf:PDF},
+  groups    = {GA},
+  publisher = {IEEE},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -135,4 +207,6 @@
 1 ExplicitGroup:OpenMole\;0\;;
 1 ExplicitGroup:MOGA\;0\;;
 1 ExplicitGroup:NoisyGA\;0\;;
+1 ExplicitGroup:ComputerScience\;0\;;
+1 ExplicitGroup:SyntheticData\;0\;;
 }
