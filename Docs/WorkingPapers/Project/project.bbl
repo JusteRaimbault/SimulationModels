@@ -39,6 +39,13 @@ Favaro, J.-M. and Pumain, D. (2011).
   interaction and innovation cycles.
 \newblock {\em Geographical Analysis}, 43(3):261--286.
 
+\bibitem[Le~N{\'e}chet, 2015]{le2015forme}
+Le~N{\'e}chet, F. (2015).
+\newblock De la forme urbaine {\`a} la structure m{\'e}tropolitaine: une
+  typologie de la configuration interne des densit{\'e}s pour les principales
+  m{\'e}tropoles europ{\'e}ennes de l'audit urbain.
+\newblock {\em Cybergeo: European Journal of Geography}.
+
 \bibitem[Le~N{\'e}chet and Raimbault, 2015]{lenechet:halshs-01272236}
 Le~N{\'e}chet, F. and Raimbault, J. (2015).
 \newblock {Modeling the emergence of metropolitan transport autorithy in a
@@ -51,8 +58,14 @@ Pumain, D. (1997).
 \newblock Pour une th{\'e}orie {\'e}volutive des villes.
 \newblock {\em Espace g{\'e}ographique}, 26(2):119--134.
 
-\bibitem[Pumain and Reuillon, 2017]{pumain2017urban}
-Pumain, D. and Reuillon, R. (2017).
+\bibitem[Pumain and Reuillon, 2017a]{pumain2017evaluation}
+Pumain, D. and Reuillon, R. (2017a).
+\newblock Evaluation of the simpoplocal model.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 37--56.
+  Springer.
+
+\bibitem[Pumain and Reuillon, 2017b]{pumain2017urban}
+Pumain, D. and Reuillon, R. (2017b).
 \newblock {\em Urban Dynamics and Simulation Models}.
 \newblock Springer International.
 

@@ -107,6 +107,40 @@ A particular interest can be found in comparing models of growth for systems of 
 
 
 
+\subsection{Specific issues to explore}
+
+\subsubsection{Benchmark of methods}
+
+In \cite{pumain2017evaluation}, a new strategy to evaluate noisy fitness function in the standard NSGA-II genetic algorithm is introduced. The principle is to constantly reevaluate individuals at a fixed rate, and to add as an objective in the optimization the number of evaluation. Several open questions remain on that innovative methodology:
+\begin{itemize}
+\item Does this method perform better than existing strategies in terms of trade-off between convergence and computational burden, on what type of optimization problems ?
+\item How does the form of the added objective influences the performance ?
+\item What is the influence of different types of noises, and of non-stationary noises ?
+\end{itemize}
+
+The detailed study of this strategy for noisy fitness function will be the first priority of the benchmark axis. Beside, the sensitivity to the choice of mutation, crossover and selection operators will be important to look at.
+
+
+\subsubsection{Spatial sensitivity}
+
+The axis of spatial sensitivity methods is particularly prone to include an open problem in the exploration of simulation models, which is the reconstruction of the inverse image of a given set in the indicator space. Morphological classes of cities are well established objects in the literature \cite{le2015forme}\cite{raimbault2017calibration}, and their sensitivity to equifinality is interesting from a thematic point of view: given some generative models, which processes or set of parameters do produce the same type of cities ? This axis thus raises this methodological question, which can be explored conjointly within the method development axis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -122,13 +156,13 @@ Two research axis are direct contributions to the issues tackled within Dynamici
 \begin{itemize}
 \item Any method developed or tested on a closed model (that should be as few as possible, ideally only Dynex) should be similarly applied to a similar open case.
 \item Most methods developed should be integrated as OpenMole plugins.
-\item Valorisation: \textit{to be discussed}
+%\item Valorisation: \textit{to be discussed}
 \end{itemize}
 
 
-\subsection{Planning}
+%\subsection{Planning}
 
-Time assignment and preliminary planning: \textit{to be discussed}
+%Time assignment and preliminary planning: \textit{to be discussed}
 
 
 
@@ -138,7 +172,7 @@ Time assignment and preliminary planning: \textit{to be discussed}
 %%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{apalike}
-\bibliography{/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork,/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit,/home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib}
+\bibliography{/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib,/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib,/home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib}
 
 
 \end{document}

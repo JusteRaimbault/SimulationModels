@@ -2,52 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: project.aux
 The style file: apalike.bst
-Database file #1: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib
-Database file #2: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib
-Repeated entry---line 224 of file /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib
+Database file #1: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib.bib
+Database file #2: /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib.bib
+Repeated entry---line 224 of file /home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib.bib
  : @inproceedings{lenechet:halshs-01272236
  :                                        ,
 I'm skipping whatever remains of this entry
 Database file #3: /home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib.bib
-You've used 20 entries,
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            579 strings with 7580 characters,
-and the built_in function-call counts, 7315 in all, are:
-= -- 709
-> -- 254
-< -- 16
-+ -- 91
-- -- 82
-* -- 567
-:= -- 1279
-add.period$ -- 61
-call.type$ -- 20
-change.case$ -- 138
-chr.to.int$ -- 19
-cite$ -- 20
-duplicate$ -- 319
-empty$ -- 560
-format.name$ -- 108
-if$ -- 1444
-int.to.chr$ -- 2
+            587 strings with 7946 characters,
+and the built_in function-call counts, 8084 in all, are:
+= -- 789
+> -- 274
+< -- 19
++ -- 98
+- -- 88
+* -- 618
+:= -- 1406
+add.period$ -- 68
+call.type$ -- 22
+change.case$ -- 151
+chr.to.int$ -- 20
+cite$ -- 22
+duplicate$ -- 357
+empty$ -- 621
+format.name$ -- 118
+if$ -- 1607
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 103
-num.names$ -- 60
-pop$ -- 147
+missing$ -- 23
+newline$ -- 113
+num.names$ -- 66
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 141
+purify$ -- 154
 quote$ -- 0
-skip$ -- 221
+skip$ -- 250
 stack$ -- 0
-substring$ -- 465
-swap$ -- 36
-text.length$ -- 2
+substring$ -- 513
+swap$ -- 45
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 128
 warning$ -- 0
-while$ -- 58
+while$ -- 65
 width$ -- 0
-write$ -- 255
+write$ -- 281
 (There was 1 error message)
