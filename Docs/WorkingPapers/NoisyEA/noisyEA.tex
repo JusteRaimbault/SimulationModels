@@ -1,0 +1,81 @@
+\input{header.tex}
+
+
+\title{A simple embedding method for the evaluation of fitness in a noisy environment}
+\author{\noun{Juste Raimbault}$^{1,2}$\\
+$^1$ UPS CNRS 3611 ISC-PIF\\
+$^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+\date{}
+
+
+\maketitle
+
+\justify
+
+
+%\begin{abstract}
+
+%\end{abstract}
+
+
+\section{Context}
+
+
+Fitness with additive noise :
+
+\[
+\vec{f}(\vec{x}) = \vec{f}_d(\vec{x}) + b(\vec{x})
+\]
+
+
+Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$
+
+
+\section{Proposed method}
+
+Embedding approach taking $n_{evals}$ as a supplementary objective in the optimization.
+
+$\rightarrow$ take in practice $\frac{1}{n_{evals}}$ in the case of a minimization.
+
+
+
+\paragraph{Idea}
+
+\begin{itemize}
+\item Adaptive in sigma ? size of the confidence interval proportional to $\sigma / \sqrt{n}$
+\item Use bootstrap to get local confidence intervals ?
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib,/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib,/home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib}
+
+
+\end{document}
