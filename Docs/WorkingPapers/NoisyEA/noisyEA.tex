@@ -22,14 +22,21 @@ $^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 \section{Context}
 
 
-Fitness with additive noise :
+\subsubsection{Possible forms of noise}
 
+\begin{enumerate}
+\item Fitness with additive noise :
 \[
-\vec{f}(\vec{x}) = \vec{f}_d(\vec{x}) + b(\vec{x})
+\vec{f}(\vec{x}) = \vec{f}_d(\vec{x}) + \vec{b}(\vec{x})
 \]
+\item Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$
+\item Non-stationary noise : $\vec{b}(\alpha(\vec{x}))$ ; for example parameters of the distribution varying in space.
+\item Self-amplifying noise (or linked to the value of the deterministic part)
+\item Random variable with conditional expectancy
+\item ``Chaotic'' random variable
+\end{enumerate}
 
 
-Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$
 
 
 \section{Proposed method}
@@ -40,7 +47,7 @@ $\rightarrow$ take in practice $\frac{1}{n_{evals}}$ in the case of a minimizati
 
 
 
-\paragraph{Idea}
+\paragraph{Ideas}
 
 \begin{itemize}
 \item Adaptive in sigma ? size of the confidence interval proportional to $\sigma / \sqrt{n}$
