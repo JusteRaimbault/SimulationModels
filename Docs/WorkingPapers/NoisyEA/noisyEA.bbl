@@ -1,0 +1,36 @@
+\begin{thebibliography}{}
+
+\bibitem[{Hansen} et~al., 2016]{2016arXiv160308776H}
+{Hansen}, N., {Tusar}, T., {Mersmann}, O., {Auger}, A., and {Brockhoff}, D.
+  (2016).
+\newblock {COCO: The Experimental Procedure}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[{Raimbault}, 2017]{2017arXiv170806743R}
+{Raimbault}, J. (2017).
+\newblock {Calibration of a Density-based Model of Urban Morphogenesis}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Rakshit et~al., 2017]{rakshit2017noisy}
+Rakshit, P., Konar, A., and Das, S. (2017).
+\newblock Noisy evolutionary optimization algorithms--a comprehensive survey.
+\newblock {\em Swarm and Evolutionary Computation}, 33:18--45.
+
+\bibitem[Simon, 2006]{simon2006optimal}
+Simon, D. (2006).
+\newblock {\em Optimal state estimation: Kalman, H infinity, and nonlinear
+  approaches}.
+\newblock John Wiley \& Sons.
+
+\bibitem[Sunnåker et~al., 2013]{10.1371/journal.pcbi.1002803}
+Sunnåker, M., Busetto, A.~G., Numminen, E., Corander, J., Foll, M., and
+  Dessimoz, C. (2013).
+\newblock Approximate bayesian computation.
+\newblock {\em PLOS Computational Biology}, 9(1):1--10.
+
+\bibitem[Szpiro, 1997]{szpiro1997forecasting}
+Szpiro, G.~G. (1997).
+\newblock Forecasting chaotic time series with genetic algorithms.
+\newblock {\em Physical Review E}, 55(3):2557.
+
+\end{thebibliography}

@@ -294,6 +294,74 @@
   groups  = {NoisyGA},
 }
 
+@Article{10.1371/journal.pcbi.1002803,
+  author    = {Sunnåker, Mikael AND Busetto, Alberto Giovanni AND Numminen, Elina AND Corander, Jukka AND Foll, Matthieu AND Dessimoz, Christophe},
+  title     = {Approximate Bayesian Computation},
+  journal   = {PLOS Computational Biology},
+  year      = {2013},
+  volume    = {9},
+  number    = {1},
+  pages     = {1-10},
+  month     = {01},
+  abstract  = {Approximate Bayesian computation (ABC) constitutes a class of computational methods rooted in Bayesian statistics. In all model-based statistical inference, the likelihood function is of central importance, since it expresses the probability of the observed data under a particular statistical model, and thus quantifies the support data lend to particular values of parameters and to choices among different models. For simple models, an analytical formula for the likelihood function can typically be derived. However, for more complex models, an analytical formula might be elusive or the likelihood function might be computationally very costly to evaluate. ABC methods bypass the evaluation of the likelihood function. In this way, ABC methods widen the realm of models for which statistical inference can be considered. ABC methods are mathematically well-founded, but they inevitably make assumptions and approximations whose impact needs to be carefully assessed. Furthermore, the wider application domain of ABC exacerbates the challenges of parameter estimation and model selection. ABC has rapidly gained popularity over the last years and in particular for the analysis of complex problems arising in biological sciences (e.g., in population genetics, ecology, epidemiology, and systems biology).},
+  doi       = {10.1371/journal.pcbi.1002803},
+  file      = {:Docs/ABC/journal.pcbi.1002803.PDF:PDF},
+  groups    = {ABC},
+  publisher = {Public Library of Science},
+  url       = {https://doi.org/10.1371/journal.pcbi.1002803},
+}
+
+@Article{szpiro1997forecasting,
+  author    = {Szpiro, George G},
+  title     = {Forecasting chaotic time series with genetic algorithms},
+  journal   = {Physical Review E},
+  year      = {1997},
+  volume    = {55},
+  number    = {3},
+  pages     = {2557},
+  groups    = {TimeSeries},
+  publisher = {APS},
+}
+
+@Book{simon2006optimal,
+  title     = {Optimal state estimation: Kalman, H infinity, and nonlinear approaches},
+  publisher = {John Wiley \& Sons},
+  year      = {2006},
+  author    = {Simon, Dan},
+  groups    = {TimeSeries},
+}
+
+@Article{2017arXiv170806743R,
+  author        = {{Raimbault}, J.},
+  title         = {{Calibration of a Density-based Model of Urban Morphogenesis}},
+  journal       = {ArXiv e-prints},
+  year          = {2017},
+  month         = jul,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2017arXiv170806743R},
+  archiveprefix = {arXiv},
+  eprint        = {1708.06743},
+  groups        = {UrbanMorphogenesis},
+  keywords      = {Physics - Physics and Society, Computer Science - Multiagent Systems},
+  primaryclass  = {physics.soc-ph},
+}
+
+@Article{2016arXiv160308776H,
+  author        = {{Hansen}, N. and {Tusar}, T. and {Mersmann}, O. and {Auger}, A. and {Brockhoff}, D.},
+  title         = {{COCO: The Experimental Procedure}},
+  journal       = {ArXiv e-prints},
+  year          = {2016},
+  month         = mar,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2016arXiv160308776H},
+  archiveprefix = {arXiv},
+  eprint        = {1603.08776},
+  file          = {:Docs/Benchmarking/1603.08776.pdf:PDF},
+  groups        = {Benchmarking},
+  keywords      = {Computer Science - Artificial Intelligence, Computer Science - Neural and Evolutionary Computing},
+  primaryclass  = {cs.AI},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -306,4 +374,7 @@
 1 ExplicitGroup:ComputerScience\;0\;;
 1 ExplicitGroup:SyntheticData\;0\;;
 1 ExplicitGroup:DynamicalGA\;0\;;
+1 ExplicitGroup:ABC\;0\;;
+1 ExplicitGroup:TimeSeries\;0\;;
+1 ExplicitGroup:UrbanMorphogenesis\;0\;;
 }
