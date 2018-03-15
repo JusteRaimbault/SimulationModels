@@ -30,7 +30,7 @@ The problem we aim at tackling is related to stochastic models of simulation: op
 \[
 \vec{f}(\vec{x}) = \vec{f}_d(\vec{x}) + \vec{b}(\vec{x})
 \]
-\item Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$
+\item Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$ (take the log)
 \item Non-stationary noise : $\vec{b}(\alpha(\vec{x}))$ ; for example parameters of the distribution varying in space (compatible with other cases)
 \item Self-amplifying noise (or linked to the value of the deterministic part)
 \item Random variable with conditional expectancy locally ``well-defined'' : e.g., local variance small compared to global variance. Equivalent to an additive noise by writing
@@ -58,7 +58,7 @@ The idea is analog to state augmentation in Bayesian signal processing to deal w
 
 Embedding approach taking $n_{evals}$ as a supplementary objective in the optimization.
 
-$\rightarrow$ take in practice $\frac{1}{n_{evals}}$ in the case of a minimization.
+$\rightarrow$ currently $\frac{1}{n_{evals}}$ is taken as objective, as they need to be minimized.
 
 \paragraph{Generalization}
 
@@ -82,7 +82,13 @@ $\rightarrow$ flexibility on criteria should allow to be flexible on either dist
 
 \subsection{Method formalization}
 
+The idea of the method is described by \cite{pumain2017evaluation}. The base of the method is the standard NSGA2 with a fixed resampling rate $r$. Each individual has a maximal number of evaluations, but new samples discard the oldest ones to always allow for possible new diversity.
 
+Let $\vec{f}$ the random variable to be optimized. $\vec{f}(\vec{x}_{i})^{(k,t)}$ denote a realization obtained at generation $t$, for the parameter point $\vec{x}_i$ and correspond to the $k$th evaluation at this point. A realization of the genetic algorithm can be interpreted as sequences $i_t$ and $k_t$ such that $\vec{x}_{i_t})$ are the successive populations and $\vec{f}(\vec{x}_{i_t})^{(k_t,t)}$ the corresponding realizations.
+
+We consider $\vec{g}$ a set of additional objective functions, which at generation $t$ will be a function of the previous realizations $\vec{f}(\vec{x}_{i_{t-1}})^{(k_{t-1},t-1)}$, and we update the population by running a step of the algorithm on the extended objective $(\vec{f},\vec{g})$.
+
+A simple example is to add the inverse of the number of evaluation : $g(\vec{x}) = \frac{1}{\left|k_t(\vec{x}\right|}$. Other alternatives can be adaptive and consider an estimated standard deviation to take as objective a rough estimation of a confidence interval around the mean (in the case of a Gaussian distribution) with $\frac{\hat{\sigma}}{\sqrt{n}}$.
 
 
 
@@ -98,7 +104,7 @@ $\rightarrow$ flexibility on criteria should allow to be flexible on either dist
 \begin{enumerate}
 \item Does our approach ``improves'' the optimization in some cases ? (possible indicators below : expected run time, relative hypervolume, etc)
 \item On which type of problems ? (benchmark functions : to be compared with other state-of-the-art algo ; real-life model)
-\item In which particular settings : form of the additional objectives, constant/adaptive resampling rates, objective estimation method, \ldots
+\item In which particular settings : form of the additional objectives (see above), constant/adaptive resampling rates, objective estimation method, \ldots
 \item Overall advantages of the approach : gain in computation time / tradeoff of convergence ?
 \end{enumerate}
 

@@ -6,6 +6,12 @@
 \newblock {COCO: The Experimental Procedure}.
 \newblock {\em ArXiv e-prints}.
 
+\bibitem[Pumain and Reuillon, 2017]{pumain2017evaluation}
+Pumain, D. and Reuillon, R. (2017).
+\newblock Evaluation of the simpoplocal model.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 37--56.
+  Springer.
+
 \bibitem[{Raimbault}, 2017]{2017arXiv170806743R}
 {Raimbault}, J. (2017).
 \newblock {Calibration of a Density-based Model of Urban Morphogenesis}.
