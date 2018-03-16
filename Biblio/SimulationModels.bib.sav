@@ -362,6 +362,18 @@
   primaryclass  = {cs.AI},
 }
 
+@InCollection{pumain2017evaluation,
+  author        = {Pumain, Denise and Reuillon, Romain},
+  title         = {Evaluation of the SimpopLocal Model},
+  booktitle     = {Urban Dynamics and Simulation Models},
+  publisher     = {Springer},
+  year          = {2017},
+  pages         = {37--56},
+  date-added    = {2018-01-10 10:06:56 +0000},
+  date-modified = {2018-01-10 10:06:56 +0000},
+  groups        = {OpenMole},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:

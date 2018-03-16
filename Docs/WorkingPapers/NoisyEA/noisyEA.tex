@@ -1,0 +1,181 @@
+\input{header.tex}
+
+
+\title{A simple embedding method for the evaluation of fitness in a noisy environment}
+\author{\noun{Juste Raimbault}$^{1,2}$\\
+$^1$ UPS CNRS 3611 ISC-PIF\\
+$^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+\date{}
+
+
+\maketitle
+
+\justify
+
+
+\begin{abstract}
+Stochastic outputs of fitness functions challenge evolutionary meta-heuristics for multi-objective optimization. Several techniques to deal with noise have consequently been recently introduced. We describe here a novel strategy based on embedding into a larger objective space with additional criteria to be optimized that take into account the stochasticity.
+\end{abstract}
+
+
+\section{Context}
+
+The problem we aim at tackling is related to stochastic models of simulation: optimization problems in a random landscape. Following \cite{rakshit2017noisy}, the noisy optimization corresponding to a deterministic function contaminated with noise is analog to (i) finding robust (stable, or not sensitive) solutions in a chaotic deterministic landscape; (ii) optimizing an approximated function; (iii) optimizing in a dynamic landscape (all being strictly equivalent under specific assumptions). We add an additional analog problem, of greater interest in the case of simulation models, that is (iv) the optimization of a random variable landscape.
+
+\paragraph{Particular formulations}
+
+\begin{enumerate}
+\item Fitness with additive noise :
+\[
+\vec{f}(\vec{x}) = \vec{f}_d(\vec{x}) + \vec{b}(\vec{x})
+\]
+\item Fitness with multiplicative noise : equivalent to additive noise if $\vec{f} > 0$ (take the log)
+\item Non-stationary noise : $\vec{b}(\alpha(\vec{x}))$ ; for example parameters of the distribution varying in space (compatible with other cases)
+\item Self-amplifying noise (or linked to the value of the deterministic part)
+\item Random variable with conditional expectancy locally ``well-defined'' : e.g., local variance small compared to global variance. Equivalent to an additive noise by writing
+\[
+\vec{f}(\vec{x}) = \mathbb{E}\left[\vec{f}\right](\vec{x}) + \left(\vec{f}(\vec{x}) - \mathbb{E}\left[\vec{f}\right](\vec{x})\right)
+\]
+\item ``Chaotic'' random variable (overall variance of the same magnitude as local variance): we won't consider models where the sensitivity to parameters is negligible compared to the randomness ?
+\end{enumerate}
+
+\paragraph{Literature}
+
+A comprehensive survey is done by \cite{rakshit2017noisy} with more than 200 papers reviewed. The dominant formulation of the problem is the noisy optimization. Four main strategies to deal with noise in EA are unveiled: (i) explicit averaging of evaluated points, with numerous sampling strategies; (ii) estimation of the fitness distribution; (iii) implicit averaging with dynamical population sizing, that extends into more elaborated evolutionary search strategies; (iv) selection strategies.
+
+\paragraph{Positioning}
+
+The dominant narrative seems to be the noisy $f + b$, which is a bit different from considering the output of a simulation model. We could in theory deal with multimodal distributions in some parts of the parameter space, in which case we would be closer to the strategies (ii) which in a sense follow an objective similar to Approximate Bayesian Computation \cite{10.1371/journal.pcbi.1002803} (estimating the statistical distribution over the parameter space). The method should indirectly take this aspect into account.
+
+The strategy we introduce does not act directly on the \emph{structure} of the meta-heuristic, but on its application problem. The broad idea is to solve a more general problem which additional objectives should allow to tackle the stochasticity in the initial space. Our proposal indirectly acts as a (iv) strategy, as we will change the objective space. Such an embedding approach has to the best of our knowledge never been proposed in the literature.
+
+The idea is analog to state augmentation in Bayesian signal processing to deal with non-stationarity \cite{simon2006optimal}. It also bears similarities with determination of the embedding dimension when forecasting chaotic time series, since it diminishes apparent noise by extending the phase space (\cite{szpiro1997forecasting} proposes to forecast chaotic time series with a GA).
+
+\section{Proposed method}
+
+\paragraph{Base idea}
+
+Embedding approach taking $n_{evals}$ as a supplementary objective in the optimization.
+
+$\rightarrow$ currently $\frac{1}{n_{evals}}$ is taken as objective, as they need to be minimized.
+
+\paragraph{Generalization}
+
+
+Embed into a larger space with additional objective function of number of repetitions/convergence levels/other criteria ?
+
+$\rightarrow$ flexibility on criteria should allow to be flexible on either distrib estimation, or median/average with given CI, or \ldots
+
+
+
+\paragraph{Ideas}
+
+\begin{itemize}
+\item Adaptive in sigma ? size of the confidence interval proportional to $\sigma / \sqrt{n}$
+\item Use bootstrap to get local confidence intervals ? $\rightarrow$ cf Welsh Confidence Interval based samplings
+\end{itemize}
+
+
+
+
+
+\subsection{Method formalization}
+
+The idea of the method is described by \cite{pumain2017evaluation}. The base of the method is the standard NSGA2 with a fixed resampling rate $r$. Each individual has a maximal number of evaluations, but new samples discard the oldest ones to always allow for possible new diversity.
+
+Let $\vec{f}$ the random variable to be optimized. $\vec{f}(\vec{x}_{i})^{(k,t)}$ denote a realization obtained at generation $t$, for the parameter point $\vec{x}_i$ and correspond to the $k$th evaluation at this point. A realization of the genetic algorithm can be interpreted as sequences $i_t$ and $k_t$ such that $\vec{x}_{i_t})$ are the successive populations and $\vec{f}(\vec{x}_{i_t})^{(k_t,t)}$ the corresponding realizations.
+
+We consider $\vec{g}$ a set of additional objective functions, which at generation $t$ will be a function of the previous realizations $\vec{f}(\vec{x}_{i_{t-1}})^{(k_{t-1},t-1)}$, and we update the population by running a step of the algorithm on the extended objective $(\vec{f},\vec{g})$.
+
+A simple example is to add the inverse of the number of evaluation : $g(\vec{x}) = \frac{1}{\left|k_t(\vec{x}\right|}$. Other alternatives can be adaptive and consider an estimated standard deviation to take as objective a rough estimation of a confidence interval around the mean (in the case of a Gaussian distribution) with $\frac{\hat{\sigma}}{\sqrt{n}}$.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiments}
+
+
+\subsection{Questions to be answered}
+
+\begin{enumerate}
+\item Does our approach ``improves'' the optimization in some cases ? (possible indicators below : expected run time, relative hypervolume, etc)
+\item On which type of problems ? (benchmark functions : to be compared with other state-of-the-art algo ; real-life model)
+\item In which particular settings : form of the additional objectives (see above), constant/adaptive resampling rates, objective estimation method, \ldots
+\item Overall advantages of the approach : gain in computation time / tradeoff of convergence ?
+\end{enumerate}
+
+
+\subsection{Experience plan}
+
+
+\subsubsection{Benchmark problems}
+
+\paragraph{Optimization}
+
+\begin{itemize}
+\item Noisy bbob from COCO \cite{2016arXiv160308776H} : 30 single objective noisy functions, with varying dimensions (\textit{Q : varying noise distrib ?})
+% COCO test suites :
+%  benchmark suites : http://coco.gforge.inria.fr/doku.php?id=algorithms
+%  java binding : https://github.com/numbbo/coco/tree/master/code-experiments/build/java
+%  historical data noisy : http://coco.gforge.inria.fr/doku.php?id=algorithms-bbob-noisy
+%   workshop 2017 : http://numbbo.github.io/workshops/BBOB-2017/
+%   workshop 2018 : http://numbbo.github.io/workshops/BBOB-2018/index.html
+%   2010 setup : https://hal.inria.fr/inria-00462481/document
+\item ad-hoc noisy multi-obj ?
+\item ad-hoc non-stationary noise ?
+\item Vary the distribution of noise ?
+\end{itemize}
+
+
+
+\paragraph{Simulation model}
+
+Proposition (simple but applied model) : \cite{2017arXiv170806743R} ; distribution of output indicators seem not stationary, strange shapes in some places for Moran.
+
+$\rightarrow$ check first behavior of MSE to real points if it has similar behavior.
+
+
+\subsubsection{Benchmark algorithms}
+
+$\rightarrow$ find algos to compare to.
+
+\begin{itemize}
+\item static sampling (assumed very bad)
+\item state-of-the-art dynamic sampling ?
+\item fitness estimation
+\item (selection strategies) $\rightarrow$ \textit{may be more difficult to implement depending on MGO capabilities ?}
+\end{itemize}
+
+
+\subsection{Performance measures}
+
+
+$\rightarrow$ find relevant performance measures
+
+\begin{itemize}
+\item Expected Run Time
+\item \textit{convergence} : generational distance, hypervolume, etc.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork.bib,/home/raimbault/ComplexSystems/CityNetwork/Biblio/Bibtex/selfcit.bib,/home/raimbault/ComplexSystems/SimulationModels/Biblio/SimulationModels.bib}
+
+
+\end{document}
