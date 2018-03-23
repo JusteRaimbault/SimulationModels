@@ -1,0 +1,401 @@
+% Encoding: UTF-8
+
+@InProceedings{shukla2015comparative,
+  author       = {Shukla, Anupriya and Pandey, Hari Mohan and Mehrotra, Deepti},
+  title        = {Comparative review of selection techniques in genetic algorithm},
+  booktitle    = {Futuristic Trends on Computational Analysis and Knowledge Management (ABLAZE), 2015 International Conference on},
+  year         = {2015},
+  pages        = {515--519},
+  organization = {IEEE},
+  file         = {:/home/raimbault/ComplexSystems/SimulationModels/Biblio/Docs/GA/PID3565091.pdf:PDF},
+  groups       = {GA},
+}
+
+@Article{chengbenchmark,
+  author = {Cheng, Ran and Li, Miqing and Tian, Ye and Xiang, Xiaoshu and Zhang, Xingyi and Yang, Shengxiang and Jin, Yaochu and Yao, Xin},
+  title  = {Benchmark Functions for CEC’2018 Competition on Many-Objective Optimization},
+  file   = {:Docs/Benchmarking/CEC2018-MaOO-Tech-Report.pdf:PDF},
+  groups = {Benchmarking},
+}
+
+@InProceedings{vesterstrom2004comparative,
+  author       = {Vesterstrom, Jakob and Thomsen, Rene},
+  title        = {A comparative study of differential evolution, particle swarm optimization, and evolutionary algorithms on numerical benchmark problems},
+  booktitle    = {Evolutionary Computation, 2004. CEC2004. Congress on},
+  year         = {2004},
+  volume       = {2},
+  pages        = {1980--1987},
+  organization = {IEEE},
+  file         = {:Docs/Benchmarking/20150312_173941.pdf:PDF},
+  groups       = {Benchmarking},
+}
+
+@Article{passerat2017reproducible,
+  author    = {Passerat-Palmbach, Jonathan and Reuillon, Romain and Leclaire, Mathieu and Makropoulos, Antonios and Robinson, Emma C and Parisot, Sarah and Rueckert, Daniel},
+  title     = {Reproducible Large-Scale Neuroimaging Studies with the OpenMOLE Workflow Management System},
+  journal   = {Frontiers in neuroinformatics},
+  year      = {2017},
+  volume    = {11},
+  pages     = {21},
+  file      = {:Docs/OpenMole/fninf-11-00021.pdf:PDF},
+  groups    = {OpenMole},
+  publisher = {Frontiers},
+}
+
+@InProceedings{brester2015cooperative,
+  author       = {Brester, Christina and Semenkin, Eugene},
+  title        = {Cooperative multi-objective genetic algorithm with parallel implementation},
+  booktitle    = {International Conference in Swarm Intelligence},
+  year         = {2015},
+  pages        = {471--478},
+  organization = {Springer},
+  file         = {:Docs/MOGA/brester_icsi_2015.pdf:PDF},
+  groups       = {MOGA},
+}
+
+@InCollection{deb2014multi,
+  author    = {Deb, Kalyanmoy},
+  title     = {Multi-objective optimization},
+  booktitle = {Search methodologies},
+  publisher = {Springer},
+  year      = {2014},
+  pages     = {403--449},
+  file      = {:Docs/MOGA/k2011003.pdf:PDF},
+  groups    = {MOGA},
+}
+
+@Article{chand2015evolutionary,
+  author    = {Chand, Shelvin and Wagner, Markus},
+  title     = {Evolutionary many-objective optimization: A quick-start guide},
+  journal   = {Surveys in Operations Research and Management Science},
+  year      = {2015},
+  volume    = {20},
+  number    = {2},
+  pages     = {35--42},
+  file      = {:Docs/MOGA/b42ebfc1d38b516b0f09762b242ad9a031fa.pdf:PDF},
+  groups    = {MOGA},
+  publisher = {Elsevier},
+}
+
+@InProceedings{di2004applying,
+  author       = {Di Pietro, Anthony and While, Lyndon and Barone, Luigi},
+  title        = {Applying evolutionary algorithms to problems with noisy, time-consuming fitness functions},
+  booktitle    = {Evolutionary Computation, 2004. CEC2004. Congress on},
+  year         = {2004},
+  volume       = {2},
+  pages        = {1254--1261},
+  organization = {IEEE},
+  file         = {:Docs/NoisyGA/ac27065928db339f25cd79f1cfd7ee5aa5fa.pdf:PDF},
+  groups       = {NoisyGA},
+}
+
+@Article{tan2002evolutionary,
+  author    = {Tan, Kay Chen and Lee, Tong Heng and Khor, Eik Fun},
+  title     = {Evolutionary algorithms for multi-objective optimization: Performance assessments and comparisons},
+  journal   = {Artificial intelligence review},
+  year      = {2002},
+  volume    = {17},
+  number    = {4},
+  pages     = {251--290},
+  file      = {:Docs/Benchmarking/A\:1015516501242.pdf:PDF},
+  groups    = {Benchmarking},
+  publisher = {Springer},
+}
+
+@Article{schmitt2015half,
+  author    = {Schmitt, Clara and Rey-Coyrehourcq, S{\'e}bastien and Reuillon, Romain and Pumain, Denise},
+  title     = {Half a billion simulations: Evolutionary algorithms and distributed computing for calibrating the SimpopLocal geographical model},
+  journal   = {Environment and Planning B: Planning and Design},
+  year      = {2015},
+  volume    = {42},
+  number    = {2},
+  pages     = {300--315},
+  file      = {:Docs/OpenMole/schmitt2015.pdf:PDF},
+  groups    = {OpenMole},
+  publisher = {SAGE Publications Sage UK: London, England},
+}
+
+@InProceedings{siegmund2016hybrid,
+  author       = {Siegmund, Florian and Ng, Amos HC and Deb, Kalyanmoy},
+  title        = {Hybrid Dynamic Resampling Algorithms for Evolutionary Multi-objective Optimization of Invariant-Noise Problems},
+  booktitle    = {European Conference on the Applications of Evolutionary Computation},
+  year         = {2016},
+  pages        = {311--326},
+  organization = {Springer},
+  file         = {:Docs/NoisyGA/[Lecture Notes in Computer Science 9598] Giovanni Squillero, Paolo Burelli (eds.) - Applications of Evolutionary Computation_ 19th European Conference, EvoApplications 2016, Port.pdf:PDF},
+  groups       = {NoisyGA},
+}
+
+@InCollection{foster2012three,
+  author    = {Foster, Nate and Matsuda, Kazutaka and Voigtl{\"a}nder, Janis},
+  title     = {Three complementary approaches to bidirectional programming},
+  booktitle = {Generic and indexed programming},
+  publisher = {Springer},
+  year      = {2012},
+  pages     = {1--46},
+  file      = {:Docs/ComputerScience/a04331821a294bad4d08975637b4f363ec5a.pdf:PDF},
+  groups    = {ComputerScience},
+}
+
+@InProceedings{oliveira2008scala,
+  author       = {Oliveira, Bruno CdS and Gibbons, Jeremy},
+  title        = {Scala for generic programmers},
+  booktitle    = {Proceedings of the ACM SIGPLAN workshop on Generic programming},
+  year         = {2008},
+  pages        = {25--36},
+  organization = {ACM},
+  file         = {:Docs/ComputerScience/scalagp.pdf:PDF},
+  groups       = {ComputerScience},
+}
+
+@Article{gibbons2009essence,
+  author    = {Gibbons, Jeremy and Oliveira, Bruno C d S},
+  title     = {The essence of the iterator pattern},
+  journal   = {Journal of functional programming},
+  year      = {2009},
+  volume    = {19},
+  number    = {3-4},
+  pages     = {377--402},
+  file      = {:Docs/ComputerScience/iterator.pdf:PDF},
+  groups    = {ComputerScience},
+  publisher = {Cambridge University Press},
+}
+
+@Article{smith2009improving,
+  author    = {Smith, Dianna M and Clarke, Graham P and Harland, Kirk},
+  title     = {Improving the synthetic data generation process in spatial microsimulation models},
+  journal   = {Environment and Planning A},
+  year      = {2009},
+  volume    = {41},
+  number    = {5},
+  pages     = {1251--1268},
+  file      = {:Docs/SyntheticData/smith2009.pdf:PDF},
+  groups    = {SyntheticData},
+  publisher = {SAGE Publications Sage UK: London, England},
+}
+
+@InProceedings{seada2015effect,
+  author       = {Seada, Haitham and Deb, Kalyanmoy},
+  title        = {Effect of selection operator on NSGA-III in single, multi, and many-objective optimization},
+  booktitle    = {Evolutionary Computation (CEC), 2015 IEEE Congress on},
+  year         = {2015},
+  pages        = {2915--2922},
+  organization = {IEEE},
+  file         = {:Docs/GA/c2015002.pdf:PDF},
+  groups       = {GA},
+}
+
+@Article{deb2002fast,
+  author    = {Deb, Kalyanmoy and Pratap, Amrit and Agarwal, Sameer and Meyarivan, TAMT},
+  title     = {A fast and elitist multiobjective genetic algorithm: NSGA-II},
+  journal   = {IEEE transactions on evolutionary computation},
+  year      = {2002},
+  volume    = {6},
+  number    = {2},
+  pages     = {182--197},
+  file      = {:Docs/GA/deb2002.pdf:PDF},
+  groups    = {GA},
+  publisher = {IEEE},
+}
+
+@InProceedings{seada2015u,
+  author       = {Seada, Haitham and Deb, Kalyanmoy},
+  title        = {U-nsga-iii: A unified evolutionary optimization procedure for single, multiple, and many objectives: Proof-of-principle results},
+  booktitle    = {International Conference on Evolutionary Multi-Criterion Optimization},
+  year         = {2015},
+  pages        = {34--49},
+  organization = {Springer},
+  file         = {:Docs/GA/[Lecture Notes in Computer Science 9019] António Gaspar-Cunha, Carlos Henggeler Antunes, Carlos Coello Coello (eds.) - Evolutionary Multi-Criterion Optimization_ 8th International Conference, EMO 2015, Guimarães, Portuga.pdf:PDF},
+  groups       = {GA},
+}
+
+@Book{welsh2017scala,
+  title     = {Scala with cats},
+  publisher = {underscore},
+  year      = {2017},
+  author    = {Welsh, Noel and Gurnell, Dave},
+  file      = {:Docs/ComputerScience/scala-with-cats.pdf:PDF},
+  groups    = {ComputerScience},
+}
+
+@Book{chiusano2015functional,
+  title     = {Functional programming in Scala},
+  publisher = {Manning},
+  year      = {2015},
+  author    = {Chiusano, Paul and Bjarnason, R{\'u}nar},
+  file      = {:Docs/ComputerScience/Paul Chiusano, Rúnar Bjarnason - Functional Programming in Scala (2014, Manning Publications).pdf:PDF},
+  groups    = {ComputerScience},
+}
+
+@Article{ma2015biogeography,
+  author    = {Ma, Haiping and Fei, Minrui and Simon, Dan and Chen, Zixiang},
+  title     = {Biogeography-based optimization in noisy environments},
+  journal   = {Transactions of the Institute of Measurement and Control},
+  year      = {2015},
+  volume    = {37},
+  number    = {2},
+  pages     = {190--204},
+  file      = {:Docs/NoisyGA/ma2014.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {Sage Publications Sage UK: London, England},
+}
+
+@Article{muruganantham2016evolutionary,
+  author    = {Muruganantham, Arrchana and Tan, Kay Chen and Vadakkepat, Prahlad},
+  title     = {Evolutionary dynamic multiobjective optimization via Kalman filter prediction},
+  journal   = {IEEE transactions on cybernetics},
+  year      = {2016},
+  volume    = {46},
+  number    = {12},
+  pages     = {2862--2873},
+  file      = {:Docs/DynamicalGA/muruganantham2016.pdf:PDF},
+  groups    = {DynamicalGA},
+  publisher = {IEEE},
+}
+
+@Article{rakshit2017noisy,
+  author    = {Rakshit, Pratyusha and Konar, Amit and Das, Swagatam},
+  title     = {Noisy evolutionary optimization algorithms--A comprehensive survey},
+  journal   = {Swarm and Evolutionary Computation},
+  year      = {2017},
+  volume    = {33},
+  pages     = {18--45},
+  file      = {:Docs/NoisyGA/NoisyEA-Syurvey.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {Elsevier},
+}
+
+@InProceedings{sano2002optimization,
+  author    = {Sano, Yasuhito and Kita, Hajime},
+  title     = {Optimization of noisy fitness functions by means of genetic algorithms using history of search with test of estimation},
+  booktitle = {Evolutionary Computation, 2002. CEC '02. Proceedings of the 2002 Congress on},
+  year      = {2002},
+  file      = {:Docs/NoisyGA/10.1109@cec.2002.1006261.pdf:PDF},
+  groups    = {NoisyGA},
+}
+
+@InCollection{merelo2016statistical,
+  author    = {Merelo, JJ and Chelly, Zeineb and Mora, Antonio and Fern{\'a}ndez-Ares, Antonio and Esparcia-Alc{\'a}zar, Anna I and Cotta, Carlos and de las Cuevas, P and Rico, Nuria},
+  title     = {A statistical approach to dealing with noisy fitness in evolutionary algorithms},
+  booktitle = {Computational Intelligence},
+  publisher = {Springer},
+  year      = {2016},
+  pages     = {79--95},
+  file      = {:Docs/NoisyGA/[Studies in Computational Intelligence 620] Juan Julian Merelo, Agostinho Rosa, José M. Cadenas, António Dourado, Kurosh Madani, Joaquim Filipe (eds.) - Computational Intelligence_ International Joint Conference, IJCCI 2.pdf:PDF},
+  groups    = {NoisyGA},
+}
+
+@Article{friedrich2015benefit,
+  author  = {Friedrich, Tobias and K{\"o}tzing, Timo and Krejca, Martin and Sutton, Andrew M},
+  title   = {The benefit of sex in noisy evolutionary search},
+  journal = {arXiv preprint arXiv:1502.02793},
+  year    = {2015},
+  file    = {:Docs/NoisyGA/1502.02793.pdf:PDF},
+  groups  = {NoisyGA},
+}
+
+@Article{10.1371/journal.pcbi.1002803,
+  author    = {Sunnåker, Mikael AND Busetto, Alberto Giovanni AND Numminen, Elina AND Corander, Jukka AND Foll, Matthieu AND Dessimoz, Christophe},
+  title     = {Approximate Bayesian Computation},
+  journal   = {PLOS Computational Biology},
+  year      = {2013},
+  volume    = {9},
+  number    = {1},
+  pages     = {1-10},
+  month     = {01},
+  abstract  = {Approximate Bayesian computation (ABC) constitutes a class of computational methods rooted in Bayesian statistics. In all model-based statistical inference, the likelihood function is of central importance, since it expresses the probability of the observed data under a particular statistical model, and thus quantifies the support data lend to particular values of parameters and to choices among different models. For simple models, an analytical formula for the likelihood function can typically be derived. However, for more complex models, an analytical formula might be elusive or the likelihood function might be computationally very costly to evaluate. ABC methods bypass the evaluation of the likelihood function. In this way, ABC methods widen the realm of models for which statistical inference can be considered. ABC methods are mathematically well-founded, but they inevitably make assumptions and approximations whose impact needs to be carefully assessed. Furthermore, the wider application domain of ABC exacerbates the challenges of parameter estimation and model selection. ABC has rapidly gained popularity over the last years and in particular for the analysis of complex problems arising in biological sciences (e.g., in population genetics, ecology, epidemiology, and systems biology).},
+  doi       = {10.1371/journal.pcbi.1002803},
+  file      = {:Docs/ABC/journal.pcbi.1002803.PDF:PDF},
+  groups    = {ABC},
+  publisher = {Public Library of Science},
+  url       = {https://doi.org/10.1371/journal.pcbi.1002803},
+}
+
+@Article{szpiro1997forecasting,
+  author    = {Szpiro, George G},
+  title     = {Forecasting chaotic time series with genetic algorithms},
+  journal   = {Physical Review E},
+  year      = {1997},
+  volume    = {55},
+  number    = {3},
+  pages     = {2557},
+  groups    = {TimeSeries},
+  publisher = {APS},
+}
+
+@Book{simon2006optimal,
+  title     = {Optimal state estimation: Kalman, H infinity, and nonlinear approaches},
+  publisher = {John Wiley \& Sons},
+  year      = {2006},
+  author    = {Simon, Dan},
+  groups    = {TimeSeries},
+}
+
+@Article{2017arXiv170806743R,
+  author        = {{Raimbault}, J.},
+  title         = {{Calibration of a Density-based Model of Urban Morphogenesis}},
+  journal       = {ArXiv e-prints},
+  year          = {2017},
+  month         = jul,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2017arXiv170806743R},
+  archiveprefix = {arXiv},
+  eprint        = {1708.06743},
+  groups        = {UrbanMorphogenesis},
+  keywords      = {Physics - Physics and Society, Computer Science - Multiagent Systems},
+  primaryclass  = {physics.soc-ph},
+}
+
+@Article{2016arXiv160308776H,
+  author        = {{Hansen}, N. and {Tusar}, T. and {Mersmann}, O. and {Auger}, A. and {Brockhoff}, D.},
+  title         = {{COCO: The Experimental Procedure}},
+  journal       = {ArXiv e-prints},
+  year          = {2016},
+  month         = mar,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2016arXiv160308776H},
+  archiveprefix = {arXiv},
+  eprint        = {1603.08776},
+  file          = {:Docs/Benchmarking/1603.08776.pdf:PDF},
+  groups        = {Benchmarking},
+  keywords      = {Computer Science - Artificial Intelligence, Computer Science - Neural and Evolutionary Computing},
+  primaryclass  = {cs.AI},
+}
+
+@InCollection{pumain2017evaluation,
+  author        = {Pumain, Denise and Reuillon, Romain},
+  title         = {Evaluation of the SimpopLocal Model},
+  booktitle     = {Urban Dynamics and Simulation Models},
+  publisher     = {Springer},
+  year          = {2017},
+  pages         = {37--56},
+  date-added    = {2018-01-10 10:06:56 +0000},
+  date-modified = {2018-01-10 10:06:56 +0000},
+  groups        = {OpenMole},
+}
+
+@Article{siegmund2016standard,
+  author  = {Siegmund, Florian and Ng, Amos HC and Deb, Kalyanmoy},
+  title   = {Standard error dynamic resampling for preference-based evolutionary multi-objective optimization},
+  journal = {Submitted to Computers \& Operations Research},
+  year    = {2016},
+  file    = {:Docs/NoisyGA/c5800b47ecce1eb54377166ed17e84a07f88.pdf:PDF},
+  groups  = {NoisyGA},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:GA\;0\;;
+1 ExplicitGroup:Benchmarking\;0\;;
+1 ExplicitGroup:OpenMole\;0\;;
+1 ExplicitGroup:MOGA\;0\;;
+1 ExplicitGroup:NoisyGA\;0\;;
+1 ExplicitGroup:ComputerScience\;0\;;
+1 ExplicitGroup:SyntheticData\;0\;;
+1 ExplicitGroup:DynamicalGA\;0\;;
+1 ExplicitGroup:ABC\;0\;;
+1 ExplicitGroup:TimeSeries\;0\;;
+1 ExplicitGroup:UrbanMorphogenesis\;0\;;
+}
