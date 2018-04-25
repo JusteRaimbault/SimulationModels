@@ -1,0 +1,10 @@
+
+val rTask =
+ RTask("""
+   sessionInfo()
+   """,
+   forceUpdate=true,
+   rVersion="3.3.3"
+  )
+
+rTask
