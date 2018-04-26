@@ -1,10 +1,24 @@
 
-val rTask =
+
+/*
+val rTask1 =
  RTask("""
    sessionInfo()
+   library(devtools)
    """,
    forceUpdate=true,
-   rVersion="3.3.3"
+   install=Seq("apt update","apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev"),
+   libraries=Seq("devtools")
+  )
+*/
+
+val rTask2 =
+  RTask("library(igraph);sessionInfo()",
+    forceUpdate=true,
+    install=Seq("apt update","apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev"),
+    libraries = Seq(("igraph","0.7.0"))
   )
 
-rTask
+//rTask1 -- rTask2
+
+rTask2
