@@ -12,12 +12,24 @@ val rTask1 =
   )
 */
 
+
 val rTask2 =
-  RTask("library(igraph);sessionInfo()",
+  RTask(script = "library(igraph);library(lubridate);library(devtools);sessionInfo()",
     forceUpdate=true,
-    install=Seq("apt update","apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev"),
-    libraries = Seq(("igraph","0.7.0"))
+    //install=Seq("apt update","apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev"),
+    libraries = Seq(("igraph","0.7.0"),("lubridate","latest"))
   )
+
+
+/*
+// only latest
+  val rTask3 =
+    RTask(script = "library(lubridate);sessionInfo();library(devtools)",
+      forceUpdate=true,
+      libraries = Seq("lubridate")
+    )
+*/
+
 
 //rTask1 -- rTask2
 
