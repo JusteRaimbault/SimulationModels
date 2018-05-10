@@ -1,0 +1,151 @@
+
+\documentclass[11pt]{article}
+
+% general packages without options
+\usepackage{amsmath,amssymb,bbm}
+% graphics
+\usepackage{graphicx}
+% text formatting
+\usepackage[document]{ragged2e}
+\usepackage{pagecolor,color}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+%\usepackage[french]{babel}
+
+% layout : use fancyhdr package
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% variable to include comments or not in the compilation ; set to 1 to include
+\def \draft {1}
+
+
+% writing utilities
+
+% comments and responses
+%  -> use this comment to ask questions on what other wrote/answer questions with optional arguments (up to 4 answers)
+\usepackage{xparse}
+\usepackage{ifthen}
+\DeclareDocumentCommand{\comment}{m o o o o}
+{\ifthenelse{\draft=1}{
+    \textcolor{red}{\textbf{C : }#1}
+    \IfValueT{#2}{\textcolor{blue}{\textbf{A1 : }#2}}
+    \IfValueT{#3}{\textcolor{ForestGreen}{\textbf{A2 : }#3}}
+    \IfValueT{#4}{\textcolor{red!50!blue}{\textbf{A3 : }#4}}
+    \IfValueT{#5}{\textcolor{Aquamarine}{\textbf{A4 : }#5}}
+ }{}
+}
+
+% todo
+\newcommand{\todo}[1]{
+\ifthenelse{\draft=1}{\textcolor{red!50!blue}{\textbf{TODO : \textit{#1}}}}{}
+}
+
+
+
+\makeatletter
+
+
+\makeatother
+
+
+\begin{document}
+
+
+\title{\vspace{-2cm}New methods and epistemologies to explore simulation models
+\bigskip\\
+\textit{Satellite Symposium proposal - CCS 2018}
+}
+
+\date{}
+
+\maketitle
+
+\justify
+
+\pagenumbering{gobble}
+
+
+\section*{Organizers}
+
+Raimbault J., Reuillon R.  (UPS CNRS 3611 Complex System Institute Paris Ile-de-France)
+
+%\section*{Keywords: }\textit{Simulation model; Exploration and calibration methods}
+
+
+\section*{Topic}
+
+
+The study of complexity can not be anymore dissociated from intensive computational practices \citep{arthur2015complexity}. Modeling and simulation have indeed taken a crucial role in the extraction of knowledge, especially in the study of systems with a high complexity such as socio-technical systems. Quantitative geography is a perfect illustration of how methodological, technical, empirical and theoretical advances necessarily strongly bind together  \citep{rey2015plateforme}: the use of computation centers in the seventies would be comparable to the current democratization of grid computing which impact dramatically changes the way social science is practiced.
+
+This trend is propeled by the development of dedicated tools such as the OpenMOLE software for model exploration \citep{reuillon2013openmole}. It guides a progressive shift in simulation practices. Three fundamental innovative axis distinguish this new philosophy and technology compared to existing approaches in simulation: (i) the embedding of models within workflows, making model coupling and multi-modeling easier; (ii) the provision of novel heuristic methods for model exploration; and (iii) the transparent access to various intensive computation infrastructures. \cite{banos2017knowledge} emphasizes how this ``knowledge accelerator'' favors the construction of a robust and experimental social science, by the introduction of tools to deal with main requirements for it \citep{banos2013pour}: multiple heterogenous models can be compared and coupled in an interdisciplinary approach within a new incremental methodology introduced by \cite{cottineau2015modular}, models and workflows are open to ensure reproducibility, the behavior of models is better known with specific methods such as the Pattern Search Exploration algorithm \citep{10.1371/journal.pone.0138212} that provide the output feasible space of a model or the Calibration Profile algorithm \citep{reuillon2015}, multi-objective approaches to model optimization are implemented in genetic algorithms for model calibration \citep{schmitt2014half}.
+
+The aim of this symposium is take a reflexive positioning on these trends, situate them regarding similar practices, and establish the most crucial future issues to be tackled within that stream of research. Therefore, invited talks by \noun{D. Pumain} and \noun{R. Reuillon}, main investigators of the ERC project Geodivercity in which most of the aforementioned research took place \citep{pumain2017urban}, will first sketch the current landscape of these approaches, both from an epistemological point of view in the particular case of geography and from a methodological point of view. The point of view of these practitioner will be completed by an invited talk by \noun{F. Varenne} on the epistemology of modeling as well as a more specialized methodological invited talk by \noun{S. Carignon}. Submitted and reviewed contributions will then put these research into the broader framework of computational science and a wrap-up round-table will aim at exchanging and reflecting on future research directions.
+
+Contributions are open to any research developing new methods, practices, theories and epistemologies related to models of simulation. No fields are privileged but the entanglement of theory, modeling and empirics will be an important feature to bring a relevant contribution to the debates. Methodological contributions are as much welcomed as contributions in epistemology or history of science. The objective is truly to reinforce an interdisciplinary perspective on current trends in the exploration of simulation models.
+
+
+\section*{Format}
+
+\begin{itemize}
+	\item Expected full-day satellite (possibly two days depending on the number of submissions)
+    \item 4 invited speakers, open to submissions
+    \item Preliminary program: general contributions from invited speakers; specific contributions from invited speakers; accepted communications
+\end{itemize}
+
+
+\section*{Confirmed invited speakers}
+
+\noindent\noun{Pr. Denise Pumain}, UMR CNRS 8504 G{\'e}ographie-cit{\'e}s, Universit{\'e} Paris 1 - PI of the ERC advanced grant project Geodivercity. \textit{Title: } Modeling and simulation as a synergetic tool to bridge geography and computer science.
+
+\bigskip
+
+\noindent\noun{Dr. Romain Reuillon}, UPS CNRS 3611 ISC-PIF - Lead of the OpenMole project. \textit{Title: } An open and innovative toolbox to explore complex models of simulation.
+
+\bigskip
+
+\noindent\noun{Pr. Franck Varenne}, Universit{\'e} de Rouen. \textit{Title: } Simulation as a medium to bridge model functions.
+
+\bigskip
+
+\noindent\noun{Simon Carignon}, Barcelona Supercomputing Center. \textit{Title: } Approximate Bayesian Computation estimation of large-scale agent-based models on sparse archaeological data.
+
+
+%\bigskip
+
+%\noindent\noun{Mehdi Bida}, UNIL. \textit{invited}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+%\tiny
+
+%\begin{multicols}{2}
+
+%\setstretch{0.3}
+%\setlength{\parskip}{-0.4em}
+
+
+\bibliographystyle{apalike}
+\bibliography{biblio}
+%\end{multicols}
+
+
+
+\end{document}
