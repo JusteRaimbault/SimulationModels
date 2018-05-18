@@ -1,0 +1,150 @@
+
+\documentclass[11pt]{article}
+
+% general packages without options
+\usepackage{amsmath,amssymb,bbm}
+% graphics
+\usepackage{graphicx}
+% text formatting
+\usepackage[document]{ragged2e}
+\usepackage{pagecolor,color}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+%\usepackage[french]{babel}
+
+% layout : use fancyhdr package
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% variable to include comments or not in the compilation ; set to 1 to include
+\def \draft {1}
+
+
+% writing utilities
+
+% comments and responses
+%  -> use this comment to ask questions on what other wrote/answer questions with optional arguments (up to 4 answers)
+\usepackage{xparse}
+\usepackage{ifthen}
+\DeclareDocumentCommand{\comment}{m o o o o}
+{\ifthenelse{\draft=1}{
+    \textcolor{red}{\textbf{C : }#1}
+    \IfValueT{#2}{\textcolor{blue}{\textbf{A1 : }#2}}
+    \IfValueT{#3}{\textcolor{ForestGreen}{\textbf{A2 : }#3}}
+    \IfValueT{#4}{\textcolor{red!50!blue}{\textbf{A3 : }#4}}
+    \IfValueT{#5}{\textcolor{Aquamarine}{\textbf{A4 : }#5}}
+ }{}
+}
+
+% todo
+\newcommand{\todo}[1]{
+\ifthenelse{\draft=1}{\textcolor{red!50!blue}{\textbf{TODO : \textit{#1}}}}{}
+}
+
+
+
+\makeatletter
+
+
+\makeatother
+
+
+\begin{document}
+
+
+\title{\vspace{-2cm}New methods and epistemologies to explore simulation models
+\medskip\\
+\textit{Satellite Symposium - CCS 2018}\medskip\\
+\textit{Call for Papers}
+}
+
+\date{}
+
+\maketitle
+
+\justify
+
+\pagenumbering{gobble}
+
+
+
+\section*{Scope}
+
+The study of complexity can not be anymore dissociated from intensive computational practices. Modeling and simulation have indeed taken a crucial role in the extraction of knowledge, especially in the study of systems with a high complexity such as socio-technical systems. Quantitative geography is a perfect illustration of how methodological, technical, empirical and theoretical advances necessarily strongly bind together: the use of computation centers in the seventies would be comparable to the current democratization of grid computing which impact dramatically changes the way social science is practiced. 
+
+This trend is propeled by the development of dedicated tools such as the OpenMOLE software for model exploration, guiding a progressive shift in simulation practices. Three fundamental innovative axis distinguish this new philosophy and technology compared to existing approaches in simulation: (i) the embedding of models within workflows, making model coupling and multi-modeling easier; (ii) the provision of novel heuristic methods for model exploration; and (iii) the transparent access to various intensive computation infrastructures. This approach can be seen as a knowledge accelerator which favors the construction of a robust and experimental social science, by the introduction of tools to deal with main requirements for it: multiple heterogenous models can be compared and coupled in an interdisciplinary approach within a new incremental methodology, models and workflows are open to ensure reproducibility, the behavior of models is better known with specific methods for model optimization, calibration and exploration. 
+
+The aim of this symposium is take a reflexive positioning on these trends, situate them regarding similar practices, and establish the most crucial future issues to be tackled within that stream of research. 
+
+\section*{Call for papers}
+
+Contributions are open to any research developing new methods, practices, theories and epistemologies related to models of simulation. No fields are privileged but the entanglement of theory, modeling and empirics will be an important feature to bring a relevant contribution to the debates. Methodological contributions are as much welcomed as contributions in epistemology or history of science. The objective is truly to reinforce an interdisciplinary perspective on current trends in the exploration of simulation models.
+
+Submission may belong, but are not restricted, to the following categories:
+\begin{itemize}
+	\item novel methods to explore or calibrate simulation models
+	\item case studies of simulation models in which exploration methods play a crucial role
+	\item thematic synthesis building on the conjunction of theory, empirical and simulation results
+	\item epistemological contributions around simulation models
+\end{itemize}
+    
+    
+If you would like to contribute to this symposium, please send a pdf abstract (max 500 words) \textbf{before June 15th} to Juste Raimbault (juste.raimbault@iscpif.fr) and Romain Reuillon (romain.reuillon@iscpif.fr). 
+    
+
+
+\section*{Invited speakers}
+
+\begin{itemize}
+    \item Pr. Denise Pumain, UMR CNRS 8504 Géographie-cités, Université Paris 1 - PI of the ERC advanced grant project Geodivercity.
+    \item Dr. Romain Reuillon, UPS CNRS 3611 ISC-PIF - Lead of the OpenMole project.
+    \item Pr. Franck Varenne, Université de Rouen.
+    \item Pr. Celine Rozenblat, Université de Lausanne.
+    \item Simon Carignon, Barcelona Supercomputing Center.
+\end{itemize}
+
+\section*{Organizers}
+
+\begin{itemize}
+	\item Juste Raimbault, ISC-PIF, juste.raimbault@iscpif.fr
+	\item Romain Reuillon, ISC-PIF, romain.reuillon@iscpif.fr
+\end{itemize}
+
+
+\vspace{1cm}
+
+\centering
+\includegraphics[width=\linewidth]{logos}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+%\tiny
+
+%\begin{multicols}{2}
+
+%\setstretch{0.3}
+%\setlength{\parskip}{-0.4em}
+
+
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
+%\end{multicols}
+
+
+
+\end{document}
