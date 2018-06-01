@@ -1,0 +1,42 @@
+
+;;
+;
+
+
+to run-experiment
+  ; the dynamics is immediately stationary, just give a bit of time to converge
+  repeat 1000 [
+    go 
+  ]
+end
+
+
+to setup
+  ;ca  ; use direct variable setting, do not clear
+  create-turtles #-turtles [setxy random-xcor random-ycor]
+  set densities []
+  reset-ticks
+end
+
+
+to go
+  ask turtles [
+    lt random-float 360
+    fd 1 
+  ]
+  set densities lput ([local-density] of turtles) densities
+  tick
+end
+
+
+;;
+; turtle procedure to get local density
+to-report local-density
+  report count (turtles in-radius density-radius) / count turtles
+end
+
+
+to-report avg-density
+  if length densities = 0 [report 0]
+  report mean map mean densities
+end
