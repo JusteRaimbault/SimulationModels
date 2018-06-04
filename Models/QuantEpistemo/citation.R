@@ -3,10 +3,14 @@ setwd(paste0(Sys.getenv('CS_HOME'),'/SimulationModels/Models/QuantEpistemo'))
 library(dplyr)
 library(igraph)
 
+
 source('functions.R')
 
-edges <- read.csv('data/citnwdepth3_links.csv',sep=";",header=F,colClasses = c('character','character'))
-nodes <- as.tbl(read.csv('data/citnwdepth3.csv',sep=";",header=F,stringsAsFactors = F,colClasses = c('character','character','character')))
+#edges <- read.csv('data/citnwdepth3_links.csv',sep=";",header=F,colClasses = c('character','character'))
+#nodes <- as.tbl(read.csv('data/citnwdepth3.csv',sep=";",header=F,stringsAsFactors = F,colClasses = c('character','character','character')))
+edges <- read.csv('data/corpusreq_openmole_citnw_links.csv',sep=";",header=F,colClasses = c('character','character'))
+nodes <- as.tbl(read.csv('data/corpusreq_openmole_citnw.csv',sep=";",header=F,stringsAsFactors = F,colClasses = c('character','character','character')))
+
 
 names(nodes)<-c("title","id","year")
 
@@ -27,7 +31,8 @@ citationcore = induced_subgraph(citation,which(degree(citation)>1))
 citationcorehigher = citationcore
 while(length(which(degree(citationcorehigher)==1))>0){citationcorehigher = induced_subgraph(citationcorehigher,which(degree(citationcorehigher)>1))}
 
-write_graph(citationcore,file='data/core.gml',format = 'gml')
+#write_graph(citationcore,file='data/core.gml',format = 'gml')
+write_graph(citationcore,file='data/corpusreq_openmole_core.gml',format = 'gml')
 write_graph(citationcorehigher,file='data/corehigher.gml',format = 'gml')
 
 
