@@ -1,0 +1,47 @@
+import java.util.Date
+import java.text.SimpleDateFormat
+
+logger.level("FINE")
+
+
+
+val turtles = Val[Double]
+val radius = Val[Double]
+
+val density = Val[Double]
+
+val replication = Val[Int]
+
+val cmds = List("setup","run-experiment")
+
+val model = NetLogo5Task(workDirectory / "randomwalk.nlogo", cmds,embedWorkspace=true,seed=replication) set(
+  inputs += (turtles,radius,replication),
+  outputs += (turtles,radius,replication),
+  netLogoOutputs += ("avg-density",density)
+)
+
+val purpose = "TEST"
+
+val indics_hook = AppendToCSVFileHook(workDirectory / "exploration" / ((new SimpleDateFormat("yyyyMMdd_HHmmss")).format(new Date()))+"_"+purpose+".csv")
+
+val env = LocalEnvironment(4)
+
+val replications =
+ Replication (
+   evaluation = model on env,
+   seed = replication,
+   replications = 2
+)
+
+val exploration =
+  DirectSampling(
+    evaluation = replications hook indics_hook,
+    sampling = LHS(
+      2,
+      turtles in Range(100,10000),
+      radius in Range(0.1,10.0)
+    )
+  )
+
+
+exploration
