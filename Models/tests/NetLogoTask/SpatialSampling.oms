@@ -14,10 +14,11 @@ val density = Val[Double]
 
 val replication = Val[Int]
 
-val cmds = List("setup","run-experiment")
+//val cmds = List("setup","run-experiment")
+val cmds = List("setup")
 
 val model = NetLogo5Task(workDirectory / "randomwalk.nlogo", cmds,embedWorkspace=true,seed=replication) set(
-  inputs += (turtles,radius,randomRadiuses,replication),
+  inputs += (turtles,radius,replication),
   outputs += (turtles,radius,replication),
   netLogoInputs += (turtles,"#-turtles"),
   netLogoInputs += (radius,"density-radius"),
@@ -41,11 +42,11 @@ val replications =
 val exploration =
   DirectSampling(
     evaluation = replications hook indics_hook,
-    sampling = LHS(
+    sampling = RandomSpatialSampling(
+      5,
       2,
-      turtles in Range(100.0,500.0),
-      radius in Range(0.1,10.0)
-    ) x (randomRadiuses is Array(Array(1.0,2.0),Array(5.0,10.0)))
+      randomRadiuses
+    ) x (turtles is 100.0)x (radius is 1.0) // x (randomRadiuses is Array(Array(1.0,2.0),Array(5.0,10.0)))// 
   )
 
 

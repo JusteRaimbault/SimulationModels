@@ -15,6 +15,8 @@ globals [
   density-radius
 
   densities
+  
+  random-radiuses
 
 ]
 
