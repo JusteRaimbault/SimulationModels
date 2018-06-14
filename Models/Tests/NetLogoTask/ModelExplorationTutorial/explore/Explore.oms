@@ -1,0 +1,16 @@
+import _parent_.Model._
+import _parent_.replicate.Aggregate._
+
+val exploration = 
+  DirectSampling(
+    evaluation = replications hook CSVHook(workDirectory / "result.csv"),
+    sampling =   
+      LHS(
+        500,
+        diffusion in (10.0, 100.0),
+        evaporation in (10.0, 100.0)
+      )
+  )
+
+exploration
+
