@@ -1,0 +1,108 @@
+\input{header.tex}
+
+
+\title{A roadmap for spatial sensitivity analysis\bigskip\\
+\textit{Working Paper}
+}
+\author{\noun{Juste Raimbault}}
+\date{Date}
+
+
+\maketitle
+
+\justify
+
+
+\begin{abstract}
+
+\end{abstract}
+
+
+
+
+\section{Introduction}
+
+
+
+
+
+
+
+\section{Roadmap}
+
+
+\subsection{General view}
+
+Two global axis can be formulated:
+
+\begin{enumerate}
+	\item The generation of synthetic spatial data
+	\item The import and manipulation of real spatial data 
+\end{enumerate}
+
+A longer term goal is a stronger link between these two.
+
+
+\subsection{Generation of synthetic spatial data}
+
+
+\subsubsection{Raster data}
+
+\begin{itemize}
+	\item Single layer synthetic grids
+	\item Multi-layer synthetic grids
+	\item Multi-layer with specified correlation structure
+\end{itemize}
+
+\subsubsection{Vector data}
+
+\begin{itemize}
+	\item Transportation networks
+	\item Spatialized `classic` network generation models
+	\item Correlated layers	
+	\item Correlated network and raster 
+\end{itemize}
+
+
+
+
+\subsection{Architecture}
+
+\textit{Question : to what point methods are within oml plugin or in an external library ?}
+
+
+
+
+\section{Implementation}
+
+
+\subsection{Example of a workflow}
+
+We illustrate spatial sensitivity analysis by coupling a spatial generator embedded into OpenMOLE as a \texttt{Sampling} with a toy Luti model, using new features of the \texttt{NetLogoTask}
+
+\begin{itemize}
+	\item Generate realistic correlated spatial grids with an exponential mixture using a \texttt{SpatialSampling}
+	\item Plug this into a NetLogoTask (recursive arrays inputs) for a toy Luti model
+	\item Get successive system states (recursive array outputs)
+\end{itemize}
+
+
+\section*{Application}
+
+First application : comparison of the scala implementation and the netlogo implementation of the Luti part of the Lutecia model (only spatial setup is random).
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{}
+
+
+\end{document}
