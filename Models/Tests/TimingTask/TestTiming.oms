@@ -1,0 +1,31 @@
+
+
+val x = Val[Double]
+val y = Val[Double]
+val t1 = Val[Long]
+val t2 = Val[Long]
+
+val rapidTask = ScalaTask("val y = input.x + 1") set (inputs += x,outputs += y)
+//val rapidTask = (ScalaTask("val y = input.x + 1") set (inputs += x,outputs += y, x := 2.0) withTimer t1) set (inputs += x,outputs += y, x := 2.0)
+//val slowTask = ScalaTask("Thread.sleep(2000);val y = input.x + 1") set (inputs += (x,t1),outputs += (y,t1), x := 2.0)
+
+//val timing1 = TimingTask(rapidTask,t1) set (x := 2.0)
+//val timing1 = (rapidTask withTimer t1) set (x := 2.0)
+//val timing2 = TimingTask(slowTask,t2) set (inputs += (x,t1),outputs += (t1,t2), x := 1)
+//timing1 -- (timing2 hook ToStringHook()) 
+
+//timing1 hook ToStringHook()
+
+//val task = ScalaTask("println(\"test\")") set (inputs += x,outputs += t1, x := 1)
+//val timed = task withTimer t1 set (x := 1)
+
+//timed hook ToStringHook()
+
+
+val exploration = DirectSampling(
+    evaluation = rapidTask withTimer t1 hook ToStringHook(),
+    sampling = (x in (0.0 to 1.0 by 0.1))
+)
+
+exploration
+
