@@ -24,7 +24,7 @@ filtcorpus = read.csv(file='data/corpusreq_raw_handfiltered.csv',sep=";",header=
 #inds=c();for(i in 1:nrow(filtcorpus)){}
 filtcorpus = filtcorpus[!duplicated(filtcorpus$id),]
 
-write.table(filtcorpus,sep=";",row.names = F,col.names = T,file = 'data/corpusreq_filt.csv')
+write.table(filtcorpus[,2:4],sep=";",row.names = F,col.names = T,file = 'data/corpusreq_filt.csv')
 
 
 ### oml specific corpus
@@ -53,13 +53,36 @@ write.table(omlcorpus,sep=";",row.names = F,col.names = T,file = 'data/corpusreq
 omlfiltered = read.csv(file='data/corpusreq_openmole_prefilt_handfilt.csv',sep=";",header=T,colClasses = rep('character',4))
 
 # can be exported directly
-write.table(omlfiltered,sep=";",row.names = F,col.names = T,file = 'data/corpusreq_openmole_filt.csv')
+write.table(omlfiltered[,2:4],sep=";",row.names = F,col.names = T,file = 'data/corpusreq_openmole_filt.csv')
 
 ##
 # --> two "basis corpuses" are : corpusreq_openmole_filt.csv, corpusreq_filt.csv
 
 
-# 
+# check intersections of obtained corpuses
+for(kwfile in gsub(' ','+',kws$V1,fixed=T)){
+  show(kwfile)
+  refs = read.csv(paste0('data/corpusreq_',kwfile,'.csv'),sep=';',header=T,colClasses = rep('character',4))
+  omlrefs = read.csv(paste0('data/corpusreq_withopenmole_',kwfile,'+openmole.csv'),sep=';',header=T,colClasses = rep('character',4))
+  refs = refs[refs$id%in%filtcorpus$id,]
+  omlrefs = omlrefs[omlrefs$id%in%omlfiltered$id,]
+  show(paste0(length(intersect(refs$id,omlrefs$id))," in ",nrow(refs)," ; ",nrow(omlrefs)))
+  show(omlrefs[omlrefs$id%in%intersect(refs$id,omlrefs$id),])
+}
+
+#"model+exploration"
+#[1] "1 in 14 ; 40"
+#[1] "model+exploration+platform"
+#[1] "1 in 21 ; 40"
+#[1] "simulation+model+exploration"
+#[1] "1 in 10 ; 41"
+#[1] "numerical+experiment+workflow"
+#[1] "1 in 21 ; 39"
+# -> each time 11665166017377686868
+
+
+
+
 
 
 
