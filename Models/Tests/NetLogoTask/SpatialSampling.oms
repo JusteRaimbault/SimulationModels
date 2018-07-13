@@ -1,0 +1,79 @@
+import java.util.Date
+import java.text.SimpleDateFormat
+
+logger.level("FINE")
+
+
+
+val turtles = Val[Double]
+val radius = Val[Double]
+
+//val randomRadiuses = Val[Array[Array[Double]]]
+val randomRadiuses = Val[RasterLayer]
+val layer2 = Val[RasterLayer]
+
+val density = Val[Double]
+
+val replication = Val[Int]
+
+//val cmds = List("setup","run-experiment")
+val cmds = List("setup")
+
+val model = NetLogo5Task(workDirectory / "randomwalk.nlogo", cmds,embedWorkspace=true,seed=replication) set(
+  inputs += (turtles,radius,replication,layer2),
+  outputs += (turtles,radius,replication),
+  netLogoInputs += (turtles,"#-turtles"),
+  netLogoInputs += (radius,"density-radius"),
+  netLogoInputs += (randomRadiuses,"random-radiuses"),
+  netLogoInputs += (layer2,"layer2"),
+  netLogoOutputs += ("avg-density",density)
+)
+
+val purpose = "TEST"
+
+val indics_hook = AppendToCSVFileHook(workDirectory / "exploration" / ((new SimpleDateFormat("yyyyMMdd_HHmmss")).format(new Date()))+"_"+purpose+".csv")
+
+val env = LocalEnvironment(4)
+
+val replications =
+ Replication (
+   evaluation = model on env,
+   seed = replication,
+   replications = 2
+)
+
+val exploration =
+  DirectSampling(
+    evaluation = replications hook indics_hook,
+    sampling = /*RandomSpatialSampling(
+      5,
+      2,
+      randomRadiuses
+    )*/
+    /*ExponentialMixtureSpatialSampling(
+        gridSize = Left(20),
+        samples = 20,
+        //prototypes = Seq(randomRadiuses,layer2)
+        prototypes = Seq(randomRadiuses)
+    )*/
+    ExponentialMixtureSpatialSampling(
+        gridSize = Left(20),
+        centersNumber = 2,
+        maxValue = Left(1.0),//Right(Seq(3.0)),
+        kernelRadius = Left(3.0),//Right(Seq(2.0,1.5)),
+        samples = 10,
+        prototypes = Seq(randomRadiuses,layer2)
+    )
+    /*ReactionDiffusionSpatialSampling(5,10,randomRadiuses)*/
+    x (turtles is 100.0)x (radius is 1.0) // x (randomRadiuses is Array(Array(1.0,2.0),Array(5.0,10.0)))// 
+  )
+
+
+
+
+
+
+
+
+
+exploration

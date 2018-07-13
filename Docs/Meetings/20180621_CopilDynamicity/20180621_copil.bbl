@@ -1,0 +1,27 @@
+\begin{thebibliography}{}
+
+\bibitem[Cottineau et~al., 2017]{cottineau2017initial}
+Cottineau, C., Raimbault, J., Le~Texier, M., Le~Nechet, F., and Reuillon, R.
+  (2017).
+\newblock Initial spatial conditions in simulation models: the missing leg of
+  sensitivity analyses?
+\newblock In {\em Geocomputation Conference}.
+
+\bibitem[Le~N{\'e}chet and Raimbault, 2015]{le2015modeling}
+Le~N{\'e}chet, F. and Raimbault, J. (2015).
+\newblock Modeling the emergence of metropolitan transport autorithy in a
+  polycentric urban region.
+\newblock {\em Plurimondi. An International Forum for Research and Debate on
+  Human Settlements}, 7(15).
+
+\bibitem[Raimbault, 2018a]{raimbault2017calibration}
+Raimbault, J. (2018a).
+\newblock Calibration of a density-based model of urban morphogenesis.
+\newblock {\em PLoS ONE, in revision}.
+
+\bibitem[Raimbault, 2018b]{raimbault2018multi}
+Raimbault, J. (2018b).
+\newblock Multi-modeling the morphogenesis of transportation networks.
+\newblock In {\em ALife 2018}.
+
+\end{thebibliography}
