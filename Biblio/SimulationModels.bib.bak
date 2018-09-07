@@ -741,6 +741,54 @@ archivePrefix = "arXiv",
   groups       = {NoisyGA},
 }
 
+@Article{wu2010artificial,
+  author    = {Wu, Ning and Silva, Elisabete A},
+  title     = {Artificial intelligence solutions for urban land dynamics: a review},
+  journal   = {Journal of Planning Literature},
+  year      = {2010},
+  volume    = {24},
+  number    = {3},
+  pages     = {246--265},
+  file      = {:Docs/Luti/10.1177@0885412210361571.pdf:PDF},
+  groups    = {Luti},
+  publisher = {Sage Publications Sage CA: Los Angeles, CA},
+}
+
+@Article{jin2005evolutionary,
+  author    = {Jin, Yaochu and Branke, J{\"u}rgen},
+  title     = {Evolutionary optimization in uncertain environments-a survey},
+  journal   = {IEEE Transactions on evolutionary computation},
+  year      = {2005},
+  volume    = {9},
+  number    = {3},
+  pages     = {303--317},
+  file      = {:Docs/NoisyGA/JinBranke-TEVC05.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {IEEE},
+}
+
+@Article{ammu2013biogeography,
+  author  = {Ammu, PK and Sivakumar, KC and Rejimoan, R},
+  title   = {Biogeography-based optimization-a survey},
+  journal = {Int J Electron Comput Sci Eng},
+  year    = {2013},
+  volume  = {2},
+  number  = {1},
+  pages   = {154--160},
+  file    = {:Docs/BBO/1c19d0ac19aad0e2807eed56ba57f6d50612.pdf:PDF},
+  groups  = {BBO},
+}
+
+@InProceedings{rahnamayan2006opposition,
+  author    = {Rahnamayan, Shahryar and Tizhoosh, Hamid R and Salama, Magdy MA},
+  title     = {Opposition-Based Differential Evolution for Optimization of Noisy Problems.},
+  booktitle = {IEEE congress on evolutionary computation},
+  year      = {2006},
+  pages     = {1865--1872},
+  file      = {:Docs/DifferentialEvolution/Opposition-based_differential_evolution.pdf:PDF},
+  groups    = {DifferentialEvolution},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -762,4 +810,6 @@ archivePrefix = "arXiv",
 1 ExplicitGroup:SpatialSensitivity\;0\;;
 1 ExplicitGroup:SpatialNetworks\;0\;;
 1 ExplicitGroup:InverseProblem\;0\;;
+1 ExplicitGroup:BBO\;0\;;
+1 ExplicitGroup:DifferentialEvolution\;0\;;
 }
