@@ -1,0 +1,23 @@
+
+
+====
+2018/09/20
+
+Ingber, L., & Rosen, B. (1992). Genetic algorithms and very fast simulated reannealing: A comparison. Mathematical and computer modelling, 16, 87-87. : benchmark ga / simulated annealing (old)
+
+Arnold, D. V., & Salomon, R. (2007). Evolutionary gradient search revisited. IEEE Transactions on Evolutionary Computation, 11(4), 480-495. : evolutionary gradient search
+
+Zhai, W., Kelly, P., & Gong, W. B. (1996). Genetic algorithms with noisy fitness. Mathematical and computer modelling, 23(11-12), 131-142. : theoretical work on convergence of noisy GA
+
+Helbig, M., & Engelbrecht, A. P. (2014). Benchmarks for dynamic multi-objective optimisation algorithms. ACM Computing Surveys (CSUR), 46(3), 37. : benchmark better developped in mggodynamic ?
+
+Particle Swarm Optimization :
+https://github.com/flintobrien/akka-multiswarm/blob/master/src/main/scala/Application.scala
+Cilib : https://cilib.net/usage/gbestpso.html
+https://github.com/cirg-up/cilib/blob/master/example/src/main/scala/cilib/example/GBestPSO.scala
+
+Di Mario, E., Navarro, I., & Martinoli, A. (2014, July). Analysis of fitness noise in particle swarm optimization: From robotic learning to benchmark functions. In Evolutionary Computation (CEC), 2014 IEEE Congress on (pp. 2785-2792). IEEE. : noise in PSO
+
+=> more connections with how noise is dealt in others heuristic approaches
+
+
