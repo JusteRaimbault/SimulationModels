@@ -1,0 +1,334 @@
+4c5b511c53 - Romain Reuillon, 7 days ago : [Plugin] enh: remove useless state map
+cb63d8d619 - Romain Reuillon, 12 days ago : [Plugin] fix: clean installation directory
+aa454b42b8 - Romain Reuillon, 2 weeks ago : [Plugin] fix: docker layer download from registry
+849179124b - Romain Reuillon, 3 weeks ago : [Plugin] enh: get rid of the eager submission agent
+ead67b2de6 - Romain Reuillon, 3 weeks ago : [Plugin] fix: partition instead of span
+0ed8667763 - Romain Reuillon, 3 weeks ago : [Plugin] enh: get rid of environment watcher
+518343b8d5 - Romain Reuillon, 7 weeks ago : [Plugin] enh: unroll lists in csv hook.
+ff800eb453 - Juste Raimbault, 7 weeks ago : [Plugin] NetLogoTask : fix : handle boolean arrays as outputs
+3a41c6d40a - Juste Raimbault, 7 weeks ago : [Plugin] NetLogoTask : add Boolean input
+78d99a55e9 - Romain Reuillon, 7 weeks ago : [Plugin] enh: retry on error when intercting with docker regitry.
+9199023fed - Romain Reuillon, 7 weeks ago : [Plugin] fix: test if registry returns an error.
+102af9176c - Romain Reuillon, 7 weeks ago : [Plugin] enh: take into account multiple identic layers.
+99e679739a - Romain Reuillon, 8 weeks ago : [Plugin] enh: remove method
+6af1d94e9e - Romain Reuillon, 8 weeks ago : [Plugin] fix: make sure all jobs are killed.
+c2153861f1 - Romain Reuillon, 8 weeks ago : [Plugin] enh: add keyword
+1472986e8b - Romain Reuillon, 8 weeks ago : [Plugin] fix: mapping is actually an output mapping
+269f4a0b32 - Romain Reuillon, 8 weeks ago : [Plugin] enh: use mapping for csv.
+7dc9a82537 - Juste Raimbault, 8 weeks ago : [Plugin] NetLogoTask : quickfix to handle NL6 LogoLists
+f975f0092c - Romain Reuillon, 8 weeks ago : [Plugin] enh: pass task parameters as constructor arguments.
+810e817abe - Romain Reuillon, 8 weeks ago : [Plugin] fix: add missing mapped instance for RTask.
+021ed7fafd - Romain Reuillon, 8 weeks ago : [Plugin] enh: don't aggregate if aggregation is not provided.
+81e368f4e9 - Romain Reuillon, 9 weeks ago : [Plugin] enh: remove useless paramter
+83ff1aee87 - Romain Reuillon, 9 weeks ago : [Plugin] fix: output on error in version 5 and scientific number formating.
+c4e4d88403 - Romain Reuillon, 9 weeks ago : [Plugin] fix: make sure the files are written in the root dir.
+f3dba64dcf - Romain Reuillon, 9 weeks ago : [Plugin] fix: make it work with scilab 5
+a092691283 - Romain Reuillon, 9 weeks ago : [Plugin] enh: add missing keywords
+b1ffea0767 - Romain Reuillon, 9 weeks ago : [Plugin] fix: remove short keywords.
+43013d8c8c - Juste Raimbault, 9 weeks ago : [Plugin] NetLogoTask : tested multiple array output
+1552b88c77 - Romain Reuillon, 9 weeks ago : [Plugin] fix: compilation
+7f6009041f - Romain Reuillon, 9 weeks ago : [Plugin] enh: add missing keywords.
+165582168f - Juste Raimbault, 9 weeks ago : [Plugin] NetLogoTask : Recursive array outputs
+1e194affa7 - Romain Reuillon, 9 weeks ago : [Plugin] enh: use long for frequency.
+9429a2beb1 - Romain Reuillon, 9 weeks ago : [Plugin] enh: add frequency to save population hook.
+9aac2a7718 - Romain Reuillon, 9 weeks ago : [Plugin] format
+a269a0d5b3 - Romain Reuillon, 9 weeks ago : [Plugin] enh: inscept scilab task.
+0384d7d8bb - Romain Reuillon, 9 weeks ago : [Plugin] fix: test if reported value is null
+aec5b424d2 - Romain Reuillon, 9 weeks ago : [Plugin] enh: remove println.
+b50607b8c1 - Romain Reuillon, 9 weeks ago : [Plugin] enh: create sensitivity method project.
+2c35402a7d - Romain Reuillon, 9 weeks ago : [Plugin] enh + fix: refactor the code and check only netlogo inputs in type validation.
+ea7710e172 - Juste Raimbault, 10 weeks ago : [Plugin] NetLogoTask : syntax prettify
+f79f379d3f - Juste Raimbault, 10 weeks ago : [Plugin] NetLogoTask : add constraint on input types
+663e107a83 - Juste Raimbault, 10 weeks ago : [Plugin] NetlogoTask : fix
+ef43f3325a - Romain Reuillon, 10 weeks ago : [Plugin] enh: refactor code (netlogo task is not working, yet)
+9f094e64ed - Juste Raimbault, 10 weeks ago : [Plugin] NetLogoTask : remove arrayinputs
+77cfd3e826 - Juste Raimbault, 10 weeks ago : [Plugin] NetLogoTask : fix
+5e5af62a27 - Juste Raimbault, 10 weeks ago : [Plugin] NetLogo task : native variable setting ; array inputs
+9db9b6e724 - Romain Reuillon, 10 weeks ago : [Plugin] enh: implement reuse workspace for netlogo task.
+944b62e786 - Romain Reuillon, 10 weeks ago : [Plugin] enh: simplify pooling.
+04eed14a19 - Romain Reuillon, 10 weeks ago : [Plugin] fix: cache for the RTask
+e1110197a8 - Romain Reuillon, 10 weeks ago : [Plugin] enh: refactor output file managment for external tasks.
+8158f6a78d - Romain Reuillon, 10 weeks ago : [Plugin] enh: implement detail for failed job execution.
+ee9b2ecd9a - Romain Reuillon, 2 months ago : [Plugin] enh: move netlogo function to companion object.
+9bf85b5fcc - Romain Reuillon, 2 months ago : [Plugin] enh: add a unit test.
+ede8134a1b - Romain Reuillon, 2 months ago : [Plugin] fix: test compilation
+dc079e890d - Romain Reuillon, 2 months ago : [Plugin] enh: refactor netlogo task.
+6526716264 - Romain Reuillon, 2 months ago : [Plugin] fix: cache on a per task per execution basis.
+c2b0b21031 - Romain Reuillon, 3 months ago : [Plugin] enh: reformat code
+4b5e7a699d - Romain Reuillon, 3 months ago : [Plugin] fix: spelling
+4a2a0bd957 - Romain Reuillon, 3 months ago : [Plugin] enh: implement a method to deploy the netlogo workspace.
+8149ef7338 - Romain Reuillon, 3 months ago : [Plugin] enh: separated code for netlogo workspace deployment.
+962bdd7457 - Romain Reuillon, 3 months ago : [Core + Plugin] enh: improve external file managment and key value cache.
+3c96a7dc34 - Juste Raimbault, 3 months ago : [Plugin] RTask : cleaner code
+acf79b25bd - Juste Raimbault, 3 months ago : [Plugin] RTask : package version as option
+ea53e20bd0 - Romain Reuillon, 3 months ago : [Plugin] fix: wrap should be true by default.
+bdae0fdb5a - Romain Reuillon, 3 months ago : [Plugin] enh: add more case for parsing json.
+f64233eab5 - Mickaël Brasebin, 3 months ago : Adding an example to create OSGi bundle from maven plugin, adding a troobleshooting when using geotools
+721826ebcb - Romain Reuillon, 3 months ago : [Plugin] enh: add factory for evolution methods
+45b05b85e9 - Romain Reuillon, 3 months ago : [Plugin] enh: separate json serialisation code.
+769ee9c691 - Romain Reuillon, 3 months ago : [Plugin] enh: increase kill operation priority.
+b2fc1c8566 - Romain Reuillon, 3 months ago : [Plugin] enh: parallelize env cleaning.
+6c14eba47c - Romain Reuillon, 3 months ago : [Plugin] fix: log before the submission in case the submission fails.
+564031afa3 - Romain Reuillon, 3 months ago : [Plugin] enh: add logger for pbs jobs.
+ac6c6b3839 - Romain Reuillon, 3 months ago : [Plugin] enh: add force copy on node option for slurm.
+1dd8c08f1c - Romain Reuillon, 3 months ago : [Plugin] fix: mole task delegation
+c87ab3375d - Romain Reuillon, 3 months ago : [Plugin] enh: option to prevent wrapping the puzzle in a mole task.
+7f43e2cbba - Romain Reuillon, 3 months ago : Revert "[Plugin] enh: add wrap option"
+f0cf4706ca - Romain Reuillon, 3 months ago : [Plugin] enh: add wrap option
+de395826e1 - Mathieu, 3 months ago : [GUI] Remove plugin in case of loading error
+5ae471b176 - Mathieu, 4 months ago : [GUI] Deals with plugin add errors from model wizard
+824eb322a8 - Juste Raimbault, 4 months ago : [Plugins] RTask: fix package version
+e3a33b710a - Mathieu, 4 months ago : [GUI] Fix plugin panel errors
+2fd3018c1d - Mathieu, 4 months ago : [GUI] Add jar as plugin if they are a OSGI bundle
+67e0765b4a - Mathieu, 4 months ago : [GUI] Add Jar model plugin to wizards
+471af33d02 - Mathieu, 4 months ago : [Core] Added plugins and pluginsOf keywords
+dc4ad49cd3 - Romain Reuillon, 4 months ago : [Plugin] fix: update mgo.
+e289b830af - Romain Reuillon, 4 months ago : [Plugin] enh: implement sequence of enumeration genome.
+a52c577633 - Mathieu, 4 months ago : [GUI] Implements R wizard plugin and deals with empty specification plugins
+23ca6ba4a4 - Romain Reuillon, 4 months ago : [Plugin] enh: make sure the layers are distinct.
+e3ad2a3572 - Juste Raimbault, 4 months ago : [Plugins] RTask : test R version / libraries version
+4dbe283084 - Romain Reuillon, 4 months ago : [Plugin] fix: PSE from island.
+855a1a28d0 - Romain Reuillon, 4 months ago : [Plugin] fix: initialize individual going to an island in ose.
+d886b34290 - Romain Reuillon, 4 months ago : [Plugin] fix: ose discrete origin.
+4c62a0c521 - Mathieu, 4 months ago : [GUI] Implement Netlogo and Care wizard plugins
+86147b83fa - Romain Reuillon, 4 months ago : [Plugin] enh: add context argument to build an individual.
+026332c7de - Romain Reuillon, 4 months ago : [Plugin] enh: internalise niched nsga2.
+8774e6d89a - Romain Reuillon, 4 months ago : [Plugin] enh: intenalize the PSE with OpenMOLE specific individuals.
+da19de6497 - Romain Reuillon, 4 months ago : [Plugin] enh: support sequences.
+3ca527bd7f - Romain Reuillon, 4 months ago : [Plugin] enh: refactor to origin code.
+d88a0ed175 - Romain Reuillon, 4 months ago : [Plugin] enh: set the proxy env variable durring the installation process of the container.
+a823aa4690 - Romain Reuillon, 4 months ago : [Plugin] enh: add OSE to exported pattern name.
+355b444622 - Romain Reuillon, 4 months ago : [Plugin] enh: implement stochastic OSE.
+fe8dbea763 - Romain Reuillon, 4 months ago : [Plugin] fix: add island archive to population after island execution.
+7285fec6d3 - Romain Reuillon, 4 months ago : [Plugin] enh: first working version of OSE.
+f136ec8f43 - Romain Reuillon, 4 months ago : [Plugin] enh: set the proxy env variable durring the installation process of the container.
+6a5180bf2c - Romain Reuillon, 4 months ago : [Plugin] enh: implement noisy ose.
+58c1924b65 - Romain Reuillon, 4 months ago : [Plugin] enh: begin OSE integration.
+a54ee78e4e - Romain Reuillon, 4 months ago : [Plugin] fix: explicitely set inputs and outputs of the mole task.
+146127f703 - Romain Reuillon, 4 months ago : [Plugin] enh: remove check exists.
+18a6e1cb8b - Romain Reuillon, 4 months ago : [Plugin] fix: capture only netlogo runtime errors.
+f17ac4ace5 - Romain Reuillon, 5 months ago : [Plugin] fix: add after upload existance test.
+7b37548811 - Romain Reuillon, 5 months ago : [Plugin] enh: add filter task.
+8780eb0545 - Romain Reuillon, 5 months ago : [Plugin] enh: improve error when the VO name is unproperly spelled.
+60c3a0c1af - Romain Reuillon, 5 months ago : [Plugin] enh: implement a bash mode for system exec task.
+0d31434bdb - Romain Reuillon, 5 months ago : [Plugin] fix: as keyword is finally not a good idea.
+988a1b14fb - Romain Reuillon, 5 months ago : [Plugin] enh: support compressed containers images.
+9a7cae8a47 - Romain Reuillon, 5 months ago : [Plugin] enh: add keyword for inputFiles, resources...
+86a500825e - Romain Reuillon, 5 months ago : [Plugin] fix: extends ulimit for opened files.
+6cffed228b - Romain Reuillon, 5 months ago : [Plugin] enh: add as keyword.
+73b15d1d6b - Romain Reuillon, 5 months ago : [Plugin] enh: use as to rename resources and files.
+33a369772d - Jonathan Passerat-Palmbach, 5 months ago : [Plugins] [SSH] fix: update careless PATH set by Romain so that OM JRE is used by default on remote node
+568f0c360d - Jonathan Passerat-Palmbach, 5 months ago : [Plugins] [SSH+EGI] fix: make sure envplugins folder creation doesn't fail if exists
+4cc847ada0 - Romain Reuillon, 5 months ago : [Plugin] enh: merge builder functions for evolution methods.
+a203ff50a1 - Romain Reuillon, 5 months ago : [Plugin] fix: fix a bug introduced (on purpose !?) by Jo... One more time :)
+98b5ce812a - Romain Reuillon, 5 months ago : [Plugin] fix: fix a bug introduced (on purpose !?) by Jo... One more time :)
+bbc02bceba - Romain Reuillon, 5 months ago : [Plugin] enh: remove deprecated code.
+5953a58287 - Romain Reuillon, 5 months ago : [Plugin] reformat
+9fcc62cdbc - Romain Reuillon, 5 months ago : [Plugin] enh: add option to ignore error durring netlogo model execution.
+4e391082cd - Romain Reuillon, 5 months ago : [Plugin] enh: estimate size base on archived directory.
+06a81d3405 - Jonathan Passerat-Palmbach, 5 months ago : [Plugin] [UDocker] fix: check symlink validity in repos
+bfd54e9404 - Romain Reuillon, 6 months ago : [Plugin] fix: test all vomses.
+f3db9c97b6 - Romain Reuillon, 6 months ago : [Core + plugin] enh: refactor the mole execution state logic, refactor the workflow dsl, refactor the genome in evolution.
+cf0589cbed - Romain Reuillon, 6 months ago : [Plugin] fix: bug in result computation.
+6d5ff8b504 - Romain Reuillon, 6 months ago : [Plugin] fix: test
+ed575e72ac - Romain Reuillon, 6 months ago : [Plugin] enh: lower eager submission parameters.
+5edd50ae1c - Romain Reuillon, 6 months ago : [Plugin] fix: don't sample several times the same individual.
+7197d931a0 - Romain Reuillon, 6 months ago : [Plugin] enh: rename parameter.
+5203bf3489 - Romain Reuillon, 6 months ago : [Plugin] enh: improve hit mapping with island for pse.
+a2be91b400 - Romain Reuillon, 6 months ago : [Plugin] enh: remove empty line.
+cb0a4e1b52 - Mathieu, 6 months ago : [Core] Add plugin keywords
+3594a06eb3 - Romain Reuillon, 6 months ago : [Plugin] fix: use synchronized instead of stm.
+ce96e10f44 - Romain Reuillon, 6 months ago : [Plugin] fix: use debian stable to make the RTask run on EGI WN.
+7ce1b5da7b - Romain Reuillon, 6 months ago : [Plugin] enh: reduce memory footprint
+41b7f64e40 - Mathieu, 6 months ago : [GUI] Update openmole grammar highlighting after plugin start
+3106df0bde - Romain Reuillon, 6 months ago : [Plugin] fix: use previous r-base image to avoid kernel to old.
+2b1cef9a8e - Romain Reuillon, 6 months ago : [Plugin] enh: fix age to 0 when sending to island.
+cab6e3e0f6 - Romain Reuillon, 6 months ago : [Plugin] enh: name task.
+923a468e09 - Romain Reuillon, 6 months ago : [Plugin] enh: use array to store the population.
+67c6933450 - Romain Reuillon, 6 months ago : [Plugin] fix: fix concurent modification exception.
+7ff2e9a01e - Mathieu, 6 months ago : Use scalajs-execnpm plugin
+0dd12f5c28 - Romain Reuillon, 6 months ago : [Plugin] enh: check the presence of the resources durring validation.
+28d67d4f24 - Romain Reuillon, 6 months ago : [Plugin] fix: fix R deserialisation.
+ad67202dd3 - Romain Reuillon, 6 months ago : [Plugin] enh: muByNiche -> nicheSize.
+025f65a16c - Romain Reuillon, 6 months ago : [Plugin] enh: update udocker.
+71c0430b00 - Romain Reuillon, 7 months ago : [Plugin] enh: remove superflous imports.
+0c4d0956d7 - Romain Reuillon, 7 months ago : [Plugin] enh: simplify mgo integration typeclass.
+63886ef3e1 - Romain Reuillon, 7 months ago : [Plugin] enh: code formating.
+28c26f430a - Romain Reuillon, 7 months ago : [Plugin] fix: stop environment should be of the highest priority.
+db3db05c88 - Romain Reuillon, 7 months ago : [Plugin] enh: factorize from island, to island.
+504c989c92 - Romain Reuillon, 7 months ago : [Plugin] enh: improve niche specification.
+71b5e339e5 - Romain Reuillon, 7 months ago : [Plugin] enh: sequence of commands.
+2050432310 - Romain Reuillon, 7 months ago : [Plugin] fix: block parsing of special chars in udocker command.
+2338734ac8 - Romain Reuillon, 7 months ago : [Plugin] enh: support tag in implicit conversion.
+85f5ea5f84 - Romain Reuillon, 7 months ago : [Plugin] fix: reduce CPU usage durring layers download.
+e8f79bbb5e - Romain Reuillon, 7 months ago : [Plugin] enh: make the udocker task work offline.
+f19cdded35 - Romain Reuillon, 7 months ago : [Plugin] enh: enable the installation cache at the udocker task level.
+96594ac7a6 - Romain Reuillon, 7 months ago : [Plugin] enh: alias for UDockerTask.
+26e5955054 - Romain Reuillon, 7 months ago : [Plugin] enh: pass more config in constructor argument to limit keywords usage.
+cf1fa9c52f - Romain Reuillon, 7 months ago : [Plugin] fix: deserialization when there is only one array value.
+f1885153da - Romain Reuillon, 7 months ago : [Plugin] fix: fromJSON betters handles array of values.
+4ce0be76c6 - Romain Reuillon, 7 months ago : [Plugin] fix: write enumeration output.
+b71a005a92 - Romain Reuillon, 7 months ago : [Plugin] enh: add temporary dsl.
+1b0137df19 - Romain Reuillon, 7 months ago : [Plugin] enh: move niched NSGA2 in a separate file.
+c523264a13 - Romain Reuillon, 7 months ago : [Plugin] enh: separate niched nsga2 and profile.
+bf4094070b - Romain Reuillon, 7 months ago : [Plugin] enh: list keywords for environments.
+d4b9925a6a - Romain Reuillon, 7 months ago : [Plugin] enh: list keywords for domains.
+8c114e9776 - Romain Reuillon, 7 months ago : [Plugin] enh: add list of arguments of resources keyword.
+d2c954cfc2 - Romain Reuillon, 7 months ago : [Plugin] enh: refactor deserialisation function.
+6b85b9d30f - Romain Reuillon, 7 months ago : [Plugin] enh: support 2-dimensional arrays.
+808028bbf1 - Romain Reuillon, 7 months ago : [Plugin] fix: support array.
+c3de36be46 - Romain Reuillon, 7 months ago : [Plugin] enh: use constructor arguments.
+553d586ce5 - Romain Reuillon, 7 months ago : [Plugin] fix: make the json parsing more tolerant.
+125ed706a7 - Romain Reuillon, 7 months ago : [Plugin] enh: use constructor arguments instead of keywords.
+f7dd0cb283 - Romain Reuillon, 7 months ago : [Plugin] fix: force update optiion
+5cdff05db7 - Romain Reuillon, 7 months ago : [Plugin] enh: implement support for native installation commands.
+eab37f501e - Romain Reuillon, 7 months ago : [Plugin] enh: use library instead of require.
+cd2f32e776 - Romain Reuillon, 7 months ago : [Plugin] enh: use uncommon names for files and variable injected by openmole.
+d641c47eb9 - Romain Reuillon, 7 months ago : [Plugin] enh: implement R output variable mapping.
+8fa61b0385 - Romain Reuillon, 7 months ago : [Plugin] enh: map openmole inputs to R Task.
+4e42688d92 - Romain Reuillon, 7 months ago : [Plugin] enh: generate UDockerTask within the RTask.
+b81a9e4973 - Romain Reuillon, 7 months ago : [Plugin] enh: add force update option to RTask.
+436179143d - Romain Reuillon, 7 months ago : [Plugin] fix: install command implicit conversion.
+4accdd7b69 - Romain Reuillon, 7 months ago : [Plugin] fix: reduce memomy usage of error managment.
+c33886669d - Romain Reuillon, 7 months ago : [Plugin] enh: implement caching for lib installation in RTask.
+10388ad0e5 - Romain Reuillon, 7 months ago : [Plugin] fix: avoid scaling the input twice.
+5a00bf2c1e - Romain Reuillon, 7 months ago : [Plugin] enh: add discrete and hybrid profile.
+18260bb312 - Romain Reuillon, 8 months ago : [Plugin] enh: add generation in result file.
+f1a5263f99 - Romain Reuillon, 8 months ago : [Plugin] enh: implement mixed discrete continous optimisation.
+be998afade - Romain Reuillon, 8 months ago : [Plugin] fix: concurent modification exception.
+2057e067f5 - Romain Reuillon, 8 months ago : [Plugin] fix: chain causing error.
+2d7ef50c00 - Romain Reuillon, 8 months ago : [Plugin] enh: simplify eager submission code.
+8736b6e341 - Romain Reuillon, 8 months ago : [Doc] enh: remove useless plugin page.
+4ed925d548 - Romain Reuillon, 8 months ago : [Doc] fix: deduplicate plugin page.
+5e460283c2 - Romain Reuillon, 8 months ago : [Doc] fix: plugin doc.
+10d378d374 - Romain Reuillon, 8 months ago : [Doc] Fix plugin doc.
+95ddb72e56 - Romain Reuillon, 9 months ago : [Plugin] enh: add debug info by default.
+c4ac94092b - Romain Reuillon, 9 months ago : [Plugin] fix: remove useless code
+33acc45947 - Romain Reuillon, 9 months ago : [Plugin] fix: typo
+6cf420fe15 - Romain Reuillon, 9 months ago : [Plugin] fix token leak
+79d824e1a7 - Romain Reuillon, 9 months ago : [Plugin] fix: add missing proxy delegation.
+b2e9048f06 - Romain Reuillon, 9 months ago : [Plugin] make variable lazy
+8d5bc69999 - Romain Reuillon, 9 months ago : [Plugin] use fixed renewal time for token.
+98aaeb077b - Romain Reuillon, 9 months ago : [Plugin] enh: use fixed update interval for the grid.
+34aa6558ca - Romain Reuillon, 9 months ago : [Plugin] fix: dont display output on create.
+8e517d74b0 - Romain Reuillon, 9 months ago : [Plugin] fix: infinite loop on running commands.
+43e85f18eb - Romain Reuillon, 9 months ago : [Plugin] fix: remove the file if upload fails.
+c46b0b49ec - Romain Reuillon, 9 months ago : [Plugin] enh: make it possible to multiplex output steam of processes.
+bb0528a64d - Romain Reuillon, 9 months ago : [Docker] add write persmission in /workspace, for some cluncky eclipse plugins.
+2b3e548bf8 - Romain Reuillon, 9 months ago : [Plugin] fix: don't display workDir.
+5978e8ce6a - Romain Reuillon, 9 months ago : [Plugin] enh: clean display of directory content
+7328554812 - Romain Reuillon, 9 months ago : [Plugin] fix: transmit inputs to aggregation task.
+8bd9cbda14 - Romain Reuillon, 9 months ago : [Plugin] pass parameter stdout and stderr.
+6ae4b93dc4 - Romain Reuillon, 9 months ago : [Plugin] enh: simplify execute all.
+94fb3ac237 - Romain Reuillon, 9 months ago : [Plugin] functionnal version of the RTask
+8a831b629b - Romain Reuillon, 9 months ago : [Plugin] fix: use strainer capsule instead of using the default values of the subsequent task.
+2cafe03730 - Romain Reuillon, 9 months ago : [Plugin] enh: run install commands on the local system (sadely I had to disable seccomp by default).
+7003a271eb - Romain Reuillon, 9 months ago : [Plugin] fix: compilation
+377eb5a03d - Romain Reuillon, 9 months ago : [Plugin] enh: better separate concerns
+f29561a07e - Romain Reuillon, 9 months ago : [Plugin] fix: compilation.
+35deee259e - Romain Reuillon, 9 months ago : [Plugin] enh: create udocker namespace.
+364f271428 - Romain Reuillon, 9 months ago : [Plugin] enh: extract some function from withing udocker task.
+2eec3220b5 - Romain Reuillon, 9 months ago : [Plugin] enh: download the layers in parallel.
+880637dfa4 - Romain Reuillon, 9 months ago : [Plugin] enh: update udocker enh: update udocker
+59f1c23348 - Romain Reuillon, 9 months ago : [Plugin] enh: Reformat
+265754c307 - Romain Reuillon, 9 months ago : [Plugin] fix modules compilation
+1efa252957 - Romain Reuillon, 9 months ago : [Plugin] fix: compilation and remove sshd dependency.
+3d0cb2b00e - Romain Reuillon, 9 months ago : [Plugin] implement condor.
+95e5bdaf1d - Romain Reuillon, 9 months ago : [Plugin] implement slurm
+301d40b31f - Romain Reuillon, 9 months ago : [Plugin] implement sge.
+8aca2698db - Romain Reuillon, 9 months ago : [Plugin] implement pbs env
+0c66b8a778 - Romain Reuillon, 9 months ago : [Plugin] remove useless files.
+c163bf19c5 - Romain Reuillon, 9 months ago : [Plugin] enh: implemeent eager submission agent.
+9bff184693 - Romain Reuillon, 9 months ago : [Plugin] fix: recursive call in curl remote storage.
+497982f5fb - Romain Reuillon, 9 months ago : [Plugin] fix: add constructor for egi env, fix curl remote url, add missing dep
+9ad62c5063 - Romain Reuillon, 9 months ago : [Plugin] enh: egi is implemented.
+1c2a0a8723 - Romain Reuillon, 9 months ago : [Plugin] enh: implement storage interface for webdav.
+118efa6e02 - Romain Reuillon, 10 months ago : [Plugin] enh: enable egi gui plugin.
+cde0536e59 - Romain Reuillon, 10 months ago : [Plugin] feat: implement proxy creation.
+b9d864a565 - Romain Reuillon, 10 months ago : [Plugin] fix: download CA certificates
+6e40ad8a32 - Romain Reuillon, 10 months ago : [Plugin] feat: port download CA certificates with new gridscale version
+96c0b4e1fe - Romain Reuillon, 10 months ago : [Plugin] fix: stop all operations before closing the ssh connection.
+38b38fa544 - Romain Reuillon, 10 months ago : [Plugin] enh: implement local submission for oar.
+459a669613 - Romain Reuillon, 10 months ago : [Plugin] fix: add missing outputs.
+055f8e19cc - Romain Reuillon, 10 months ago : [Plugin] fix: naming.
+16137ab7d8 - Romain Reuillon, 10 months ago : [Plugin] enh: implement saltelli sampling.
+ac32d1d52e - Romain Reuillon, 10 months ago : [Plugin] enh: group OAREnvironment parameters in a case class.
+d19dfc8068 - Romain Reuillon, 10 months ago : [Plugin] enh: abstract over frontend.
+26f47e50d8 - Romain Reuillon, 11 months ago : [Plugin] enh: implement oar cluster.
+e876e8b873 - Romain Reuillon, 11 months ago : [Plugin] enh: implement a function to create a ssh storage.
+d91ffe1124 - Romain Reuillon, 11 months ago : [Plugin] enh: get rid of commented code and enable storage garbage collector.
+82ba4ab37a - Romain Reuillon, 11 months ago : [Plugin] enh: implement locally shared storage.
+48967884b4 - Romain Reuillon, 11 months ago : [Plugin] enh: shorter update intervar for ssh jobs.
+5fd8458548 - Romain Reuillon, 11 months ago : [Plugin] enh: generify ssh storage.
+8ce3449d00 - Romain Reuillon, 11 months ago : [Plugin + doc] enh: document the vector of values in LHS and extend it to Sobol.
+cb3c3f5ea2 - Romain Reuillon, 11 months ago : [Plugin] fix: keep from blowing up the stack.
+0fb31e7d56 - Romain Reuillon, 11 months ago : [Plugin] fix: fix default header when array are stored on a single line.
+1dd76a75f2 - Romain Reuillon, 11 months ago : [Plugin] enh:  create domain bounds plugin.
+835d48a85a - Romain Reuillon, 11 months ago : [Plugin] fix: lhs inputs.
+5d7fb07e27 - Romain Reuillon, 11 months ago : [Plugin] enh: code format.
+7a2d4c3f1b - Romain Reuillon, 11 months ago : [Plugin] fix: filter variables in datachanel.
+3c7d0486c8 - Romain Reuillon, 11 months ago : [Plugin] fix: remove println.
+1bb2a6a746 - Romain Reuillon, 11 months ago : [Plugin] fix: apache command line parser is bugged, try to roll our own.
+d713c2a49f - Romain Reuillon, 11 months ago : [Plugin] fix: order of character in output.
+96be88ab62 - Romain Reuillon, 11 months ago : [Runtime] fix: make sure plugin have a .jar extension.
+f8681d8849 - Romain Reuillon, 11 months ago : [Runtime] enh: list plugins in debug mode.
+b353310f82 - Romain Reuillon, 11 months ago : [Plugin] add: provide withThreadClassLoader for the scala task.
+44e403b68f - Romain Reuillon, 11 months ago : [Plugin] fix: layer and history order.
+43ffe96e35 - Romain Reuillon, 11 months ago : [Plugin] fix: forceibly destroy the process in case of error.
+3970acbdc4 - Romain Reuillon, 11 months ago : [Plugin] enh: pass image location as parameter.
+0f3a9797eb - Romain Reuillon, 11 months ago : [Plugin] fix: udocker user name parameter usage.
+d97ef07e80 - Romain Reuillon, 11 months ago : [Plugin] fix: use optional argument.
+fc7fa4dd99 - Romain Reuillon, 12 months ago : [Plugin] fix: multiple HostFiles typeclasses.
+a7e2514bd2 - Romain Reuillon, 1 year, 1 month ago : [Plugin] fix: compile with new transition api.
+ea7c665628 - Romain Reuillon, 1 year, 1 month ago : [Plugin] enh: use lazy val for env plugins.
+4fc8ff28bc - Romain Reuillon, 1 year, 1 month ago : [Plugin] fix: wierd merge pb.
+59153c3626 - Romain Reuillon, 1 year, 1 month ago : [Plugin] fix: store bundle cache in env.
+1033bafd86 - Romain Reuillon, 1 year, 1 month ago : [Plugin] enh: start the eager submission agent with the env.
+158bceb7d5 - Romain Reuillon, 1 year, 1 month ago : [Plugin] enh: start job watcher with env.
+3654465b57 - Romain Reuillon, 1 year, 1 month ago : [Plugin] enh: start and stop ssh submission thread with env.
+a49ac4a70a - Romain Reuillon, 1 year, 1 month ago : [Plugin] enh: kill jobs when the environment is stopped.
+0081c849e5 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: move downloadLayer to Registry
+bd9ae47006 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker+RTask] fix: process error as exception
+6c46354b13 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: handle errors in loadImage from tar archive
+63dbabbfa2 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] fix: remove jawn from exports in OSGi bundle
+b5f29191a4 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] fix: create repo on execution node
+d99e44ee34 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [SystemExec] enh: improve command line parser tests
+d76edb0641 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: handle errors in download
+c67e2bb08c - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: limit container names to 10 characters
+7639b59b07 - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: move MGOAPI in workflow integration file.
+10ba45c2aa - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: implement mgo typeclass for openmole integration in openmole.
+778ec1871f - Romain Reuillon, 1 year, 2 months ago : [Plugin] add: sequence pattern.
+82f1538cd3 - Romain Reuillon, 1 year, 2 months ago : [Plugin] fix: update udocker.
+88ac0739bd - Romain Reuillon, 1 year, 2 months ago : [Plugin] fix: reimplement command line parsing (because we can and also because apache exec is buggy).
+8dfb595554 - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: implement RScriptTask.
+a7005fca8d - Romain Reuillon, 1 year, 2 months ago : [Core + plugin] enh: add lock repository service, externalise install udocker function.
+f67e9c7dd7 - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: start to separate udocker logic from udocker task.
+7c7f6a89ad - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: make arguments optional.
+9f02300759 - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: add R libs parameter.
+091d272606 - Romain Reuillon, 1 year, 2 months ago : [Plugin] enh: implement RTask.
+7602a4d36f - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] fix: save one move for extracted layers => go straight to persistent
+0f6e379e52 - Romain Reuillon, 1 year, 2 months ago : [Plugin] fix: beginer try finally mistake, I guess that some people (namely jo) never learn ;)
+653e3a0eb4 - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: avoid moving files from extracted archive to temp dir if not necessary
+58cd7012de - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: refactor
+1e5a99bdfd - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] enh: finish off json4s
+6f7daa1adc - Jonathan Passerat-Palmbach, 1 year, 2 months ago : [Plugins] [UDocker] fix: load config when pulling from docker hub
+601b181c93 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: lock dir when building repo into persistent
+b6569767b6 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: refactor environment variables
+c9aabf74b7 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: tarball and exe copy from resources in multi-thread mode. (also fix leak from @romainreuillon unclosed resource...)
+8c984b9abf - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: refactor buildRepoV2 to be called from both strategies
+bb64e2eed1 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: Move repos and layers to persistent when extracting from archive
+ed17ecb1d0 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: extract image manifest to proper case class
+134a7c212f - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: typos and scalariform
+1fa640b694 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: disable caching in non reuse mode
+ed9a1fa544 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [Systemexec] enh: mark executeAll as tail recursive
+254da0c21d - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: minor bugs in container creation
+6ed51cbec7 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: first working version of local image reconstruction
+767f3b4a22 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: refine data model (swap some options to default values)
+4abd3cc9ca - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: implement Date decoders for circe
+e8eecd577c - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: prepare for json4s removal
+08340ad214 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] add: Circe JSON library (bump cats version to satisfy dependency)
+9764277f72 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: delete temp files in tests
+245c4f883c - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix: correctly build metadata with docker image / container
+61ac07927e - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] enh: replace information extraction with validated case classes
+24116d7358 - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] [UDocker] fix+enh: Fix config extraction and start implementing fields validation
+457b22d84b - Jonathan Passerat-Palmbach, 1 year, 3 months ago : [Plugins] add: case class representing Docker metadata

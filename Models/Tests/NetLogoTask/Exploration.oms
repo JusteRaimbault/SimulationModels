@@ -1,0 +1,78 @@
+import java.util.Date
+import java.text.SimpleDateFormat
+
+logger.level("FINE")
+
+
+
+val turtles = Val[Double]
+val radius = Val[Double]
+val bool = Val[Boolean]
+
+val randomRadiuses = Val[Array[Array[Double]]]
+
+val density = Val[Double]
+
+val replication = Val[Int]
+
+val long = Val[Long]
+val float = Val[Float]
+
+val name = Val[String]
+
+val f = Val[File]
+
+val arrayOutput = Val[Array[Array[Array[Double]]]]
+//val arrayOutput = Val[Array[Double]]
+
+val booloutput = Val[Boolean]
+
+val cmds = List("setup","run-experiment")
+
+val model = NetLogo6Task(workDirectory / "randomwalk_nl6.nlogo", cmds,embedWorkspace=true,seed=replication) set(
+//val model = NetLogo5Task(workDirectory / "randomwalk.nlogo", cmds,embedWorkspace=true,seed=replication) set(
+  inputs += (turtles,radius,replication,name,f,long,float),
+  outputs += (turtles,radius,replication),
+  netLogoInputs += (turtles,"#-turtles"),
+  netLogoInputs += (radius,"density-radius"),
+  netLogoInputs += (randomRadiuses,"random-radiuses"),
+  netLogoInputs += (long,"long"),
+  netLogoInputs += (name,"name"),
+  netLogoInputs += (f,"filename"),
+  netLogoInputs += (float,"float"),
+  inputs += bool mapped "bool" ,
+  //netLogoOutputs += ("avg-density",density),
+  netLogoOutputs += ("list-list-reporter",arrayOutput),
+  //outputs += arrayOutput mapped "list-list-reporter",
+  outputs += booloutput mapped "booloutput"
+  name := "test",
+  f := workDirectory / "file.csv",
+  long := 1L,
+  float := 1.0f
+)
+
+val purpose = "TEST"
+
+val indics_hook = AppendToCSVFileHook(workDirectory / "exploration" / ((new SimpleDateFormat("yyyyMMdd_HHmmss")).format(new Date()))+"_"+purpose+".csv")
+
+val env = LocalEnvironment(4)
+
+val replications =
+ Replication (
+   evaluation = model on env,
+   seed = replication,
+   replications = 2
+)
+
+val exploration =
+  DirectSampling(
+    evaluation = replications hook ToS//indics_hook,
+    sampling = LHS(
+      2,
+      turtles in Range(100.0,500.0),
+      radius in Range(0.1,10.0)
+    ) x (randomRadiuses is Array(Array(1.0,2.0),Array(5.0,10.0))) x (bool in Seq(true,false))
+  )
+
+
+exploration

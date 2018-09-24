@@ -1,0 +1,73 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
+logger.level("FINE")
+
+// Inputs
+val greenRatio = Val[Double]
+val redRatio = Val[Double]
+val similarWanted = Val[Double]
+
+val grid = Val[Array[Array[Double]]]
+
+val seed = Val[Long]
+
+// Outputs
+val step = Val[Double]
+val unsatisfiedRatio = Val[Double]
+val dissimilarity = Val[Double]
+val moranRed = Val[Double]
+val moranGreen = Val[Double]
+val entropy = Val[Double]
+val exposureRedGreen = Val[Double]
+val exposureGreenRed = Val[Double]
+val isolationRed = Val[Double]
+val isolationGreen = Val[Double]
+val deltaRed = Val[Double]
+val deltaGreen = Val[Double]
+
+//setup-experiment [greenratio redratio similarwanted setuptype configfile
+val cmds = Seq("setup-experiment ${greenRatio} ${redRatio} ${similarWanted} 3 0","run-experiment")
+
+
+val model =
+NetLogo5Task(workDirectory / "HEADLESS_Schelling.nlogo",cmds,embedWorkspace = true) set(
+  inputs += (greenRatio, redRatio, similarWanted, seed),
+  outputs += (greenRatio, redRatio, similarWanted, seed),
+  netLogoArrayInputs += (grid,"setup-grid-array"),
+  netLogoOutputs += ("final-step", step),
+  netLogoOutputs += ("unsatisfied-rate", unsatisfiedRatio),
+  netLogoOutputs += ("dissimilarity", dissimilarity),
+  netLogoOutputs += ("moran-red", moranRed),
+  netLogoOutputs += ("moran-green", moranGreen),
+  netLogoOutputs += ("segregation-entropy", entropy),
+  netLogoOutputs += ("exposure-red-green", exposureRedGreen),
+  netLogoOutputs += ("exposure-green-red", exposureGreenRed),
+  netLogoOutputs += ("isolation-red", isolationRed),
+  netLogoOutputs += ("isolation-green", isolationGreen),
+  netLogoOutputs += ("delta-red", deltaRed),
+  netLogoOutputs += ("delta-green", deltaGreen)
+)
+
+
+val explo = ExplorationTask (
+      LHS (
+        1,
+        greenRatio in Range(0.0, 1.0),
+        redRatio in Range(0.0, 1.0),
+        similarWanted in Range(0.0, 1.0)
+      ).filter("greenRatio + redRatio < 0.98") x (seed in UniformDistribution[Long]() take 2)
+      x ExponentialMixtureSpatialSampling(4,20,grid,centersNumber = 3)
+)
+
+
+val purpose = "SPATIALSAMPLING"
+
+val indicsoutput = AppendToCSVFileHook(workDirectory / "exploration" / ((new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss")).format(new Date()))+"_"+purpose+".csv")
+
+val local = LocalEnvironment(4)
+//val grid = EGIEnvironment("vo.complex-systems.eu", openMOLEMemory = 2400 megabytes)
+
+
+//explo -< (model on grid by 50 hook indicsoutput)
+explo -< (model on local hook indicsoutput)

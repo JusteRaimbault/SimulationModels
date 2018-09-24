@@ -1,6 +1,63 @@
 % Encoding: UTF-8
 
 
+@ARTICLE{2010arXiv1006.3056Y,
+   author = {{Yu}, G. and {Sapiro}, G. and {Mallat}, S.},
+    title = "{Solving Inverse Problems with Piecewise Linear Estimators: From Gaussian Mixture Models to Structured Sparsity}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1006.3056},
+ primaryClass = "cs.CV",
+ keywords = {Computer Science - Computer Vision and Pattern Recognition},
+     year = 2010,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2010arXiv1006.3056Y},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+    file={Docs/InverseProblem/1006.3056.pdf}
+}
+
+
+
+
+
+
+@ARTICLE{2018arXiv180605843C,
+   author = {{Croix}, J.-C. and {Durrande}, N. and {Alvarez}, M.},
+    title = "{Bayesian inversion of a diffusion evolution equation with application to Biology}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1806.05843},
+ primaryClass = "math.NA",
+ keywords = {Mathematics - Numerical Analysis, Physics - Data Analysis, Statistics and Probability, Quantitative Biology - Quantitative Methods},
+     year = 2018,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2018arXiv180605843C},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+   file={Docs/InverseProblem/1806.05843.pdf}
+}
+
+
+
+@INPROCEEDINGS{2017JPhCS.921a2001M,
+   author = {{Murase}, Y. and {Uchitane}, T. and {Ito}, N.},
+    title = "{An open-source job management framework for parameter-space exploration: OACIS}",
+booktitle = {Journal of Physics Conference Series},
+     year = 2017,
+   series = {Journal of Physics Conference Series},
+   volume = 921,
+archivePrefix = "arXiv",
+   eprint = {1805.00438},
+ primaryClass = "cs.CY",
+    month = nov,
+      eid = {012001},
+    pages = {012001},
+      doi = {10.1088/1742-6596/921/1/012001},
+   adsurl = {http://adsabs.harvard.edu/abs/2017JPhCS.921a2001M},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+  file={Docs/Frameworks/1805.00438.pdf}
+}
+
+
 @article{munoz2015exploratory,
   title={Exploratory landscape analysis of continuous space optimization problems using information content},
   author={Mu{\~n}oz, Mario A and Kirley, Michael and Halgamuge, Saman K},
@@ -465,6 +522,273 @@
   groups  = {Luti},
 }
 
+@Article{2018arXiv180610228M,
+  author        = {{Masuda}, N. and {Sakaki}, M. and {Ezaki}, T. and {Watanabe}, T.},
+  title         = {{Clustering coefficients for correlation networks}},
+  journal       = {ArXiv e-prints},
+  year          = {2018},
+  month         = jun,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2018arXiv180610228M},
+  archiveprefix = {arXiv},
+  eprint        = {1806.10228},
+  file          = {:Docs/CorrelatedSyntheticData/1806.10228.pdf:PDF},
+  groups        = {CorrelatedSyntheticData},
+  keywords      = {Physics - Physics and Society, Quantitative Biology - Neurons and Cognition},
+  primaryclass  = {physics.soc-ph},
+}
+
+@Article{2018arXiv180608709M,
+  author        = {{Masuda}, N. and {Kojaku}, S. and {Sano}, Y.},
+  title         = {{A configuration model for correlation matrices}},
+  journal       = {ArXiv e-prints},
+  year          = {2018},
+  month         = jun,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2018arXiv180608709M},
+  archiveprefix = {arXiv},
+  eprint        = {1806.08709},
+  file          = {:Docs/CorrelatedSyntheticData/1806.08709.pdf:PDF},
+  groups        = {CorrelatedSyntheticData},
+  keywords      = {Physics - Physics and Society, Computer Science - Social and Information Networks},
+  primaryclass  = {physics.soc-ph},
+}
+
+@InProceedings{sargent2009verification,
+  author       = {Sargent, Robert G},
+  title        = {Verification and validation of simulation models},
+  booktitle    = {Simulation Conference (WSC), Proceedings of the 2009 Winter},
+  year         = {2009},
+  pages        = {162--176},
+  organization = {IEEE},
+  file         = {:Docs/ModelValidation/Verification And Validation Of Simulation Models.pdf:PDF},
+  groups       = {ModelValidation},
+}
+
+@Article{crosetto2001uncertainty,
+  author    = {Crosetto, Michele and Tarantola, Stefano},
+  title     = {Uncertainty and sensitivity analysis: tools for GIS-based model implementation},
+  journal   = {International Journal of Geographical Information Science},
+  year      = {2001},
+  volume    = {15},
+  number    = {5},
+  pages     = {415--437},
+  file      = {:Docs/SpatialSensitivity/Uncertainty and sensitivity analysis tools for GIS based model implementation.pdf:PDF},
+  groups    = {SpatialSensitivity},
+  publisher = {Taylor \& Francis},
+}
+
+@Article{2018arXiv180610114B,
+  author        = {{Balister}, P. and {Song}, C. and {Riordan}, O. and {Bollobas}, B. and {Barabasi}, A.-L.},
+  title         = {{Topological Phase Transitions in Spatial Networks}},
+  journal       = {ArXiv e-prints},
+  year          = {2018},
+  month         = jun,
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {http://adsabs.harvard.edu/abs/2018arXiv180610114B},
+  archiveprefix = {arXiv},
+  eprint        = {1806.10114},
+  file          = {:Docs/SpatialNetworks/1806.10114v1.pdf:PDF},
+  groups        = {SpatialNetworks},
+  keywords      = {Physics - Physics and Society, Condensed Matter - Statistical Mechanics},
+  primaryclass  = {physics.soc-ph},
+}
+
+@Article{carrera2005inverse,
+  author    = {Carrera, Jesus and Alcolea, Andres and Medina, Agust{\'\i}n and Hidalgo, Juan and Slooten, Luit J},
+  title     = {Inverse problem in hydrogeology},
+  journal   = {Hydrogeology journal},
+  year      = {2005},
+  volume    = {13},
+  number    = {1},
+  pages     = {206--222},
+  file      = {:Docs/InverseProblem/Carrera2005_Article_InverseProblemInHydrogeology.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {Springer},
+}
+
+@Article{croix2018bayesian,
+  author  = {Croix, Jean-Charles and Durrande, Nicolas and Alvarez, Mauricio},
+  title   = {Bayesian inversion of a diffusion evolution equation with application to Biology},
+  journal = {arXiv preprint arXiv:1806.05843},
+  year    = {2018},
+  file    = {:Docs/InverseProblem/1806.05843.pdf:PDF},
+  groups  = {InverseProblem},
+}
+
+@Article{trabs2018bayesian,
+  author    = {Trabs, Mathias},
+  title     = {Bayesian inverse problems with unknown operators},
+  journal   = {Inverse Problems},
+  year      = {2018},
+  volume    = {34},
+  number    = {8},
+  pages     = {085001},
+  file      = {:Docs/InverseProblem/trabs2018.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@Article{yeh1986review,
+  author    = {Yeh, William W-G},
+  title     = {Review of parameter identification procedures in groundwater hydrology: The inverse problem},
+  journal   = {Water Resources Research},
+  year      = {1986},
+  volume    = {22},
+  number    = {2},
+  pages     = {95--108},
+  file      = {:Docs/InverseProblem/yeh1986.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {Wiley Online Library},
+}
+
+@Article{cristofol2006inverse,
+  author    = {Cristofol, Michel and Gaitan, Patricia and Ramoul, Hichem},
+  title     = {Inverse problems for a 2$\times$ 2 reaction--diffusion system using a Carleman estimate with one observation},
+  journal   = {Inverse Problems},
+  year      = {2006},
+  volume    = {22},
+  number    = {5},
+  pages     = {1561},
+  file      = {:Docs/InverseProblem/cristofol2006.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@Article{klibanov1992inverse,
+  author    = {Klibanov, Michael V},
+  title     = {Inverse problems and Carleman estimates},
+  journal   = {Inverse problems},
+  year      = {1992},
+  volume    = {8},
+  number    = {4},
+  pages     = {575},
+  file      = {:Docs/InverseProblem/klibanov1992.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@Article{mosegaard2002monte,
+  author    = {Mosegaard, Klaus and Sambridge, Malcolm},
+  title     = {Monte Carlo analysis of inverse problems},
+  journal   = {Inverse problems},
+  year      = {2002},
+  volume    = {18},
+  number    = {3},
+  pages     = {R29},
+  file      = {:Docs/InverseProblem/mosegaard2002.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@Article{beven2006manifesto,
+  author    = {Beven, Keith},
+  title     = {A manifesto for the equifinality thesis},
+  journal   = {Journal of hydrology},
+  year      = {2006},
+  volume    = {320},
+  number    = {1-2},
+  pages     = {18--36},
+  file      = {:Docs/InverseProblem/Manifesto12.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {Elsevier},
+}
+
+@Article{sambridge2001finding,
+  author    = {Sambridge, Malcolm},
+  title     = {Finding acceptable models in nonlinear inverse problems using a neighbourhood algorithm},
+  journal   = {Inverse Problems},
+  year      = {2001},
+  volume    = {17},
+  number    = {3},
+  pages     = {387},
+  file      = {:Docs/InverseProblem/NeighblorhoodAlgorithm_c6f5b7da4b87b5dd4364082fbbbdf4407b2e.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@Article{caffarelli2007constant,
+  author    = {Caffarelli, Luis A and Guan, Pengfei and Ma, Xi-Nan},
+  title     = {A constant rank theorem for solutions of fully nonlinear elliptic equations},
+  journal   = {Communications on Pure and Applied Mathematics: A Journal Issued by the Courant Institute of Mathematical Sciences},
+  year      = {2007},
+  volume    = {60},
+  number    = {12},
+  pages     = {1769--1791},
+  file      = {:Docs/InverseProblem/caffarelli2007.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {Wiley Online Library},
+}
+
+@Article{wald2018fast,
+  author    = {Wald, Anne},
+  title     = {A fast subspace optimization method for nonlinear inverse problems in Banach spaces with an application in parameter identification},
+  journal   = {Inverse Problems},
+  year      = {2018},
+  file      = {:Docs/InverseProblem/10.1088@1361-6420@aac8f3.pdf:PDF},
+  groups    = {InverseProblem},
+  publisher = {IOP Publishing},
+}
+
+@InProceedings{huo2014new,
+  author       = {Huo, Yudan and Cai, Zhihua and Gong, Wenyin and Liu, Qin},
+  title        = {A new adaptive Kalman filter by combining evolutionary algorithm and fuzzy inference system},
+  booktitle    = {Evolutionary Computation (CEC), 2014 IEEE Congress on},
+  year         = {2014},
+  pages        = {2893--2900},
+  organization = {IEEE},
+  file         = {:Docs/NoisyGA/huo2014.pdf:PDF},
+  groups       = {NoisyGA},
+}
+
+@Article{wu2010artificial,
+  author    = {Wu, Ning and Silva, Elisabete A},
+  title     = {Artificial intelligence solutions for urban land dynamics: a review},
+  journal   = {Journal of Planning Literature},
+  year      = {2010},
+  volume    = {24},
+  number    = {3},
+  pages     = {246--265},
+  file      = {:Docs/Luti/10.1177@0885412210361571.pdf:PDF},
+  groups    = {Luti},
+  publisher = {Sage Publications Sage CA: Los Angeles, CA},
+}
+
+@Article{jin2005evolutionary,
+  author    = {Jin, Yaochu and Branke, J{\"u}rgen},
+  title     = {Evolutionary optimization in uncertain environments-a survey},
+  journal   = {IEEE Transactions on evolutionary computation},
+  year      = {2005},
+  volume    = {9},
+  number    = {3},
+  pages     = {303--317},
+  file      = {:Docs/NoisyGA/JinBranke-TEVC05.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {IEEE},
+}
+
+@Article{ammu2013biogeography,
+  author  = {Ammu, PK and Sivakumar, KC and Rejimoan, R},
+  title   = {Biogeography-based optimization-a survey},
+  journal = {Int J Electron Comput Sci Eng},
+  year    = {2013},
+  volume  = {2},
+  number  = {1},
+  pages   = {154--160},
+  file    = {:Docs/BBO/1c19d0ac19aad0e2807eed56ba57f6d50612.pdf:PDF},
+  groups  = {BBO},
+}
+
+@InProceedings{rahnamayan2006opposition,
+  author    = {Rahnamayan, Shahryar and Tizhoosh, Hamid R and Salama, Magdy MA},
+  title     = {Opposition-Based Differential Evolution for Optimization of Noisy Problems.},
+  booktitle = {IEEE congress on evolutionary computation},
+  year      = {2006},
+  pages     = {1865--1872},
+  file      = {:Docs/DifferentialEvolution/Opposition-based_differential_evolution.pdf:PDF},
+  groups    = {DifferentialEvolution},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -481,4 +805,11 @@
 1 ExplicitGroup:TimeSeries\;0\;;
 1 ExplicitGroup:UrbanMorphogenesis\;0\;;
 1 ExplicitGroup:Luti\;0\;;
+1 ExplicitGroup:CorrelatedSyntheticData\;0\;;
+1 ExplicitGroup:ModelValidation\;0\;;
+1 ExplicitGroup:SpatialSensitivity\;0\;;
+1 ExplicitGroup:SpatialNetworks\;0\;;
+1 ExplicitGroup:InverseProblem\;0\;;
+1 ExplicitGroup:BBO\;0\;;
+1 ExplicitGroup:DifferentialEvolution\;0\;;
 }
