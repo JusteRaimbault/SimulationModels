@@ -1,3 +1,8 @@
 .tor_tmp
 launchtorpool.sh
 
+# large result files
+data/corpusreq_citnw.csv
+data/corpusreq_citnw_links.csv
+data/corpusreq_core.gml
+

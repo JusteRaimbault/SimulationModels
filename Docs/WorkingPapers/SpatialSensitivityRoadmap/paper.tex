@@ -1,11 +1,9 @@
 \input{header.tex}
 
 
-\title{A roadmap for spatial sensitivity analysis\bigskip\\
-\textit{Working Paper}
-}
-\author{\noun{Juste Raimbault}}
-\date{Date}
+\title{A roadmap for spatial sensitivity analysis}
+\author{}
+\date{}
 
 
 \maketitle
@@ -20,15 +18,54 @@
 
 
 
+
+%%%%%%%%%%%%
 \section{Introduction}
 
 
+\subsection{Sensitivity analysis methods}
+
+\cite{lilburne2009sensitivity} study how standard sensitivity analysis methods can be applied to spatial models, and show that Sobol sensitivity index is the most suited for such models. \cite{saint2010comparison} benchmark three sensitivity analysis techniques and also concludes that Sobol is better in reflecting changes in model behavior.
+
+In environmental science, multi-criteria decision analysis based on GIS has been tested for the sensitivity to weight \cite{chen2010spatial}.
+
+
+
+\subsection{Synthetic data}
+
+\cite{cottineau2017initial} suggest the use of synthetic data generation to test the sensitivity of simple agent-based models to their spatial initial configuration.
+
+\cite{obled1994sensitivity} combine observational data with a baseline model to understand to sensitivity of hydrographs to the spatial distribution of rainfall.
+
+Link with methods in geostatistics \cite{gotway2002combining}, since extrapolation can be understood as the generation of synthetic data.
+
+
+\subsection{Real data}
+
+\cite{Thomasetal2017} show that city boundary selection can have a significant impact on model behavior for Luti models.
+
+\cite{moderl2011spatial} sensitivity of infrastructure network to spatial distribution of hazards
 
 
 
 
 
-\section{Roadmap}
+
+%%%%%%%%%%%%%%
+\subsection{Literature mapping}
+
+% Initial corpus : keyword request + screening
+% "Spatial sensitivity analysis"
+% "Spatial synthetic data" -> bof
+% "Spatial noise" -> bof
+%
+
+
+
+
+
+%%%%%%%%%%%%
+\section{Methods}
 
 
 \subsection{General view}
@@ -40,7 +77,8 @@ Two global axis can be formulated:
 	\item The import and manipulation of real spatial data 
 \end{enumerate}
 
-A longer term goal is a stronger link between these two.
+A longer term goal is a stronger link between these two. The different axis belong to different knowledge domains \cite{raimbault2017applied} and their relations foster integrative approaches.
+
 
 
 \subsection{Generation of synthetic spatial data}
@@ -49,10 +87,24 @@ A longer term goal is a stronger link between these two.
 \subsubsection{Raster data}
 
 \begin{itemize}
-	\item Single layer synthetic grids
+	\item Single layer synthetic grids ; several methods implemented :
+		\begin{itemize}
+			\item Kernel mixtures \cite{anas1998urban}
+			\item Reaction-diffusion model generating population distributions \cite{raimbault2018calibration}
+		\end{itemize}
 	\item Multi-layer synthetic grids
 	\item Multi-layer with specified correlation structure
 \end{itemize}
+
+
+\paragraph{Kernel mixtures}
+
+
+\paragraph{Reaction-diffusion}
+
+
+
+
 
 \subsubsection{Vector data}
 
@@ -65,15 +117,27 @@ A longer term goal is a stronger link between these two.
 
 
 
+\subsection{Perturbation of real data}
+
+\cite{constantine2012method} example of Gaussian field perturbation
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\section{Implementation}
+
 
 \subsection{Architecture}
 
-\textit{Question : to what point methods are within oml plugin or in an external library ?}
+\begin{itemize}
+	\item Methods available as a standalone library
+	\item Integrated into OpenMOLE as a plugin
+\end{itemize}
 
-
-
-
-\section{Implementation}
 
 
 \subsection{Example of a workflow}
@@ -87,12 +151,24 @@ We illustrate spatial sensitivity analysis by coupling a spatial generator embed
 \end{itemize}
 
 
-\section*{Application}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{Application}
 
 First application : comparison of the scala implementation and the netlogo implementation of the Luti part of the Lutecia model (only spatial setup is random).
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Perspectives}
+
+\textit{ideas of features to integrate}
+
+\begin{itemize}
+	\item Network generalization algorithms ? (depend on the purpose)
+\end{itemize}
 
 
 
@@ -102,7 +178,7 @@ First application : comparison of the scala implementation and the netlogo imple
 %%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{apalike}
-\bibliography{}
+\bibliography{biblio.bib}
 
 
 \end{document}
