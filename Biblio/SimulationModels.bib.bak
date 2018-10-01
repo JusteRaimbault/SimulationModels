@@ -789,6 +789,76 @@ archivePrefix = "arXiv",
   groups    = {DifferentialEvolution},
 }
 
+@InProceedings{krink2004noisy,
+  author       = {Krink, Thiemo and Filipic, Bogdan and Fogel, Gary B and Thomsen, Ren{\'e}},
+  title        = {Noisy optimization problems-a particular challenge for differential evolution?},
+  booktitle    = {IEEE congress on Evolutionary Computation},
+  year         = {2004},
+  pages        = {332--339},
+  organization = {Citeseer},
+  file         = {:Docs/DifferentialEvolution/10.1.1.58.1481.pdf:PDF},
+  groups       = {DifferentialEvolution},
+}
+
+@InProceedings{jin2003trade,
+  author       = {Jin, Yaochu and Sendhoff, Bernhard},
+  title        = {Trade-off between performance and robustness: an evolutionary multiobjective approach},
+  booktitle    = {international conference on Evolutionary Multi-Criterion Optimization},
+  year         = {2003},
+  pages        = {237--251},
+  organization = {Springer},
+  file         = {:Docs/NoisyGA/jin-emo03.pdf:PDF},
+  groups       = {NoisyGA},
+}
+
+@InProceedings{jin2004constructing,
+  author       = {Jin, Yaochu and Sendhoff, Bernhard},
+  title        = {Constructing dynamic optimization test problems using the multi-objective optimization concept},
+  booktitle    = {Workshops on Applications of Evolutionary Computation},
+  year         = {2004},
+  pages        = {525--536},
+  organization = {Springer},
+  file         = {:Docs/DynamicalGA/JIN_Constructing_Dynamic_2004.pdf:PDF},
+  groups       = {DynamicalGA},
+}
+
+@InProceedings{di2014analysis,
+  author       = {Di Mario, Ezequiel and Navarro, Inaki and Martinoli, Alcherio},
+  title        = {Analysis of fitness noise in particle swarm optimization: From robotic learning to benchmark functions},
+  booktitle    = {Evolutionary Computation (CEC), 2014 IEEE Congress on},
+  year         = {2014},
+  pages        = {2785--2792},
+  organization = {IEEE},
+  file         = {:Docs/ParticleSwarmOptimization/cec14_15-04-2014_final_compliant.pdf:PDF},
+  groups       = {ParticleSwarmOptimization},
+}
+
+@Article{cauwet2016algorithm,
+  author    = {Cauwet, Marie-Liesse and Liu, Jialin and Rozi{\`e}re, Baptiste and Teytaud, Olivier},
+  title     = {Algorithm portfolios for noisy optimization},
+  journal   = {Annals of Mathematics and Artificial Intelligence},
+  year      = {2016},
+  volume    = {76},
+  number    = {1-2},
+  pages     = {143--172},
+  file      = {:Docs/NoisyGA/cauwet2015.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {Springer},
+}
+
+@Article{branke2008simulated,
+  author    = {Branke, J{\"u}rgen and Meisel, Stephan and Schmidt, Christian},
+  title     = {Simulated annealing in the presence of noise},
+  journal   = {Journal of Heuristics},
+  year      = {2008},
+  volume    = {14},
+  number    = {6},
+  pages     = {627--654},
+  file      = {:Docs/NoisyGA/branke2007.pdf:PDF},
+  groups    = {NoisyGA},
+  publisher = {Springer},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -812,4 +882,5 @@ archivePrefix = "arXiv",
 1 ExplicitGroup:InverseProblem\;0\;;
 1 ExplicitGroup:BBO\;0\;;
 1 ExplicitGroup:DifferentialEvolution\;0\;;
+1 ExplicitGroup:ParticleSwarmOptimization\;0\;;
 }
