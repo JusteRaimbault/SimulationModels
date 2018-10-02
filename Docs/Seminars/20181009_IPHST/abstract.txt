@@ -1,0 +1,8 @@
+
+Titre : Validation des modèles de simulation en géographie: nouvelles pratiques et perspectives
+
+Résumé : Cette présentation propose d'illustrer la question de la validation des modèles de simulation, dans le cas particulier de la géographie pour laquelle la prépondérance de l'espace augmente la complexité des modèles. Nous donnons d'abord un aperçu des pratiques classiques de validation, afin de mettre en contexte les nouvelles pratiques développées au cours de la dernière décennie au sein de l'ERC Geodivercity. Cette collaboration interdisciplinaire fructueuse entre géographes et informaticiens à conduit à l'émergence de la plateforme OpenMOLE pour l'exploration des modèles, ainsi que de nouvelles méthodes de validation des modèles basées sur le calcul intensif. Nous donnons un aperçu de celles-ci ainsi que des illustrations concrètes de différentiels qualitatifs en termes de connaissances produites. Nous développons finalement les pistes de recherche qui en découlent et dans quelle mesures celles-ci s'intègrent au sein de perspectives plus larges de construction de disciplines intégrées et d'une interdisciplinarité accrue.
+
+Bio : Juste Raimbault a obtenu son doctorat en géographie à l'Université Paris 7 Diderot, sous la direction d'Arnaud Banos (Géographie-cités) et Florent Le Néchet (LVMT), s'intéressant à la modélisation de la co-évolution des réseaux de transport et des territoires. Par sa formation interdisciplinaire en systèmes complexes, son travail se veut à l'interface des disciplines et des domaines de connaissance. Actuellement en post-doctorat à l'Institut des Systèmes Complexes (UPS CNRS 3611 ISC-PIF) au sein de l'équipe OpenMOLE, il participe au développement de modèles géographiques, de nouvelles méthodes et de la plateforme.
+
+
