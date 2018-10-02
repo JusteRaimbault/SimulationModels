@@ -1,10 +1,13 @@
 #benchmark suite
-coco
+# -> submodule
+#coco
 
 # closed model
-Forcity
-Dynamicity-model
+# -> submodule
+#Forcity
+#Dynamicity-model
 
-#gitlab repo
-stylized-fact-checking
+#gitlab repo Guillaume
+# -> submodule
+#stylized-fact-checking
 
