@@ -1,0 +1,12 @@
+[submodule "Models/Dynamicity-model"]
+	path = Models/Dynamicity-model
+	url = git@github.com:JusteRaimbault/Dynamicity-model.git
+[submodule "Models/coco"]
+	path = Models/coco
+	url = git@github.com:JusteRaimbault/coco.git
+[submodule "Models/stylized-fact-checking"]
+	path = Models/stylized-fact-checking
+	url = ssh://git@gitlab.iscpif.fr:20022/gcherel/stylized-fact-checking.git
+[submodule "Docs/Papers/LutiSensitivity"]
+	path = Docs/Papers/LutiSensitivity
+	url = git@github.com:JusteRaimbault/LutiSensitivity-paper.git
