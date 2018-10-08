@@ -1,0 +1,1073 @@
+\documentclass[english,11pt]{beamer}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Proba}{\mathbb{P}}
+
+\newcommand{\Covb}[2]{\ensuremath{\Cov\!\left[#1,#2\right]}}
+\newcommand{\Eb}[1]{\ensuremath{\E\!\left[#1\right]}}
+\newcommand{\Pb}[1]{\ensuremath{\Proba\!\left[#1\right]}}
+\newcommand{\Varb}[1]{\ensuremath{\Var\!\left[#1\right]}}
+
+% norm
+\newcommand{\norm}[1]{\| #1 \|}
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+
+
+
+
+\usepackage{mathptmx,amsmath,amssymb,graphicx,bibentry,bbm,babel,ragged2e}
+
+\makeatletter
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\newcommand{\jitem}[1]{\item \begin{justify} #1 \end{justify} \vfill{}}
+\newcommand{\sframe}[2]{\frame{\frametitle{#1} #2}}
+
+\newenvironment{centercolumns}{\begin{columns}[c]}{\end{columns}}
+%\newenvironment{jitem}{\begin{justify}\begin{itemize}}{\end{itemize}\end{justify}}
+
+\usetheme{Warsaw}
+\setbeamertemplate{footline}[text line]{}
+\setbeamercolor{structure}{fg=purple!50!blue, bg=purple!50!blue}
+
+\setbeamersize{text margin left=15pt,text margin right=15pt}
+
+\setbeamercovered{transparent}
+
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{multirow}
+
+
+\makeatother
+
+\begin{document}
+
+
+
+
+
+\title{Validation des modèles de simulation en géographie: nouvelles pratiques et perspectives}
+
+\author{J.~Raimbault$^{1,2,\ast}$\\
+\texttt{juste.raimbault@polytechnique.edu}
+}
+
+
+\institute{$^{1}$Complex Systems Institute, Paris, UPS CNRS 3611 ISC-PIF\\
+$^{2}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+
+
+\date{Séminaire EpisteMod\\\smallskip
+IHPhST\\\smallskip
+October 9th 2018
+}
+
+\frame{\maketitle}
+
+
+% 
+%Titre : Validation des modèles de simulation en géographie: nouvelles pratiques et perspectives
+
+%Résumé : Cette présentation propose d'illustrer la question de la validation des modèles de simulation, dans le cas particulier de la géographie pour laquelle la prépondérance de l'espace augmente la complexité des modèles. Nous donnons d'abord un aperçu des pratiques classiques de validation, afin de mettre en contexte les nouvelles pratiques développées au cours de la dernière décennie au sein de l'ERC Geodivercity. Cette collaboration interdisciplinaire fructueuse entre géographes et informaticiens à conduit à l'émergence de la plateforme OpenMOLE pour l'exploration des modèles, ainsi que de nouvelles méthodes de validation des modèles basées sur le calcul intensif. Nous donnons un aperçu de celles-ci ainsi que des illustrations concrètes de différentiels qualitatifs en termes de connaissances produites. Nous développons finalement les pistes de recherche qui en découlent et dans quelle mesures celles-ci s'intègrent au sein de perspectives plus larges de construction de disciplines intégrées et d'une interdisciplinarité accrue.
+
+%Bio : Juste Raimbault a obtenu son doctorat en géographie à l'Université Paris 7 Diderot, sous la direction d'Arnaud Banos (Géographie-cités) et Florent Le Néchet (LVMT), s'intéressant à la modélisation de la co-évolution des réseaux de transport et des territoires. Par sa formation interdisciplinaire en systèmes complexes, son travail se veut à l'interface des disciplines et des domaines de connaissance. Actuellement en post-doctorat à l'Institut des Systèmes Complexes (UPS CNRS 3611 ISC-PIF) au sein de l'équipe OpenMOLE, il participe au développement de modèles géographiques, de nouvelles méthodes et de la plateforme.
+
+
+
+
+
+\sframe{Une longue histoire de modélisation et simulation en TQG}{
+
+% Cette présentation propose d'illustrer la question de la validation des modèles de simulation, dans le cas particulier de la géographie
+
+%The role of simulation models in the production of knowledge has significantly shifted in recent years, accompanied with a transformation of practices, including methods and tools. This presentation aims at describing these mutations from the point of view of theoretical and quantitative geography.
+
+\begin{columns}
+
+	\begin{column}{0.5\textwidth}
+	\centering
+	
+	\includegraphics[width=0.6\textwidth]{figures/openshaw.png}
+	
+	\footnotesize
+\textit{Machine d'analyse géographique \cite{openshaw1987mark}}
+	
+	\medskip
+	\hrule
+	\medskip
+	
+	\includegraphics[width=0.55\textwidth,height=0.3\textheight]{figures/intro_RBD_lattice.png}
+	
+	\footnotesize
+\textit{Morphogenèse urbaine hybride \cite{raimbault2014hybrid}}
+	
+
+	\end{column}
+	\vrule{}
+	\begin{column}{0.5\textwidth}
+	\centering
+	
+	\includegraphics[width=0.7\textwidth]{figures/simpop1.png}
+	
+	\footnotesize
+\textit{Modèle Simpop 1 \cite{sanders1997simpop}}
+
+	\medskip
+
+	\hrule
+	
+	\medskip
+
+	\includegraphics[width=0.6\textwidth]{figures/setup_synth_1_tick100.png}
+	
+	\footnotesize
+	\textit{Modèle SimpopNet \cite{schmitt2014modelisation}}
+	
+	\end{column}
+
+
+\end{columns}
+
+}
+
+
+
+\sframe{Système géographique et complexité}{
+
+% pour laquelle la prépondérance de l'espace augmente la complexité des modèles
+
+
+
+
+}
+
+
+\sframe{Validation des modèles de simulation}{
+
+% these seb ; bouquin Varenne
+% at least two slides ; examples ?
+
+
+}
+
+
+
+\sframe{Vers de nouvelles pratiques: ERC Geodivercity}{
+
+% presentation generale de Geodivercity
+
+
+}
+
+
+
+\sframe{Méthodes et outils: OpenMOLE}{
+
+}
+
+\sframe{Manifeste d'OpenMOLE}{
+	
+	\textit{(i) Méthodes d'exploration innovantes; (ii) Passage à l'échelle par calcul distribué; (iii) Pas d'interférence avec le modèle.}
+	
+	\smallskip
+	
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/openmoleGal.png}
+	
+}
+
+
+
+\sframe{Citation network analysis (full)}{
+
+%% % A citation network mapping helps situating it in the broader context of computational science.
+
+\centering
+%
+%%\vspace{-1.5cm}
+\includegraphics[width=1.2\textwidth,trim={1cm 0 1cm 1cm}]{figures/citnw_sampled.png}
+
+}
+
+
+\sframe{Citation network analysis (OpenMOLE)}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/oml_depth3_core.png}
+}
+
+
+
+
+\sframe{Modèles de simulation}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/modelIO.png}
+
+}
+
+\sframe{Une interface web ergonomique}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/openmolefirefox.png}
+	
+}
+
+\sframe{Agnostique aux langages}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/blackbox.png}
+
+}
+
+\sframe{Modèle NetLogo}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/netlogomodel.png}
+	
+}
+
+\sframe{Code R}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/rcode.png}
+	
+}
+
+
+\sframe{Code Python en package}{
+
+	\centering
+	
+	\textbf{Package}
+	
+	\medskip
+	
+	\includegraphics[width=\textwidth]{figures/pythonpackage.png}
+	
+	\bigskip\bigskip
+	
+	\textbf{Run}
+	
+	\medskip
+	
+	\includegraphics[width=\textwidth]{figures/pythonrun.png}
+	
+}
+
+\sframe{Méthodes}{
+	
+	\begin{itemize}
+		\item Reconstruction de données
+		\item Estimation de paramètres
+		\item Analyse de sensibilité
+		\item Étude de robustesse
+		\item Optimisation
+	\end{itemize}
+
+	% Designed in a scalable manner, handle stochasticity, usable on any models and environments
+	
+	\medskip
+	
+	\textit{Conçues pour passer à l'échelle, prendre en compte la stochasticité, être utilisable sur n'importe quel modèle et environnement de calcul.}
+	
+}
+
+\sframe{Méthodes: scripting}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/directsampling.png}
+
+}
+
+
+\sframe{Environnements de calcul}{
+
+% Prototype Small, Scale for Free
+
+% Zero deployment approach
+% No prior knowledge of remote environment needed
+% No installation required on any machine
+% User code and data are automatically deployed
+
+
+
+}
+
+
+\sframe{Passage à l'échelle}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/cluster.png}
+
+}
+
+\sframe{Environnements supportés}{
+
+Supported environments today
+Multi-thread
+Delegation through SSH
+PBS
+SLURM
+Condor
+SGE
+OAR
+EGI Grid
+
+}
+
+
+\sframe{Vers une modélisation assistée par ordinateur}{
+
+Computer assisted modeling
+Build a general framework and algorithms to guide the modeling process.
+
+
+Make the modeling process:
+
+traceable: understand what choices were made,
+reproducible: recompute the reason why they were made,
+reusable: study alternative choices.
+
+}
+
+
+\sframe{Modèles descriptifs}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/descriptivemodel.png}
+
+
+Descriptive models
+Design/evaluate a theory involving causal effects through its capacity to (re-)produce some patterns/data.
+
+Model evaluation
+How to assess:
+
+the sufficiency of the mechanisms ?
+the necessity of the mechanisms ?
+the uniqueness of the mechanisms ?
+
+
+}
+
+
+\sframe{Sufficiency}{
+
+% Free parameters, example of Simpop Local
+% No empirical evidence for the parameters.
+
+The usual approach
+Use a classical design of experiment. 
+
+	\centering
+	
+	\includegraphics[width=0.5\textwidth]{figures/sobol.jpg}
+
+Limits
+It produces a huge quantity of data.
+It transform a problem into a data-mining problem.
+The parameter space is mostly left unexplored due to the curse of dimensionality.
+
+}
+
+
+\sframe{Proposed method}{
+
+Reverse approach: From output values to parameter values.
+
+Formalising the expectations
+
+\centering
+	
+	\includegraphics[width=\textwidth]{figures/slocal_fitness.png}
+
+}
+
+
+\sframe{Calibration algorithm}{
+
+Genetic algorithm as a calibration algorithm
+
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/ga.png}
+
+Calibration method
+Genome: 6 parameters of the model
+
+Fitness: 3 descriptors of the quality of the simulated dynamic.
+
+
+
+Necessary extensions:
+
+distributed computing
+auto-adaptative strategy to handle stochasticity
+
+}
+
+
+\sframe{Calibration results}{
+	
+	No compromise between the 3 objectives.
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/slocalcalib.png}
+	
+	Evaluation approach
+Would not have been found using a direct method.
+
+
+The method is tractable (even for ABMs):
+
+Handles stochasticity: 100x gain.
+Support for distributed computing: 1000x gain.
+
+Conclusion
+How to assess:
+
+the sufficiency of the mechanisms Y
+the necessity of the mechanisms ?
+the uniqueness of the mechanisms ?
+
+}
+
+
+\sframe{Necessity}{
+
+A new algorithm
+To detect if a parameter is useful: it impacts the capacity of the model to produce plausible outcomes.
+
+To better constrain the parameter ranges.
+
+As an indirect way to detect if some of the mechanisms are expandable
+
+Objective
+Hundreds of calibrations
+
+	%\centering
+	
+	%\includegraphics[width=\textwidth]{figures/PdiffusionZ.pdf.png}
+
+
+}
+
+\sframe{Algorithme des profils}{
+\centering
+	
+	\includegraphics[width=\textwidth]{figures/profil_algo.png}
+	
+The profile algorithm
+Compute the best of calibration for hundreds of values along the definition domain of a parameter.
+
+
+The method is tractable (even for ABMs):
+
+Converges almost as fast a single calibration.
+Handles stochasticity: 100x gain.
+Support for distributed computing: 1000x gain.	
+	
+}
+
+
+
+\sframe{Algorithme des profils}{
+\centering
+\includegraphics[width=\textwidth]{figures/profil_interpretation.png}
+}
+
+
+\sframe{Results}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/PdiffusionZ.png}
+
+}
+
+\sframe{Results}{
+
+	\centering
+	
+	\includegraphics[width=\textwidth]{figures/InnovationLife.png}
+
+%Conclusion
+%How to assess:
+
+%the sufficiency of the mechanisms Y
+%the necessity of the mechanisms Y
+%the uniqueness of the mechanisms ?
+
+}
+
+
+\sframe{Uniqueness}{
+
+Automate the confrontation of alternative hypothesis / mechanisms.
+
+\centering
+	
+	\includegraphics[width=\textwidth]{figures/simfamily.png}
+
+}
+
+
+\sframe{Objective}{
+
+
+What we are running after?
+
+\includegraphics[width=\textwidth]{figures/paretocomplexityfit.png}
+
+}
+
+\sframe{Multi-modeling}{
+
+64 models
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/marius_complexification.png}
+
+}
+
+
+\sframe{Example of concurrent hypotheses}{
+
+
+Exchange mechanism:
+
+Market based
+Centrally planned
+
+City growth mechanism:
+
+Purely inter-urban interactions
+Influenced by environmental situation
+
+
+\centering
+
+\includegraphics[width=0.5\textwidth]{figures/system_mec.png}
+
+}
+
+\sframe{Model family calibration}{
+
+Compute the best set of parameters for all 64 models.
+
+\centering
+
+\includegraphics[width=0.5\textwidth]{figures/varius_big.png}
+
+% http://shiny.parisgeo.cnrs.fr/VARIUS/
+
+}
+
+\sframe{Calibration}{
+
+
+Calibration method
+Algorithm principle: reuse the good parameters found on one model to calibrate on the others.
+
+% Niched NSGA2 ?
+
+The method is tractable (even for ABMs):
+
+as fast (faster ??) as calibrating a single model.
+Handles stochasticity: 100x gain.
+Support for distributed computing: 1000x gain.
+
+%Conclusion
+%How to assess:
+
+%the sufficiency of the mechanisms Y
+%the necessity of the mechanisms Y
+%the uniqueness of the mechanisms (≈) Y
+
+Alternative approach
+All these methods are based on an a priori mesurement of the quality.
+
+Can we propose an alternative approach to evaluation?
+
+}
+
+
+
+\sframe{Autre exemple de multimodélisation}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/CN_zoomed.png}
+
+}
+
+
+\sframe{Pattern search}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/pse_algo.png}
+
+}
+
+\sframe{Recherche de nouveauté}{
+
+The inputs producing rare patterns have high fitness values.
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/hitmap.png}
+
+}
+
+
+\sframe{Résultats}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/flockingvolume.png}
+
+}
+
+\sframe{Résultats}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/flockingpatterns.png}
+
+}
+
+\sframe{Résultats}{
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/pse_marius.png}
+
+Interpretation
+All expected/observed patterns are produced: the model is generic enough.
+
+
+Unexepected patterns are found:
+
+aberations: better constrain the model,
+predictions: test them.
+
+% Exemple OpenMOLE + SimPLU (IGN) https://simplu.openmole.org/
+
+}
+
+\sframe{Origin search}{
+
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/ose_algo.png}
+
+}
+
+
+\sframe{First results}{
+
+Formulation: $\Delta$ pattern < $\varepsilon$
+
+f(x1, x2, .., xn) < 10
+
+
+\centering
+
+%\includegraphics[width=\textwidth]{figures/rastrigin.png}
+\includegraphics[width=\textwidth]{figures/oserast6d.png}
+
+6-D Rastrigin function < 10
+
+}
+
+% Want to use it?
+%Stable: openmole.org
+%Dev: next.openmole.org
+%User forum: ask.openmole.org
+%Source code: github.com/openmole/openmole
+%Demo instance: demo.openmole.org
+%Grid accesss: iscpif.fr/services
+
+
+
+%Nous développons finalement les pistes de recherche qui en découlent et dans quelle mesures celles-ci s'intègrent au sein de perspectives plus larges de construction de disciplines intégrées et d'une interdisciplinarité accrue.
+
+
+
+
+%
+%\sframe{Current trends and challenges in (geo-)simulation}{
+%
+%% 
+%%\centering
+%%\justify
+%
+%% We first survey the current trends and explicit the positioning of OpenMOLE's philosophy within these.
+%
+%\textbf{Key domains: } quantifying urban growth and form, mining spatio-temporal data, geosimulation, multi-scalar approaches \cite{behnisch2018trends}.
+%
+%\medskip
+%
+%\textbf{Challenges: }
+%
+%\begin{itemize}
+%	\item \cite{perez2016agent} key challenges in ABM for planning: addressing complexity in a clean way, addressing multi-dimensionality, feasible trajectories, participatory planning.
+%	\item Simulation models \cite{banos2013pour}: interdiscplinarity, data-driven models, exploration of models, multi-objective issues, reproducibility and reuse of models, coupling models.
+%\end{itemize}
+%
+%
+%\medskip
+%
+%\textbf{Future ?} \cite{banos2017knowledge} deeper and integrated knowledge; \cite{arribas2018geography} new geographic data science?
+%
+%
+%}
+%
+
+\sframe{OpenMole's positioning}{
+
+\textit{A qualitative shift in knowledge that can be extracted from a simulation model with model exploration methods.}
+
+\medskip
+
+Success stories: SimpopLocal \cite{schmitt2014half}, Marius \cite{10.1371/journal.pone.0138212}, Ecological modeling \cite{lavallee2018dynamical}, epidemiology \cite{arduin2018modelisation}, etc.
+
+\medskip
+
+\textbf{Key features: }
+
+\begin{itemize}
+	\item Unique role of complementary axis of computation environment access, methods providing, and model embedding.
+	\item Iterative and integrated construction of models and theories, using all dimensions of knowledge enhanced by simulation and computation (modeling, theory, empirical, data, methods, tools \cite{raimbault2017applied}.
+	\item Coupling models and reproducibility at the core of the workflow approach \cite{passerat2017reproducible}
+\end{itemize}
+
+
+}
+
+
+
+\sframe{Perspectives and questions ouvertes pour la simulation en TQG}{
+
+%
+%%We then propose a grasp on some future perspectives, by detailing examples of crucial research questions on simulation models in geography that remain open, including in particular, first generic issues such as
+%
+%% plan (generic + specific to spatio-temporal modeling)
+%
+%\textit{Some of crucial issues :}
+%
+%\medskip
+%
+\textbf{Question générales: }
+\begin{itemize}
+	\item Surajustement des modèles de simulation
+	\item Couplage des modèles
+	\item Direct and inverse mapping
+	\item Stochasticité
+\end{itemize}
+
+\medskip
+
+\textbf{Spécifiques aux systèmes spatio-temporels: }
+\begin{itemize}
+	\item Non-stationnarité spatio-temporelle
+	\item Données synthétiques spatio-temporelles
+\end{itemize}
+
+
+
+
+}
+
+
+%
+%
+%
+\sframe{Surajustement}{
+%
+%% (i) the development of multi-modeling techniques that explicitly account for overfitting for simulation models;
+%
+%\textit{When do additional parameters actually capture new dimensions of the simulated system ? i.e. when does fit improvement is not only due to more degree of freedom ?}
+%
+%\medskip
+%
+%$\rightarrow$ Crucial for parcimonious models, which can be used then as building bricks for more complex models.
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item Black-box brutal data explanation ?
+%	\item Extension of AIC-type measures ?
+%	\item Multi-objective optimisation with degrees of freedom ?
+%\end{itemize}
+%
+%
+}
+
+%
+%\sframe{Model coupling}{
+%
+%% (ii) a better understanding of model coupling
+%% (includes multi-scale more or less)
+%% -> robust definition / classification of models etc
+%
+%\textit{Definition/theory/quantification of model coupling ?}
+%
+%\medskip
+%
+%$\rightarrow$ Crucial for interdisciplinarity, reproducibility and the reuse of models; crucial for multi-scalar approaches (downward causation); crucial for model benchmarking.
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item Model-independent notion of ``coupling-strength'' ?
+%	\item Covariance structures ?
+%	\item Causal graphs ?
+%\end{itemize}
+%
+%}
+%
+%
+%\sframe{Direct and inverse mapping}{
+%
+%% (iii) the development of adaptative direct and inverse mapping methods;
+%% inverse problems / feasible space
+%
+%\textit{How to have a comprehensive overview of strongly non-linear simulation models mapping ?}
+%
+%\medskip
+%
+%$\rightarrow$ Feasible space and unexpected patterns (PSE algorithm \cite{10.1371/journal.pone.0138212}); dealing with equifinality.
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item Inverse problem heuristics being currently tested in OpenMOLE
+%	\item Iterative approach to determine main patterns in the mapping ?
+%\end{itemize}
+%
+%}
+%
+%
+%\sframe{Handling stochasticity}{
+%
+%% (iv) a better handling of stochasticity in ``real-world'' models;
+%
+%\textit{How to handle stochastic models during genetic algorithm calibration or exploration ?}
+%
+%\medskip
+%
+%$\rightarrow$ Crucial for more data-driven and ``real-world'' models; crucial for a robust knowledge extracted from simulation models.
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item Deal with ``real-world'' noise patterns
+%	\item An embedding approach tested in OpenMOLE to deal with noisy fitness
+%	\item A bayesian approach to calibration (ABC) also currently tested
+%\end{itemize}
+%
+%
+%
+%}
+%
+%\sframe{Spatio-temporal modeling issues: non-stationarity}{
+%
+%%  and secondly issues which are more specific to spatio-temporal models, such as (v) the understanding of spatio-temporal non-stationarity, possibly through the intermediate of limit links between agent-based approaches and system dynamics approaches;
+%
+%\textit{How to understand and include spatio-temporal non stationarity in empirical analysis / in model simulations and calibration ?}
+%
+%\medskip
+%
+%$\rightarrow$ Intrinsic complexity of spatial systems; crucial for multi-scalar approaches.
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item Link between non-stationarity and non-ergodicity
+%	\item Link between ABM approaches and dynamical systems approaches, towards hybrid approaches \cite{banos2015importance}
+%\end{itemize}
+%
+%
+%}
+%
+%
+%\sframe{Spatio-temporal synthetic data}{
+%
+%% and (vi) methods to generate synthetic spatio-temporal data to be used for broader sensitivity analyses.
+%
+%\textit{How to extend sensitivity analyses to spatial initial conditions ? How to generate spatial synthetic data ?}
+%
+%\medskip
+%
+%$\rightarrow$ Crucial for the robustness of spatial simulations
+%
+%\medskip
+%
+%\begin{itemize}
+%	\item First work in the case of density grids in territorial systems \cite{cottineau2017initial}
+%	\item Extend to other disciplines: ecology, geosciences
+%	\item Towards a generic library integrated in OpenMOLE
+%\end{itemize}
+%
+%}
+%
+%
+%
+%
+%
+%\sframe{An integrated view}{
+%	
+%	% graph between different open issues
+%	
+%	\includegraphics[width=\textwidth]{figures/directions.pdf}
+%	
+%}
+%
+%
+\sframe{Un perspectivisme appliqué pour coupler les approches de modélisation}{
+%
+%% We finally describe an epistemological framework integrating several of these issues, which applies Giere's perspectivism to the effective coupling of simulation models, and that we call ``applied perspectivism''. This framework should foster the development of integrative theories through the coupling of perspectives, and therefore of models.
+%
+%% link it with knowledge framework
+%
+Perspectivisme de Giere \cite{giere2010scientific}: a ``third way'' beyond constructivism-realism: \textit{Any scientific knowledge construction process as a perspective by an agent to answer a purpose with a media (model)}.
+
+\medskip
+
+Applied knowledge framework proposed by \cite{raimbault2017applied} to study [complex] systems: \textit{co-evolution} of cognitive agents and knowledge domains, through the intermediate of perspectives.
+
+\medskip
+
+\textbf{Applied perspectivism principles:}
+\begin{itemize}
+	\item Foster consistence of perspectives and their communication (Banos' virtuous spiral between disciplinarity and interdisciplinarity)
+	\item Importance of reflexivity to ease the coupling of perspectives
+	\item New model exploration methods increase the integration between knowledge domains
+	\item Coupling of models as a possible medium to couple perspectives (transfer hypothesis)
+\end{itemize}
+
+\medskip
+
+\textit{Still to be formalized, specified as possible implementations, and experimented.}
+
+
+}
+
+%
+%
+%
+%
+%
+\sframe{Conclusion}{
+%
+%
+%\justify
+%
+%%\vspace{-1cm}
+%
+%%$\rightarrow$ 
+%
+\textit{Significant accomplishments beyond disciplines, construction of new research practices (see the satellite presentations)} $\rightarrow$ still much to do ? (e.g. how to put into practice ? how to achieve true integration ? etc.)
+%
+%\bigskip
+%
+%\textbf{\textit{``La route est longue mais la voie est libre''}}
+%
+%\bigskip
+%
+%\textbf{\textit{You need OpenMOLE and OpenMOLE needs you !}} (win-win interdisciplinary relations): apply to the summer school !\\
+%\texttt{https://exmodelo.org/}
+%
+%\bigskip
+\bigskip
+\bigskip
+
+\footnotesize
+%
+\textbf{Related works on epistemological considerations}
+
+Raimbault, J. (2017, December). An Applied Knowledge Framework to Study Complex Systems. In Complex Systems Design \& Management (pp. 31-45). arXiv:1706.09244.
+%
+\smallskip
+
+
+Raimbault, J. (2018). Caract{\'e}risation et mod{\'e}lisation de la co-{\'e}volution des r{\'e}seaux de transport et des territoires (Doctoral dissertation, Université Paris 7 Denis Diderot). \url{https://halshs.archives-ouvertes.fr/tel-01857741}
+%
+%
+%
+%
+%%\smallskip
+%
+%%\textbf{Open repository} at \texttt{https://github.com/JusteRaimbault/UrbanGrowth}\\\smallskip
+%%\textbf{Acknowledgments}: thanks to the \textit{EGI} for access to the infrastructure.
+%
+%
+}
+%
+%
+
+
+
+
+\sframe{Reserve slides}{
+
+\centering
+
+\Large
+
+\textbf{Reserve Slides}
+
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{apalike}
+\bibliography{/Users/juste/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork,biblio}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
