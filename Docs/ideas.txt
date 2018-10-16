@@ -1,5 +1,18 @@
 
 
+
+====
+2018/10/16
+
+Duboz, R., Versmisse, D., Travers, M., Ramat, E., & Shin, Y. J. (2010). Application of an evolutionary algorithm to the inverse parameter estimation of an individual-based model. Ecological modelling, 221(5), 840-849. => specific GA with stochastic model ? [not exactly inverse problem]
+
+!!!! The POMIC approach is exactly the researched method for overfitting !!!!
+Piou, C., Berger, U., & Grimm, V. (2009). Proposing an information criterion for individual-based models developed in a pattern-oriented modelling framework. Ecological Modelling, 220(17), 1957-1967.
+ => TODO check R package ; contact Piou.
+
+Thiele, J. C., Kurth, W., & Grimm, V. (2014). Facilitating parameter estimation and sensitivity analysis of agent-based models: A cookbook using NetLogo and R. Journal of Artificial Societies and Social Simulation, 17(3), 11. => excellent list of exeperiments to explore/validate sim model.
+
+
 ====
 2018/09/20
 
