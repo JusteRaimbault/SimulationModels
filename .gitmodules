@@ -10,3 +10,6 @@
 [submodule "Docs/Papers/LutiSensitivity"]
 	path = Docs/Papers/LutiSensitivity
 	url = git@github.com:JusteRaimbault/LutiSensitivity-paper.git
+[submodule "Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks"]
+	path = Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks
+	url = git@github.com:JusteRaimbault/ECTQG2019-SessionNetwork.git
