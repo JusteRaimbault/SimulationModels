@@ -13,3 +13,6 @@
 [submodule "Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks"]
 	path = Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks
 	url = git@github.com:JusteRaimbault/ECTQG2019-SessionNetwork.git
+[submodule "Docs/Papers/UrbanPerspectives"]
+	path = Docs/Papers/UrbanPerspectives
+	url = git@github.com:JusteRaimbault/UrbanPerspectives-paper.git
