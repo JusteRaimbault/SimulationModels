@@ -1,0 +1,36 @@
+import java.util.Date
+import java.text.SimpleDateFormat
+
+logger.level("FINE")
+
+val blocks = Val[Double]
+val blocksMax = Val[Double]
+val blocksMin = Val[Double]
+
+
+val w = Val[Array[Array[Double]]]
+
+val model = ScalaTask(
+    //"""w.foreach{r => r.foreach{d => print(d.toString+" ")};println()}"""
+    """println(w.flatten.sum)"""
+    ) set (
+  inputs += (w)
+)
+
+val exploration =
+  DirectSampling(
+    evaluation = model hook ToStringHook(),
+    sampling = 
+    BlocksGridSpatialSampling(
+        samples = 10,
+        gridSize = 20,
+        blocks = (blocks in Range(1.0,10.0)),
+        blockMinSize = (blocksMax in Range(2.0,4.0)),
+        blockMaxSize = (blocksMin in Range(2.0,4.0)),
+        prototype = w
+    )
+    //RandomSpatialSampling(10,20,w)
+)
+
+
+exploration
