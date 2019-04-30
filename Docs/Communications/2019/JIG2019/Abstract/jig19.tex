@@ -1,0 +1,118 @@
+\documentclass[11pt]{article}
+
+% general packages without options
+\usepackage{amsmath,amssymb,bbm}
+% graphics
+\usepackage{graphicx}
+% text formatting
+\usepackage[document]{ragged2e}
+\usepackage{pagecolor,color}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=1cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+%\usepackage[french]{babel}
+
+% layout : use fancyhdr package
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% variable to include comments or not in the compilation ; set to 1 to include
+\def \draft {1}
+
+
+% writing utilities
+
+% comments and responses
+%  -> use this comment to ask questions on what other wrote/answer questions with optional arguments (up to 4 answers)
+\usepackage{xparse}
+\usepackage{ifthen}
+\DeclareDocumentCommand{\comment}{m o o o o}
+{\ifthenelse{\draft=1}{
+    \textcolor{red}{\textbf{C : }#1}
+    \IfValueT{#2}{\textcolor{blue}{\textbf{A1 : }#2}}
+    \IfValueT{#3}{\textcolor{ForestGreen}{\textbf{A2 : }#3}}
+    \IfValueT{#4}{\textcolor{red!50!blue}{\textbf{A3 : }#4}}
+    \IfValueT{#5}{\textcolor{Aquamarine}{\textbf{A4 : }#5}}
+ }{}
+}
+
+% todo
+\newcommand{\todo}[1]{
+\ifthenelse{\draft=1}{\textcolor{red!50!blue}{\textbf{TODO : \textit{#1}}}}{}
+}
+
+
+\makeatletter
+
+
+\makeatother
+
+
+\begin{document}
+
+
+
+
+
+
+
+\title{\vspace{-1cm}De l'endogénéité des hiérarchies dans les systèmes territoriaux complexes
+\\\medskip
+\textit{JIG 2019}
+}
+\author{\noun{Juste Raimbault}$^{1,2,3}$\medskip\\
+$^1$ UPS CNRS 3611 ISC-PIF\\
+$^3$ CASA, UCL\\
+$^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s\medskip\\
+\texttt{juste.raimbault@iscpif.fr}
+}
+\date{}
+
+\maketitle
+
+\justify
+
+\pagenumbering{gobble}
+
+
+\textbf{Mots-clés : }\textit{Théories de la complexité ; Théorie évolutive urbaine ; Lois d'échelle}
+
+\medskip
+
+
+Le concept de hiérarchie émerge naturellement au sein de différentes théories et modèles des systèmes complexes. Cette contribution vise à illustrer dans quelle mesure une prise en compte de la complexité sociale ne peut en être dissociée. Nous développons dans un premier temps des approches théoriques de la complexité. La théorie des systèmes complexes adaptatifs de \cite{holland2012signals}, considère l'imbrication des niches, dont les frontières filtrent les signaux entre celles-ci, comme des briques élémentaires de systèmes multi-niveaux par essence hiérarchiques. Cette approche s'applique par exemple autant aux systèmes écologiques qu'aux systèmes territoriaux. La théorie multiscalaire de l'information introduite par \cite{allen2017multiscale} utilise la distribution de l'information entre les différents niveaux du système comme une méthode pour caractériser son niveau de complexité, et montre que les profils complexes sont justement ceux présentant une articulation entre les différentes échelles et une hiérarchie. D'autres approches moins formalisées insistent également sur le rôle de la hiérarchie, comme \cite{morin1980methode} qui montre la tension entre dépendance et indépendance d'un organisme à ses constituants, à l'ensemble des niveaux. Dans un second temps, nous donnons des illustrations sur un plan thématique par des théories de l'organisation spatiale des systèmes territoriaux. La théorie évolutive des villes \citep{pumain2018evolutionary} nécessite d'une part l'intégration des multiples échelles des systèmes urbains (micro, meso, macro) pour expliquer les faits stylisés typiques connus sur les systèmes de villes, et d'autre part montre par l'application de modèles de simulation l'émergence de la hiérarchie à l'origine \citep{pumain2017simpoplocal} mais aussi lors de changements de régime comme l'apparition de nouveaux modes de transport \citep{raimbault2018modeling}. La théorie des lois d'échelle, appliquée aux systèmes urbains par \cite{bettencourt2007growth}, montre l'endogénéité des hiérarchies pour les activités bénéficiant du rôle d'incubateur social des villes. À la lumière de ces exemples, nous postulons que les hiérarchies, que ce soit au sens de l'imbrication de multiples niveaux ou échelles, ou de distributions statistiques à grande queue, sont endogènes aux systèmes territoriaux complexes. Il fait alors difficilement sens de proposer que le concept de hiérarchie serait entièrement exogène. En termes d'aide à la décision, et notamment en termes de structures sociales ou politiques, la remise en question complete de la hiérarchie associée aux propositions d'organisations purement horizontales, n'est ni basée sur des faits ni compatible avec les théories de la complexité, en opposition avec les besoins actuels de modèles multi-scalaires pour l'intelligence territoriale soutenable \citep{rozenblat2018conclusion}. Ainsi, des approches plus intégratives, larges dans la portée des systèmes considérés, et basées sur les faits, ne peuvent complètement déconstruire le concept de hiérarchie de par son endogénéité à la complexité.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+%\tiny
+
+%\begin{multicols}{2}
+
+%\setstretch{0.3}
+%\setlength{\parskip}{-0.4em}
+
+
+\footnotesize
+
+\bibliographystyle{apalike}
+\bibliography{biblio}
+%\end{multicols}
+
+
+
+\end{document}

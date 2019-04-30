@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+
+% general packages without options
+\usepackage{amsmath,amssymb,bbm}
+% graphics
+\usepackage{graphicx}
+% text formatting
+\usepackage[document]{ragged2e}
+\usepackage{pagecolor,color}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+%\usepackage[french]{babel}
+
+% layout : use fancyhdr package
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% variable to include comments or not in the compilation ; set to 1 to include
+\def \draft {1}
+
+
+% writing utilities
+
+% comments and responses
+%  -> use this comment to ask questions on what other wrote/answer questions with optional arguments (up to 4 answers)
+\usepackage{xparse}
+\usepackage{ifthen}
+\DeclareDocumentCommand{\comment}{m o o o o}
+{\ifthenelse{\draft=1}{
+    \textcolor{red}{\textbf{C : }#1}
+    \IfValueT{#2}{\textcolor{blue}{\textbf{A1 : }#2}}
+    \IfValueT{#3}{\textcolor{ForestGreen}{\textbf{A2 : }#3}}
+    \IfValueT{#4}{\textcolor{red!50!blue}{\textbf{A3 : }#4}}
+    \IfValueT{#5}{\textcolor{Aquamarine}{\textbf{A4 : }#5}}
+ }{}
+}
+
+% todo
+\newcommand{\todo}[1]{
+\ifthenelse{\draft=1}{\textcolor{red!50!blue}{\textbf{TODO : \textit{#1}}}}{}
+}
+
+
+\makeatletter
+
+
+\makeatother
+
+
+\begin{document}
+
+
+
+
+
+
+
+\title{Extracting knowledge from simulation models: trends and perspectives from the viewpoint of quantitative geography
+\\\medskip
+\textit{CCS 2018 - Satellite Modeling and Simulation}
+}
+\author{\noun{Juste Raimbault}$^{1,2}$
+\\
+$^1$ UPS CNRS 3611 ISC-PIF\\
+$^2$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+\date{}
+
+\maketitle
+
+\justify
+
+\pagenumbering{gobble}
+
+
+\textbf{Keywords : }\textit{Simulation models; Quantitative geography; Open questions; Epistemological framework}
+
+\medskip
+
+The role of simulation models in the production of knowledge has significantly shifted in recent years, accompanied with a transformation of practices, including methods and tools. This presentation aims at describing these mutations from the point of view of theoretical and quantitative geography. We first survey the current trends and explicit the positioning of OpenMOLE's philosophy within these. A citation network mapping helps situating it in the broader context of computational science. We then propose a grasp on some future perspectives, by detailing examples of crucial research questions on simulation models in geography that remain open, including in particular, first generic issues such as (i) the development of multi-modeling techniques that explicitly account for overfitting for simulation models; (ii) a better understanding of model coupling (iii) the development of adaptative direct and inverse mapping methods; (iv) a better handling of stochasticity in ``real-world'' models; and secondly issues which are more specific to spatio-temporal models, such as (v) the understanding of spatio-temporal non-stationarity, possibly through the intermediate of limit links between agent-based approaches and system dynamics approaches; and (vi) methods to generate synthetic spatio-temporal data to be used for broader sensitivity analyses. We finally describe an epistemological framework integrating several of these issues, which applies Giere's perspectivism to the effective coupling of simulation models, and that we call ``applied perspectivism''. This framework should foster the development of integrative theories through the coupling of perspectives, and therefore of models.
+
+% note : no multi-scale ? linked to coupling
+% note : link with the applied knowledge fwk ?
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Biblio
+%%%%%%%%%%%%%%%%%%%%
+%\tiny
+
+%\begin{multicols}{2}
+
+%\setstretch{0.3}
+%\setlength{\parskip}{-0.4em}
+
+
+%\bibliographystyle{apalike}
+%\bibliography{/Users/Juste/Documents/ComplexSystems/CityNetwork/Biblio/Bibtex/CityNetwork}%,biblio}
+%\end{multicols}
+
+
+
+\end{document}

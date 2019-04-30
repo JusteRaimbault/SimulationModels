@@ -10,3 +10,12 @@
 [submodule "Docs/Papers/LutiSensitivity"]
 	path = Docs/Papers/LutiSensitivity
 	url = git@github.com:JusteRaimbault/LutiSensitivity-paper.git
+[submodule "Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks"]
+	path = Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks
+	url = git@github.com:JusteRaimbault/ECTQG2019-SessionNetwork.git
+[submodule "Docs/Papers/UrbanPerspectives"]
+	path = Docs/Papers/UrbanPerspectives
+	url = git@github.com:JusteRaimbault/UrbanPerspectives-paper.git
+[submodule "Docs/Communications/2019/ECTQG2019/ExModeloRetex"]
+	path = Docs/Communications/2019/ECTQG2019/ExModeloRetex
+	url = git@github.com:JusteRaimbault/ECTQG2019-Simulation.git
