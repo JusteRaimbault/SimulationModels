@@ -1,0 +1,65 @@
+\begin{thebibliography}{}
+
+\bibitem[Arthur, 2015]{arthur2015complexity}
+Arthur, W.~B. (2015).
+\newblock Complexity and the shift in modern science.
+\newblock Conference on Complex Systems, Tempe, Arizona.
+
+\bibitem[Banos, 2013]{banos2013pour}
+Banos, A. (2013).
+\newblock Pour des pratiques de mod{\'e}lisation et de simulation
+  lib{\'e}r{\'e}es en g{\'e}ographies et shs.
+\newblock {\em HDR. Universit{\'e} Paris}, 1.
+
+\bibitem[Banos, 2017]{banos2017knowledge}
+Banos, A. (2017).
+\newblock Knowledge accelerator' in geography and social sciences: Further and
+  faster, but also deeper and wider.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 119--123.
+  Springer.
+
+\bibitem[Ch{\'e}rel et~al., 2015]{10.1371/journal.pone.0138212}
+Ch{\'e}rel, G., Cottineau, C., and Reuillon, R. (2015).
+\newblock Beyond corroboration: Strengthening model validation by looking for
+  unexpected patterns.
+\newblock {\em PLoS ONE}, 10(9):e0138212.
+
+\bibitem[Cottineau et~al., 2015]{cottineau2015modular}
+Cottineau, C., Reuillon, R., Chapron, P., Rey-Coyrehourcq, S., and Pumain, D.
+  (2015).
+\newblock A modular modelling framework for hypotheses testing in the
+  simulation of urbanisation.
+\newblock {\em Systems}, 3(4):348--377.
+
+\bibitem[Pumain and Reuillon, 2017]{pumain2017urban}
+Pumain, D. and Reuillon, R. (2017).
+\newblock {\em Urban Dynamics and Simulation Models}.
+\newblock Springer International.
+
+\bibitem[Reuillon et~al., 2013]{reuillon2013openmole}
+Reuillon, R., Leclaire, M., and Rey-Coyrehourcq, S. (2013).
+\newblock Openmole, a workflow engine specifically tailored for the distributed
+  exploration of simulation models.
+\newblock {\em Future Generation Computer Systems}, 29(8):1981--1990.
+
+\bibitem[Reuillon et~al., 2015]{reuillon2015}
+Reuillon, R., Schmitt, C., De~Aldama, R., and Mouret, J.-B. (2015).
+\newblock A new method to evaluate simulation models: The calibration profile
+  (cp) algorithm.
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  18(1):12.
+
+\bibitem[Rey-Coyrehourcq, 2015]{rey2015plateforme}
+Rey-Coyrehourcq, S. (2015).
+\newblock {\em Une plateforme int{\'e}gr{\'e}e pour la construction et
+  l'{\'e}valuation de mod{\`e}les de simulation en g{\'e}ographie}.
+\newblock PhD thesis, Universit{\'e} Paris 1 Panth{\'e}on-Sorbonne.
+
+\bibitem[Schmitt et~al., 2015]{schmitt2014half}
+Schmitt, C., Rey-Coyrehourcq, S., Reuillon, R., and Pumain, D. (2015).
+\newblock Half a billion simulations: Evolutionary algorithms and distributed
+  computing for calibrating the simpoplocal geographical model.
+\newblock {\em Environment and Planning B: Planning and Design},
+  42(2):300--315.
+
+\end{thebibliography}
