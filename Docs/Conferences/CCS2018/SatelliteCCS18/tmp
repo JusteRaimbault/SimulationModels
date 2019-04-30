@@ -1,0 +1,35 @@
+According to Arthur (2015), the study of complexity can not be anymore dissociated from intensive
+computational practices. Modeling and simulation have indeed taken a crucial role in the extraction of
+knowledge, especially in the study of systems with a high complexity such as socio-technical systems.
+Furthermore, Rey-Coyrehourcq (2015) gives the example of theoretical and quantitative geography is
+a perfect illustration of how methodological, technical, empirical and theoretical advances necessarily
+strongly bind together: the use of computation centers in the seventies would be comparable to the
+current democratization of grid computing which impact dramatically changes the way social science is
+practiced.
+The development of the OpenMole software for model exploration (Reuillon et al., 2013) is accompa-
+nied by a progressive shift in simulation practices. Three fundamental innovative axis distinguish this new
+philosophy and technology compared to existing approaches in simulation: (i) the embedding of models
+within workflows, making model coupling and multi-modeling easier; (ii) the provision of novel heuristic
+methods for model exploration; and (iii) the transparent access to various intensive computation infras-
+tructures. Banos (2017) emphasizes how this “knowledge accelerator” favors the construction of a robust
+and experimental social science, by the introduction of tools to deal with main requirements for it coined
+out by Banos (2013): multiple heterogenous models can be compared and coupled in an interdisciplinar
+approach within a new incremental methodology introduced by Cottineau et al. (2015), models and work-
+flows are open to ensure reproducibility, the behavior of models is better known with specific methods
+such as the Pattern Space Exploration algorithm developed by Chérel et al. (2015) that provide the out-
+put feasible space of a model or the Calibration Profile algorithm Reuillon et al. (2015), multi-objective
+approaches to model optimization are implemented in genetic algorithms for model calibration Schmitt
+et al. (2015).
+The aim of this symposium is take a reflexive positioning on these trends, situate them regarding
+similar practices, and establish the most crucial future issues to be tackled within that stream of research.
+Therefore, (i) two invited talks by D. Pumain and R. Reuillon, main investigators of the ERC project
+Geodivercity in which most of the aforementioned research took place (Pumain and Reuillon, 2017), will
+first sketch the current landscape of these approaches, both from an epistemological point of view in the
+particular case of geography and from a methodological point of view; (ii) more specialized invited talks
+will illustrate particular issues still open for the exploration of complex models of simulation; (iii) open
+contributions will put these research into the broader framework of computational science; (iv) a wrap-up
+round-table will aim at exchanging and reflecting on future research directions.
+Contributions are open to any research developing new methods, practices, theories and epistemologies
+related to models of simulation. No fields are privileged but the entanglement of theory, modeling andempirics will be an important feature to bring a relevant contribution to the debates. Methodological
+contributions are as much welcomed as contributions in epistemology or history of science. The objective
+is truly to reinforce an interdisciplinary perspective on modeling and simulation.
