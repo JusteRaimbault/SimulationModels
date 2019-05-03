@@ -1,0 +1,11 @@
+
+val task = UDockerTask(
+image = workDirectory / "ubuntu.tgz",
+      //run = """sh -c "ls -a""""
+      run = "echo 'hello world'"
+      //run = """echo "hello world""""
+      //run = "echo \\"hello world\\""//,
+      //reuseContainer=false,cacheInstall=false,forceUpdate=true
+)
+
+task
