@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--BuidFile for jarring project-->
+
+<project name="nlheadless" default="run" basedir=".">
+  <description>buildfile</description>
+
+  <!-- global properties -->
+  <!--<property name="src" location="src"/>-->
+  <!-- no need source, use lastly compiled classes-->
+  <property name="build" location="bin"/>
+  <property name="jar.dir" value="jar" />
+  <property name="main" value = "nlheadless.Main"/>
+    <!--<property name="main" value = "main.CitationNetwork"/>-->
+  <!--<property name="main" value="utils.tor.TestTorPoolManager"/>-->
+  <property name="bib" location="libjava"/>
+
+    <mkdir dir="bin"/>
+    <mkdir dir="jar"/>
+
+  <path id="classpath">
+    <fileset dir="${bib}" includes="*.jar"/>
+  </path>
+
+	<target name="compile" description="compile the source ">
+	    <!--<javac srcdir="src" destdir="${build}" classpathref="classpath"/>-->
+        <javac srcdir="java" destdir="${build}">
+            <classpath>
+                <fileset dir="${bib}" includes="**/*.jar"/>
+                <!--<pathelement location="lib/*.jar"/>-->
+            </classpath>
+        </javac>
+
+    </target>
+
+
+  <target name="jar" depends="compile">
+
+  	<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${build}">
+  		<manifest>
+  		   <attribute name="Main-Class" value="${main}"/>
+  		</manifest>
+  	    <fileset dir="${build}" includes="**/*.class" />
+  	    <zipgroupfileset dir="${bib}" includes="**/*.jar" />
+  	</jar>
+
+
+
+  </target>
+
+  <target name="run" depends="jar">
+
+      <java jar="${jar.dir}/${ant.project.name}.jar" fork="true">
+          <classpath>
+              <pathelement location="${jar.dir}/${ant.project.name}.jar"/>
+          </classpath>
+      </java>
+
+
+  </target>
+
+
+
+</project>

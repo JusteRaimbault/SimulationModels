@@ -1,0 +1,27 @@
+val population = Val[Double]
+val seed = Val[Int]
+val vision = Val[Double]
+
+val cmds = 
+  List(
+    "random-seed ${seed}",
+    "setup",
+    "repeat 10 [go]"
+  )
+
+val model =
+  NetLogo6Task(workDirectory / "Flocking3D.nlogo3d", cmds) set (
+    (inputs,outputs) += (seed,population,vision),
+    inputs += population mapped "population",
+    inputs += vision mapped "vision",
+  )
+
+//val csvHook = CSVHook(workDirectory / "result.csv", density, burned, seed)
+
+val exploration = 
+  DirectSampling(
+    evaluation = Replication(model, seed, 2),
+    sampling = population in Seq(20.0,30.0) x (vision is 10.0)
+  )
+
+exploration
