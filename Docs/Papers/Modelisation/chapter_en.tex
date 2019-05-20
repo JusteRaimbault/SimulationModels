@@ -64,7 +64,7 @@ $^{3}$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 \begin{abstract}
 %On rappelle d’abord dans ce chapitre à quel point les modèles de simulation sont une absolue nécessité en sciences humaines et sociales, qui ne peuvent que très exceptionnellement recourir aux méthodes des sciences expérimentales pour construire leurs savoirs. Les modèles offrent une possibilité de simuler les processus sociaux en remplaçant le jeu complexe des actions et réactions individuelles et collectives aux situations qu’elles engendrent par des mécanismes mathématiques ou informatiques plus simples, permettant de faciliter la compréhension des relations entre causes et conséquences de ces interactions et d’effectuer des prévisions. La formalisation par des modèles mathématiques susceptibles d’offrir des solutions analytiques n’étant souvent guère envisageable pour donner des représentations satisfaisantes de la complexité sociale (Jensen 2018), ce sont de plus en plus des modèles informatiques à base d’agents qui sont utilisés. Pendant longtemps les capacités limitées de calcul des ordinateurs ont empêché de programmer des modèles qui prennent en compte les interactions entre de grands nombres d’entités localisées géographiquement (personnes ou territoires). En principe, ces modèles doivent nous renseigner sur les possibilités et les conditions de l’émergence de certaines situations définies à un échelon macro-géographique à partir des interactions intervenant à un niveau micro-géographique, dans des systèmes aux comportements trop complexes pour être compris par un cerveau humain. Encore faut-il pouvoir étudier le comportement dynamique de ces modèles comportant des effets de feedback non linéaires et vérifier qu’ils produisent des résultats plausibles dans toutes les étapes de leur simulation. Ce travail indispensable de l’exploration de la dynamique des algorithmes est resté balbutiant jusque vers la fin des années 2010, où des algorithmes combinant des méthodes plus sophistiquées incluant des algorithmes génétiques et le recours au calcul intensif distribué ont permis un saut qualitatif important dans la validation des modèles, voire un tournant épistémologique pour les sciences humaines et sociales, comme l’indiquent les dernières applications réalisées avec l’aide de la plateforme OpenMOLE présentée ici. 
 %  reformuler phrase interaction / emergence - OK
-We recall first in this chapter to what extent simulation models are an absolute necessity in social sciences and humanities, which can only very exceptionally require to experimental sciences methods to construct their knowledge. Models open the perspective to simulate social processes by replacing the complex interplay of individual and collective actions and reactions to the situations they make emerge by simpler mathematical or computational mechanisms, fostering an easier understanding of the relations between causes and consequences of these interactions and to make predictions. The formalisation through mathematical models able to offer analytical solutions being most often not possible in order to provide satisfying representations of social complexity~\citep{jensen2018pourquoi}, computational models based on agents are more and more used. For long the limited computational capabilities of computer have forbidden to program models taking into account interactions between large numbers of entities geographically localized (individuals or territories). In principle these models should inform on the possibilities and conditions of the emergence of given configurations defined at a macro-geographical level from interactions occurring at a micro-geographical level, within systems with a too much complex behavior to be understood by a human brain. This however requires to study the dynamical behavior of these models including non-linear feedback effects and verify they produce plausible results at all stages of their simulation. This necessary stage of the exploration of the dynamics of algorithms remained rather rudimentary until the end of the last decade, when algorithms including more sophisticated methods such as evolutionary computation and the use of distributed high performance computing have allowed a significant qualitative leap forward in the validation of models, and even an epistemological turn for social sciences and humanities, as suggest the latest applications realized with the OpenMOLE platform described here.
+We first recall in this chapter to what extent simulation models are an absolute necessity in social sciences and humanities, which can only very exceptionally require to experimental sciences methods to construct their knowledge. Models open the perspective to simulate social processes by replacing the complex interplay of individual and collective actions and reactions to the situations they make emerge by simpler mathematical or computational mechanisms, fostering an easier understanding of the relations between causes and consequences of these interactions and to make predictions. The formalisation through mathematical models able to offer analytical solutions being most often not possible in order to provide satisfying representations of social complexity~\citep{jensen2018pourquoi}, computational models based on agents are more and more used. For long the limited computational capabilities of computer have forbidden to program models taking into account interactions between large numbers of entities geographically localized (individuals or territories). In principle these models should inform on the possibilities and conditions of the emergence of given configurations defined at a macro-geographical level from interactions occurring at a micro-geographical level, within systems with a too much complex behavior to be understood by a human brain. This however requires to study the dynamical behavior of these models including non-linear feedback effects and verify they produce plausible results at all stages of their simulation. This necessary stage of the exploration of the dynamics of algorithms remained rather rudimentary until the end of the last decade, when algorithms including more sophisticated methods such as evolutionary computation and the use of distributed high performance computing have allowed a significant qualitative leap forward in the validation of models, and even an epistemological turn for social sciences and humanities, as suggest the latest applications realized with the OpenMOLE platform described here.
 \end{abstract}
 
 
@@ -82,7 +82,7 @@ In social sciences and humanities, the elaboration of experimental apparatus is 
 
 
 %Conduire le changement dans la vie sociale, quelle que soit l’échelle des interventions, reste une opération coûteuse et risquée, donc déontologiquement peu acceptable par les scientifiques, dont bien peu finalement osent se lancer dans des projets de « recherche-action ». Une controverse a ainsi opposé pendant les années 1960 en France les tenants d’une « géographie appliquée », bonne connaisseuse du « terrain » mais parfois de tendance conservatrice à ceux d’une « géographie active » plus engagée dans la transformation de la société. Parfois, par exemple pour contribuer à la définition de la politique des métropoles d’équilibre en France (opération de la DATAR1 en 1964), les géographes participant aux études (dont Michel Rochefort en l’occurrence) s’appuyaient, sans vraiment oser le dire, sur des modèles scientifiques (dans ce cas précis la théorie des lieux centraux de Walter Christaller). Les géographes actuels affichent plus volontiers un souci d’aider à la décision de la manière la plus avisée possible selon l’état de leurs connaissances, ils font alors souvent le choix de recourir à des modèles de simulation, in silico, opérés par des ordinateurs. La simulation informatique est ainsi devenue un substitut à l’expérimentation. Ce n’est pas un hasard si, parmi les chercheurs en sciences sociales, les géographes s’y sont intéressés très tôt : la diversité des multiples sources de données (paysages, populations, habitats…) qu’ils manipulent pour rendre compte des aménagements apportés par les sociétés aux interfaces terrestres, l’étendue souvent large des territoires qu’ils examinent aux échelles régionale, nationale ou mondiale, expliquent leur besoin de recourir au calcul pour organiser ces masses d’information et comprendre les dynamiques qu’elles représentent.
-Driving change in social systems, whatever the scale of interventions, remains a costly and risky operation, therefore difficultly acceptable by science for deontological concerns. Very few scientists therefore engage in ``research-action'' projects. A controversy has thus opposed in the sixties in France the advocates of an ``applied geography'' with a good knowledge of the ``field'' but sometimes with conservative trends, to the defenders of an ``active geography'' which would be more implied in the transformation of society. Sometimes, for example to contribute to the definition of policies for balancing metropolitan areas in France (operation by the \emph{D{\'e}l{\'e}gation à l'Am{\'e}nagement du Territoire et à l'Action R{\'e}gionale} in 1964), geographers participating in the studies such as Michel Rochefort more particularly, did rely on scientific works, without having the courage to make it explicitly open (in this specific case central place theory by Walter Christaller). Contemporary geographers are less reluctant to exhibit a concern to help decision making in the most informed way possible given the state of their knowledge. They often then make the choice to use simulation models operated in silico by computers. Computer simulation thus became a substitute to experimentation. It is not a coincidence if among researchers in social sciences, geographers have very early found an interest in it: the diversity of multiple data sources (landscapes, populations, built environment, etc.) which they use to account of modifications of terrestrial interfaces by societies, the often large spatial extent of territories they study at the regional, national, or global scales, explain their need to make use of computing to organize this large quantities of information and to understand the dynamics they represent.
+Driving change in social systems, whatever the scale of interventions, remains a costly and risky operation, therefore difficultly acceptable by science for deontological concerns. Very few scientists therefore engage in ``research-action'' projects. A controversy has thus opposed in the sixties in France the advocates of an ``applied geography'' with a good knowledge of the ``field'' but sometimes with conservative trends, to the defenders of an ``active geography'' which would be more implied in the transformation of society. Sometimes, for example to contribute to the definition of policies for balancing metropolitan areas in France (operation by the \emph{D{\'e}l{\'e}gation {\`a} l'Am{\'e}nagement du Territoire et à l'Action R{\'e}gionale} in 1964), geographers participating in the studies such as Michel Rochefort more particularly, did rely on scientific works, without having the courage to make it explicitly open (in this specific case central place theory by Walter Christaller). Contemporary geographers are less reluctant to exhibit a concern to help decision making in the most informed way possible given the state of their knowledge. They often then make the choice to use simulation models operated in silico by computers. Computer simulation thus became a substitute to experimentation. It is not a coincidence if among researchers in social sciences, geographers have very early found an interest in it: the diversity of multiple data sources (landscapes, populations, built environment, etc.) which they use to account of modifications of terrestrial interfaces by societies, the often large spatial extent of territories they study at the regional, national, or global scales, explain their need to make use of computing to organize this large quantities of information and to understand the dynamics they represent.
 
 
 
@@ -107,7 +107,7 @@ A later generation of models playing in a more complex way with effects of proxi
 
 %Mais le développement de ces modèles s’est heurté très tôt à l’obstacle des capacités de calcul des ordinateurs de l’époque, car la représentation explicite des interactions spatiales augmente comme le carré du nombre des unités géographiques considérées. Ainsi, le statisticien Christophe Terrier a dû segmenter son programme Mirabelle ((Méthode Informatisée de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi) traitant les données du recensement de l’INSEE de 1975 avant de pouvoir simuler les découpages en bassins d’emploi des populations résidentes en fonction des navettes domicile-travail entre toutes les 36 000 communes françaises (Terrier, 1980). Notre premier modèle de simulation des interactions entre des villes destiné à reproduire leurs trajectoires démographiques et économiques influencées par les fonctions urbaines sur une période de 2000 ans sur un ordinateur de laboratoire ne pouvait accepter qu’un maximum de 400 villes (Bura et al., 1996, Sanders et al., 1997). La montée en puissance des calculs informatiques a été relativement lente, autorisant la considération d’environ un millier de villes en 2007 avec le modèle Eurosim (Sanders et al. 2007) ou les modèles Simpop2 appliqués par Anne Bretagnolle à l’Europe et aux Etats-Unis (Bretagnolle et al 2010). Surtout, la méthode d’expérimentation avec ces modèles est longtemps restée à un stade artisanal, requérant une grande application dans la modification « à la main » des valeurs des paramètres, qui ne sont que trop rarement directement observables, et qui doivent donc être estimées d’après la plausibilité des dynamiques du modèle. Or, les équations des modèles de dynamique urbaine intègrent des relations non linéaires qui produisent de nombreuses bifurcations, obligeant à des retours fastidieux dans la procédure d’estimation (Sanders et al. 2013). Ce long travail limite le nombre des simulations à partir duquel l’estimation obtenue peut être jugée comme satisfaisante, et surtout, une fois le modèle ainsi calibré, il demeure une assez grande incertitude quant à la qualité des résultats obtenus.
 %  imprecision on nonlinearity / bifurcations ? ok
-But the development of these models has been very early impeded by the computational capabilities at this time, since the explicit representation of spatial interactions increases as the square of the number of geographical units considered. Therefore, the statistician Christophe Terrier had to segment his Mirabelle program (\textit{Méthode Informatisée de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi}) processing household survey data provided by INSEE in 1975 before being able to simulate the clustering into employment centers of resident populations as a function of work-residence commuting between all 36,000 French communes \citep{terrier1980mirabelle}. Our first simulation model of interactions between cities aimed at reproducing their demographic and economic trajectories influenced by urban functions on a period of 2000 years could only accept a maximum of 400 cities on a personal computer \citep{bura1996multiagent,sanders1997simpop}. The increase of computational possibilities has been relatively slow, allowing to consider around one thousand cities in 2007 with the Eurosim model \citep{sanders2007artificial} or the Simpop2 models applied by Anne Bretagnolle on Europe and United States \citep{bretagnolle2010simulating}. Furthermore, the experimentation method with these models stayed at an experimental stage for long, requiring am increased attention in the modification ``by hand'' of parameter values, which are only very rarely directly observable, and which thus must be estimated through the plausibility of model dynamics. However, equations for urban dynamics models integrate non-linear relations which are linked to numerous bifurcations, forcing to laborious trial-and-error loops in the estimation procedure \citep{sanders2007artificial}. This consequent work limits the number of simulations from which the estimation obtained can be judged as satisfying, and more importantly once the model is therein calibrated, there remains a relatively high uncertainty regarding the quality of results obtained.
+But the development of these models has been very early impeded by the computational capabilities at this time, since the explicit representation of spatial interactions increases as the square of the number of geographical units considered. Therefore, the statistician Christophe Terrier had to segment his Mirabelle program (\textit{M{\'e}thode Informatis{\'e}e de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi}) processing household survey data provided by INSEE in 1975 before being able to simulate the clustering into employment centers of resident populations as a function of work-residence commuting between all 36,000 French communes \citep{terrier1980mirabelle}. Our first simulation model of interactions between cities aimed at reproducing their demographic and economic trajectories influenced by urban functions on a period of 2000 years could only accept a maximum of 400 cities on a personal computer \citep{bura1996multiagent,sanders1997simpop}. The increase of computational possibilities has been relatively slow, allowing to consider around one thousand cities in 2007 with the Eurosim model \citep{sanders2007artificial} or the Simpop2 models applied by Anne Bretagnolle on Europe and United States \citep{bretagnolle2010simulating}. Furthermore, the experimentation method with these models stayed at an experimental stage for long, requiring am increased attention in the modification ``by hand'' of parameter values, which are only very rarely directly observable, and which thus must be estimated through the plausibility of model dynamics. However, equations for urban dynamics models integrate non-linear relations which are linked to numerous bifurcations, forcing to laborious trial-and-error loops in the estimation procedure \citep{sanders2007artificial}. This consequent work limits the number of simulations from which the estimation obtained can be judged as satisfying, and more importantly once the model is therein calibrated, there remains a relatively high uncertainty regarding the quality of results obtained.
 
 
 %3 Les simulations de nouvelle génération
@@ -392,8 +392,512 @@ The exploration of simulation models has been progressively established in geogr
 
 
 
-\bibliographystyle{apalike}
-\bibliography{biblio}
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
+
+
+\begin{thebibliography}{}
+
+\bibitem[Aghion et~al., 1998]{aghion1998endogenous}
+Aghion, P., Howitt, P.~W., Howitt, P., Brant-Collett, M.,
+  Garc{\'\i}a-Pe{\~n}alosa, C., et~al. (1998).
+\newblock {\em Endogenous growth theory}.
+\newblock MIT press.
+
+\bibitem[Allen, 2012]{allen2012cities}
+Allen, P.~M. (2012).
+\newblock {\em Cities and regions as self-organizing systems: models of
+  complexity}.
+\newblock Routledge.
+
+\bibitem[Allen and Sanglier, 1981]{allen1981urban}
+Allen, P.~M. and Sanglier, M. (1981).
+\newblock Urban evolution, self-organization, and decisionmaking.
+\newblock {\em Environment and Planning A}, 13(2):167--183.
+
+\bibitem[Amblard, 2003]{amblard2003comprendre}
+Amblard, F. (2003).
+\newblock {\em Comprendre le fonctionnement de simulations sociales
+  individus-centr{\'e}es: Application {\`a} des mod{\`e}les de dynamiques
+  d'opinions}.
+\newblock PhD thesis, Universit{\'e} Blaise Pascal-Clermont-Ferrand II.
+
+\bibitem[Aster et~al., 2018]{aster2018parameter}
+Aster, R.~C., Borchers, B., and Thurber, C.~H. (2018).
+\newblock {\em Parameter estimation and inverse problems}.
+\newblock Elsevier.
+
+\bibitem[Banos, 2013]{banos2013pour}
+Banos, A. (2013).
+\newblock {\em Pour des pratiques de mod{\'e}lisation et de simulation
+  lib{\'e}r{\'e}es en g{\'e}ographie et SHS}.
+\newblock PhD thesis, Universit{\'e} Paris 1 Panth{\'e}on Sorbonne.
+
+\bibitem[Banos, 2017]{banos2017knowledge}
+Banos, A. (2017).
+\newblock Knowledge accelerator' in geography and social sciences: Further and
+  faster, but also deeper and wider.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 119--123.
+  Springer.
+
+\bibitem[Batty, 2019]{batty2019urban}
+Batty, M. (2019).
+\newblock Urban analytics defined.
+
+\bibitem[Bonnafous and Plassard, 1974]{bonnafous1974methodologies}
+Bonnafous, A. and Plassard, F. (1974).
+\newblock Les m{\'e}thodologies usuelles de l'{\'e}tude des effets structurants
+  de l'offre de transport.
+\newblock {\em Revue {\'e}conomique}, 25(25):208--232.
+
+\bibitem[Bretagnolle and Franc, 2018]{bretagnolle2018vers}
+Bretagnolle, A. and Franc, A. (2018).
+\newblock Vers des syst{\`e}mes de villes int{\'e}gr{\'e}s.
+\newblock In {\em Sanders, L., ed. Peupler la terre: De la pr{\'e}histoire à
+  l'{\`e}re des m{\'e}tropoles. Presses universitaires François-Rabelais.}
+
+\bibitem[Bretagnolle and Pumain, 2010]{bretagnolle2010simulating}
+Bretagnolle, A. and Pumain, D. (2010).
+\newblock Simulating urban networks through multiscalar space-time dynamics:
+  Europe and the united states, 17th-20th centuries.
+\newblock {\em Urban Studies}, 47(13):2819--2839.
+
+\bibitem[Bura et~al., 1996]{bura1996multiagent}
+Bura, S., Gu{\'e}rin-Pace, F., Mathian, H., Pumain, D., and Sanders, L. (1996).
+\newblock Multiagent systems and the dynamics of a settlement system.
+\newblock {\em Geographical analysis}, 28(2):161--178.
+
+\bibitem[Castiglione et~al., 2007]{castiglione2007optimization}
+Castiglione, F., Pappalardo, F., Bernaschi, M., and Motta, S. (2007).
+\newblock Optimization of haart with genetic algorithms and agent-based models
+  of hiv infection.
+\newblock {\em Bioinformatics}, 23(24):3350--3355.
+
+\bibitem[Ch{\'e}rel et~al., 2015]{10.1371/journal.pone.0138212}
+Ch{\'e}rel, G., Cottineau, C., and Reuillon, R. (2015).
+\newblock Beyond corroboration: Strengthening model validation by looking for
+  unexpected patterns.
+\newblock {\em PLoS ONE}, 10(9):e0138212.
+
+\bibitem[Clarke and Wilson, 1983]{clarke1983dynamics}
+Clarke, M. and Wilson, A.~G. (1983).
+\newblock The dynamics of urban spatial structure: progress and problems.
+\newblock {\em Journal of regional science}, 23(1):1--18.
+
+\bibitem[Cliff et~al., 2004]{cliff2004world}
+Cliff, A.~D., Haggett, P., Smallman-Raynor, M., et~al. (2004).
+\newblock {\em World atlas of epidemic diseases}.
+\newblock Arnold London.
+
+\bibitem[Cottineau et~al., 2015]{cottineau2015modular}
+Cottineau, C., Reuillon, R., Chapron, P., Rey-Coyrehourcq, S., and Pumain, D.
+  (2015).
+\newblock A modular modelling framework for hypotheses testing in the
+  simulation of urbanisation.
+\newblock {\em Systems}, 3(4):348--377.
+
+\bibitem[Csill{\'e}ry et~al., 2010]{csillery2010approximate}
+Csill{\'e}ry, K., Blum, M.~G., Gaggiotti, O.~E., and Fran{\c{c}}ois, O. (2010).
+\newblock Approximate bayesian computation (abc) in practice.
+\newblock {\em Trends in ecology \& evolution}, 25(7):410--418.
+
+\bibitem[Deffuant et~al., 2003]{deffuant2003demarche}
+Deffuant, G., Amblard, F., Duboz, R., and Ramat, E. (2003).
+\newblock Une d{\'e}marche exp{\'e}rimentale pour la simulation
+  individus-centr{\'e}e.
+\newblock {\em Actes des 10{\`e}mes Journ{\'e}es de Rochebrune, rencontres
+  interdisciplinaires sur les syst{\`e}mes complexes naturels et artificiels,
+  statut {\'e}pist{\'e}mologique de la simulation}, pages 45--64.
+
+\bibitem[Demoule et~al., 2018]{demoule2018histoire}
+Demoule, J.-P., Garcia, D., and Schnapp, A. (2018).
+\newblock {\em Une histoire des civilisations}.
+\newblock Paris, La Découverte, INRAP.
+
+\bibitem[Di~Pietro et~al., 2004]{di2004applying}
+Di~Pietro, A., While, L., and Barone, L. (2004).
+\newblock Applying evolutionary algorithms to problems with noisy,
+  time-consuming fitness functions.
+\newblock In {\em Proceedings of the 2004 Congress on Evolutionary Computation
+  (IEEE Cat. No. 04TH8753)}, volume~2, pages 1254--1261. IEEE.
+
+\bibitem[Duboz et~al., 2010]{duboz2010application}
+Duboz, R., Versmisse, D., Travers, M., Ramat, E., and Shin, Y.-J. (2010).
+\newblock Application of an evolutionary algorithm to the inverse parameter
+  estimation of an individual-based model.
+\newblock {\em Ecological modelling}, 221(5):840--849.
+
+\bibitem[Dupuy and Benguigui, 2015]{dupuy2015sciences}
+Dupuy, G. and Benguigui, L.~G. (2015).
+\newblock Sciences urbaines: interdisciplinarit{\'e}s passive, na{\"\i}ve,
+  transitive, offensive.
+\newblock {\em M{\'e}tropoles}, (16).
+
+\bibitem[Eliot and Daud{\'e}, 2006]{eliot2006diffusion}
+Eliot, E. and Daud{\'e}, {\'E}. (2006).
+\newblock Diffusion des {\'e}pid{\'e}mies et complexit{\'e}s g{\'e}ographiques.
+  perspectives conceptuelles et m{\'e}thodologiques.
+\newblock {\em Espace populations soci{\'e}t{\'e}s. Space populations
+  societies}, (2006/2-3):403--416.
+
+\bibitem[Epstein and Axtell, 1996]{epstein1996growing}
+Epstein, J.~M. and Axtell, R. (1996).
+\newblock {\em Growing artificial societies: social science from the bottom
+  up}.
+\newblock Brookings Institution Press.
+
+\bibitem[Espinosa, 2012]{espinosa2012genetic}
+Espinosa, O.~B. (2012).
+\newblock A genetic algorithm for the calibration of a micro-simulation model.
+\newblock {\em arXiv preprint arXiv:1201.3456}.
+
+\bibitem[Eubank et~al., 2004]{eubank2004modelling}
+Eubank, S., Guclu, H., Kumar, V.~A., Marathe, M.~V., Srinivasan, A., Toroczkai,
+  Z., and Wang, N. (2004).
+\newblock Modelling disease outbreaks in realistic urban social networks.
+\newblock {\em Nature}, 429(6988):180.
+
+\bibitem[Favaro and Pumain, 2011]{favaro2011gibrat}
+Favaro, J.-M. and Pumain, D. (2011).
+\newblock Gibrat revisited: An urban growth model incorporating spatial
+  interaction and innovation cycles. 再评吉尔布瑞特:
+  顾及空间相互作用和创新周期的城市增长模型.
+\newblock {\em Geographical Analysis}, 43(3):261--286.
+
+\bibitem[Fletcher, 1986]{fletcher1986settlement}
+Fletcher, R. (1986).
+\newblock Settlement archaeology: World-wide comparisons.
+\newblock {\em World Archaeology}, 18(1):59--83.
+
+\bibitem[Gibrat, 1931]{gibrat1931inegalites}
+Gibrat, R. (1931).
+\newblock {\em Les in{\'e}galit{\'e}s {\'e}conomiques: Applications... d'une
+  loi nouvelle, la loi de l'effet proportionnel}.
+\newblock PhD thesis, Recueil Sirey.
+
+\bibitem[Gleyze, 2005]{gleyze2005vulnerabilite}
+Gleyze, J.-F. (2005).
+\newblock {\em La vuln{\'e}rabilit{\'e} structurelle des r{\'e}seaux de
+  transport dans un contexte de risques}.
+\newblock PhD thesis, Universit{\'e} Paris-Diderot-Paris VII.
+
+\bibitem[Grignard et~al., 2013]{grignard2013gama}
+Grignard, A., Taillandier, P., Gaudou, B., Vo, D.~A., Huynh, N.~Q., and
+  Drogoul, A. (2013).
+\newblock Gama 1.6: Advancing the art of complex agent-based modeling and
+  simulation.
+\newblock In {\em International Conference on Principles and Practice of
+  Multi-Agent Systems}, pages 117--131. Springer.
+
+\bibitem[Grimm et~al., 2005]{grimm2005pattern}
+Grimm, V., Revilla, E., Berger, U., Jeltsch, F., Mooij, W.~M., Railsback,
+  S.~F., Thulke, H.-H., Weiner, J., Wiegand, T., and DeAngelis, D.~L. (2005).
+\newblock Pattern-oriented modeling of agent-based complex systems: lessons
+  from ecology.
+\newblock {\em science}, 310(5750):987--991.
+
+\bibitem[Hagerstrand, 1957]{hagerstrand1957migration}
+Hagerstrand, T. (1957).
+\newblock Migration and area: migration in sweden: Lund studies in geography,
+  series b.
+\newblock {\em Human Geography}, 13.
+
+\bibitem[Heppenstall et~al., 2007]{heppenstall2007genetic}
+Heppenstall, A.~J., Evans, A.~J., and Birkin, M.~H. (2007).
+\newblock Genetic algorithm optimisation of an agent-based model for simulating
+  a retail market.
+\newblock {\em Environment and Planning B: Planning and Design},
+  34(6):1051--1070.
+
+\bibitem[Hung et~al., 2016]{hung2016guidock}
+Hung, L.-H., Kristiyanto, D., Lee, S.~B., and Yeung, K.~Y. (2016).
+\newblock Guidock: using docker containers with a common graphics user
+  interface to address the reproducibility of research.
+\newblock {\em PloS one}, 11(4):e0152686.
+
+\bibitem[Jensen, 2018]{jensen2018pourquoi}
+Jensen, P. (2018).
+\newblock {\em Pourquoi la soci{\'e}t{\'e} ne se laisse pas mettre en
+  {\'e}quations}.
+\newblock Le Seuil.
+
+\bibitem[Kurtzer et~al., 2017]{kurtzer2017singularity}
+Kurtzer, G.~M., Sochat, V., and Bauer, M.~W. (2017).
+\newblock Singularity: Scientific containers for mobility of compute.
+\newblock {\em PloS one}, 12(5):e0177459.
+
+\bibitem[Lenormand et~al., 2013]{lenormand2013adaptive}
+Lenormand, M., Jabot, F., and Deffuant, G. (2013).
+\newblock Adaptive approximate bayesian computation for complex models.
+\newblock {\em Computational Statistics}, 28(6):2777--2796.
+
+\bibitem[Liu, 1996]{liu1996settlement}
+Liu, L. (1996).
+\newblock Settlement patterns, chiefdom variability, and the development of
+  early states in north china.
+\newblock {\em Journal of anthropological archaeology}, 15(3):237--288.
+
+\bibitem[Lowry, 1964]{lowry1964model}
+Lowry, I.~S. (1964).
+\newblock A model of metropolis.
+
+\bibitem[Marcus and Sabloff, 2008]{marcus2008ancient}
+Marcus, J. and Sabloff, J.~A. (2008).
+\newblock {\em The ancient city: New perspectives on urbanism in the old and
+  new world}.
+\newblock School for Advanced Research on the.
+
+\bibitem[Moriconi-Ebrard, 1993]{moriconi1993urbanisation}
+Moriconi-Ebrard, F. (1993).
+\newblock {\em L'urbanisation du monde de 1950 {\`a} 1990 d'apr{\`e}s une
+  d{\'e}finition harmonis{\'e}e des agglom{\'e}rations urbaines}.
+\newblock PhD thesis, Paris 1.
+
+\bibitem[Morrill, 1962]{morrill1962development}
+Morrill, R.~L. (1962).
+\newblock The development of models of migration and the role of electronic
+  processing machines.
+\newblock {\em J. Sutter. Entret. Monaco Sc. Hum. I}, page 213.
+
+\bibitem[Morrill, 1963]{morrill1963distribution}
+Morrill, R.~L. (1963).
+\newblock The distribution of migration distances.
+\newblock In {\em Papers of the Regional Science Association}, volume~11, pages
+  73--84. Springer.
+
+\bibitem[Odersky and Zenger, 2005]{odersky2005scalable}
+Odersky, M. and Zenger, M. (2005).
+\newblock Scalable component abstractions.
+\newblock In {\em ACM Sigplan Notices}, volume~40, pages 41--57. ACM.
+
+\bibitem[Offner, 1993]{offner1993effets}
+Offner, J.-M. (1993).
+\newblock Les ``effets structurants'' du transport: mythe politique,
+  mystification scientifique.
+\newblock {\em L'espace g{\'e}ographique}, pages 233--242.
+
+\bibitem[Offner et~al., 2014]{offner2014effets}
+Offner, J.-M., Beaucire, F., Delaplace, M., Fr{\'e}mont, A., Ninot, O.,
+  Bretagnolle, A., and Pumain, D. (2014).
+\newblock Les effets structurants des infrastructures de transport.
+\newblock {\em Espace Geographique}, 43(1):p--51.
+
+\bibitem[Oliveira and Gibbons, 2010]{oliveira2010scala}
+Oliveira, B.~C. and Gibbons, J. (2010).
+\newblock Scala for generic programmers: comparing haskell and scala support
+  for generic programming.
+\newblock {\em Journal of functional programming}, 20(3-4):303--352.
+
+\bibitem[Passerat-Palmbach et~al., 2017]{passerat2017reproducible}
+Passerat-Palmbach, J., Reuillon, R., Leclaire, M., Makropoulos, A., Robinson,
+  E.~C., Parisot, S., and Rueckert, D. (2017).
+\newblock Reproducible large-scale neuroimaging studies with the openmole
+  workflow management system.
+\newblock {\em Frontiers in neuroinformatics}, 11:21.
+
+\bibitem[Piou et~al., 2009]{piou2009proposing}
+Piou, C., Berger, U., and Grimm, V. (2009).
+\newblock Proposing an information criterion for individual-based models
+  developed in a pattern-oriented modelling framework.
+\newblock {\em Ecological Modelling}, 220(17):1957--1967.
+
+\bibitem[Pumain, 1997]{pumain1997pour}
+Pumain, D. (1997).
+\newblock Pour une th{\'e}orie {\'e}volutive des villes.
+\newblock {\em L'Espace g{\'e}ographique}, pages 119--134.
+
+\bibitem[Pumain and Reuillon, 2017]{pumain2017urban}
+Pumain, D. and Reuillon, R. (2017).
+\newblock {\em Urban dynamics and simulation models}.
+\newblock Springer.
+
+\bibitem[Raimbault, 2017a]{raimbault2017applied}
+Raimbault, J. (2017a).
+\newblock An applied knowledge framework to study complex systems.
+\newblock In {\em Complex Systems Design \& Management}, pages 31--45.
+
+\bibitem[Raimbault, 2017b]{raimbault2017identification}
+Raimbault, J. (2017b).
+\newblock Identification de causalités dans des données spatio-temporelles.
+\newblock In {\em Spatial Analysis and GEOmatics 2017}.
+
+\bibitem[Raimbault, 2018a]{raimbault2018indirect}
+Raimbault, J. (2018a).
+\newblock Indirect evidence of network effects in a system of cities.
+\newblock {\em Environment and Planning B: Urban Analytics and City Science},
+  page 2399808318774335.
+
+\bibitem[Raimbault, 2018b]{raimbault2018modeling}
+Raimbault, J. (2018b).
+\newblock Modeling the co-evolution of cities and networks.
+\newblock {\em arXiv preprint arXiv:1804.09430}.
+
+\bibitem[Raimbault, 2018c]{raimbault2018modelisation}
+Raimbault, J. (2018c).
+\newblock Mod{\'e}lisation des interactions entre r{\'e}seaux de transport et
+  territoires: une approche par la co-{\'e}volution.
+\newblock In {\em JJC Pacte-Citeres-Les capacit{\'e}s transformatives des
+  r{\'e}seaux dans la fabrique des territoires}.
+
+\bibitem[Raimbault, 2018d]{raimbault2018unveiling}
+Raimbault, J. (2018d).
+\newblock Unveiling co-evolutionary patterns in systems of cities: a systematic
+  exploration of the simpopnet model.
+\newblock {\em arXiv preprint arXiv:1809.00861}.
+
+\bibitem[Raimbault et~al., 2018]{raimbault2018space}
+Raimbault, J., Cottineau, C., Texier, M.~L., N{\'e}chet, F.~L., and Reuillon,
+  R. (2018).
+\newblock Space matters: extending sensitivity analysis to initial spatial
+  conditions in geosimulation models.
+\newblock {\em arXiv preprint arXiv:1812.06008}.
+
+\bibitem[Raimbault and Perret, 2019]{raimbault2019generating}
+Raimbault, J. and Perret, J. (2019).
+\newblock Generating urban morphologies at large scales.
+\newblock {\em arXiv preprint arXiv:1903.06807}.
+
+\bibitem[Rakshit et~al., 2017]{rakshit2017noisy}
+Rakshit, P., Konar, A., and Das, S. (2017).
+\newblock Noisy evolutionary optimization algorithms--a comprehensive survey.
+\newblock {\em Swarm and Evolutionary Computation}, 33:18--45.
+
+\bibitem[Reuillon et~al., 2010]{reuillon2010declarative}
+Reuillon, R., Chuffart, F., Leclaire, M., Faure, T., Dumoulin, N., and Hill, D.
+  (2010).
+\newblock Declarative task delegation in openmole.
+\newblock In {\em 2010 International Conference on High Performance Computing
+  \& Simulation}, pages 55--62. IEEE.
+
+\bibitem[Reuillon et~al., 2013]{reuillon2013openmole}
+Reuillon, R., Leclaire, M., and Rey-Coyrehourcq, S. (2013).
+\newblock Openmole, a workflow engine specifically tailored for the distributed
+  exploration of simulation models.
+\newblock {\em Future Generation Computer Systems}, 29(8):1981--1990.
+
+\bibitem[Reuillon et~al., 2015]{reuillon2015new}
+Reuillon, R., Schmitt, C., De~Aldama, R., and Mouret, J.-B. (2015).
+\newblock A new method to evaluate simulation models: The calibration profile
+  (cp) algorithm.
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  18(1):12.
+
+\bibitem[Rey-Coyrehourcq, 2015]{rey2015plateforme}
+Rey-Coyrehourcq, S. (2015).
+\newblock {\em Une plateforme int{\'e}gr{\'e}e pour la construction et
+  l'{\'e}valuation de mod{\`e}les de simulation en g{\'e}ographie}.
+\newblock PhD thesis, Paris 1-Panth{\'e}on-Sorbonne.
+
+\bibitem[Reymond, 1971]{reymond1971pour}
+Reymond, H. (1971).
+\newblock Pour une problématique théorique.
+\newblock In Isnard, H., Racine, J.~B., and Reymond, H., editors, {\em
+  Probl{\'e}matiques de la g{\'e}ographie}, volume~29. Presses Universitaires
+  de France-PUF.
+
+\bibitem[Rist, 1970]{rist1970student}
+Rist, R. (1970).
+\newblock Student social class and teacher expectations: The self-fulfilling
+  prophecy in ghetto education.
+\newblock {\em Harvard educational review}, 40(3):411--451.
+
+\bibitem[Rozenfeld et~al., 2008]{rozenfeld2008laws}
+Rozenfeld, H.~D., Rybski, D., Andrade, J.~S., Batty, M., Stanley, H.~E., and
+  Makse, H.~A. (2008).
+\newblock Laws of population growth.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(48):18702--18707.
+
+\bibitem[Sanders et~al., 2007]{sanders2007artificial}
+Sanders, L., Favaro, J., Glisse, B., Mathian, H., and Pumain, D. (2007).
+\newblock Artificial intelligence and collective agents: the eurosim model.
+\newblock {\em Cybergeo}, 392:15.
+
+\bibitem[Sanders et~al., 1997]{sanders1997simpop}
+Sanders, L., Pumain, D., Mathian, H., Gu{\'e}rin-Pace, F., and Bura, S. (1997).
+\newblock Simpop: a multiagent system for the study of urbanism.
+\newblock {\em Environment and Planning B: Planning and design},
+  24(2):287--305.
+
+\bibitem[Schmitt, 2014]{schmitt2014modelisation}
+Schmitt, C. (2014).
+\newblock {\em Mod{\'e}lisation de la dynamique des syst{\`e}mes de peuplement:
+  de SimpopLocal {\`a} SimpopNet}.
+\newblock PhD thesis, Universit{\'e} Panth{\'e}on-Sorbonne-Paris I.
+
+\bibitem[Schmitt et~al., 2015]{schmitt2015half}
+Schmitt, C., Rey-Coyrehourcq, S., Reuillon, R., and Pumain, D. (2015).
+\newblock Half a billion simulations: Evolutionary algorithms and distributed
+  computing for calibrating the simpoplocal geographical model.
+\newblock {\em Environment and Planning B: Planning and Design},
+  42(2):300--315.
+
+\bibitem[Sharma and Singh, 2006]{sharma2006multi}
+Sharma, S. and Singh, H. (2006).
+\newblock Multi-agent system for simulating human behavior in egress
+  simulations.
+\newblock In {\em Proceedings of NAACSOS, Annual Conference of the North
+  American Association for computational social and organizational sciences,
+  Notre Dame, Indiana}.
+
+\bibitem[Sloane, 2008]{sloane2008experiences}
+Sloane, T. (2008).
+\newblock Experiences with domain-specific language embedding in scala.
+\newblock In {\em Domain-Specific Program Development}, page~7.
+
+\bibitem[Solomatine et~al., 1999]{solomatine1999automatic}
+Solomatine, D., Dibike, Y., and Kukuric, N. (1999).
+\newblock Automatic calibration of groundwater models using global optimization
+  techniques.
+\newblock {\em Hydrological Sciences Journal}, 44(6):879--894.
+
+\bibitem[Stonedahl and Wilensky, 2010]{stonedahl2010evolutionary}
+Stonedahl, F. and Wilensky, U. (2010).
+\newblock Evolutionary robustness checking in the artificial anasazi model.
+\newblock In {\em 2010 AAAI Fall Symposium Series}.
+
+\bibitem[Stonedahl, 2011]{stonedahl2011genetic}
+Stonedahl, F.~J. (2011).
+\newblock {\em Genetic algorithms for the exploration of parameter spaces in
+  agent-based models}.
+\newblock PhD thesis, Northwestern University.
+
+\bibitem[Terrier, 1980]{terrier1980mirabelle}
+Terrier, C. (1980).
+\newblock Mirabelle.
+\newblock {\em Courrier des Statistiques}, 73.
+
+\bibitem[Tisue and Wilensky, 2004]{tisue2004netlogo}
+Tisue, S. and Wilensky, U. (2004).
+\newblock Netlogo: A simple environment for modeling complexity.
+\newblock In {\em International conference on complex systems}, volume~21,
+  pages 16--21. Boston, MA.
+
+\bibitem[Van~Deursen and Klint, 2002]{van2002domain}
+Van~Deursen, A. and Klint, P. (2002).
+\newblock Domain-specific language design requires feature descriptions.
+\newblock {\em Journal of Computing and Information Technology}, 10(1):1--17.
+
+\bibitem[White and Engelen, 1993]{white1993cellular}
+White, R. and Engelen, G. (1993).
+\newblock Cellular automata and fractal urban form: a cellular modelling
+  approach to the evolution of urban land-use patterns.
+\newblock {\em Environment and planning A}, 25(8):1175--1199.
+
+\bibitem[White et~al., 2015]{white2015modeling}
+White, R., Engelen, G., and Uljee, I. (2015).
+\newblock {\em Modeling cities and regions as complex systems: From theory to
+  planning applications}.
+\newblock MIT Press.
+
+\bibitem[Wilson, 2014]{wilson2014complex}
+Wilson, A.~G. (2014).
+\newblock {\em Complex spatial systems: the modelling foundations of urban and
+  regional analysis}.
+\newblock Routledge.
+
+\end{thebibliography}
+
 
 
 
