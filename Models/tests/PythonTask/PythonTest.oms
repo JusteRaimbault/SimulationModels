@@ -1,0 +1,10 @@
+
+val i = Val[Double]
+val j = Val[Double]
+
+val model = PythonTask(workDirectory / "script.py",3) set (
+    inputs += (i),
+    outputs += (i,j)
+)
+
+model
