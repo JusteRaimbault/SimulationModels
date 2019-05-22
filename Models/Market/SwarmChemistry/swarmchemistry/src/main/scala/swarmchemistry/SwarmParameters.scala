@@ -53,8 +53,6 @@ object SwarmParameters {
     )
   }
 
-  def bounded(p: Double,mi: Double, ma: Double): Double = math.max(math.min(p,ma),mi)
-
 
   def mutate(rate: Double,magnitude: Double,params: SwarmParameters)(implicit rng: Random): SwarmParameters = {
     SwarmParameters(
