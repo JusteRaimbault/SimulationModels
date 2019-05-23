@@ -60,7 +60,8 @@ val errresistance = Val[Array[Double]]
 val score = Val[Double]
 
 val sklearnclassifier = PythonTask(
-    workDirectory / "logisticregression.py",3
+    workDirectory / "logisticregression.py",3,
+    libraries = Seq("pandas","numpy","sklearn")
 ) set (
   inputFiles += (training,"data/training.csv"),
   inputFiles += (validation,"data/validation.csv"),
