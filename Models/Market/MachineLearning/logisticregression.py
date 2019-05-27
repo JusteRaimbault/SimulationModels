@@ -25,8 +25,9 @@ prederror = dp.loc[abs(pred - yp)==1]
 print(prederror['density'])
 print(prederror['resistance'])
 
-errdensity = prederror['density']
-errresistance = prederror['resistance']
+# define outputs - must be "standard types", not objects (basic types and multidimensional lists)
+errdensity = list(prederror['density'])
+errresistance = list(prederror['resistance'])
 
 score = clf.score(Xp,yp)
 print(score)
