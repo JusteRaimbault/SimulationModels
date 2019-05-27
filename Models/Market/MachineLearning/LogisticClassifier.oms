@@ -63,14 +63,16 @@ val sklearnclassifier = PythonTask(
     workDirectory / "logisticregression.py",3,
     libraries = Seq("pandas","numpy","sklearn")
 ) set (
-  inputFiles += (training,"data/training.csv"),
-  inputFiles += (validation,"data/validation.csv"),
+  //inputFiles += (training,"data/training.csv"),
+  //inputFiles += (validation,"data/validation.csv"),
+  inputs += training mapped "data/training.csv",
+  inputs += validation mapped "data/validation.csv",
   outputs += errdensity mapped "errdensity",
-  outputs += errresistance mapped "errresistance"
+  outputs += errresistance mapped "errresistance",
   outputs += score mapped "score"
 )
 
-val indics_hook = AppendToCSVFileHook(workDirectory / "exploration" / ((new SimpleDateFormat("yyyyMMdd_HHmmss")).format(new Date()))+"_classiferrors.csv")
+val indics_hook = AppendToCSVFileHook(workDirectory / "exploration" / (((new SimpleDateFormat("yyyyMMdd_HHmmss")).format(new Date()))+"_classiferrors.csv"))
 
 EmptyTask() -- Seq(training,validation).map{datagen} -- (sklearnclassifier hook indics_hook)
 
