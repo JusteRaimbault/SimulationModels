@@ -1,0 +1,32 @@
+
+val x1 = Val[Double]
+val x2 = Val[Double]
+val sampling = Val[String]
+val repet = Val[Int]
+val samples = Val[Int]
+
+val dummy = EmptyTask() set ((inputs,outputs) += (x1,x2,sampling,repet,samples))
+
+val h = AppendToCSVFileHook(workDirectory / "sobol_repets.csv")
+
+def repli(ni: (Int,Int)) = {
+    println(ni)
+    val n = ni._1
+    val i = ni._2
+    val gridStep = 1.0 / math.sqrt(n).toInt.toDouble
+  DirectSampling(
+    evaluation = dummy hook h,
+    sampling = (
+        LHS(n,x1 in (0.0,1.0),x2 in (0.0,1.0)) x (sampling is "LHS") x (repet is i) x (samples is n)
+        ) :: (
+        SobolSampling(n,x1 in (0.0,1.0),x2 in (0.0,1.0))x (sampling is "Sobol") x (repet is i) x (samples is n)
+        ) :: (
+          ((x1 in UniformDistribution[Double](i,1.0) take n) zip (x2 in UniformDistribution[Double](i+10000,1.0) take n)) x (sampling is "random") x (repet is i) x (samples is n)
+        ) :: (
+            (x1 in (gridStep to 1.0 by gridStep)) x (x2 in (gridStep to 1.0 by gridStep)) x (sampling is "grid") x (repet is i) x (samples is n)
+            )
+    )
+}
+
+EmptyTask() -- (Array.tabulate(20){i => (200 to 2000 by 200).toArray zip Array.fill(10)(i)}).flatten.toSeq.map(repli)
+

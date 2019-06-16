@@ -1,0 +1,19 @@
+
+val x1 = Val[Double]
+val x2 = Val[Double]
+val sampling = Val[String]
+
+val dummy = EmptyTask() set ((inputs,outputs) += (x1,x2,sampling))
+
+val h = AppendToCSVFileHook(workDirectory / "sobol.csv")
+
+DirectSampling(
+    evaluation = dummy hook h,
+    sampling = (
+        LHS(1000,x1 in (0.0,1.0),x2 in (0.0,1.0)) x (sampling is "LHS") 
+        ) :: (
+        SobolSampling(1000,x1 in (0.0,1.0),x2 in (0.0,1.0))x (sampling is "Sobol") 
+        ) :: (
+          ((x1 in UniformDistribution[Double](0,1.0) take 1000) zip (x2 in UniformDistribution[Double](0,1.0) take 1000)) x (sampling is "random")
+        )
+    )
