@@ -1,0 +1,51 @@
+Conferences :
+ - Chérel, G. (2018). Classifying Simulation Methods. CCS2018 Satellite: New methods and epistemologies to explore simulation models, Thessaloniki, Greece.
+ - Raimbault, J. (2018). A systematic comparison of interaction models for systems of cities, Conference on Complex Systems 2018, Thessaloniki.
+ - Raimbault, J. (2018). Extracting knowledge from simulation models: trends and perspectives from the viewpoint of quantitative geography, CCS2018 Satellite: New methods and epistemologies to explore simulation models, Thessaloniki
+ - Raimbault, J. (2018). Multi-modeling the morphogenesis of transportation networks. In Artificial Life Conference Proceedings (extended abstract, pp. 382-383). Tokyo, July 2018
+ - Raimbault, J. (2018). A multi-dimensional percolation approach to characterize sustainable mega-city regions, MARAMI 2018, Avignon, Oct. 2018.
+ - Raimbault, J. (2018). Des systèmes naturels aux systèmes urbains: génération de réseaux de transport optimaux par modèle slime-mould. In BioMim Expo 2018.
+ - Raimbault, J. (2019). Espace et complexités des systèmes territoriaux, Journées de Rochebrune 2019.
+ - Raimbault, J. (2019). Towards multi-scalar models for the co-evolution of transportation networks and territories. Rencontres de Theo Quant 2019.
+ - Raimbault, J. (2019). De l’endogénéité des hiérarchies dans les systèmes territoriaux complexes, JIG 2019, Paris.
+ - Raimbault, J. (2019). Towards integrated urban models for sustainable policies, Urban Analytics Tongji-Turing Workshop, Shanghai.
+ - Reuillon R., Leclaire M., Raimbault J., et al. (2019). Fostering the use of methods for geosimulation models sensitivity analysis and validation, ECTQG 2019, Luxembourg (forthcoming).
+ - Raimbault, J. (2019). A meta-analysis of models for interactions between transportation networks and territories, ECTQG 2019, Luxembourg (forthcoming).
+ - Raimbault, J., Denis E., Pumain D. (2019). An evolutionary theory for the spatial dynamics of urban systems worldwide, ECTQG 2019, Luxembourg (forthcoming).
+ - Raimbault, J. (2019). A multi-scalar model for system of cities, Conference on Complex Systems 2019, Singapore (forthcoming).
+ - Raimbault, J. (2019). Worldwide estimation of parameters for a simple reaction-diffusion model of urban growth, International Land-use Symposium, Paris (forthcoming).
+
+
+Conferences under review :
+ - Leclaire M., Reuillon R., Raimbault J., Rey S. Et al. (2019). Retour d’expérience de l’école OpenMOLE “ExModelo”, organisée en partenariat avec le méso-centre du CRIANN. Soumis à JCAD 2019.
+ - Banos A., Raimbault J., Rey S. (2019). HPC et Geographie. Soumis à JCAD 2019.
+
+
+Papers:
+ - Raimbault, J. (2018). Calibration of a density-based model of urban morphogenesis. PloS one, 13(9), e0203516.
+ - Raimbault, J. (2019). Exploration of an interdisciplinary scientific landscape. Scientometrics, 119(2), 617-641.
+ - Raimbault, J. and Perret, J., 2019. Generating urban morphologies at large scales. Proceedings of Artificial Life 2019.
+ - Raimbault, J. (2019). An urban morphogenesis model capturing interactions between networks and territories. In The Mathematics of Urban Morphology (pp. 383-409). Birkhauser, Cham.
+ - Raimbault, J. (2019). Models for the co-evolution of cities and networks, Handbook on Cities and Networks, Rozenblat C., Neal Z., Edward Elgar Publishing, in press.
+ - Raimbault, J. (2019). Evolving accessibility landscapes: mutations of transportation networks in China. In Aveline-Dubach, N., ed. Pathways of sustainable urban development across China - the cases of Hangzhou, Datong and Zhuhai, pp 89-108. Imago. ISBN:978-88-94384-71-0
+ - Raimbault, J. (2019). Unveiling co-evolutionary patterns in systems of cities : systematic exploration of the SimpopNet model, in Theories and models of urbanization. Pumain D., ed. Springer Lecture Notes in Morphogenesis. In press.
+ - Raimbault, J. (2019). Relating complexities for the reflexive study of complex systems, in Theories and models of urbanization. Pumain D., ed. Springer Lecture Notes in Morphogenesis. In press.
+ - Pumain D., Raimbault J. (2019). Méthodes d’exploration de la dynamique des algorithmes, in La modelisation des Villes et des Territoires, Pumain D. ed., ISTE Editions. In press.
+ 
+
+Papers under review :
+ - Raimbault, J. (2019). Multi-dimensional Urban Network Percolation. Under review (second round, minor revision) for JIMIS.
+ - Raimbault, J., Cottineau, C., Texier, M. L., Néchet, F. L., & Reuillon, R. (2018). Space Matters: extending sensitivity analysis to initial spatial conditions in geosimulation models. Under review (second round, minor revision) for JASSS.
+ - Raimbault, J. & Bergeaud, A. (2019). An Empirical Analysis of the Spatial Variability of Fuel Prices in the United States. Under review (second round, major revision) for Transportation Research Part A.
+ - Raimbault, J. & Le Nechet, F. (2018). Closing the loop: Introducing Endogenous Transport Provision in a LUTI Model. Under review for Journal of Transport Geography.
+
+ 
+
+Papers in preparation :
+ - Raimbault, J. & Reuillon, R. (2019). A simple embedding method for the evaluation of fitness in a noisy environment. In preparation for IEEE Transactions on Evolutionary Computation.
+ - Raimbault, J. (2019). Space and complexities of territorial systems. In preparation for Interface. arXiv:1901.09869
+ - Raimbault, J., Reuillon, R. & Chérel, G. (2019). Validation of land-use transport interaction models. In preparation for Transportation Research Part B.
+ - Raimbault J., Vanhoof M., Batty M. (2019). Microsimulation models and land-use transport interaction models : a systematic review. In preparation for Applied Network Science.
+ - Lavallee F., Raimbault J., Reuillon R. (2019). A new method for inverse problems in simulation models. In preparation for Journal of Artificial Societies and Social Simulation.
+ - Chérel, G., & Romain, R., A asynchronous parallelisation scheme for approximate Bayesian computation targeting massively parallel computing architectures. In preparation for Computational Statistics.
+ - Chérel, G., Classifying Simulation Methods. In preparation for Journal of Artificial Societies and Social Simulation.
