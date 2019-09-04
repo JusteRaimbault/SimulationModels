@@ -1,0 +1,6 @@
+val command = """python3 -c 'from simurba import Simulation; s=Simulation("openmole", "inputs/${pixRes} output ${growth} ${finalYear} ${scenario} ${pluPriority} ${buildNonRes} ${exclusionRatio} ${maxBuiltRatio} ${maxUsedSrfPla} ${densifyOld} ${winSize} ${minContig} ${maxContig} ${roadRatio} ${fitTo} ${seed} ${ecoWeight} ${roadWeight} ${sirWeight} ${traWeight} ${tiff} ${snaps} ${verbose}");s.run();'"""
+
+val parsed = org.openmole.plugin.task.systemexec.parse(command,true)
+
+
+println(parsed)

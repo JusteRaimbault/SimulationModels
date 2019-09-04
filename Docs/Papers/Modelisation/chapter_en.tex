@@ -9,21 +9,62 @@
 % Méthodes d’exploration des modèles de simulation
 \title{Exploration methods for simulation models}
 
-\author{Juste Raimbault et Denise Pumain}
+\author{Juste Raimbault$^{1,2,3}$ et Denise Pumain$^{3}$\\
+\medskip\\
+$^{1}$ UPS CNRS 3611 ISC-PIF\\
+$^{2}$ CASA, UCL\\
+$^{3}$ UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
 \date{}
 
 \begin{document}
 	
 
+%%%%%%
+%% IDEES / RQ
+
+% - Q : a ton vraiment passe un plafond de verre qualitatif ou ne fait on pas que repousser les difficultés ? a voir dans les annees qui viennent ! : ajouter en conclusion ? => no ; think to it (what differentiates quali from quanti ?)
+
+% - RQ ! confusion complexite / complication (sur le human brain) => OK lang courant - et vraie question ouverte en fait : quest ce que le cerveau/esprit compute ? tres bon a certaines choses, pas a d'autres ; etc.
+
+% % TDO - signaler morpho analysis a Tannier ?
+
+% - RQ - lowry statique ? - roughly - but can be used dynamically
+
+% rq : principe d'exlusion ? // attractoin - repulsion ~ reaction diffusion ?
+
+
+% % IDEE - disc Paul modele a lintermediaire, simpoplocal deja un ? modele barthelemy shitty. - why ? [rq th gravite]
+
+% % TDO simpop2 dans le urbangrowth benchmark ?
+
+% Q : (sur la structure de simpoplocal) crucial is to have non linear term / as for positive/negative externalities tradeoff : not really sensitive to the form of the function, or it is ?
+
+% % rq : new experimenbts : // Marion physics -> ?
+
+%  rq : term bifurcation : clarify ? // transitions. write something on a clear mathematical def for transitions, compatible with transmondyn ?
+
+%  rq : even no order of magnitude for simpoplocal params ? strange - maybe lack a normalization ?
+
+%  refl : how manage models urb evol th in forthcoming project / context ?
+
+% q optim : not really a constrined optim, quite different ? - ok just terminology
+
+%  idee : sensitivity of simpoplocal caluibration to these synthetic data / initial configuration / calibration targets ?
+
+
+%  rq (calib intgib) : et si obj pas log mse mais mse tout court, possible que comportement different ? pas evident
+
+% coding camp : sci positioning ?
+
+%  rq (ccl) sur le dernier point, en opposition avec Paul Bourgine ? ("belle theories etc.") write a piece on "nice theories" in social science ? (blog cybergeo ?)
+
 \maketitle
 
 \begin{abstract}
 %On rappelle d’abord dans ce chapitre à quel point les modèles de simulation sont une absolue nécessité en sciences humaines et sociales, qui ne peuvent que très exceptionnellement recourir aux méthodes des sciences expérimentales pour construire leurs savoirs. Les modèles offrent une possibilité de simuler les processus sociaux en remplaçant le jeu complexe des actions et réactions individuelles et collectives aux situations qu’elles engendrent par des mécanismes mathématiques ou informatiques plus simples, permettant de faciliter la compréhension des relations entre causes et conséquences de ces interactions et d’effectuer des prévisions. La formalisation par des modèles mathématiques susceptibles d’offrir des solutions analytiques n’étant souvent guère envisageable pour donner des représentations satisfaisantes de la complexité sociale (Jensen 2018), ce sont de plus en plus des modèles informatiques à base d’agents qui sont utilisés. Pendant longtemps les capacités limitées de calcul des ordinateurs ont empêché de programmer des modèles qui prennent en compte les interactions entre de grands nombres d’entités localisées géographiquement (personnes ou territoires). En principe, ces modèles doivent nous renseigner sur les possibilités et les conditions de l’émergence de certaines situations définies à un échelon macro-géographique à partir des interactions intervenant à un niveau micro-géographique, dans des systèmes aux comportements trop complexes pour être compris par un cerveau humain. Encore faut-il pouvoir étudier le comportement dynamique de ces modèles comportant des effets de feedback non linéaires et vérifier qu’ils produisent des résultats plausibles dans toutes les étapes de leur simulation. Ce travail indispensable de l’exploration de la dynamique des algorithmes est resté balbutiant jusque vers la fin des années 2010, où des algorithmes combinant des méthodes plus sophistiquées incluant des algorithmes génétiques et le recours au calcul intensif distribué ont permis un saut qualitatif important dans la validation des modèles, voire un tournant épistémologique pour les sciences humaines et sociales, comme l’indiquent les dernières applications réalisées avec l’aide de la plateforme OpenMOLE présentée ici. 
-% TODO reformuler phrase interaction / emergence
-% TODO Q : a ton vraiment passe un plafond de verre qualitatif ou ne fait on pas que repousser les difficultés ? a voir dans les annees qui viennent ! : ajouter en conclusion ?
-% TODO ! confusion complexite / complication (sur le human brain)
-% TODO signaler morpho analysis a Tannier ?
-We recall first in this chapter to what extent simulation models are an absolute necessity in social sciences and humanities, which can only very exceptionally require to experimental sciences methods to construct their knowledge. Models open the perspective to simulate social processes by replacing the complex interplay of individual and collective actions and reactions to the situations they make emerge by simpler mathematical or computational mechanisms, fostering an easier understanding of the relations between causes and consequences of these interactions and to make predictions. The formalisation through mathematical models able to offer analytical solutions being most often not possible in order to provide satisfying representations of social complexity~\citep{jensen2018pourquoi}, computational models based on agents are more and more used. For long the limited computational capabilities of computer have forbidden to program models taking into account interactions between large numbers of entities geographically localized (individuals or territories). In principle these models should inform on the possibilities and conditions of the emergence of given configurations defined at a macro-geographical level from interactions occurring at a micro-geographical level, within systems with a too much complex behavior to be understood by a human brain. This however requires to study the dynamical behavior of these models including non-linear feedback effects and verify they produce plausible results at all stages of their simulation. This necessary stage of the exploration of the dynamics of algorithms remained rather rudimentary until the end of the last decade, when algorithms including more sophisticated methods such as evolutionary computation and the use of distributed high performance computing have allowed a significant qualitative leap forward in the validation of models, and even an epistemological turn for social sciences and humanities, as suggest the latest applications realized with the OpenMOLE platform described here.
+%  reformuler phrase interaction / emergence - OK
+We first recall in this chapter to what extent simulation models are an absolute necessity in social sciences and humanities, which can only very exceptionally require to experimental sciences methods to construct their knowledge. Models open the perspective to simulate social processes by replacing the complex interplay of individual and collective actions and reactions to the situations they make emerge by simpler mathematical or computational mechanisms, fostering an easier understanding of the relations between causes and consequences of these interactions and to make predictions. The formalisation through mathematical models able to offer analytical solutions being most often not possible in order to provide satisfying representations of social complexity~\citep{jensen2018pourquoi}, computational models based on agents are more and more used. For long the limited computational capabilities of computer have forbidden to program models taking into account interactions between large numbers of entities geographically localized (individuals or territories). In principle these models should inform on the possibilities and conditions of the emergence of given configurations defined at a macro-geographical level from interactions occurring at a micro-geographical level, within systems with a too much complex behavior to be understood by a human brain. This however requires to study the dynamical behavior of these models including non-linear feedback effects and verify they produce plausible results at all stages of their simulation. This necessary stage of the exploration of the dynamics of algorithms remained rather rudimentary until the end of the last decade, when algorithms including more sophisticated methods such as evolutionary computation and the use of distributed high performance computing have allowed a significant qualitative leap forward in the validation of models, and even an epistemological turn for social sciences and humanities, as suggest the latest applications realized with the OpenMOLE platform described here.
 \end{abstract}
 
 
@@ -32,16 +73,16 @@ We recall first in this chapter to what extent simulation models are an absolute
 
 
 %L’expérimentation a beaucoup aidé à construire les sciences de la nature, en ce qu’elle consiste à simuler des processus matériels, physiques, chimiques ou biologiques, selon des dispositifs imaginés par les chercheurs pour sélectionner, souvent en les isolant, des enchaînements de faits plus simples que ceux opérant dans une réalité complexe. La confrontation des résultats de ces manipulations à des données d’observation, en totalité ou en partie étrangères à celles qui ont servi à construire le dispositif expérimental, est considérée comme apportant une preuve de la véracité ou de la justesse du raisonnement explicatif qui est à la base de la construction du modèle, plus ou moins probante en fonction de la qualité de l’ajustement entre les prédictions du modèle et les observations. On sait cependant que la justesse des prédictions d’un modèle ne suffit pas à valider totalement l’adéquation entre le mécanisme explicatif imaginé par les manipulateurs du dispositif expérimental et les processus à l’œuvre dans le système étudié, mais c’est une étape importante dans la construction de modèles et de théories enrichis par les observations.
-% TODO miss the "model building" part ?
+%  miss the "model building" part ? - OK - general
 Experimentation played a significant role in the construction of natural sciences, since it consists in simulating material, physical, chemical or biological processes, through the use of apparatus imagined by researchers to select, often by isolating them, chains of facts that are simpler than the ones occurring in a complex reality. The confrontation of results of these experiments to observational data, partly or totally foreign to the data used to construct the experimental apparatus, is considered as bringing a proof of truth or of accuracy of the explicative reasoning at the basis of the model construction, more or less robust depending on the quality of the fit between model predictions and observations. We however know that the accuracy of a model predictions is not sufficient to fully validate the correspondance between the explicative mechanism imagined by the builders of the experimental apparatus and processes at work in the studied system, but this remains a crucial stage in the construction of models and theories enriched by observations.
 
 
 %En sciences humaines et sociales, la mise au point de dispositifs expérimentaux est très délicate car elle se heurte à de nombreux obstacles  pratiques et éthiques. La critique éthique et politique met en question la manipulation des personnes et l’usurpation de leur liberté. Ces scrupules propres à l’ontologie et la déontologie scientifiques (faisant partie de ce qu’on appelle aujourd’hui l’intégrité) n’ont certes pas empêché en pratique les manipulations, bienveillantes ou non, opérées au cours des temps historiques par des acteurs disposant d’un pouvoir politique, culturel ou économique de prendre des décisions, plus ou moins bien informées « scientifiquement » (voir à toutes époques les écrits des « conseillers du prince », tels Bodin, Machiavel, Botero… pour citer quelques-uns parmi ceux qui ont traité de l’aménagement des territoires) et de procéder à des « expérimentations » de formes de gouvernance ou d’innovations technologiques ou culturelles dont les résultats ont pu être évalués, tantôt comme bénéfiques et tantôt comme désastreux. L’évaluation de l’efficacité des décisions se complique du fait des justifications qu’apportent les acteurs eux-mêmes avec leurs « prophéties auto-réalisatrices » (Rist, 1970). La difficulté souvent déplorée de l’évaluation des politiques publiques est aussi accrue par l’incertitude des limites entre l’action et son contexte, dans l’espace comme dans le temps. 
-In social sciences and humanities, the elaboration of experimental apparatus is highly problematic since it is confronted to numerous practical and ethical obstacles. Ethical and political critic questions the manipulation of individuals and the usurpation of their freedom. These concerns which are typical of the scientific ontology and deontology (being part of what is nowadays called integrity) have surely not avoided in practice manipulations, in a positive way or not, operated during historical times by actors with a political, cultural or economical power to make decisions which were more or less well informed ``scientifically'' (see at all historical periods writings by ``counsellors of the prince'' such as Bodin, Machiavel, Botero, etc. to give a few among the ones having dealt with the planning of territories) and to proceed to ``experiments'' of governance structures or of technological or cultural innovations which results could be evaluated in some case as beneficial and in others as catastrophic. The evaluation of the efficacy of decisions complicates because of the justifications brought by the actors themselves with their ``self-fulfilling prophecies''~\citep{}. The often recalled difficulty of the evaluation of public policies is also increased by the uncertainty in the limits between the action and its context, both in space and in time.
+In social sciences and humanities, the elaboration of experimental apparatus is highly problematic since it is confronted to numerous practical and ethical obstacles. Ethical and political critic questions the manipulation of individuals and the usurpation of their freedom. These concerns which are typical of the scientific ontology and deontology (being part of what is nowadays called integrity) have surely not avoided in practice manipulations, in a positive way or not, operated during historical times by actors with a political, cultural or economical power to make decisions which were more or less well informed ``scientifically'' (see at all historical periods writings by ``counsellors of the prince'' such as Bodin, Machiavel, Botero, etc. to give a few among the ones having dealt with the planning of territories) and to proceed to ``experiments'' of governance structures or of technological or cultural innovations which results could be evaluated in some case as beneficial and in others as catastrophic. The evaluation of the efficacy of decisions complicates because of the justifications brought by the actors themselves with their ``self-fulfilling prophecies''~\citep{rist1970student}. The often recalled difficulty of the evaluation of public policies is also increased by the uncertainty in the limits between the action and its context, both in space and in time.
 
 
 %Conduire le changement dans la vie sociale, quelle que soit l’échelle des interventions, reste une opération coûteuse et risquée, donc déontologiquement peu acceptable par les scientifiques, dont bien peu finalement osent se lancer dans des projets de « recherche-action ». Une controverse a ainsi opposé pendant les années 1960 en France les tenants d’une « géographie appliquée », bonne connaisseuse du « terrain » mais parfois de tendance conservatrice à ceux d’une « géographie active » plus engagée dans la transformation de la société. Parfois, par exemple pour contribuer à la définition de la politique des métropoles d’équilibre en France (opération de la DATAR1 en 1964), les géographes participant aux études (dont Michel Rochefort en l’occurrence) s’appuyaient, sans vraiment oser le dire, sur des modèles scientifiques (dans ce cas précis la théorie des lieux centraux de Walter Christaller). Les géographes actuels affichent plus volontiers un souci d’aider à la décision de la manière la plus avisée possible selon l’état de leurs connaissances, ils font alors souvent le choix de recourir à des modèles de simulation, in silico, opérés par des ordinateurs. La simulation informatique est ainsi devenue un substitut à l’expérimentation. Ce n’est pas un hasard si, parmi les chercheurs en sciences sociales, les géographes s’y sont intéressés très tôt : la diversité des multiples sources de données (paysages, populations, habitats…) qu’ils manipulent pour rendre compte des aménagements apportés par les sociétés aux interfaces terrestres, l’étendue souvent large des territoires qu’ils examinent aux échelles régionale, nationale ou mondiale, expliquent leur besoin de recourir au calcul pour organiser ces masses d’information et comprendre les dynamiques qu’elles représentent.
-Driving change in social systems, whatever the scale of interventions, remains a costly and risky operation, therefore difficultly acceptable by science for deontological concerns. Very few scientists therefore engage in ``research-action'' projects. A controversy has thus opposed in the sixties in France the advocates of an ``applied geography'' with a good knowledge of the ``field'' but sometimes with conservative trends, to the defenders of an ``active geography'' which would be more implied in the transformation of society. Sometimes, for example to contribute to the definition of policies for balancing metropolitan areas in France (operation by the \emph{D{\'e}l{\'e}gation à l'Am{\'e}nagement du Territoire et à l'Action R{\'e}gionale} in 1964), geographers participating in the studies such as Michel Rochefort more particularly, did rely on scientific works, without having the courage to make it explicitly open (in this specific case central place theory by Walter Christaller). Contemporary geographers are less reluctant to exhibit a concern to help decision making in the most informed way possible given the state of their knowledge. They often then make the choice to use simulation models operated in silico by computers. Computer simulation thus became a substitute to experimentation. It is not a coincidence if among researchers in social sciences, geographers have very early found an interest in it: the diversity of multiple data sources (landscapes, populations, built environment, etc.) which they use to account of modifications of terrestrial interfaces by societies, the often large spatial extent of territories they study at the regional, national, or global scales, explain their need to make use of computing to organize this large quantities of information and to understand the dynamics they represent.
+Driving change in social systems, whatever the scale of interventions, remains a costly and risky operation, therefore difficultly acceptable by science for deontological concerns. Very few scientists therefore engage in ``research-action'' projects. A controversy has thus opposed in the sixties in France the advocates of an ``applied geography'' with a good knowledge of the ``field'' but sometimes with conservative trends, to the defenders of an ``active geography'' which would be more implied in the transformation of society. Sometimes, for example to contribute to the definition of policies for balancing metropolitan areas in France (operation by the \emph{D{\'e}l{\'e}gation {\`a} l'Am{\'e}nagement du Territoire et à l'Action R{\'e}gionale} in 1964), geographers participating in the studies such as Michel Rochefort more particularly, did rely on scientific works, without having the courage to make it explicitly open (in this specific case central place theory by Walter Christaller). Contemporary geographers are less reluctant to exhibit a concern to help decision making in the most informed way possible given the state of their knowledge. They often then make the choice to use simulation models operated in silico by computers. Computer simulation thus became a substitute to experimentation. It is not a coincidence if among researchers in social sciences, geographers have very early found an interest in it: the diversity of multiple data sources (landscapes, populations, built environment, etc.) which they use to account of modifications of terrestrial interfaces by societies, the often large spatial extent of territories they study at the regional, national, or global scales, explain their need to make use of computing to organize this large quantities of information and to understand the dynamics they represent.
 
 
 
@@ -50,25 +91,23 @@ Driving change in social systems, whatever the scale of interventions, remains a
 
 
 %Les premiers modèles de simulation en géographie ont d’abord été calculés « à la main », dans les années 1950. Ce n’est pas un hasard si ces modèles traitent tous de faits stylisés qui traduisent les régularités les plus fréquemment observées dans l’organisation de l’espace social, et qui sont des effets de la « première loi de la géographie » résumée ainsi dès 1970 par le cartographe américain Waldo Tobler : « tout interagit avec tout, mais deux choses proches ont plus de chances d’entrer en contact que deux choses éloignées ». La puissance de l’attrait pour la proximité apparaît dans tous les processus sociaux d’aménagement de l’espace social, qui sont contraints par «  l’obligation d’espacement ». Cette expression a été forgée par Henri Reymond dès 1971 dans une formalisation des problématiques de la géographie, qui posait en premier principe que les sociétés tendent à transformer l’étendue terrestre, hétérogène, rugueuse et discontinue, en espace organisé présentant des propriétés de plus grande homogénéité et continuité, et faisant émerger des régularités, du fait que deux objets ne peuvent occuper la même place. Dire que les personnes et les sociétés ont la probabilité la plus grande de choisir d’occuper les localisations les plus proches, à la fois parce qu’elles sont mieux connues et parce qu’elles permettent de réaliser des économies sur les coûts (physiques, monétaires et culturels) de franchissement de la distance, est certainement la plus forte proposition théorique de la géographie. Elle se repère dans toutes les configurations spatiales conduisant à distinguer un centre et une périphérie, qui se manifestent à tous les échelons de l’espace géographique, du local au mondial. 
-% TODO repet social
-% rq : principe d'exlusion ? // attractoin - repulsion ~ reaction diffusion ?
+%  repet social - ok
 The first simulation models in geography were firstly computed ``by hand'' in the fifties. It is not a coincidence if these models all deal with stylized facts which translate the regularities most frequently observed in the organisation of social space, and which are consequences of the ``first law of geography'' summarized as such already in 1970 by the American geographer Waldo Tobler: ``everything interacts with everything, but two closer things have more chances to make contact than two more distant things''. The power of attraction by proximity occurs in all social processes transforming the social space, which are constrained by an ``obligation of space''. This term was forged by Henri Reymond already in 1971 in a formalisation of issues in geography, who stated as first principle that societies have the tendency to transform the surface of the Earth which is heterogenous, rough and discontinuous, in an organized space exhibiting higher homogeneity and continuity, and making regularities emerge, due to the fact that two objects can not occupy the same place. Stating that individuals and societies have the highest probability to choose occupying the closest locations, both because these are better known and also because they yield economies on costs (physical, financial, and cultural) to travel the distance, may certainly be the strongest theoretical proposal of geography. It can be identified in any spatial configuration implying to distinguish a center and a periphery, which are observed at any level of the geographical space, from the local to the global. 
 
 
 %Les premiers modèles de simulation en géographie ont donc touché d’abord à des processus pour lesquels le choix du plus proche, parmi les lieux avec lesquels on souhaite établir une interaction, est une constante anthropologique très dominante, que ce soit pour observer les effets d’une innovation avant de l’imiter, selon la théorie spatiale de diffusion des innovations de Torsten Hägerstrand (1952) ou encore pour le choix des lieux de destination d’une migration (Hägerstrand 1957, Morrill 1962 et 1963). Les modèles s’appuyant sur la proposition, dès 1954, du géographe américain Edward Ullman de construire une géographie comme la science des interactions spatiales, notamment à propos des relations commerciales, ont d’abord surtout donné lieu à des expérimentations de modèles statistiques, sous l’appellation de « modèle gravitaire », avant d’être intégrés dans des modèles urbains, d’abord statiques (Lowry, 1964) puis dynamiques (Clarke Wilson 1983, Wilson 2014, Allen Sanglier 1981 et Allen 2012). 
-% TODO cut phrase trade gravity
+% cut phrase trade gravity - OK
 % rq : repet si pas autre mot, pas experimental instead of empirical, ≠
-% TODO lowry statique ?
-The first simulation models in geography have thus dealt with processes for which the choice of the closest, among the place with which an interaction is expected, is a highly salient anthropological constant, either to observe the effects of an innovation before imitating it, according to the spatial theory of the diffusion of innovations by Torsten~\cite{}, or for the choice of destination places for a migration \citep{}. Models already in 1954 rely on the proposal by the American geographer Edward Ullman to construct a geography as the science of spatial interactions. This concerns more particularly trade relations, which have first lead to the empirical test of statistical models, as the so-called ``gravity model'', before being integrated into urban models which were first static \citep{} and then dynamical \citep{}.
+The first simulation models in geography have thus dealt with processes for which the choice of the closest, among the place with which an interaction is expected, is a highly salient anthropological constant, either to observe the effects of an innovation before imitating it, according to the spatial theory of the diffusion of innovations by~\cite{hagerstrand1957migration}, or for the choice of destination places for a migration \citep{hagerstrand1957migration,morrill1962development,morrill1963distribution}. Models already in 1954 rely on the proposal by the American geographer Edward Ullman to construct a geography as the science of spatial interactions. This concerns more particularly trade relations, which have first lead to the empirical test of statistical models, as the so-called ``gravity model'', before being integrated into urban models which were first static \citep{lowry1964model} and then dynamical \citep{clarke1983dynamics,wilson2014complex,allen1981urban,allen2012cities}.
 
 
 %Une génération postérieure de modèles jouant de manière plus complexe avec les effets de la proximité a beaucoup utilisé les automates cellulaires. Les mesures de l’auto-corrélation spatiale, qui traduisent de manière positive ou négative les effets d’attraction ou de concurrence liés à la proximité sont ainsi employées pour tester la plausibilité des configurations simulées pour les changements d’utilisation du sol, et en particulier la croissance urbaine (White Engelen, 1993, White et al. 2015) ou encore la propagation des épidémies dans l’espace géographique (Cliff et al. 2004 )
-A later generation of models playing in a more complex way with effects of proximity has intensively used cellular automatons. Measures of spatial auto-correlation, which translate in a positive or negative way attraction or concurrency effects linked to proximity are in that context used to test the plausibility of simulated configurations for land-use changes, and in particular urban growth \citep{}, or moreover the spread of epidemics in the geographical space \citep{cliff2004world}.
+A later generation of models playing in a more complex way with effects of proximity has intensively used cellular automatons. Measures of spatial auto-correlation, which translate in a positive or negative way attraction or concurrency effects linked to proximity are in that context used to test the plausibility of simulated configurations for land-use changes, and in particular urban growth \citep{white1993cellular,white2015modeling}, or moreover the spread of epidemics in the geographical space \citep{cliff2004world}.
 
 
 %Mais le développement de ces modèles s’est heurté très tôt à l’obstacle des capacités de calcul des ordinateurs de l’époque, car la représentation explicite des interactions spatiales augmente comme le carré du nombre des unités géographiques considérées. Ainsi, le statisticien Christophe Terrier a dû segmenter son programme Mirabelle ((Méthode Informatisée de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi) traitant les données du recensement de l’INSEE de 1975 avant de pouvoir simuler les découpages en bassins d’emploi des populations résidentes en fonction des navettes domicile-travail entre toutes les 36 000 communes françaises (Terrier, 1980). Notre premier modèle de simulation des interactions entre des villes destiné à reproduire leurs trajectoires démographiques et économiques influencées par les fonctions urbaines sur une période de 2000 ans sur un ordinateur de laboratoire ne pouvait accepter qu’un maximum de 400 villes (Bura et al., 1996, Sanders et al., 1997). La montée en puissance des calculs informatiques a été relativement lente, autorisant la considération d’environ un millier de villes en 2007 avec le modèle Eurosim (Sanders et al. 2007) ou les modèles Simpop2 appliqués par Anne Bretagnolle à l’Europe et aux Etats-Unis (Bretagnolle et al 2010). Surtout, la méthode d’expérimentation avec ces modèles est longtemps restée à un stade artisanal, requérant une grande application dans la modification « à la main » des valeurs des paramètres, qui ne sont que trop rarement directement observables, et qui doivent donc être estimées d’après la plausibilité des dynamiques du modèle. Or, les équations des modèles de dynamique urbaine intègrent des relations non linéaires qui produisent de nombreuses bifurcations, obligeant à des retours fastidieux dans la procédure d’estimation (Sanders et al. 2013). Ce long travail limite le nombre des simulations à partir duquel l’estimation obtenue peut être jugée comme satisfaisante, et surtout, une fois le modèle ainsi calibré, il demeure une assez grande incertitude quant à la qualité des résultats obtenus.
-% TODO imprecision on nonlinearity / bifurcations ?
-But the development of these models has been very early impeded by the computational capabilities at this time, since the explicit representation of spatial interactions increases as the square of the number of geographical units considered. Therefore, the statistician Christophe Terrier had to segment his Mirabelle program (\textit{Méthode Informatisée de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi}) processing household survey data provided by INSEE in 1975 before being able to simulate the clustering into employment centers of resident populations as a function of work-residence commuting between all 36,000 French communes \citep{}. Our first simulation model of interactions between cities aimed at reproducing their demographic and economic trajectories influenced by urban functions on a period of 2000 years could only accept a maximum of 400 cities on a personal computer \citep{bura1996multiagent} \citep{}. The increase of computational possibilities has been relatively slow, allowing to consider around one thousand cities in 2007 with the Eurosim model \citep{} or the Simpop2 models applied by Anne Bretagnolle on Europe and United States \citep{bretagnolle2010simulating}. Furthermore, the experimentation method with these models stayed at an experimental stage for long, requiring am increased attention in the modification ``by hand'' of parameter values, which are only very rarely directly observable, and which thus must be estimated through the plausibility of model dynamics. However, equations for urban dynamics models integrate non-linear relations which produce numerous bifurcations, forcing to laborious trial-and-error loops in the estimation procedure \citep{}. This consequent work limits the number of simulations from which the estimation obtained can be judged as satisfying, and more importantly once the model is therein calibrated, there remains a relatively high uncertainty regarding the quality of results obtained.
+%  imprecision on nonlinearity / bifurcations ? ok
+But the development of these models has been very early impeded by the computational capabilities at this time, since the explicit representation of spatial interactions increases as the square of the number of geographical units considered. Therefore, the statistician Christophe Terrier had to segment his Mirabelle program (\textit{M{\'e}thode Informatis{\'e}e de Recherche et d'Analyse des Bassins par l'Etude des Liaisons Logement-Emploi}) processing household survey data provided by INSEE in 1975 before being able to simulate the clustering into employment centers of resident populations as a function of work-residence commuting between all 36,000 French communes \citep{terrier1980mirabelle}. Our first simulation model of interactions between cities aimed at reproducing their demographic and economic trajectories influenced by urban functions on a period of 2000 years could only accept a maximum of 400 cities on a personal computer \citep{bura1996multiagent,sanders1997simpop}. The increase of computational possibilities has been relatively slow, allowing to consider around one thousand cities in 2007 with the Eurosim model \citep{sanders2007artificial} or the Simpop2 models applied by Anne Bretagnolle on Europe and United States \citep{bretagnolle2010simulating}. Furthermore, the experimentation method with these models stayed at an experimental stage for long, requiring am increased attention in the modification ``by hand'' of parameter values, which are only very rarely directly observable, and which thus must be estimated through the plausibility of model dynamics. However, equations for urban dynamics models integrate non-linear relations which are linked to numerous bifurcations, forcing to laborious trial-and-error loops in the estimation procedure \citep{sanders2007artificial}. This consequent work limits the number of simulations from which the estimation obtained can be judged as satisfying, and more importantly once the model is therein calibrated, there remains a relatively high uncertainty regarding the quality of results obtained.
 
 
 %3 Les simulations de nouvelle génération
@@ -76,12 +115,12 @@ But the development of these models has been very early impeded by the computati
 
 
 %La fin des années 1990 devait modifier totalement l’environnement de travail des chercheurs, la diffusion d’Internet puis des téléphones portables et enfin des données massives produites par toutes sortes de capteurs numériques ayant des effets en retour rapides et intenses sur la montée en puissance des capacités de calcul informatique qui avaient permis ces innovations technologiques disruptives. Les modèles de simulation peuvent alors intégrer des quantités considérables d’interactions entre des entités localisées caractérisées par une grande diversité d’attributs. Il y a une quinzaine d’années encore, (Gleyze, 2005) était forcé de conclure que les analyses de réseau, pour les transports publics parisiens, étaient “limitées par le calcul”. Pour ne donner qu’un exemple du bond quantitatif représenté par l’accroissement des capacités de calcul et de ses conséquences sur la plus grande confiance accordée aux modèles qui en découle, on peut citer le travail pionnier en épidémiologie numérique réalisé par Eubank et al. (2004) pour simuler au moyen des modèles EpiSims et TRANSIMS les trajectoires quotidiennes, sur un réseau de transport, des déplacements d’un million et demi de personnes entre quelque 180 000 lieux de la ville virtuelle de Portland, afin de prédire les chemins de propagation d’une épidémie à partir des probabilités de rencontre interpersonnelles, dans des réseaux sociaux organisés en « petits mondes ». L’épidémie peut se propager rapidement par toute la ville alors que les nombres de contacts par personne restent petits (quinze au maximum, Eliot et Daudé, 2006). 
-The end of the nineties was to modify completely the working environment of researchers, the diffusion of internet and then mobile phones and finally of massive data produced by diverse numerical sensors having in return rapid and intense effects on the increase of computational power which had allowed these disruptive technological innovations. Simulation models can then integrate considerable quantities of interactions between localized entities chracterized by a large diversity of attributes. Still fifteen years ago, \cite{} was forced to conclude that network analysis in the case of the Parisian transportation network were ``limited by computation''. To give a single example of the quantitative leap forward in the increase of computational capabilities and their consequences on the higher confidence given to the models in consequence, we can mention the pioneering work in numerical epidemiology realized by \cite{eubank2004modelling} to simulate through the EpiSims and TRANSIMS models the daily trajectories on a transportation network of commuting of a million and a half individuals between around 180,000 places in the virtual city of Portland, in order to predict transmission pathways of an epidemics starting from interpersonal meeting probabilities in social networks organized as ``small worlds''. The epidemics can rapidly propagate to the whole city despite the number of contacts by individual remain low (fifteen in maximum \citep{eliot2006diffusion}).
+The end of the nineties was to modify completely the working environment of researchers, the diffusion of internet and then mobile phones and finally of massive data produced by diverse numerical sensors having in return rapid and intense effects on the increase of computational power which had allowed these disruptive technological innovations. Simulation models can then integrate considerable quantities of interactions between localized entities chracterized by a large diversity of attributes. Still fifteen years ago, \cite{gleyze2005vulnerabilite} was forced to conclude that network analysis in the case of the Parisian transportation network were ``limited by computation''. To give a single example of the quantitative leap forward in the increase of computational capabilities and their consequences on the higher confidence given to the models in consequence, we can mention the pioneering work in numerical epidemiology realized by \cite{eubank2004modelling} to simulate through the EpiSims and TRANSIMS models the daily trajectories on a transportation network of commuting of a million and a half individuals between around 180,000 places in the virtual city of Portland, in order to predict transmission pathways of an epidemics starting from interpersonal meeting probabilities in social networks organized as ``small worlds''. The epidemics can rapidly propagate to the whole city despite the number of contacts by individual remain low (fifteen in maximum \citep{eliot2006diffusion}).
 
 
 
 %Des plateformes de simulation sont mises au point pour que le plus grand nombre de chercheurs, même non spécialisés en informatique, puissent mettre en œuvre des modèles multi-agents. Netlogo (Tisue et Wilensky 2004) est sans doute la plus connue, elle est généraliste et permet un accès aux simulations multi-agent sans besoin de connaissance informatiques approfondies, grâce à son langage de programmation simple et le constructeur d’interface graphique intégré. D’autres plateformes plus spécialisées, comme GAMA (Grignard et al., 2013), sont d’emblée construites pour proposer un couplage avec des systèmes d’information géographique. Cependant, la confiance dans les résultats issus des modèles de simulation va de pair avec une augmentation de la taille et du nombre de simulations requises, c’est-à-dire de l’ampleur des expériences numériques. Bien que ces plateformes intègrent des outils de base permettant un premier pas vers un tel passage à l’échelle, un besoin de “méta-plateforme” dédiée a naturellement émergé.
-Simulation platforms are elaborated such that the largest number of researchers even not specialized in computer science can elaborate agent-based models. NetLogo \citep{} is amongst the most famous. It is generic and allows to access multi-agent simulations without a deep knowledge in algorithmics, thanks to its simple programming language and the integrated builder of graphic user interface. Other platforms which are more specialized such as GAMA \citep{grignard2013gama} are immediately elaborated to propose a coupling with geographic information systems. However, the confidence in results obtained from simulation models goes along with an increase in the size and the number of experiments required, i.e. of the amplitude of numerical experiments. Despite the fact that these platforms integrate basic tools for a first step towards such a change in scale, a need for a dedicated ``meta-platform'' has naturally emerged.
+Simulation platforms are elaborated such that the largest number of researchers even not specialized in computer science can elaborate agent-based models. NetLogo \citep{tisue2004netlogo} is amongst the most famous. It is generic and allows to access multi-agent simulations without a deep knowledge in algorithmics, thanks to its simple programming language and the integrated builder of graphic user interface. Other platforms which are more specialized such as GAMA \citep{grignard2013gama} are immediately elaborated to propose a coupling with geographic information systems. However, the confidence in results obtained from simulation models goes along with an increase in the size and the number of experiments required, i.e. of the amplitude of numerical experiments. Despite the fact that these platforms integrate basic tools for a first step towards such a change in scale, a need for a dedicated ``meta-platform'' has naturally emerged.
 
 
 
@@ -89,10 +128,10 @@ Simulation platforms are elaborated such that the largest number of researchers 
 \subsection{A virtual laboratory: the OpenMOLE platform}
 
 
-%Depuis 2008 le logiciel OpenMOLE a été conçu pour explorer la dynamique des modèles multi-agents (Reuillon, Chuffart et al., 2010 ; Reuillon, Leclaire et Rey-Coyrehourcq, 2013). Il est issu du développement d’un précédent logiciel, SimExplorer (Amblard, 2003 ; Deffuant et al., 2003), qui offrait déjà à ses utilisateurs une interface ergonomique pour la conception de plans d’expérimentation et donne accès au calcul distribué. OpenMOLE2 est un outil de modélisation collaboratif en perpétuelle évolution : « Un effort permanent de généricité a permis de réaliser en quelques années une plateforme générique, pragmatique et éprouvée pour l’exploration de modèles de systèmes complexes sous forme d’un langage dédié, textuel et graphique, exposant des blocs cohérents et au bon niveau d’abstraction pour la conception d’expérimentations numériques distribuées sur des modèles de simulation » (Schmitt, 2014).
-% TODO not only multi-agent - was it at the beginning ?
-% TODO note on difference oml/simexplorer ? (parallelisation of workflows ?)
-Since 2008, the OpenMOLE software has been conceived to explore the dynamics of multi-agent models \citep{}. It inherits from the development of a previous software SimExplorer \citep{} which already provided to users an ergonomic interface for the conception of experience plans and gave access to distributed computing. OpenMOLE (\texttt{https://openmole.org/}) is a collaborative modeling tool in constant evolution: ``\textit{a permanent effort for genericity has allowed to realize in a few years a pragmatic, generic, and proofed platform for the exploration of models of complex systems under the form of a dedicated language, both graphical and textual, exposing consistent blocks at the appropriated level of abstraction for the design of numerical experiments distributed on simulation models}'' \citep{}.
+%Depuis 2008 le logiciel OpenMOLE a été conçu pour explorer la dynamique des modèles multi-agents (Reuillon, Chuffart et al., 2010 ; Reuillon, Leclaire et Rey-Coyrehourcq, 2013). Il est issu du développement d’un précédent logiciel, SimExplorer (Amblard, 2003 ; Deffuant et al., 2003), qui offrait déjà à ses utilisateurs une interface ergonomique pour la conception de plans d’expérimentation et donne accès au calcul distribué. OpenMOLE généralisait dans ses débuts SimExplorer en particulier en rendant possible la parallélisation massive de tâches. OpenMOLE2 est un outil de modélisation collaboratif en perpétuelle évolution : « Un effort permanent de généricité a permis de réaliser en quelques années une plateforme générique, pragmatique et éprouvée pour l’exploration de modèles de systèmes complexes sous forme d’un langage dédié, textuel et graphique, exposant des blocs cohérents et au bon niveau d’abstraction pour la conception d’expérimentations numériques distribuées sur des modèles de simulation » (Schmitt, 2014).
+%  not only multi-agent - was it at the beginning ? OK precised.
+% - note on difference oml/simexplorer ? (parallelisation of workflows ?) - OK
+Since 2008, the OpenMOLE software has been conceived to explore the dynamics of multi-agent models \citep{reuillon2010declarative,reuillon2013openmole}, and rapidly simulation models in general. It inherits from the development of a previous software SimExplorer \citep{amblard2003comprendre,deffuant2003demarche} which already provided to users an ergonomic interface for the conception of experience plans and gave access to distributed computing. OpenMOLE was generalizing SimpExplorer in the beginning in particular by enabling the parallelisation of large workflows. OpenMOLE (\texttt{https://openmole.org/}) is a collaborative modeling tool in constant evolution: ``\textit{a permanent effort for genericity has allowed to realize in a few years a pragmatic, generic, and proofed platform for the exploration of models of complex systems under the form of a dedicated language, both graphical and textual, exposing consistent blocks at the appropriated level of abstraction for the design of numerical experiments distributed on simulation models}'' \citep{schmitt2014modelisation}.
 
 
 %Les procédures (ou workflow) proposées dans OpenMOLE sont décrites de manière indépendante des modèles et sont donc reproductibles, ré-utilisables et échangeables entre modélisateurs. Une place d’échange (market place) est intégrée au logiciel, à l’image de la librairie de modèles incluse dans NetLogo, et permet aux utilisateurs de bénéficier de scripts d’exploration pouvant servir de template ou d’exemple, dans des domaines thématiques très variés et pour l’ensemble des méthodes et langages implémentés dans OpenMOLE (par exemple pour les champs thématiques calibration de modèles géographiques, analyse de réseaux biologiques, traitement d’images pour les neurosciences).
@@ -100,7 +139,7 @@ Procedures (or workflows) proposed in OpenMOLE are described in a manner indepen
 
 
 %Il est utile de mentionner l’utilisation par OpenMOLE d’un Domain Specific Language (DSL) (Van Deursen and Klint, 2002) pour l'écriture des workflow d’exploration. Cette pratique consiste en la création d’une notation et de règles spécifiques au domaine d’un problème donné. Il s’agit en quelque sorte d’un langage de programmation dédié dans ce cas à l’exploration des modèles et aux méthodes associées. Celui-ci n’est bien sur pas créé de toutes pièces, mais vient comme une extension du langage sous-jacent, c’est-à-dire Scala dans le cas d’OpenMOLE. Un nombre réduit de mot-clés et de primitives rend l’utilisation aisée même pour un utilisateur qui n’aurait aucune connaissance en programmation, et par ailleurs le DSL reste très flexible pour l’utilisateur avancé qui peut utiliser la programmation Scala. Selon Passerat-Palmbach et al. (2017), le DSL d’OpenMOLE est l’un des éléments clés de sa généricité et de son accessibilité.
-It is useful to mention the use by OpenMOLE of a Domain Specific Language (DSL) \citep{} to write exploration workflows. This practice consists in the construction of a notation and rules specific to the domain of a given problem. It is in a way a programmation language dedicated in that case to model exploration and associated methods. This language is naturally not created from scratch, but comes as an extension of the underlying language, i.e. the Scala language in the case of OpenMOLE. A reduced number of keywords and primitives fosters an easier use even for a user with no knowledge in programming, and furthermore the DSL remains highly flexible for the advanced user who can use Scala programming. According to \cite{}, the DSL of OpenMOLE is one of the key elements of its genericity and accessibility.
+It is useful to mention the use by OpenMOLE of a Domain Specific Language (DSL) \citep{van2002domain} to write exploration workflows. This practice consists in the construction of a notation and rules specific to the domain of a given problem. It is in a way a programmation language dedicated in that case to model exploration and associated methods. This language is naturally not created from scratch, but comes as an extension of the underlying language, i.e. the Scala language in the case of OpenMOLE. A reduced number of keywords and primitives fosters an easier use even for a user with no knowledge in programming, and furthermore the DSL remains highly flexible for the advanced user who can use Scala programming. According to \cite{passerat2017reproducible}, the DSL of OpenMOLE is one of the key elements of its genericity and accessibility.
 
 
 
@@ -109,26 +148,25 @@ We can also remark that one of the main assets of OpenMOLE is the transparent ac
 
 
 %La présentation de l’utilisation du DSL et de la mise en place de scripts n'étant pas l’objectif de ce chapitre, nous renvoyons le lecteur à la documentation en ligne d’OpenMOLE pour des exemples de scripts et d’exploration de modèles. Nous rappelons simplement les composants fondamentaux d’un script d’exploration: (i) la définition de prototypes, qui correspondent aux paramètres et aux sorties du modèles, qui prendront différentes valeurs lors de l'expérience; (ii) la définition de tâches, incluant l'exécution du modèle mais pouvant aussi par exemple être des pré- ou post-traitements - les tâches couvrant une très grande variété de langages (scala, java, NetLogo, R, Scilab, code natif comme python ou C++); (iii) la description des méthodes à appliquer (exploration par échantillonnage, calibrage, recherche de diversité, etc.) qui agiront sur les valeurs des prototypes et lanceront la tâche d'évaluation considérée (le plus souvent le modèle); (iv) une spécification des données recupérées en sortie de l’exécution du script (les données de simulation étant souvent massives, une sélection par cette étape est cruciale); et (v) la définition de l’environnement de calcul sur lequel la méthode sera lancée.
-% TODO typo modeles
 The presentation of how to use the DSL and to elaborate scripts is out of the scope of this chapter, and we refer the reader to the online documentation of OpenMOLE for examples of scripts and model explorations. We simply recall the fundamental components of an exploration script: (i) the definition of prototypes, which correspond to parameters and outputs of the model, and which will take different values during the experiment; (ii) the definition of tasks, including model execution but that can also be for exemple pre- or post-processing tasks - the tasks covering a high variety of languages (scala, java, NetLogo, R, Scilab, native code such as python or C++); (iii) the description of methods to be applied (exploration by sampling, calibration, diversity search, etc.) which will act on the values of prototypes and will launch the considered evaluation task (mostly the model); (iv) a specification of the data gathered as an output of script execution (simulation data being often massive, a selection through this stage is crucial); and (v) the definition of the computation environment on which the method will be launched.
 
 
-%La plateforme vise à considérablement étendre les pratiques de la generative social science proposée par Epstein et Axtell (1996), qui envisageait chaque modèle multi-agents comme une société artificielle, engendrant des comportements macroscopiques à partir d’hypothèses émises sur les comportements microscopiques. Les expériences numériques envisageables changent d'échelle, et les questions posées au modèle de nature qualitative. Selon Clara Schmitt (2014), qui a utilisé la plateforme OpenMOLE pour développer avec Sébastien Rey Coyrehourcq (2014) le modèle SimpopLocal destiné à simuler l’émergence d’un système de villes, le laboratoire virtuel que représente cette plateforme « n’est plus seulement le modèle de simulation et les hypothèses qu’il simule (i.e. l’artificial society). Il contient aussi les méthodes, les outils et procédures de modélisation adaptés à la conception et à l’exploration du modèle et dont la pratique procure autant de connaissances et de retours théoriques que la conception du modèle lui-même. Ce laboratoire virtuel s’apparente donc d’autant plus à un véritable laboratoire de recherche avec une paillasse (le modèle à concevoir et explorer), les hypothèses d’un chercheur (les processus géographiques transcrits en mécanismes du modèles), des méthodes (la méthode de modélisation itérative et assistée par le calcul intensif), des outils (les procédures d’exploration automatisées et tout autre plan d’expérimentations incorporé dans OpenMOLE), le tout rassemblé dans une salle, la plateforme de modélisation SimProcess (Rey Coyrehourcq, 2014) ».
-% TODO unclear what simprocess is at this stage
-The platform aims at considerably extending practices of generative social science proposed by \cite{}, which considers each multi-agent model as an artificial society, yielding macroscopic behaviors from assumptions made on microscopic behaviors. Numerical experiments that can be considered follow a change in scale, and the questions asked to the model evolve in a qualitative way. According to Clara \cite{}, who used the OpenMOLE platform to develop with S{\'e}bastien \cite{} the SimpopLocal model aimed at simulating the emergence of a system of cities, the virtual laboratory represented by this platform ``\textit{is not anymore only the simulation model and the hypothesis it simulated (i.e. the artificial society). It also contains the methods, tools and modeling procedures adapted to the conception and the exploration of the model and which practice creates as much knowledge and theoretical feedbacks than the conception of the model itself. This virtual laboratory is thus furthermore resembling a real research laboratory with an experimental desk (the model to conceive and explore), the assumptions of a researcher (the geographical processes translated into model mechanisms), methods (the iterative modeling method and aided by intensive computation), tools (the procedure for automatic exploration and any other experience plan integrated in OpenMOLE), all this gathered in a single room, the modeling platform SimProcess \citep{}}''.
+%La plateforme vise à considérablement étendre les pratiques de la generative social science proposée par Epstein et Axtell (1996), qui envisageait chaque modèle multi-agents comme une société artificielle, engendrant des comportements macroscopiques à partir d’hypothèses émises sur les comportements microscopiques. Les expériences numériques envisageables changent d'échelle, et les questions posées au modèle de nature qualitative. Selon Clara Schmitt (2014), qui a utilisé la plateforme OpenMOLE pour développer avec Sébastien Rey Coyrehourcq (2014) le modèle SimpopLocal destiné à simuler l’émergence d’un système de villes, le laboratoire virtuel que représente cette plateforme « n’est plus seulement le modèle de simulation et les hypothèses qu’il simule (i.e. l’artificial society). Il contient aussi les méthodes, les outils et procédures de modélisation adaptés à la conception et à l’exploration du modèle et dont la pratique procure autant de connaissances et de retours théoriques que la conception du modèle lui-même. Ce laboratoire virtuel s’apparente donc d’autant plus à un véritable laboratoire de recherche avec une paillasse (le modèle à concevoir et explorer), les hypothèses d’un chercheur (les processus géographiques transcrits en mécanismes du modèles), des méthodes (la méthode de modélisation itérative et assistée par le calcul intensif), des outils (les procédures d’exploration automatisées et tout autre plan d’expérimentations incorporé dans OpenMOLE), le tout rassemblé dans une salle, la plateforme de modélisation SimProcess [une appellation alternative du cadre dans lequel s'inscrit OpenMOLE] (Rey Coyrehourcq, 2014) ».
+% -  unclear what simprocess is at this stage - ok
+The platform aims at considerably extending practices of generative social science proposed by \cite{epstein1996growing}, which considers each multi-agent model as an artificial society, yielding macroscopic behaviors from assumptions made on microscopic behaviors. Numerical experiments that can be considered follow a change in scale, and the questions asked to the model evolve in a qualitative way. According to \cite{schmitt2014modelisation}, who used the OpenMOLE platform to develop with \cite{rey2015plateforme} the SimpopLocal model aimed at simulating the emergence of a system of cities, the virtual laboratory represented by this platform ``\textit{is not anymore only the simulation model and the hypothesis it simulated (i.e. the artificial society). It also contains the methods, tools and modeling procedures adapted to the conception and the exploration of the model and which practice creates as much knowledge and theoretical feedbacks than the conception of the model itself. This virtual laboratory is thus furthermore resembling a real research laboratory with an experimental desk (the model to conceive and explore), the assumptions of a researcher (the geographical processes translated into model mechanisms), methods (the iterative modeling method and aided by intensive computation), tools (the procedure for automatic exploration and any other experience plan integrated in OpenMOLE), all this gathered in a single room, the modeling platform SimProcess [an alternative name for the framework in which OpenMOLE in inserted] \citep{rey2015plateforme}}''.
 
 
 %Par rapport aux protocoles généraux comme celui introduit par (Grimm et al., 2014) pour présenter l’ensemble des étapes de la modélisation, les principes appliqués dans OpenMOLE apportent surtout de la nouveauté en termes de capacités inédites d’exploration du comportement dynamique des modèles de simulation. Deux principales innovations consistent dans l’emploi systématique de meta-heuristiques d’optimisation, principalement des algorithmes génétiques, pour tester rapidement le plus grand nombre possible de combinaisons de valeurs des paramètres du modèle, et dans l’envoi simultané des simulations sur les multiples machines d’une grille de calcul, ce qui permet de réduire considérablement la durée des expériences qui sans cela deviendrait rapidement prohibitive.
-In comparison to general protocols as the one introduced by \cite{} to describe all the stage of the modeling process, principles applied in OpenMOLE mostly innovate regarding the potentialities without precedent to explore the dynamical behavior of simulation models. Two main innovations rely in the systematic application of optimization meta-heuristics, mainly genetic algorithms, to rapidly test the largest possible number of combinations for model parameter values, and in the simultaneous distribution of simulations on multiple machines of a computation grid, what allows to considerably reduce the length of experiments without which it would become quickly prohibitive.
+In comparison to general protocols as the one introduced by \cite{grimm2005pattern} to describe all the stage of the modeling process, principles applied in OpenMOLE mostly innovate regarding the potentialities without precedent to explore the dynamical behavior of simulation models. Two main innovations rely in the systematic application of optimization meta-heuristics, mainly genetic algorithms, to rapidly test the largest possible number of combinations for model parameter values, and in the simultaneous distribution of simulations on multiple machines of a computation grid, what allows to considerably reduce the length of experiments without which it would become quickly prohibitive.
 
 
 %Le choix des algorithmes génétiques comme heuristique d’optimisation est justifié par leur efficacité dans le cadre de problèmes d’optimisation multi-objectifs. Par ailleurs, le schéma de distribution en îles (populations évoluant indépendamment pendant une certaine durée) est particulièrement adapté à la distribution sur grille, chacun des noeuds faisant évoluer une sous-population, qui est régulièrement récupérée, fusionnée dans la population globale, à partir de laquelle une nouvelle sous-population est générée et envoyée sur le noeud. Ce type d’algorithme s'étend par ailleurs relativement bien aux modèles stochastiques, même si cet aspect comporte encore un certain nombre de problèmes ouverts (Rakshit, Konar and Das, 2017). Suivant Rey-Coyrehourcq (2015), ces méthodes se situent dans le cadre plus global de l'Evolutionary Computation, et la bibliothèque scala MGO développée simultanément à la plateforme et qui permet d’y implémenter les algorithmes évolutionnaires, a été conçue pour être facilement étendue à d’autres heuristiques en Evolutionary Computation, laissant les possibilités de méthodes incluses dans OpenMOLE totalement ouvertes.
-The choice of genetic algorithms as an optimization heuristic is justified by their efficiency in the context of multi-objective optimization problems. Moreover, the island distribution scheme (populations evolving independantly during a given duration) is particularly suited to a distribution on grid, each node making a subpopulation evolve, which is regularly fetched, merged into the global population, and from which a new subpopulation is generated and sent on the node. This type of algorithms furthermore extends relatively well to stochastic models, even if this aspect still implies a certain number of open problems \citep{}. Following \cite{}, these methods are situated within the larger context of Evolutionary Computation, and the scala library MGO developed simultaneously to the platform and which allows to implement evolutionary algorithms in it, has been conceived to be easily extended to other heuristics in Evolutionary Computation, opening totally the possibilities for the inclusion of new methods in OpenMOLE.
+The choice of genetic algorithms as an optimization heuristic is justified by their efficiency in the context of multi-objective optimization problems. Moreover, the island distribution scheme (populations evolving independantly during a given duration) is particularly suited to a distribution on grid, each node making a subpopulation evolve, which is regularly fetched, merged into the global population, and from which a new subpopulation is generated and sent on the node. This type of algorithms furthermore extends relatively well to stochastic models, even if this aspect still implies a certain number of open problems \citep{rakshit2017noisy}. Following \cite{rey2015plateforme}, these methods are situated within the larger context of Evolutionary Computation, and the scala library MGO developed simultaneously to the platform and which allows to implement evolutionary algorithms in it, has been conceived to be easily extended to other heuristics in Evolutionary Computation, opening totally the possibilities for the inclusion of new methods in OpenMOLE.
 
 
 %(Reuillon, Leclaire et Rey-Coyrehourcq, 2013) décrivent les principes fondamentaux de la plateforme, tandis que (Pumain et Reuillon, 2017) donnent une contextualisation des différentes utilisations dans le cadre de modèles de simulation pour les systèmes de villes. Selon R. Reuillon cité par Raimbault (2017a), la philosophie d’OpenMole s’articule autour de trois axes: le modèle comme “boîte noire” à explorer (i.e. méthodes indépendantes du modèle), l’utilisation de méthodes avancées d’exploration, et l’accès transparent aux environnements de calcul intensif. Ces différentes composantes sont en interdépendance forte, et permettent un changement de paradigme dans l’utilisation des modèles de simulation : utilisation de multi-modélisation, c’est-à-dire structure variable du modèle, comme il a été présenté au chapitre 4 (Cottineau et al., 2015), changement de la nature des questions posées au modèle (par exemple détermination complète de l’espace faisable (Chérel, Cottineau et Reuillon, 2015)), tout cela permis par l’utilisation du calcul intensif (Schmitt et al., 2015). Les différentes méthodes disponibles dans ce cadre seront illustrées ci-dessous dans des exemples concrets. La documentation en ligne donne un aperçu global des méthodes disponibles dans la version la plus récente du logiciel et de leur articulation dans un cadre standard.
-% TODO repetitions ?
-\cite{reuillon2013openmole} describe the fundamental principles of the platform, whereas \cite{} give a contextualisation of the different uses in the frame of simulation models for systems of cities. According to R. Reuillon cited by \cite{}, the philosophy of OpenMOLE is articulated around three axis: the model as a ``black box'' to be explored (i.e. methods which are independent from the model), the use of advanced exploration methods, and the transparent access to intensive computation environments. These different components are in a strong interdependence, and allow a paradigm shift in the use of simulation models: use of multi-modeling, i.e. variable structure of the model such as it was presented in chapter 4 \citep{}, change in the nature of questions asked to the model (for example full determination of the feasible space \citep{}), all this allowed by the use of intensive computation \citep{}. The different methods available in that context will be illustrated below in concrete examples. The online documentation gives a broad overview of the available methods in the most recent version of the software and of their articulation within a standard context.
+%  repetitions ? ok leger
+\cite{reuillon2013openmole} describe the fundamental principles of the platform, whereas \cite{pumain2017urban} give a contextualisation of the different uses in the frame of simulation models for systems of cities. According to R. Reuillon cited by \cite{raimbault2017applied}, the philosophy of OpenMOLE is articulated around three axis: the model as a ``black box'' to be explored (i.e. methods which are independent from the model), the use of advanced exploration methods, and the transparent access to intensive computation environments. These different components are in a strong interdependence, and allow a paradigm shift in the use of simulation models: use of multi-modeling, i.e. variable structure of the model such as it was presented in chapter 4 \citep{cottineau2015modular}, change in the nature of questions asked to the model (for example full determination of the feasible space \citep{10.1371/journal.pone.0138212}), all this allowed by the use of intensive computation \citep{schmitt2015half}. The different methods available in that context will be illustrated below in concrete examples. The online documentation gives a broad overview of the available methods in the most recent version of the software and of their articulation within a standard context.
 
 
 %Nous considérons un modèle de simulation comme un algorithme produisant des sorties à partir de données et de paramètres en entrée. Dans ce cadre, nous rappelons que dans un cas idéal, l’ensemble des étapes suivantes devraient être nécessaires pour une utilisation robuste des modèles de simulation.
@@ -142,11 +180,11 @@ We consider a simulation model as an algorithm producing outputs from data and p
 	% Exploration directe pour une première analyse de sensibilité, si possible évaluation statistique des relations entre paramètres et indicateurs de sortie.
 	\item Direct exploration for a first sensitivity analysis, if possible statistical evaluation of relations between parameters and output indicators.
 	% Calibrage, exploration algorithmique ciblée par l’utilisation d’algorithmes spécifiques (Calibration Profile (Reuillon, Schmitt at al. 2015), Pattern Space Exploration (Chérel, Cottineau et Reuillon 2015)).
-	\item Calibration, targeted algorithmic exploration through the use of specific algorithms (Calibration Profile \citep{reuillon2015new}, Pattern Space Exploration \citep{}).
+	\item Calibration, targeted algorithmic exploration through the use of specific algorithms (Calibration Profile \citep{reuillon2015new}, Pattern Space Exploration \citep{10.1371/journal.pone.0138212}).
 	% Retours sur le modèle, extension et nouvelles briques de multi-modélisation, retours sur les faits stylisés et la théorie. 
 	\item Feedbacks on the model, extension and new multi-modeling bricks, feedbacks on stylized facts and theory.
 	% Analyses de sensibilité étendues, correspondant à des méthodes expérimentales en cours d'élaboration et d'intégration dans la plateforme, comme par exemple la sensibilité aux méta-paramètres et aux conditions spatiales initiales proposée par (Raimbault et al. 2018).
-	\item Extended sensitivity analysis, corresponding to experimental methods currently in construction and integration into the platform, such as for example the sensitivity to meta-parameters and to initial spatial conditions proposed by \cite{}.
+	\item Extended sensitivity analysis, corresponding to experimental methods currently in construction and integration into the platform, such as for example the sensitivity to meta-parameters and to initial spatial conditions proposed by \cite{raimbault2018space}.
 \end{enumerate}
 
 %Le cas échéant, certaines étapes n’ont pas lieu d’être, par exemple l’évaluation de la stochasticité dans le cas d’un modèle déterministe. De même, les étapes prendront plus ou moins d’importance selon la nature de la question posée : le calibrage ne sera pas pertinent dans le cas de modèles complètement synthétiques, tandis qu’une exploration systématique d’un grand nombre de paramètres ne sera pas forcément nécessaire dans le cas d’un modèle qui a pour but d’être calibré sur des données.
@@ -170,11 +208,10 @@ However, geographers still identify the apparition of cities as an emergence, or
 
 
 %Le modèle SimpopLocal vise à reproduire cet aspect remarquable de la dynamique des systèmes de peuplement, qui produit invariablement une amplification de la différenciation hiérarchique entre les habitats, définie dans la littérature comme un fait stylisé majeur: déjà dans tout système, en tout lieu et à tout moment de l’histoire ou de la préhistoire, la répartition des tailles des lieux habités (mesurée par la population ou l’étendue spatiale, voire la diversité des artefacts fonctionnels) est statistiquement très dissymétrique, comportant de nombreuses très petites agglomérations et seulement quelques très grandes agglomérations selon une distribution assez régulière de type loi de Zipf ou log normale (Fletcher 1986; Liu 1996). Ce schéma hiérarchique est une propriété structurelle (ordre de taille des entités) au niveau macroscopique particulièrement persistante dans le temps, quelles que soient les fluctuations locales intervenant au niveau des entités. Le modèle SimpopLocal est conçu pour tester l'hypothèse énoncée dans la théorie évolutive des systèmes urbains (Pumain 1997), qui explique cette caractéristique structurelle par un processus de croissance urbaine en moyenne proportionnel à la taille acquise, et son amplification par la création de multiples innovations technologiques et sociétales produisant l’accroissement et la diversification des richesses qui se diffusent parmi les lieux mis en relation par toutes sortes d’échanges.
-The SimpopLocal model aims at reproducing this remarkable aspect of the dynamic of settlement systems, which invariably produces an amplification of the hierarchical differentiation between habitats defined in the literature as a major stylized fact: already in any system at any place and at any time of history or prehistory, the size distribution of inhabited places (measured by population or spatial extent, or even the diversity of functional artefacts) is statistically highly dissymmetrical, including numerous very small agglomerations and only few very large agglomerations following a relatively regular distribution of the type of a Zipf law or log-normal law \citep{fletcher1986settlement,liu1996settlement}. This hierarchical schema is a structural property (magnitude of the size of entities) at the macroscopic level which is relatively persistent in time whatever the local fluctuations intervening at the level of entities. The SimpopLocal model is conceived to test the hypothesis introduced in the evolutive theory of urban systems \citep{}, which explains this structural characteristic by an urban growth process in average proportional to the size attained, and its amplification through the creation of multiple technological and social innovations inducing the growth and the diversification of wealth which diffuse among the places put in relation by any sort of exchanges.
+The SimpopLocal model aims at reproducing this remarkable aspect of the dynamic of settlement systems, which invariably produces an amplification of the hierarchical differentiation between habitats defined in the literature as a major stylized fact: already in any system at any place and at any time of history or prehistory, the size distribution of inhabited places (measured by population or spatial extent, or even the diversity of functional artefacts) is statistically highly dissymmetrical, including numerous very small agglomerations and only few very large agglomerations following a relatively regular distribution of the type of a Zipf law or log-normal law \citep{fletcher1986settlement,liu1996settlement}. This hierarchical schema is a structural property (magnitude of the size of entities) at the macroscopic level which is relatively persistent in time whatever the local fluctuations intervening at the level of entities. The SimpopLocal model is conceived to test the hypothesis introduced in the evolutive theory of urban systems \citep{pumain1997pour}, which explains this structural characteristic by an urban growth process in average proportional to the size attained, and its amplification through the creation of multiple technological and social innovations inducing the growth and the diversification of wealth which diffuse among the places put in relation by any sort of exchanges.
 
-Le modèle SimpopLocal s’inspire d’abord du modèle statistique qui constitue une excellente première approximation de l’évolution des populations dans un système de villes, en simulant la croissance urbaine comme un simple processus stochastique faisant varier la taille de chaque ville de façon proportionnelle à sa taille et conduisant à une distribution lognormale des populations urbaines (Gibrat 1931). La grande qualité de ce modèle statistique élémentaire tient à ce qu’il utilise comme “explication” de la croissance la taille déjà acquise, laquelle exprime à la fois la richesse accumulée et la capacité d’attraction et de résilience du lieu habité (en quelque sorte il s’agit d’un modèle selon le concept de “croissance endogène” des économistes). Mais SimpopLocal est conçu, comme les modèles précédents de la “famille” des modèles multi-agents Simpop (Bura et al 1996, Sanders et al. 2007), pour pallier l’insuffisante capacité du modèle de Gibrat à prévoir la tendance partout observée à la croissance plus forte qu’attendu des plus grandes villes situées en tête des réseaux (Moriconi-Ebrard, 1993) et à l’exagération de l’inégalité entre les tailles des villes (Pumain 1997, Bretagnolle, Pumain 2010). Ces déviations au modèle de Gibrat sont liées aux corrélations de longue portée (Rozenfeld et al. 2008), suscitées par les interactions spatiales. L’effet de celles-ci amplifie la différenciation hiérarchique entre les tailles des villes participant aux échanges dans un système urbain (Favaro et al. 2011). Les modèles Simpop traduisent cet effet en introduisant, de manière exogène au modèle et à différents moments du temps de la simulation, de nouvelles fonctions urbaines qui sélectionnent certaines villes ou sont captées par elles dans un processus continu d’adaptation à ces innovations. En comparaison des autres modèles Simpop, SimpopLocal introduit deux nouveautés: il utilise une représentation abstraite des vagues d’innovation successives et les rassemble toutes dans un seul objet “innovation”. Une seconde originalité consiste à rendre le processus de création d’innovation endogène en le liant à la taille du lieu habité, censée amplifier de manière non linéaire l’émergence de nouvelles formes techniques, sociales ou culturelles (avec une probabilité de création variant comme le carré des populations en présence ou en relations). Cette version plus parcimonieuse de la construction du modèle permet de réduire considérablement le nombre de paramètres et autorise donc une exploration et une évaluation plus systématiques. 
-% TODO cit aghion endog growth ?
-The SimpopLocal model is first inspired by the statistical model which constitutes a first excellent approximation of the evolution of populations in a system of cities, by simulating urban growth as a simple stochastic process which makes the size of each city vary in a way proportional to its size and leads to a lognormal distribution of urban populations \citep{gibrat1931inegalites}. The high quality of this elementary statistical model relies in the fact that it uses as ``explanation'' of growth the already acquired size, which expresses both the accumulated wealth and the attraction and resilience capabilities of the inhabited place (in some sense this corresponds to a model following the concept of ``endogenous growth'' proposed by economists). But SimpopLocal is conceived, as the preceding models of the ``family'' of multi-agent Simpop models \citep{bura1996multiagent,sanders2007artificial}, to palliate to the incapacity of the Gibrat model to predict the over-trend growth
+%Le modèle SimpopLocal s’inspire d’abord du modèle statistique qui constitue une excellente première approximation de l’évolution des populations dans un système de villes, en simulant la croissance urbaine comme un simple processus stochastique faisant varier la taille de chaque ville de façon proportionnelle à sa taille et conduisant à une distribution lognormale des populations urbaines (Gibrat 1931). La grande qualité de ce modèle statistique élémentaire tient à ce qu’il utilise comme “explication” de la croissance la taille déjà acquise, laquelle exprime à la fois la richesse accumulée et la capacité d’attraction et de résilience du lieu habité (en quelque sorte il s’agit d’un modèle selon le concept de “croissance endogène” des économistes). Mais SimpopLocal est conçu, comme les modèles précédents de la “famille” des modèles multi-agents Simpop (Bura et al 1996, Sanders et al. 2007), pour pallier l’insuffisante capacité du modèle de Gibrat à prévoir la tendance partout observée à la croissance plus forte qu’attendu des plus grandes villes situées en tête des réseaux (Moriconi-Ebrard, 1993) et à l’exagération de l’inégalité entre les tailles des villes (Pumain 1997, Bretagnolle, Pumain 2010). Ces déviations au modèle de Gibrat sont liées aux corrélations de longue portée (Rozenfeld et al. 2008), suscitées par les interactions spatiales. L’effet de celles-ci amplifie la différenciation hiérarchique entre les tailles des villes participant aux échanges dans un système urbain (Favaro et al. 2011). Les modèles Simpop traduisent cet effet en introduisant, de manière exogène au modèle et à différents moments du temps de la simulation, de nouvelles fonctions urbaines qui sélectionnent certaines villes ou sont captées par elles dans un processus continu d’adaptation à ces innovations. En comparaison des autres modèles Simpop, SimpopLocal introduit deux nouveautés: il utilise une représentation abstraite des vagues d’innovation successives et les rassemble toutes dans un seul objet “innovation”. Une seconde originalité consiste à rendre le processus de création d’innovation endogène en le liant à la taille du lieu habité, censée amplifier de manière non linéaire l’émergence de nouvelles formes techniques, sociales ou culturelles (avec une probabilité de création variant comme le carré des populations en présence ou en relations). Cette version plus parcimonieuse de la construction du modèle permet de réduire considérablement le nombre de paramètres et autorise donc une exploration et une évaluation plus systématiques. 
+The SimpopLocal model is first inspired by the statistical model which constitutes a first excellent approximation of the evolution of populations in a system of cities, by simulating urban growth as a simple stochastic process which makes the size of each city vary in a way proportional to its size and leads to a lognormal distribution of urban populations \citep{gibrat1931inegalites}. The high quality of this elementary statistical model relies in the fact that it uses as ``explanation'' of growth the already acquired size, which expresses both the accumulated wealth and the attraction and resilience capabilities of the inhabited place (in some sense this corresponds to a model following the concept of ``endogenous growth'' proposed by economists \citep{aghion1998endogenous}). But SimpopLocal is conceived, as the preceding models of the ``family'' of multi-agent Simpop models \citep{bura1996multiagent,sanders2007artificial}, to palliate to the incapacity of the Gibrat model to predict the trend of a growth larger than expected observed everywhere for largest cities located in central places of networks \citep{moriconi1993urbanisation} and the exaggeration of the inequality between city sizes \citep{pumain1997pour,bretagnolle2010simulating}. These deviations to the Gibrat model are linked to long-range correlations \citep{rozenfeld2008laws} induced by spatial interactions. The influence of these amplifies the hierarchical differentiation between sizes of cities participating to exchanges in an urban system \citep{favaro2011gibrat}. The Simpop models include this effect by introducing, in an exogenous way to the model and at different times in the simulation, new urban functions which select some cities or are integrated by these in a continuous adaptation process to these innovations. In comparison to other Simpop models, SimpopLocal introduces two novel elements: it uses an abstract representation of successive innovation waves and gathers all in a single object ``innovation''. A second originality consists in making the innovation creation process endogenous by linking it to the size of the inhabited place, which is assumed to amplify in a non-linear way the emergence of new technical, social or cultural forms (with a creation probability varying as the square of populations being present or in relation). This more parsimonious of the model construction allow to significantly redue the number of parameters and authorizes thus more systematic exploration and evaluation.
 
 
 
@@ -191,9 +228,7 @@ The model represents the evolution of settlement units dispersed in a zone large
 
 
 %Le modèle a été conçu pour être le plus parcimonieux possible, en minimisant le nombre des attributs des agents (qui sont des lieux habités) et les paramètres qui contrôlent leur évolution. On a utilisé directement les ordres de grandeur moyens indiqués par les travaux des archéologues pour fixer à environ 4000 ans la durée de la période de transition entre un système de peuplement agraire et un système de peuplement urbain, pour estimer un taux de variation moyen annuel de la population d’environ 0,02\% par an et pour considérer que la taille du plus grand lieu habité du système allait passer d’une centaine à quelque 10 000 habitants. En revanche, les valeurs de cinq autres paramètres ne pouvaient pas être estimées d’après la littérature et devaient être déduites des expériences de simulation. Il s’agit de la probabilité de création d’une innovation par interaction entre deux personnes d’un même lieu, de la probabilité de diffusion d’une innovation par interaction entre deux personnes de lieux différents, de l’intensité de l’effet dissuasif de la distance sur ces interactions entre lieux, et de l’impact d’une innovation sur la croissance de la population (qui passe par un accroissement des ressources disponibles) et de la dimension maximale possible d’un lieu habité (mesurée en termes de population ou de ressources disponibles) qui intervient dans l’équation de croissance logistique retenue comme modèle générique d’une évolution encore très fortement contrainte par les ressources locales. Les équations qui résument le modèle et les tableaux définissant précisément les paramètres et leur action sont détaillés dans (Schmitt 2014) et (Schmitt, Rey Coyrehourcq in Pumain, Reuillon, 2017, pp 21-34).
-% TODO "et" de en trop
-% TODO disc Paul modele a lintermediaire, simpoplocal deja un ? modele barthelemy shitty. - why ? [rq th gravite]
-The model was conceived to be the most parcimonious possible by minimizing the number of attributes of agents (which are inhabited places) and the parameters controlling their evolution. The average orders of magnitude given by the work of archeologists were directly used to fix at around 4000 years the duration of the transition period between an agricultural settlement system and an urban settlement system, to estimate an annual average variation rate of population at around 0.02\% per year, and to consider that the size of the largest inhabited place in the system would change from around hundred to around 10,000 inhabitants. On the contrary, the values of the five other parameters could not be estimated from the literature and had to be deduced from simulation experiments. These parameters are the probability to create an innovation through an interaction between two persons in the same place, of the diffusion probability of an innovation through an interaction between two persons from two different places, of the intensity of the dissuasive effect of distance on these interactions between places, of the impact of an innovation on population growth (which is a consequence of an increase of available resources) and of the maximal possible dimension of an inhabited place (measured in terms of population or available resources) which intervenes in the logistic growth equation retained as a generic model of an evolution still very strongly constrained by local resources. Equations summarizing the model and tables defining precisely parameters and their action are detailed in \cite{schmitt2014modelisation} and \cite{}.
+The model was conceived to be the most parcimonious possible by minimizing the number of attributes of agents (which are inhabited places) and the parameters controlling their evolution. The average orders of magnitude given by the work of archeologists were directly used to fix at around 4000 years the duration of the transition period between an agricultural settlement system and an urban settlement system, to estimate an annual average variation rate of population at around 0.02\% per year, and to consider that the size of the largest inhabited place in the system would change from around hundred to around 10,000 inhabitants. On the contrary, the values of the five other parameters could not be estimated from the literature and had to be deduced from simulation experiments. These parameters are the probability to create an innovation through an interaction between two persons in the same place, of the diffusion probability of an innovation through an interaction between two persons from two different places, of the intensity of the dissuasive effect of distance on these interactions between places, of the impact of an innovation on population growth (which is a consequence of an increase of available resources) and of the maximal possible dimension of an inhabited place (measured in terms of population or available resources) which intervenes in the logistic growth equation retained as a generic model of an evolution still very strongly constrained by local resources. Equations summarizing the model and tables defining precisely parameters and their action are detailed in \cite{schmitt2014modelisation} and \cite{pumain2017urban}.
 
 
 %On définit une valeur initiale pour la population et les ressources des lieux habités, puis le réseau d’interaction entre eux est créé. Ensuite, à chaque étape de la simulation, les mécanismes de croissance de la population et de diffusion de l'innovation sont appliqués. L’impact des innovations sur l’efficacité de l’extraction des ressources est calculé. Cette boucle est itérée jusqu'à ce que le critère d'arrêt soit atteint: dans ce cas, après 4000 étapes ou lorsqu’un nombre maximal arbitraire d'innovations a été atteint. On observe l’évolution de l’état du système de peuplement défini au niveau macro-géographique par la distribution de la taille des lieux habités, résumée par la pente de la distribution rang-taille. Le modèle utilisant certains paramètres qui sont des probabilités est stochastique, un même jeu de valeurs de paramètres peut donner lieu à des résultats sensiblement différents. Une méthode automatisée pour faire varier les valeurs des paramètres et interpréter les résultats obtenus a été mise au point progressivement par une collaboration entre informaticiens et géographes.
@@ -207,30 +242,72 @@ We define an initial value of population and resources of inhabited places, and 
 
 
 %L’automatisation de l’exploration des dynamiques engendrées par les modèles de simulation avec la plateforme OpenMole utilise des algorithmes génétiques qui réalisent de façon systématique les variations des valeurs des paramètres auparavant effectuées “à la main” par le chercheur. La distribution des calculs sur une infrastructure de grille (un réseau d’ordinateurs) permet en outre de conduire ce très grand nombre d’opérations combinatoires en réduisant considérablement le temps de calcul, grâce au traitement en parallèle de l’information. Mais la mise en oeuvre de cette nouvelle forme de l’expérimentation des modèles suppose aussi une intervention du chercheur thématicien, qui doit sélectionner les objectifs précis que son modèle doit satisfaire, tandis qu’un raffinement supplémentaire de la méthode d’exploration peut conduire à un renforcement de la confiance qu’il accorde aux hypothèses scientifiques de son modèle.
-% TODO repet grid ?
-% TODO rq : new experimenbts : // Marion physics -> ?
-The automation of the exploration of dynamics produced by simulation models with the OpenMOLE platform uses genetic algorithms which realize in a systematic way the variations of parameter values which were before done ``by hand'' by the researcher. The distribution of computation tasks on a grid infrastructure (a network of computers) furthermore allows to operate this very high number of combinatorial operations while significantly reducing the computing time, through the parallel processing of information. But putting this new form of model experiments into practice also assumes an intervention of the thematic researcher, which has to select the precise objectives that the model has to satisfy, whereas a supplementary refinement of the exploration method can lead to an increase of trust given to the scientific assumptions of the model.
+The automation of the exploration of dynamics produced by simulation models with the OpenMOLE platform uses genetic algorithms which realize in a systematic way the variations of parameter values which were before done ``by hand'' by the researcher. The distribution of computation tasks on a grid infrastructure (a network of computers) furthermore allows to operate this very high number of combinatorial operations while significantly reducing the computing time, through the parallel processing of information. But putting this new form of model experiments into practice also assumes an intervention of the thematic researcher, which has to select the precise objectives that the model has to satisfy, whereas a supplementary refinement of the exploration method can lead to an increase in trust given to the scientific assumptions of the model.
 
 
 %Le calibrage comme optimisation au moyen des algorithmes génétiques
 \subsubsection*{Calibration as optimization through genetic algorithms}
 
-Le calibrage est une procédure qui cherche à minimiser l’écart (appelé fitness) entre le comportement simulé par le modèle et le comportement observé empiriquement, en faisant varier de façon incrémentale les valeurs inconnues des paramètres du modèle. Stonedahl (2011) a rappelé les difficultés de cette exploration qui devient vite fastidieuse lorsqu’elle est conduite manuellement, à cause des multiples bifurcations intervenant dans des modèles où la plupart des mécanismes liant les variables sont non linéaires. Une exploration exhaustive de l’espace des paramètres n’est pas envisageable car elle exigerait des temps de calcul trop importants, en croissance exponentielle avec le nombre de ces paramètres. Comme ces procédures produisent aussi de grandes quantités de résultats, elles exigent en outre d’employer des méthodes adaptées pour traiter et visualiser les informations engendrées par les simulations. Tout un ensemble de logiciels doit donc être mis au point pour permettre au chercheur de découvrir les principaux schémas des dynamiques associées aux variations des paramètres de son modèle.
-C’est là où des procédures informatiques adaptées peuvent être utilisées, en rapportant la question du calibrage à un problème d’optimisation. Les algorithmes génétiques ont été utilisés pour calibrer des systèmes multi-agents dans plusieurs domaines, en médecine (Castiglione et al, 2007), en écologie (Duboz et al, 2010), en économie (Espinosa, 2012; Stonedahl et Wilensky, 2010a), ou en hydrologie (Solomatine et al, 1999). En dépit de la large utilisation des systèmes multi-agents en sciences sociales, cette méthode n’a pas été appliquée très souvent (Heppenstall et al, 2007; Stonedahl et Wilensky, 2010b). Ce type d’expérience numérique exige en effet que soient définis des objectifs quantitatifs permettant d’évaluer si les résultats de la simulation sont compatibles avec les attentes des experts, il faut également savoir gérer l’énorme charge de calcul et parvenir à optimiser une fonction de fitness susceptibles de très importantes variations stochastique (Pietro et al, 2004). 
-Dans le cas de SimpopLocal, qui comprend 5 paramètres dont les valeurs sont inconnues (même leurs ordres de grandeur ne peuvent pas être estimés à partir de données empiriques), nous avons dû identifier trois “fonctions objectif”. Celles-ci caractérisent un résultat de simulation au niveau macro-géographique et correspondent à des faits stylisés dont les ordres de grandeur ont pu être établis à partir des connaissances archéologiques et historiques: la distribution finale des tailles de villes doit être lognormale (peu différente d’une loi de Zipf), la taille maximale qu’atteint la plus grande ville doit être d’environ 10 000 habitants, pour une durée de simulation équivalant à 4000 ans.
-Cette obligation de définir des fonctions-objectif  pourrait être considérée comme une contrainte forte sur la validité épistémologique du modèle, elle semble en effet contredire l’hypothèse d’une évolution ouverte pour les systèmes de villes. En fait, cette étape intermédiaire de calcul représente un comprimé de connaissances, notre exigence a minima sur la représentativité et la plausibilité du comportement du modèle par rapport à l’ensemble envisageable des dynamiques des villes en système (à l’époque historique de l’émergence des villes). Le résultat en termes d’évaluation des simulations doit permettre d’avancer dans la connaissance des processus d’interaction intra-urbains susceptibles d’engendrer dette dynamique générale à l’échelon macroscopique du système, cette reconstitution théorique s’apparentant alors à ce que des physiciens nomment le “problème inverse”.
-Un domaine de variation numérique assez large est établi a priori pour chacun des cinq paramètres. Chaque jeu de paramètres, combinant une valeur pour chacun d’entre eux, est évalué en fonction de la sortie de simulation qu'il produit. Cette évaluation mesure la proximité entre les sorties de la simulation et les fonctions objectifs définies pour le modèle et permet ainsi de mesurer la capacité d’un certain ensemble de valeurs de paramètres à reproduire les faits stylisés que la simulation doit approcher au mieux. Les paramétrages recevant les meilleures évaluations sont ensuite utilisés comme base pour engendrer de nouveaux jeux de paramètres qui sont ensuite testés. 
+%Le calibrage est une procédure qui cherche à minimiser l’écart (appelé fitness) entre le comportement simulé par le modèle et le comportement observé empiriquement, en faisant varier de façon incrémentale les valeurs inconnues des paramètres du modèle. Stonedahl (2011) a rappelé les difficultés de cette exploration qui devient vite fastidieuse lorsqu’elle est conduite manuellement, à cause des multiples bifurcations intervenant dans des modèles où la plupart des mécanismes liant les variables sont non linéaires. Une exploration exhaustive de l’espace des paramètres n’est pas envisageable car elle exigerait des temps de calcul trop importants, en croissance exponentielle avec le nombre de ces paramètres. Comme ces procédures produisent aussi de grandes quantités de résultats, elles exigent en outre d’employer des méthodes adaptées pour traiter et visualiser les informations engendrées par les simulations. Tout un ensemble de logiciels doit donc être mis au point pour permettre au chercheur de découvrir les principaux schémas des dynamiques associées aux variations des paramètres de son modèle.
+Calibration is a procedure aiming at minimizing the discrepancy (called fitness) between the behavior simulated by the model and the behavior observed empirically, by making the unknown model parameter values vary in an incremental way. \cite{stonedahl2011genetic} has recalled the difficulties of this exploration which rapidly becomes fastidious when it is done by hand, because of the multiple bifurcations occurring in models in which most of mechanisms linking variables are non-linear. An exhaustive exploration of the parameter space can not be conceived since it would require a too large computation time, which follows an exponential growth in the number of these parameters. As these procedures also produce large quantities of results, they furthermore impose to use dedicated methods to process and visualize informations produced by simulations. A whole suite of softwares must thus be elaborated to enable the researcher to discover the main schemes for dynamics associated to the variations of model parameters.
 
-Exploration de l’espace des paramètres sous contrainte d’objectifs
-Le modèle SimpopLocal étant stochastique, les résultats de la simulation varient d'une simulation à l'autre pour le même paramétrage. Par conséquent, l'évaluation du paramétrage en fonction des trois objectifs doit prendre en compte cette variabilité. Nous avons vérifié qu’une centaine de simulations pour chaque jeu de paramètres suffisait à saisir cette variabilité sans trop augmenter la durée du calcul. 
-A chaque fonction-objectif correspond une mesure de l’évaluation de la qualité du résultat simulé.  La capacité du modèle à produire une distribution log-normale est mesurée par l’écart entre la distribution simulée et une distribution log-normale théorique ayant même moyenne et écart type selon un test de Kolmogorov-Smirnov.  L’objectif de population maximale quantifie la capacité du modèle à engendrer des villes plus ou moins grandes, le résultat d'une simulation est testé en calculant l'écart entre la taille de la plus grande agglomération et la valeur attendue de 10 000 habitants: [(population de la plus grande agglomération −10 000) / 10 000 |. L’objectif de la durée de la simulation quantifie la capacité du modèle à générer une configuration attendue dans un laps de temps historiquement plausible. On calcule l’écart entre le nombre d’itérations de la simulation et la valeur attendue de 4000 étapes de la simulation: | (simulation durée −4000) / 4000 |. Ces trois calculs d’erreur sont normalisés afin de pouvoir comparer le degré de réussite d’une simulation vis-à-vis de chacun des trois objectifs. Mais l’agrégation des trois calculs qui produirait une seule mesure de qualité globale n’étant pas possible, un algorithme multi-objectif est nécessaire pour déterminer quelles simulations sont les plus satisfaisantes pour approcher la configuration finale souhaitée. Ce type d’algorithme calcule des solutions de compromis telles qu’aucune ne domine toutes les autres pour tous les objectifs. Ces solutions sont appelées des compromis de Pareto et elles forment ensemble ce qui est appelé un front de Pareto.
-L’utilisation de méthodes d’exploration globales comme celle des algorithmes génétiques pour calibrer un modèle multi-agent (et en particulier un modèle multi-agent stochastique) implique un coût de calcul très élevé (Sharma et al, 2006). Ce type de charge est trop volumineux pour être exécuté sur des ordinateurs locaux, et les supercalculateurs sont très coûteux et ne sont pas facilement disponibles dans la plupart des laboratoires. Les grilles informatiques offrent une solution pour résoudre ces problèmes de calculs intensifs. Cependant, l’informatique à une si grande échelle suppose d’orchestrer l'exécution de dizaines de milliers d'instances du modèle sur des ordinateurs distribués dans le monde entier. La probabilité cumulée de pannes locales et le problème de répartir la charge de travail de façon optimale sur la grille rendent très difficile son utilisation pour un chercheur non spécialisé, comme précisé ci-dessus. C’est entre autres pour surmonter ces difficultés que la plate-forme OpenMOLE a été construite (Reuillon et al, 2010; 2013). Cet exemple de la calibration du modèle SimpopLocal montre bien dans quelle mesure OpenMOLE aide les modélisateurs à franchir le fossé technique et méthodologique qui les sépare de l'informatique haute performance.
-L’infrastructure de la grille de calcul (EGI) nous a permis d’utiliser une puissance de calcul telle qu’un demi milliard d’exécutions du modèle ont pu être effectuées pour le calibrage de SimpopLocal, lequel sans cela aurait requis quelque 20 années de calcul avec un seul ordinateur.
-Le profil de calibrage, un grand saut épistémologique pour les SHS
-Le résultat du processus de calibrage assure seulement que le modèle peut reproduire les caractéristiques stylisées de l’émergence d’un système de villes, avec une évaluation assez précise des valeurs des paramètres qui toutes ensemble contribuent à assurer cette évolution. Mais il ne dit rien de la fréquence à laquelle les jeux de paramètres produisent des comportements plausibles, et de quelle façon chaque paramètre contribue à modifier le comportement du modèle. Il serait intéressant par exemple de savoir à quel moment certaines valeurs de paramètre empêchent le système d’atteindre un comportement plausible, et de ne pas se restreindre à ne connaître qu'un seul jeu de valeurs de paramètres «optimales». 
-Une nouvelle méthode a été mise au point pour représenter la sensibilité du modèle aux variations d'un seul paramètre, indépendamment des variations de tous les autres paramètres (Reuillon et al. 2015). Au moyen d’une fonction qui calcule une seule valeur numérique décrivant la qualité du calibrage pour le modèle, l’algorithme de profil calcule l’erreur de calibrage la plus faible possible lorsque la valeur d'un paramètre donné est fixée et que les autres sont libres. L’algorithme calcule cette erreur minimale pour tout le domaine de variation du paramètre étudié. Pour chaque valeur d’un paramètre, l’algorithme cherche à identifier les jeux de valeurs des autres paramètres qui produisent le meilleur ajustement du modèle aux données attendues (la plus petite erreur possible). Un graphique représente alors les variations de cette valeur d’ajustement optimale en fonction des variations du paramètre étudié. Le profil de calibrage montre ainsi plusieurs formes possibles pour cette courbe. Lorsqu’elle présente une nette inflexion vers les valeurs les plus basses pour l’erreur de calibrage, cela pour un tout petit domaine de variation des valeurs du paramètre étudié, on peut en conclure qu’on a vraiment identifié l’ordre de grandeur du paramètre qui satisfait aux exigences en termes de comportement du modèle. Si l’une de ces courbes reste plate, cela indique que le paramètre n’a pas d’effet sur le comportement du modèle et peut donc en être éliminé. Ainsi, dans le cas de SimpopLocal, un paramètre imaginé comme le durée de vie d’une innovation a été finalement exclu car des variations restaient sans effet sur la qualité d’ajustement du modèle, toutes choses égales quant aux variations des autres paramètres (Schmitt, 2014). On a donc ici la possibilité d’évaluer jusqu’à quel point les mécanismes imaginés pour construire le modèle sont non seulement suffisants, mais aussi nécessaires pour produire le comportement attendu. Certes dans les limites du cadre théorique et de la sélection des faits stylisés retenus, c’est la première fois que des chercheurs en SHS peuvent parvenir à ce type de conclusion scientifique essentielle, grâce à une méthode de validation enfin efficace pour les modèles de simulation multi-agents. C’est un immense progrès du point de vue épistémologique en sciences sociales – certes toujours dans le cadre théorique donné par les objets, attributs et mécanismes sélectionnés par les chercheurs pour être représentatifs du système observé.
-Une forme complémentaire de validation du modèle pourrait être alors imaginée si des historiens archéologues tentaient de le recalibrer avec des données de leurs observations. En effet, le jeu de paramètres estimé contient des valeurs qui engendrent bien la dynamique voulue pour un système de peuplement mais qui ne sont pas fixées dans l’absolu, elles sont  relatives les unes aux autres d’une part et aux données fictives introduites d’autre part. Si l’on modifie ces dernières pour les rendre compatibles avec un système de peuplement historiquement observé, la capacité du modèle à simuler son développement serait alors confirmée, non seulement en reconstruisant les trajectoires de l’évolution de la population des lieux habités considérés, mais aussi en conservant les ordres de grandeur relatifs des paramètres qui engendrent cette dynamique. 
 
+%C’est là où des procédures informatiques adaptées peuvent être utilisées, en rapportant la question du calibrage à un problème d’optimisation. Les algorithmes génétiques ont été utilisés pour calibrer des systèmes multi-agents dans plusieurs domaines, en médecine (Castiglione et al, 2007), en écologie (Duboz et al, 2010), en économie (Espinosa, 2012; Stonedahl et Wilensky, 2010a), ou en hydrologie (Solomatine et al, 1999). En dépit de la large utilisation des systèmes multi-agents en sciences sociales, cette méthode n’a pas été appliquée très souvent (Heppenstall et al, 2007; Stonedahl et Wilensky, 2010b). Ce type d’expérience numérique exige en effet que soient définis des objectifs quantitatifs permettant d’évaluer si les résultats de la simulation sont compatibles avec les attentes des experts, il faut également savoir gérer l’énorme charge de calcul et parvenir à optimiser une fonction de fitness susceptibles de très importantes variations stochastique (Pietro et al, 2004). 
+%  reformulate on stichasticity ? no need, general
+This is where suited algorithms can be used, by understanding the calibration issue as an optimization problem. Genetic algorithms have been used to calibrate multi-agent systems in several domains as therapeutic evaluation \citep{castiglione2007optimization}, ecology \citep{duboz2010application}, economics \citep{espinosa2012genetic,stonedahl2010evolutionary}, or hydrology \citep{solomatine1999automatic}. Despite of the the frequent use of multi-agent systems in social sciences, this method has not been applied very often \citep{heppenstall2007genetic,stonedahl2010evolutionary}. This type of numerical experiment indeed requires that quantitative objective are defined in order to evaluate if simulation results are compatible to results expected from expert knowledge, and the enormous computation load must also be managed while optimizing a fitness function candidate to very large stochastic fluctuations \citep{di2004applying}.
+
+
+%Dans le cas de SimpopLocal, qui comprend 5 paramètres dont les valeurs sont inconnues (même leurs ordres de grandeur ne peuvent pas être estimés à partir de données empiriques), nous avons dû identifier trois “fonctions objectif”. Celles-ci caractérisent un résultat de simulation au niveau macro-géographique et correspondent à des faits stylisés dont les ordres de grandeur ont pu être établis à partir des connaissances archéologiques et historiques: la distribution finale des tailles de villes doit être lognormale (peu différente d’une loi de Zipf), la taille maximale qu’atteint la plus grande ville doit être d’environ 10 000 habitants, pour une durée de simulation équivalant à 4000 ans.
+In the case of SimpopLocal, which has five unknown parameter values (even their order of magnitude can not be estimated from empirical data), three ``objective functions'' had to be defined. These characterize a simulation result at the macro-geographical level and correspond to stylized facts which order of magnitude were established from archeological and historical knowledge: the final distribution of city sizes must be log-normal (not far to a Zipf's law), the maximal size of the largest city must be around 10,000 inhabitants, for a simulation duration corresponding to 4000 years.
+
+
+
+%Cette obligation de définir des fonctions-objectif  pourrait être considérée comme une contrainte forte sur la validité épistémologique du modèle, elle semble en effet contredire l’hypothèse d’une évolution ouverte pour les systèmes de villes. En fait, cette étape intermédiaire de calcul représente un comprimé de connaissances, notre exigence a minima sur la représentativité et la plausibilité du comportement du modèle par rapport à l’ensemble envisageable des dynamiques des villes en système (à l’époque historique de l’émergence des villes). Le résultat en termes d’évaluation des simulations doit permettre d’avancer dans la connaissance des processus d’interaction intra-urbains susceptibles d’engendrer dette dynamique générale à l’échelon macroscopique du système, cette reconstitution théorique s’apparentant alors à ce que des physiciens nomment le “problème inverse”.
+This requirement of defining objective functions could be considered as a strong constraint on the epistemological validity of the model, it seems indeed to contradict the assumption of an open evolution for systems of cities. Indeed, this intermediate computation step corresponds to a condensate of knowledges, a minimal requirement on the representativity and the plausibility of model behavior in comparison to all dynamics of systems of cities that could be considered (at the historical period of the emergence of cities). The result in terms of evaluation of simulations should allow to advance in the knowledge of intra and inter-urban interaction processes susceptible to produce this general dynamic at the macroscopic scale of the system, such a theoretical reconstitution corresponding then to what some physicists describe as an ``inverse problem''.
+
+
+
+%Un domaine de variation numérique assez large est établi a priori pour chacun des cinq paramètres. Chaque jeu de paramètres, combinant une valeur pour chacun d’entre eux, est évalué en fonction de la sortie de simulation qu'il produit. Cette évaluation mesure la proximité entre les sorties de la simulation et les fonctions objectifs définies pour le modèle et permet ainsi de mesurer la capacité d’un certain ensemble de valeurs de paramètres à reproduire les faits stylisés que la simulation doit approcher au mieux. Les paramétrages recevant les meilleures évaluations sont ensuite utilisés comme base pour engendrer de nouveaux jeux de paramètres qui sont ensuite testés. 
+A rather broad numerical domain is established a priori for each of the five parameters. Each parameter set combining a value for each parameter is evaluated depending on the simulation outcome it produces. This evaluation measures the proximity between simulation outputs and objective functions defined for the model and provides thus a measure of the ability of a given of parameters values set to reproduce the stylized facts of which the simulation must be the closest. The parameter values receiving the best evaluations are then used as a basis to produce new parameter sets which are then tested.
+
+
+%Exploration de l’espace des paramètres sous contrainte d’objectifs
+\subsubsection*{Exploration of the parameter space under objective constraints}
+
+
+%Le modèle SimpopLocal étant stochastique, les résultats de la simulation varient d'une simulation à l'autre pour le même paramétrage. Par conséquent, l'évaluation du paramétrage en fonction des trois objectifs doit prendre en compte cette variabilité. Nous avons vérifié qu’une centaine de simulations pour chaque jeu de paramètres suffisait à saisir cette variabilité sans trop augmenter la durée du calcul. 
+The SimpopLocal model being stochastic, simulation results vary from one simulation to the other for the same parameter values. In consequence, the evaluation of parameter values according to the three objectives must take into account this variability. We verified that around hundred simulations for each parameter set was enough to capture this variability without increasing too much computation time.
+
+
+%A chaque fonction-objectif correspond une mesure de l’évaluation de la qualité du résultat simulé.  La capacité du modèle à produire une distribution log-normale est mesurée par l’écart entre la distribution simulée et une distribution log-normale théorique ayant même moyenne et écart type selon un test de Kolmogorov-Smirnov.  L’objectif de population maximale quantifie la capacité du modèle à engendrer des villes plus ou moins grandes, le résultat d'une simulation est testé en calculant l'écart entre la taille de la plus grande agglomération et la valeur attendue de 10 000 habitants: [(population de la plus grande agglomération −10 000) / 10 000 |. L’objectif de la durée de la simulation quantifie la capacité du modèle à générer une configuration attendue dans un laps de temps historiquement plausible. On calcule l’écart entre le nombre d’itérations de la simulation et la valeur attendue de 4000 étapes de la simulation: | (simulation durée −4000) / 4000 |. Ces trois calculs d’erreur sont normalisés afin de pouvoir comparer le degré de réussite d’une simulation vis-à-vis de chacun des trois objectifs. Mais l’agrégation des trois calculs qui produirait une seule mesure de qualité globale n’étant pas possible, un algorithme multi-objectif est nécessaire pour déterminer quelles simulations sont les plus satisfaisantes pour approcher la configuration finale souhaitée. Ce type d’algorithme calcule des solutions de compromis telles qu’aucune ne domine toutes les autres pour tous les objectifs. Ces solutions sont appelées des compromis de Pareto et elles forment ensemble ce qui est appelé un front de Pareto.
+% rq : why normalize then as the nsga2 is ranked-based ? => crowding distance !
+To each objective function corresponds a measure of the evaluation to the quality of the simulated result. The ability of the model to produce a log-normal distribution is measured by the distance between the simulated distribution and a theoretical log-normal distribution with the same average and standard deviation following a Kolmogorov-Smirnov test. The maximal population objective quantifies the ability of the model to produce more or less large cities, the result of a simulation being tested by computing the distance between the size of the largest city and the expected value of 10,000 inhabitants: $\left|(\textrm{population of the largest agglomeration} - 10,000) / 10,000 \right|$. The objective of the duration of the simulation duration quantifies the ability of the model to generate an expected configuration in an historically plausible time window. The distance between the number of iterations of the simulation and the expected value of 4000 steps for the simulation is computed: $\left| (simulation duration - 4000) / 4000 \right|$. These three computations of errors are normalized in order to enable the comparison the degree of satisfaction of a simulation regarding each of the three objectives. But the aggregation of the three computations which would produce a single global quality measure is not possible , a multi-objective algorithm is necessary to determine which simulations are the most satisfying to approach the expected final configuration. This type of algorithm computes compromise solutions such that no solution dominates all the others for all objectives. These solutions are called Pareto compromises and are together part of what is called a Pareto front.
+
+
+%L’utilisation de méthodes d’exploration globales comme celle des algorithmes génétiques pour calibrer un modèle multi-agent (et en particulier un modèle multi-agent stochastique) implique un coût de calcul très élevé (Sharma et al, 2006). Ce type de charge est trop volumineux pour être exécuté sur des ordinateurs locaux, et les supercalculateurs sont très coûteux et ne sont pas facilement disponibles dans la plupart des laboratoires. Les grilles informatiques offrent une solution pour résoudre ces problèmes de calculs intensifs. Cependant, l’informatique à une si grande échelle suppose d’orchestrer l'exécution de dizaines de milliers d'instances du modèle sur des ordinateurs distribués dans le monde entier. La probabilité cumulée de pannes locales et le problème de répartir la charge de travail de façon optimale sur la grille rendent très difficile son utilisation pour un chercheur non spécialisé, comme précisé ci-dessus. C’est entre autres pour surmonter ces difficultés que la plate-forme OpenMOLE a été construite (Reuillon et al, 2010; 2013). Cet exemple de la calibration du modèle SimpopLocal montre bien dans quelle mesure OpenMOLE aide les modélisateurs à franchir le fossé technique et méthodologique qui les sépare de l'informatique haute performance.
+The use of global exploration methods such as the one of genetic algorithms to calibrate a multi-agent model (and in particular a stochastic multi-agent model) implies a very high computation cost \citep{sharma2006multi}. Such a computation charge is too voluminous to be executed on local computers, and supercomputers have a high cost and are not easily available for most of research laboratories. Computer grids provide a solution to these issues of intensive computation. However, distributing computation at such a large scale requires to orchestrate the execution of ten of thousands of model instances on computers distributed in the entire world. The cumulated probability of local failures and the issue of sharing to workload in an optimal way on the grid make its use very difficult for a non-specialized researcher as described above. It is in particular to overcome these difficulties that the OpenMOLE platform has been conceived \citep{reuillon2010declarative,reuillon2013openmole}. This exemple of the calibration of the SimpopLocal model shows well to what extent OpenMOLE helps modelers to overcome the technical and methodological gap which separates them from high performance computing.
+
+
+%L’infrastructure de la grille de calcul (EGI) nous a permis d’utiliser une puissance de calcul telle qu’un demi milliard d’exécutions du modèle ont pu être effectuées pour le calibrage de SimpopLocal, lequel sans cela aurait requis quelque 20 années de calcul avec un seul ordinateur.
+The infrastructure of the European Computation Grid allowed to use a computing power such that half a billion simulations of the model have been executed for the calibration of SimpopLocal, without which it would have required around 20 years of computation with a single computer.
+
+
+
+%Le profil de calibrage, un grand saut épistémologique pour les SHS
+\subsubsection*{The Calibration Profile, a significant leap forward for social sciences}
+
+
+%Le résultat du processus de calibrage assure seulement que le modèle peut reproduire les caractéristiques stylisées de l’émergence d’un système de villes, avec une évaluation assez précise des valeurs des paramètres qui toutes ensemble contribuent à assurer cette évolution. Mais il ne dit rien de la fréquence à laquelle les jeux de paramètres produisent des comportements plausibles, et de quelle façon chaque paramètre contribue à modifier le comportement du modèle. Il serait intéressant par exemple de savoir à quel moment certaines valeurs de paramètre empêchent le système d’atteindre un comportement plausible, et de ne pas se restreindre à ne connaître qu'un seul jeu de valeurs de paramètres «optimales». 
+The result of the calibration process ensures only that the model is able to reproduce stylized characteristics of the emergence of a system of cities, with a relatively precise evaluation of parameter values which altogether contribute to produce this evolution. But it does not tell anything on the frequency to which parameter sets produce plausible behaviors, and to what extent each parameter contributes to modify the model behavior. It would be interesting for example to know at which point some parameter values avoid the system to reach a plausible behavior, and to not be restricted to know only a single ``optimal'' parameter values set.
+
+
+%Une nouvelle méthode a été mise au point pour représenter la sensibilité du modèle aux variations d'un seul paramètre, indépendamment des variations de tous les autres paramètres (Reuillon et al. 2015). Au moyen d’une fonction qui calcule une seule valeur numérique décrivant la qualité du calibrage pour le modèle, l’algorithme de profil calcule l’erreur de calibrage la plus faible possible lorsque la valeur d'un paramètre donné est fixée et que les autres sont libres. L’algorithme calcule cette erreur minimale pour tout le domaine de variation du paramètre étudié. Pour chaque valeur d’un paramètre, l’algorithme cherche à identifier les jeux de valeurs des autres paramètres qui produisent le meilleur ajustement du modèle aux données attendues (la plus petite erreur possible). Un graphique représente alors les variations de cette valeur d’ajustement optimale en fonction des variations du paramètre étudié. Le profil de calibrage montre ainsi plusieurs formes possibles pour cette courbe. Lorsqu’elle présente une nette inflexion vers les valeurs les plus basses pour l’erreur de calibrage, cela pour un tout petit domaine de variation des valeurs du paramètre étudié, on peut en conclure qu’on a vraiment identifié l’ordre de grandeur du paramètre qui satisfait aux exigences en termes de comportement du modèle. Si l’une de ces courbes reste plate, cela indique que le paramètre n’a pas d’effet sur le comportement du modèle et peut donc en être éliminé. Ainsi, dans le cas de SimpopLocal, un paramètre imaginé comme le durée de vie d’une innovation a été finalement exclu car des variations restaient sans effet sur la qualité d’ajustement du modèle, toutes choses égales quant aux variations des autres paramètres (Schmitt, 2014). On a donc ici la possibilité d’évaluer jusqu’à quel point les mécanismes imaginés pour construire le modèle sont non seulement suffisants, mais aussi nécessaires pour produire le comportement attendu. Certes dans les limites du cadre théorique et de la sélection des faits stylisés retenus, c’est la première fois que des chercheurs en SHS peuvent parvenir à ce type de conclusion scientifique essentielle, grâce à une méthode de validation enfin efficace pour les modèles de simulation multi-agents. C’est un immense progrès du point de vue épistémologique en sciences sociales – certes toujours dans le cadre théorique donné par les objets, attributs et mécanismes sélectionnés par les chercheurs pour être représentatifs du système observé.
+% wrong use of inflexion (// eco ?) -> current lang
+A new method has been elaborated to represent the sensitivity of the model to the variations of a single parameter, independently of the variations of all other parameters \citep{reuillon2015new}. Using an objective function computing a single numerical value describing the quality of the calibration for the model, the profile algorithm computes the calibration error the lowest possible when the value of a given parameter remains fixed and all others are free. The algorithm computes this minimal error for the full variation domain of the parameter studied. For each value of a parameter, the algorithm aims at identifying parameter values for other parameters which produce the best fit of the model to the expected data (the smallest error possible). A plot gives then the variations of this optimal fit value as a function of the variations of the parameter studied. The calibration profile shows then different possible forms for this curve. When it exhibits a clear inflexion in the lowest values for the calibration error, for a relatively small domain of variation for the parameter studied, it is possible to conclude that the order of magnitude of the parameter was truly identified which satisfies to the expectations in terms of model behavior. If one of these curves remains flat, it indicates that the parameter has no effect on the local behavior of the model and thus can be removed from it. Therefore, in the case of SimpopLocal, a parameter thought as the duration of life of an innovation was finally excluded since variations remained without effect on the quality of fit of the model, all things being equal regarding the variations of the other parameters \citep{schmitt2014modelisation}. This provides thus the possibility to evaluate to what extent the mechanisms invented to construct the model are not only sufficient, but also necessary to produce the expected behavior. Naturally within the limits of the theoretical framework and of the selection of stylized facts which were kept, it is the first time that researchers in social science can reach such an essential scientific conclusion, thanks to a validation method finally efficient for multi-agent simulation models. This is an enormous progress from the epistemological point of view for social sciences - surely still within the theoretical framework given by the objects, attributes and mechanisms selected by researchers as representatives of the system observed.
+
+
+%Une forme complémentaire de validation du modèle pourrait être alors imaginée si des historiens archéologues tentaient de le recalibrer avec des données de leurs observations. En effet, le jeu de paramètres estimé contient des valeurs qui engendrent bien la dynamique voulue pour un système de peuplement mais qui ne sont pas fixées dans l’absolu, elles sont  relatives les unes aux autres d’une part et aux données fictives introduites d’autre part. Si l’on modifie ces dernières pour les rendre compatibles avec un système de peuplement historiquement observé, la capacité du modèle à simuler son développement serait alors confirmée, non seulement en reconstruisant les trajectoires de l’évolution de la population des lieux habités considérés, mais aussi en conservant les ordres de grandeur relatifs des paramètres qui engendrent cette dynamique. 
+A complementary form of model validation could then be imagined if historians and archeologists would try to recalibrate it from their observations. Indeed, the estimated parameter set contains values which indeed provide the expected dynamic for a settlement system but which are not absolutely fixed, they are relative one to the other on the one hand and to the synthetic data introduced on the other hand. If these are modified to be compatible with an historically observed settlement system, the ability of the model to simulate its development would then be confirmed, not only by reconstructing the trajectories of the evolution of population of the considered inhabited places, but also by keeping the relative orders of magnitude of parameters which yield this dynamic. 
 
 
 
@@ -240,15 +317,13 @@ Une forme complémentaire de validation du modèle pourrait être alors imaginé
 
 
 %Nous proposons dans cette section d’illustrer l’application des méthodes d’exploration d’OpenMOLE et du calcul intensif à une autre question thématique, celle des interactions entre réseaux et territoires. Cette question a alimenté de nombreux débats scientifiques, pour lesquels la plupart des questions restent relativement ouvertes. Par exemple, le problème des “effets structurants des infrastructures de transport” (Bonnafous et Plassard, 1974), présenté par (Offner, 1993) comme un “mythe scientifique” invoqué pour justifier le coût d’une nouvelle infrastructure par ses retombées sur le développement régional, pas toujours observées à moyen terme, peut selon A. Bretagnolle dans (Offner et al., 2014) être observé pour des territoires plus vastes et sur le temps long, tout en tenant compte des fluctuations locales dans les dynamiques des systèmes de villes. La difficulté empirique d’extraire des faits stylisés généraux ainsi que la difficulté conceptuelle d'entités géographiques en relations de causalités circulaires, sont contournées par l’approche de modélisation de la co-évolution des réseaux de transport et des territoires proposée par Raimbault (2018b). Les résultats obtenus sont étroitement liés à l’utilisation d’OpenMOLE et de ses algorithmes d’exploration et de calibrage, dont nous allons donner quelques illustrations.
-% TODO repet question
-% TODO wrong cit thesis ?
-We propose in this section to illustrate the application of the exploration methods included in OpenMOLE and intensive computation to an other thematic question, the issue of interactions between networks and territories. This question has fed numerous scientific debates fir which most of problems remain relatively open. For example, the issue of ``structuring effects of transportation infrastructures'' \citep{bonnafous1974methodologies}, described by \cite{offner1993effets} as a ``scientific myth'' invoked to justify the cost of an infrastructure through its spillovers on regional development, and which are not always observed on middle terms, can according to A. Bretagnolle in \citep{offner2014effets} be observed for broader territories and on long times, while taking into account local fluctuations in dynamics of systems of cities. The empirical difficulty to extract general stylized facts together with the conceptual difficulty of geographical entities in relations of circular causality, are avoided through the approach of modeling co-evolution between transportation networks and territories proposed by \cite{raimbault2018modelisation}. The results obtained are closely linked to the use of OpenMOLE and its exploration and calibration algorithms, of which we will give a few illustrations.
+%  wrong cit thesis ? ok pas besoin paper synth.
+We propose in this section to illustrate the application of the exploration methods included in OpenMOLE and intensive computation to an other thematic question, the issue of interactions between networks and territories. This question has fed numerous scientific debates fir which most of issues remain relatively open. For example, the issue of ``structuring effects of transportation infrastructures'' \citep{bonnafous1974methodologies}, described by \cite{offner1993effets} as a ``scientific myth'' invoked to justify the cost of an infrastructure through its spillovers on regional development, and which are not always observed on middle terms, can according to A. Bretagnolle in \citep{offner2014effets} be observed for broader territories and on long times, while taking into account local fluctuations in dynamics of systems of cities. The empirical difficulty to extract general stylized facts together with the conceptual difficulty of geographical entities in relations of circular causality, are avoided through the approach of modeling co-evolution between transportation networks and territories proposed by \cite{raimbault2018modelisation}. The results obtained are closely linked to the use of OpenMOLE and its exploration and calibration algorithms, of which we will give a few illustrations.
 
 
 
 %L’application de calibrage multi-objectif s'avère essentielle pour l’application des modèles de systèmes de villes à des situations réelles. Par exemple, (Raimbault, 2018a) introduit un modèle d'évolution d’un système de villes sur le temps long, proche du modèle de (Favaro et Pumain, 2011), mais se concentrant sur l’effet du réseau de transport physique. Les taux de croissance des villes sont déterminés par la superposition de plusieurs effets: (i) croissance endogène capturée par un taux de croissance fixe correspondant au modèle de Gibrat; (ii) interactions entre villes par un modèle gravitaire; (iii) rétroaction des flux circulant dans le réseau sur les villes traversées. Ce modèle est calibré de manière non stationnaire dans le temps (c’est-à-dire sur des fenêtres temporelles glissantes, afin de prendre en compte le changement de nature des dynamiques urbaines, comme observé par Bretagnolle et Franc (2018) avec par exemple les mutations des réseaux de transport), sur le système de villes français entre 1830 et 2000. Pour calibrer le modèle, les populations simulées sont comparées aux populations observées. À ce stade, l’utilisation d’un algorithme de calibrage multi-objectif (l’algorithme NSGA2 implémenté dans OpenMOLE) est essentielle. En effet, l’ajustement peut par exemple s’effectuer sur une erreur carrée moyenne dans le temps et pour l’ensemble des villes. Cependant, vu les disparités de taille des villes liées à la hiérarchie urbaine, il émerge rapidement qu’une optimisation mono-objectif sur cette erreur s'attellera à ajuster la taille des plus grandes villes, au détriment de la majorité des villes du système. L’ajout d’un second objectif, pris par exemple comme une erreur carrée moyenne sur les logarithmes des populations, permet de prendre celles-ci en compte. Un résultat important de (Raimbault, 2018a) est alors l'émergence de fronts de Pareto pour ces deux objectifs, pour l’ensemble des fenêtres temporelles considérées. Cela montre que ce type de modèle doit être appliqué en faisant un compromis entre l’ajustement des populations pour les villes moyennes et des populations pour les plus grandes villes. Ce résultat est permis grâce à l’optimisation multi-objectif par algorithme génétique d’OpenMOLE.
-% TODO rq : et si obj pas log mse mais mse tout court, possible que comportement different ? pas evident
-The application of multi-objective calibration appears to be essential for the application of models for systems of cities to real situations. For example, \cite{raimbault2018indirect} introduce a model for the evolution of a system of cities on long times which is close to the model by \citep{favaro2011gibrat} but focuses on the effect of the physical transportation network. Growth rates of cities are determined by the superposition of several effects: (i) endogenous growth captured with a fixed growth rate corresponding to the Gibrat model; (ii) interactions between cities through a gravity model; (iii) feedback of flows circulating in the network on traversed cities. This model is calibrated in a non-stationary way in time (i.e. on temporal moving windows in order to take into account the change in nature of urban dynamics such as observed by \cite{} with for example the mutations of transportation networks) on the French system of cities between 1830 and 2000. To calibrate the model, simulated populations are compared to observed populations. At this stage the use of a multi-objective calibration algorithm (the NSGA2 algorithm implemented in OpenMOLE) is crucial. Indeed, the fit can be for example computed as a mean square error in time and for all cities. However, given the disparities in city sizes due to urban hierarchy, it rapidly occurs that a mono-objective calibration on this error will focus on adjusting the size of largest cities, at the expense of most cities in the system. The addition of a second objective taken for example as a mean square error on logarithms of populations, allowing to take these into account. An important result of \citep{raimbault2018indirect} is then the emergence of Pareto fronts for these two objectives for all time windows considered. This shows that this type of model must be applied by making a compromise between the adjustment of population for medium-sized cities and populations for largest cities. This result is obtained thanks to the multi-objective optimization with a genetic algorithm in OpenMOLE.
+The application of multi-objective calibration appears to be essential for the application of models for systems of cities to real situations. For example, \cite{raimbault2018indirect} introduce a model for the evolution of a system of cities on long times which is close to the model by \citep{favaro2011gibrat} but focuses on the effect of the physical transportation network. Growth rates of cities are determined by the superposition of several effects: (i) endogenous growth captured with a fixed growth rate corresponding to the Gibrat model; (ii) interactions between cities through a gravity model; (iii) feedback of flows circulating in the network on traversed cities. This model is calibrated in a non-stationary way in time (i.e. on temporal moving windows in order to take into account the change in nature of urban dynamics such as observed by \cite{bretagnolle2018vers} with for example the mutations of transportation networks) on the French system of cities between 1830 and 2000. To calibrate the model, simulated populations are compared to observed populations. At this stage the use of a multi-objective calibration algorithm (the NSGA2 algorithm implemented in OpenMOLE) is crucial. Indeed, the fit can be for example computed as a mean square error in time and for all cities. However, given the disparities in city sizes due to urban hierarchy, it rapidly occurs that a mono-objective calibration on this error will focus on adjusting the size of largest cities, at the expense of most cities in the system. The addition of a second objective taken for example as a mean square error on logarithms of populations, allowing to take these into account. An important result of \citep{raimbault2018indirect} is then the emergence of Pareto fronts for these two objectives for all time windows considered. This shows that this type of model must be applied by making a compromise between the adjustment of population for medium-sized cities and populations for largest cities. This result is obtained thanks to the multi-objective optimization with a genetic algorithm in OpenMOLE.
 
 
 
@@ -258,8 +333,6 @@ An other application example for methods included in the platform which illustra
 
 
 %La question est alors dans un cas d'étude donné d’identifier les régimes présents à partir de données observées ou de données simulées par un modèle, et notamment ceux qui correspondent à une co-évolution. La démonstration de l’existence de tels régimes en sortie d’un “modèle de co-évolution” n’est pas a priori attendue, puisque les processus inclus à l'échelle microscopique où les influences sont en effet réciproques n’impliquent pas une causalité réciproque à l'échelle macroscopique des indicateurs, puisque les modèles considérés sont complexes et témoignent d’une émergence. Cette méthode est appliquée à un modèle macroscopique de co-évolution par Raimbault (2019a), qui étend le modèle de Raimbault (2018a) par l’ajout de règles d'évolution des capacités des liens du réseau. Un échantillonnage direct, qui consiste en un tirage aléatoire d’un nombre fixe de points de paramètres (par exemple par échantillonnage Hypercube Latin maximisant la répartition des points), est une première expérience permise par OpenMOLE pour avoir un aperçu de la capacité du modèle à produire de la co-évolution. Celui-ci permet d’isoler un certain nombre de régimes pouvant être potentiellement produits par le modèle (33 régimes pour 729 régimes possibles pour les variables considérées, i.e.  4,5\%  (dans ce cas on considère comme variable de territoire les populations, et comme variables de réseau la centralité de proximité et l'accessibilité, ce qui correspond à six couples dirigés de variables, et donc $3^6=729$ configurations possibles, chaque couple pouvant présenter corrélation retardée positive, négative, ou inexistante). On trouve parmi ceux-ci 19 régimes de co-évolution, dont l’existence ne pouvait pas être intuitivement prédite. L’existence et la variété de ces régimes est un résultat important, montrant qu’il est possible de modéliser une co-évolution, au sens statistique précis donné précédemment.
-% TODO repet puisque
-% TODO parentheses
 The question is then is a given case study to identify the regimes in presence from observed data or from data simulated by a model, and particularly the regimes corresponding to a co-evolution. The demonstration of the existence of such regimes as output of a ``co-evolution model'' is a priori not expected, since processes included at the microscopic scale for which the influences are indeed reciprocal do not imply a reciprocal causality at the macroscopic scale of indicators, as the models considered are complex and exhibit emergence. This method is applied to a macroscopic model of co-evolution by \cite{raimbault2018modeling}, which extends the model of \citep{raimbault2018indirect} by adding rules for the evolution of network capacities. A direct sampling which consists in a random sampling of a fixed number of parameter points (for example through Latin Hypercube Sampling maximizing the discrepancy of points), is a first experiment allowed by OpenMOLE to have an overview of the capacity of the model to produce co-evolution. This experiment provides a certain number of regimes which can potentially be produced by the model, namely 33 regimes among 729 possible regimes for the variable considered, i.e. 4,5\% (in this case we consider as territory variable the populations, and as network variables the closeness centrality and the accessibility, what corresponds to six directed couples of variables, and thus $3^6=729$ possible configurations since each couple can exhibit a positive, negative or inexistent lagged correlation). We find among these 19 co-evolution regimes, which existence could not be intuitively predicted. The existence and the variety of these regimes is an important result, showing that it is possible to model a co-evolution, in the precise statistical sense given above.
 
 
@@ -285,7 +358,7 @@ The elaboration of the OpenMOLE platform has created a research axis, even a res
 \subsection{Methods}
 
 %L’extension des méthodes mises à disposition est un axe privilégié de la recherche liée au développement d’OpenMOLE. Par exemple, la résolution exhaustive de problèmes inverses (Aster et al. 2018) n’est actuellement pas incluse. La résolution d’un problème inverse consiste a déterminer l’ensemble des antécédents d’un objectif donné dans l’espace de sortie du modèle. Les algorithmes de calibrage résolvent des problèmes similaires mais ne garantissent pas l'exhaustivité des solutions produites, ce qui peut considérablement poser problème en cas d'équifinalité (Rey-Coyrehourcq, 2015), i.e. de configurations de paramètres ou de conditions initiales conduisant par des trajectoires différentes à un résultat identique. Une heuristique de problème inverse s’inspirant des mécanismes de PSE est actuellement en cours d'élaboration pour une intégration dans OpenMOLE.
-The extension of available methods is a privileged axis of research linked to the development of OpenMOLE. For example, the exhaustive resolution of inverse problems \citep{aster2018parameter} is currently not included. Solving an inverse problem consists in determining all the antecedents of a given objective in the output space of the model. Calibration algorithms solve similar problems but do not ensure the exhaustivity of the solutions produced, what can become a considerable issue in the case of equifinality \citep{}, i.e. of parameter configurations or initial conditions leading through different trajectories to an identical result. An heuristic for inverse problems inspired by the PSE mechanisms is currently being elaborated for an integration into OpenMOLE.
+The extension of available methods is a privileged axis of research linked to the development of OpenMOLE. For example, the exhaustive resolution of inverse problems \citep{aster2018parameter} is currently not included. Solving an inverse problem consists in determining all the antecedents of a given objective in the output space of the model. Calibration algorithms solve similar problems but do not ensure the exhaustivity of the solutions produced, what can become a considerable issue in the case of equifinality \citep{rey2015plateforme}, i.e. of parameter configurations or initial conditions leading through different trajectories to an identical result. An heuristic for inverse problems inspired by the PSE mechanisms is currently being elaborated for an integration into OpenMOLE.
 
 
 %L’utilisation de méthodes d'inférence Bayésiennes est également une piste développée. En effet, dans le cas de modèles fortement stochastiques, et où les distributions jointes ont des formes non standard, une estimation de la distribution de probabilité des paramètres peut être fournie par ce type de méthodes. Dans le cas des modèles de simulation, la méthode d’Approximate Bayesian Computation (Csilléry et al. 2010)  permet, pour un jeu de données observées, de fournir la distribution de probabilité des paramètres ayant le plus probablement conduit à celles-ci. Il s’agit ainsi d’un calibrage étendu, avec une connaissance produite probabiliste permettant de prendre en compte l’incertitude. Une spécification de cette méthode proposée par Lenormand et al. (2013), destinée à réduire le nombre de simulations dans le cas de modèles au temps de calcul significatif, est également en cours d’adaptation au calcul parallèle et d'intégration dans la plateforme.
@@ -306,8 +379,6 @@ All along its development, OpenMOLE has always been innovative in terms of tools
 
 
 %Les questions d’embarquement de programmes, et par extension de modèles, restent un domaine de recherche actif notamment en lien avec la reproductibilité. Le programme docker, qui utilise des container, permet d’embarquer un environnement d'exécution à l’identique quel que soit le système d’exploitation et le hardware. Hung et al. (2016) propose de coupler docker à une interface graphique pour la reproductibilité scientifique. Des programmes similaires comme Singularity sont spécifiquement dédiés à la reproductibilité d'expériences HPC (Kurtzer et al., 2017). Le coeur de la stratégie d’embarquement d’OpenMOLE ne repose pas sur un tel programme, par exemple pour des questions de performance, mais certaines tâches reposant sur l'exécution de binaires ou de programme à l’environnement complexe sont embarquées dans OpenMOLE par une tâche utilisant docker (par exemple pour la tâche pour le langage R qui demande l’installation d’un environnement R complet). Une amélioration de l'intégration de docker dans OpenMOLE est un axe de recherche actif et crucial pour l’extension future de la généricité des programmes embarquables. OpenMOLE se place ainsi à la pointe de la recherche technique en termes de reproductibilité scientifique. De la même manière, la question de la scalabilité des expériences est au coeur de la philosophie de la plateforme, et des recherches sont menées par exemple pour automatiser le déploiement de multiples instances d’OpenMOLE sur un cluster et faciliter l’utilisation au sein de communautés de thématiciens.
-% TODO complicated pas complexe
-% coding camp : sci positioning ?
 The issue of program embedding, and by extension of model embedding, remain an active research field in particular in relation with reproducibility. The docker software which uses containers allows to wrap an execution environment in an identical manner whatever the operating system and the hardware. \cite{hung2016guidock} propose to couple docker with a graphical user interface for scientific reproducibility. Similar softwares such as Singularity are specifically dedicated to the reproducibility of HPC experiments \citep{kurtzer2017singularity}. The core of the embedding strategy taken by OpenMOLE does not rely on such a software, for example because of performance reasons, but some tasks relying on the execution of binaries or of programs with a complicated environment are embedded in OpenMOLE through a task using docker (for example for the R language task which requires the installation of a full R environment). An improvement of the integration of docker into OpenMOLE is an active research direction which is crucial for the future extension of the genericity of embeddable programs. OpenMOLE is therefore at the edge in technical research regarding scientific reproducibility. In a similar way, the question of scalability of experiments is at the core of the philosophy of the platform, and research are done for example to automatize the deployment of multiple OpenMOLE instances on a cluster and facilitate the use within communities of thematic researchers.
 
 
@@ -317,17 +388,516 @@ The issue of program embedding, and by extension of model embedding, remain an a
 
 
 %L’exploration des modèles de simulation s’est pérennisée en géographie par l'intermédiaire d’initiatives comme le développement de la plateforme OpenMOLE. Celle-ci s’est menée dans un cadre hautement interdisciplinaire et réciproque (relation gagnant-gagnant entre informaticiens et géographes), mais aussi au travers d’une intégration inédite des domaines de connaissance (Raimbault, 2017a), c’est-à-dire des connaissances empiriques, théoriques et de modélisation, mais aussi les outils et méthodes, qui sont dans chacun de ces domaines en interaction forte. L’aventure OpenMOLE, et sa branche liée à la géographie dans le cadre de l’ERC Geodivercity, témoigne d’une nouvelle façon de produire des connaissances géographiques, résolument evidence-based, rendant envisageable la production de preuves scientifiques en sciences sociales. Cette émancipation reste à être propagée et la démarche à être valorisée pour réaliser son potentiel de direction future de la Géographie Théorique et Quantitative, en complémentarité avec les nouvelles disciplines émergentes de City Science et Urban Analytics décrites par Batty (2019), mais la “preuve de concept” est largement validée et donne des arguments de poids aux sciences humaines pour résister à l'hégémonie colonisatrice de sciences dures comme la physique prétendant à un monopole sur les approches evidence-based des systèmes sociaux (Dupuy and Benguigui, 2015).
-% TODO rq sur le dernier point, en opposition avec Paul ? ("belle theories etc.") write a piece on "nice theories" in social science ? (blog cybergeo ?)
 The exploration of simulation models has been progressively established in geography through the intermediary of initiatives such as the development of the OpenMOLE platform. It has been achieved in a highly interdisciplinary and reciprocal framework (win-win relations between computer scientists and geographers), but also through a novel integration of knowledge domains \citep{raimbault2017applied}, i.e. of empirical, theoretical and modeling knowledges, but also tools and methods which are within each of these domains in strong interaction. The OpenMOLE enterprise and its branch linked to geography in the context of the Geodivercity ERC project witnesses of a novel way to produce geographical knowledge, in a robust evidence-based manner, and suggesting the possibility of scientific proofs in social sciences. Such an emancipation remains to be propagated and the approach to be valorized to realize its potential of future direction of Quantitative and Theoretical Geography, in complementarity with new emerging disciplines of City Science and Urban Analytics described by \cite{batty2019urban}, but the proof-of-concept is largely validated and provides significant evidence to social sciences to resist the colonizer hegemony of hard sciences such as physics pretending to a monopoly on evidence-based approaches to social systems \citep{dupuy2015sciences}.
 
 
 
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
 
-% TODO check cit. espinosa
 
+\begin{thebibliography}{}
 
-\bibliographystyle{apalike}
-\bibliography{biblio}
+\bibitem[Aghion et~al., 1998]{aghion1998endogenous}
+Aghion, P., Howitt, P.~W., Howitt, P., Brant-Collett, M.,
+  Garc{\'\i}a-Pe{\~n}alosa, C., et~al. (1998).
+\newblock {\em Endogenous growth theory}.
+\newblock MIT press.
+
+\bibitem[Allen, 2012]{allen2012cities}
+Allen, P.~M. (2012).
+\newblock {\em Cities and regions as self-organizing systems: models of
+  complexity}.
+\newblock Routledge.
+
+\bibitem[Allen and Sanglier, 1981]{allen1981urban}
+Allen, P.~M. and Sanglier, M. (1981).
+\newblock Urban evolution, self-organization, and decisionmaking.
+\newblock {\em Environment and Planning A}, 13(2):167--183.
+
+\bibitem[Amblard, 2003]{amblard2003comprendre}
+Amblard, F. (2003).
+\newblock {\em Comprendre le fonctionnement de simulations sociales
+  individus-centr{\'e}es: Application {\`a} des mod{\`e}les de dynamiques
+  d'opinions}.
+\newblock PhD thesis, Universit{\'e} Blaise Pascal-Clermont-Ferrand II.
+
+\bibitem[Aster et~al., 2018]{aster2018parameter}
+Aster, R.~C., Borchers, B., and Thurber, C.~H. (2018).
+\newblock {\em Parameter estimation and inverse problems}.
+\newblock Elsevier.
+
+\bibitem[Banos, 2013]{banos2013pour}
+Banos, A. (2013).
+\newblock {\em Pour des pratiques de mod{\'e}lisation et de simulation
+  lib{\'e}r{\'e}es en g{\'e}ographie et SHS}.
+\newblock PhD thesis, Universit{\'e} Paris 1 Panth{\'e}on Sorbonne.
+
+\bibitem[Banos, 2017]{banos2017knowledge}
+Banos, A. (2017).
+\newblock Knowledge accelerator' in geography and social sciences: Further and
+  faster, but also deeper and wider.
+\newblock In {\em Urban Dynamics and Simulation Models}, pages 119--123.
+  Springer.
+
+\bibitem[Batty, 2019]{batty2019urban}
+Batty, M. (2019).
+\newblock Urban analytics defined.
+
+\bibitem[Bonnafous and Plassard, 1974]{bonnafous1974methodologies}
+Bonnafous, A. and Plassard, F. (1974).
+\newblock Les m{\'e}thodologies usuelles de l'{\'e}tude des effets structurants
+  de l'offre de transport.
+\newblock {\em Revue {\'e}conomique}, 25(25):208--232.
+
+\bibitem[Bretagnolle and Franc, 2018]{bretagnolle2018vers}
+Bretagnolle, A. and Franc, A. (2018).
+\newblock Vers des syst{\`e}mes de villes int{\'e}gr{\'e}s.
+\newblock In {\em Sanders, L., ed. Peupler la terre: De la pr{\'e}histoire à
+  l'{\`e}re des m{\'e}tropoles. Presses universitaires François-Rabelais.}
+
+\bibitem[Bretagnolle and Pumain, 2010]{bretagnolle2010simulating}
+Bretagnolle, A. and Pumain, D. (2010).
+\newblock Simulating urban networks through multiscalar space-time dynamics:
+  Europe and the united states, 17th-20th centuries.
+\newblock {\em Urban Studies}, 47(13):2819--2839.
+
+\bibitem[Bura et~al., 1996]{bura1996multiagent}
+Bura, S., Gu{\'e}rin-Pace, F., Mathian, H., Pumain, D., and Sanders, L. (1996).
+\newblock Multiagent systems and the dynamics of a settlement system.
+\newblock {\em Geographical analysis}, 28(2):161--178.
+
+\bibitem[Castiglione et~al., 2007]{castiglione2007optimization}
+Castiglione, F., Pappalardo, F., Bernaschi, M., and Motta, S. (2007).
+\newblock Optimization of haart with genetic algorithms and agent-based models
+  of hiv infection.
+\newblock {\em Bioinformatics}, 23(24):3350--3355.
+
+\bibitem[Ch{\'e}rel et~al., 2015]{10.1371/journal.pone.0138212}
+Ch{\'e}rel, G., Cottineau, C., and Reuillon, R. (2015).
+\newblock Beyond corroboration: Strengthening model validation by looking for
+  unexpected patterns.
+\newblock {\em PLoS ONE}, 10(9):e0138212.
+
+\bibitem[Clarke and Wilson, 1983]{clarke1983dynamics}
+Clarke, M. and Wilson, A.~G. (1983).
+\newblock The dynamics of urban spatial structure: progress and problems.
+\newblock {\em Journal of regional science}, 23(1):1--18.
+
+\bibitem[Cliff et~al., 2004]{cliff2004world}
+Cliff, A.~D., Haggett, P., Smallman-Raynor, M., et~al. (2004).
+\newblock {\em World atlas of epidemic diseases}.
+\newblock Arnold London.
+
+\bibitem[Cottineau et~al., 2015]{cottineau2015modular}
+Cottineau, C., Reuillon, R., Chapron, P., Rey-Coyrehourcq, S., and Pumain, D.
+  (2015).
+\newblock A modular modelling framework for hypotheses testing in the
+  simulation of urbanisation.
+\newblock {\em Systems}, 3(4):348--377.
+
+\bibitem[Csill{\'e}ry et~al., 2010]{csillery2010approximate}
+Csill{\'e}ry, K., Blum, M.~G., Gaggiotti, O.~E., and Fran{\c{c}}ois, O. (2010).
+\newblock Approximate bayesian computation (abc) in practice.
+\newblock {\em Trends in ecology \& evolution}, 25(7):410--418.
+
+\bibitem[Deffuant et~al., 2003]{deffuant2003demarche}
+Deffuant, G., Amblard, F., Duboz, R., and Ramat, E. (2003).
+\newblock Une d{\'e}marche exp{\'e}rimentale pour la simulation
+  individus-centr{\'e}e.
+\newblock {\em Actes des 10{\`e}mes Journ{\'e}es de Rochebrune, rencontres
+  interdisciplinaires sur les syst{\`e}mes complexes naturels et artificiels,
+  statut {\'e}pist{\'e}mologique de la simulation}, pages 45--64.
+
+\bibitem[Demoule et~al., 2018]{demoule2018histoire}
+Demoule, J.-P., Garcia, D., and Schnapp, A. (2018).
+\newblock {\em Une histoire des civilisations}.
+\newblock Paris, La Découverte, INRAP.
+
+\bibitem[Di~Pietro et~al., 2004]{di2004applying}
+Di~Pietro, A., While, L., and Barone, L. (2004).
+\newblock Applying evolutionary algorithms to problems with noisy,
+  time-consuming fitness functions.
+\newblock In {\em Proceedings of the 2004 Congress on Evolutionary Computation
+  (IEEE Cat. No. 04TH8753)}, volume~2, pages 1254--1261. IEEE.
+
+\bibitem[Duboz et~al., 2010]{duboz2010application}
+Duboz, R., Versmisse, D., Travers, M., Ramat, E., and Shin, Y.-J. (2010).
+\newblock Application of an evolutionary algorithm to the inverse parameter
+  estimation of an individual-based model.
+\newblock {\em Ecological modelling}, 221(5):840--849.
+
+\bibitem[Dupuy and Benguigui, 2015]{dupuy2015sciences}
+Dupuy, G. and Benguigui, L.~G. (2015).
+\newblock Sciences urbaines: interdisciplinarit{\'e}s passive, na{\"\i}ve,
+  transitive, offensive.
+\newblock {\em M{\'e}tropoles}, (16).
+
+\bibitem[Eliot and Daud{\'e}, 2006]{eliot2006diffusion}
+Eliot, E. and Daud{\'e}, {\'E}. (2006).
+\newblock Diffusion des {\'e}pid{\'e}mies et complexit{\'e}s g{\'e}ographiques.
+  perspectives conceptuelles et m{\'e}thodologiques.
+\newblock {\em Espace populations soci{\'e}t{\'e}s. Space populations
+  societies}, (2006/2-3):403--416.
+
+\bibitem[Epstein and Axtell, 1996]{epstein1996growing}
+Epstein, J.~M. and Axtell, R. (1996).
+\newblock {\em Growing artificial societies: social science from the bottom
+  up}.
+\newblock Brookings Institution Press.
+
+\bibitem[Espinosa, 2012]{espinosa2012genetic}
+Espinosa, O.~B. (2012).
+\newblock A genetic algorithm for the calibration of a micro-simulation model.
+\newblock {\em arXiv preprint arXiv:1201.3456}.
+
+\bibitem[Eubank et~al., 2004]{eubank2004modelling}
+Eubank, S., Guclu, H., Kumar, V.~A., Marathe, M.~V., Srinivasan, A., Toroczkai,
+  Z., and Wang, N. (2004).
+\newblock Modelling disease outbreaks in realistic urban social networks.
+\newblock {\em Nature}, 429(6988):180.
+
+\bibitem[Favaro and Pumain, 2011]{favaro2011gibrat}
+Favaro, J.-M. and Pumain, D. (2011).
+\newblock Gibrat revisited: An urban growth model incorporating spatial
+  interaction and innovation cycles. 再评吉尔布瑞特:
+  顾及空间相互作用和创新周期的城市增长模型.
+\newblock {\em Geographical Analysis}, 43(3):261--286.
+
+\bibitem[Fletcher, 1986]{fletcher1986settlement}
+Fletcher, R. (1986).
+\newblock Settlement archaeology: World-wide comparisons.
+\newblock {\em World Archaeology}, 18(1):59--83.
+
+\bibitem[Gibrat, 1931]{gibrat1931inegalites}
+Gibrat, R. (1931).
+\newblock {\em Les in{\'e}galit{\'e}s {\'e}conomiques: Applications... d'une
+  loi nouvelle, la loi de l'effet proportionnel}.
+\newblock PhD thesis, Recueil Sirey.
+
+\bibitem[Gleyze, 2005]{gleyze2005vulnerabilite}
+Gleyze, J.-F. (2005).
+\newblock {\em La vuln{\'e}rabilit{\'e} structurelle des r{\'e}seaux de
+  transport dans un contexte de risques}.
+\newblock PhD thesis, Universit{\'e} Paris-Diderot-Paris VII.
+
+\bibitem[Grignard et~al., 2013]{grignard2013gama}
+Grignard, A., Taillandier, P., Gaudou, B., Vo, D.~A., Huynh, N.~Q., and
+  Drogoul, A. (2013).
+\newblock Gama 1.6: Advancing the art of complex agent-based modeling and
+  simulation.
+\newblock In {\em International Conference on Principles and Practice of
+  Multi-Agent Systems}, pages 117--131. Springer.
+
+\bibitem[Grimm et~al., 2005]{grimm2005pattern}
+Grimm, V., Revilla, E., Berger, U., Jeltsch, F., Mooij, W.~M., Railsback,
+  S.~F., Thulke, H.-H., Weiner, J., Wiegand, T., and DeAngelis, D.~L. (2005).
+\newblock Pattern-oriented modeling of agent-based complex systems: lessons
+  from ecology.
+\newblock {\em science}, 310(5750):987--991.
+
+\bibitem[Hagerstrand, 1957]{hagerstrand1957migration}
+Hagerstrand, T. (1957).
+\newblock Migration and area: migration in sweden: Lund studies in geography,
+  series b.
+\newblock {\em Human Geography}, 13.
+
+\bibitem[Heppenstall et~al., 2007]{heppenstall2007genetic}
+Heppenstall, A.~J., Evans, A.~J., and Birkin, M.~H. (2007).
+\newblock Genetic algorithm optimisation of an agent-based model for simulating
+  a retail market.
+\newblock {\em Environment and Planning B: Planning and Design},
+  34(6):1051--1070.
+
+\bibitem[Hung et~al., 2016]{hung2016guidock}
+Hung, L.-H., Kristiyanto, D., Lee, S.~B., and Yeung, K.~Y. (2016).
+\newblock Guidock: using docker containers with a common graphics user
+  interface to address the reproducibility of research.
+\newblock {\em PloS one}, 11(4):e0152686.
+
+\bibitem[Jensen, 2018]{jensen2018pourquoi}
+Jensen, P. (2018).
+\newblock {\em Pourquoi la soci{\'e}t{\'e} ne se laisse pas mettre en
+  {\'e}quations}.
+\newblock Le Seuil.
+
+\bibitem[Kurtzer et~al., 2017]{kurtzer2017singularity}
+Kurtzer, G.~M., Sochat, V., and Bauer, M.~W. (2017).
+\newblock Singularity: Scientific containers for mobility of compute.
+\newblock {\em PloS one}, 12(5):e0177459.
+
+\bibitem[Lenormand et~al., 2013]{lenormand2013adaptive}
+Lenormand, M., Jabot, F., and Deffuant, G. (2013).
+\newblock Adaptive approximate bayesian computation for complex models.
+\newblock {\em Computational Statistics}, 28(6):2777--2796.
+
+\bibitem[Liu, 1996]{liu1996settlement}
+Liu, L. (1996).
+\newblock Settlement patterns, chiefdom variability, and the development of
+  early states in north china.
+\newblock {\em Journal of anthropological archaeology}, 15(3):237--288.
+
+\bibitem[Lowry, 1964]{lowry1964model}
+Lowry, I.~S. (1964).
+\newblock A model of metropolis.
+
+\bibitem[Marcus and Sabloff, 2008]{marcus2008ancient}
+Marcus, J. and Sabloff, J.~A. (2008).
+\newblock {\em The ancient city: New perspectives on urbanism in the old and
+  new world}.
+\newblock School for Advanced Research on the.
+
+\bibitem[Moriconi-Ebrard, 1993]{moriconi1993urbanisation}
+Moriconi-Ebrard, F. (1993).
+\newblock {\em L'urbanisation du monde de 1950 {\`a} 1990 d'apr{\`e}s une
+  d{\'e}finition harmonis{\'e}e des agglom{\'e}rations urbaines}.
+\newblock PhD thesis, Paris 1.
+
+\bibitem[Morrill, 1962]{morrill1962development}
+Morrill, R.~L. (1962).
+\newblock The development of models of migration and the role of electronic
+  processing machines.
+\newblock {\em J. Sutter. Entret. Monaco Sc. Hum. I}, page 213.
+
+\bibitem[Morrill, 1963]{morrill1963distribution}
+Morrill, R.~L. (1963).
+\newblock The distribution of migration distances.
+\newblock In {\em Papers of the Regional Science Association}, volume~11, pages
+  73--84. Springer.
+
+\bibitem[Odersky and Zenger, 2005]{odersky2005scalable}
+Odersky, M. and Zenger, M. (2005).
+\newblock Scalable component abstractions.
+\newblock In {\em ACM Sigplan Notices}, volume~40, pages 41--57. ACM.
+
+\bibitem[Offner, 1993]{offner1993effets}
+Offner, J.-M. (1993).
+\newblock Les ``effets structurants'' du transport: mythe politique,
+  mystification scientifique.
+\newblock {\em L'espace g{\'e}ographique}, pages 233--242.
+
+\bibitem[Offner et~al., 2014]{offner2014effets}
+Offner, J.-M., Beaucire, F., Delaplace, M., Fr{\'e}mont, A., Ninot, O.,
+  Bretagnolle, A., and Pumain, D. (2014).
+\newblock Les effets structurants des infrastructures de transport.
+\newblock {\em Espace Geographique}, 43(1):p--51.
+
+\bibitem[Oliveira and Gibbons, 2010]{oliveira2010scala}
+Oliveira, B.~C. and Gibbons, J. (2010).
+\newblock Scala for generic programmers: comparing haskell and scala support
+  for generic programming.
+\newblock {\em Journal of functional programming}, 20(3-4):303--352.
+
+\bibitem[Passerat-Palmbach et~al., 2017]{passerat2017reproducible}
+Passerat-Palmbach, J., Reuillon, R., Leclaire, M., Makropoulos, A., Robinson,
+  E.~C., Parisot, S., and Rueckert, D. (2017).
+\newblock Reproducible large-scale neuroimaging studies with the openmole
+  workflow management system.
+\newblock {\em Frontiers in neuroinformatics}, 11:21.
+
+\bibitem[Piou et~al., 2009]{piou2009proposing}
+Piou, C., Berger, U., and Grimm, V. (2009).
+\newblock Proposing an information criterion for individual-based models
+  developed in a pattern-oriented modelling framework.
+\newblock {\em Ecological Modelling}, 220(17):1957--1967.
+
+\bibitem[Pumain, 1997]{pumain1997pour}
+Pumain, D. (1997).
+\newblock Pour une th{\'e}orie {\'e}volutive des villes.
+\newblock {\em L'Espace g{\'e}ographique}, pages 119--134.
+
+\bibitem[Pumain and Reuillon, 2017]{pumain2017urban}
+Pumain, D. and Reuillon, R. (2017).
+\newblock {\em Urban dynamics and simulation models}.
+\newblock Springer.
+
+\bibitem[Raimbault, 2017a]{raimbault2017applied}
+Raimbault, J. (2017a).
+\newblock An applied knowledge framework to study complex systems.
+\newblock In {\em Complex Systems Design \& Management}, pages 31--45.
+
+\bibitem[Raimbault, 2017b]{raimbault2017identification}
+Raimbault, J. (2017b).
+\newblock Identification de causalités dans des données spatio-temporelles.
+\newblock In {\em Spatial Analysis and GEOmatics 2017}.
+
+\bibitem[Raimbault, 2018a]{raimbault2018indirect}
+Raimbault, J. (2018a).
+\newblock Indirect evidence of network effects in a system of cities.
+\newblock {\em Environment and Planning B: Urban Analytics and City Science},
+  page 2399808318774335.
+
+\bibitem[Raimbault, 2018b]{raimbault2018modeling}
+Raimbault, J. (2018b).
+\newblock Modeling the co-evolution of cities and networks.
+\newblock {\em arXiv preprint arXiv:1804.09430}.
+
+\bibitem[Raimbault, 2018c]{raimbault2018modelisation}
+Raimbault, J. (2018c).
+\newblock Mod{\'e}lisation des interactions entre r{\'e}seaux de transport et
+  territoires: une approche par la co-{\'e}volution.
+\newblock In {\em JJC Pacte-Citeres-Les capacit{\'e}s transformatives des
+  r{\'e}seaux dans la fabrique des territoires}.
+
+\bibitem[Raimbault, 2018d]{raimbault2018unveiling}
+Raimbault, J. (2018d).
+\newblock Unveiling co-evolutionary patterns in systems of cities: a systematic
+  exploration of the simpopnet model.
+\newblock {\em arXiv preprint arXiv:1809.00861}.
+
+\bibitem[Raimbault et~al., 2018]{raimbault2018space}
+Raimbault, J., Cottineau, C., Texier, M.~L., N{\'e}chet, F.~L., and Reuillon,
+  R. (2018).
+\newblock Space matters: extending sensitivity analysis to initial spatial
+  conditions in geosimulation models.
+\newblock {\em arXiv preprint arXiv:1812.06008}.
+
+\bibitem[Raimbault and Perret, 2019]{raimbault2019generating}
+Raimbault, J. and Perret, J. (2019).
+\newblock Generating urban morphologies at large scales.
+\newblock {\em arXiv preprint arXiv:1903.06807}.
+
+\bibitem[Rakshit et~al., 2017]{rakshit2017noisy}
+Rakshit, P., Konar, A., and Das, S. (2017).
+\newblock Noisy evolutionary optimization algorithms--a comprehensive survey.
+\newblock {\em Swarm and Evolutionary Computation}, 33:18--45.
+
+\bibitem[Reuillon et~al., 2010]{reuillon2010declarative}
+Reuillon, R., Chuffart, F., Leclaire, M., Faure, T., Dumoulin, N., and Hill, D.
+  (2010).
+\newblock Declarative task delegation in openmole.
+\newblock In {\em 2010 International Conference on High Performance Computing
+  \& Simulation}, pages 55--62. IEEE.
+
+\bibitem[Reuillon et~al., 2013]{reuillon2013openmole}
+Reuillon, R., Leclaire, M., and Rey-Coyrehourcq, S. (2013).
+\newblock Openmole, a workflow engine specifically tailored for the distributed
+  exploration of simulation models.
+\newblock {\em Future Generation Computer Systems}, 29(8):1981--1990.
+
+\bibitem[Reuillon et~al., 2015]{reuillon2015new}
+Reuillon, R., Schmitt, C., De~Aldama, R., and Mouret, J.-B. (2015).
+\newblock A new method to evaluate simulation models: The calibration profile
+  (cp) algorithm.
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  18(1):12.
+
+\bibitem[Rey-Coyrehourcq, 2015]{rey2015plateforme}
+Rey-Coyrehourcq, S. (2015).
+\newblock {\em Une plateforme int{\'e}gr{\'e}e pour la construction et
+  l'{\'e}valuation de mod{\`e}les de simulation en g{\'e}ographie}.
+\newblock PhD thesis, Paris 1-Panth{\'e}on-Sorbonne.
+
+\bibitem[Reymond, 1971]{reymond1971pour}
+Reymond, H. (1971).
+\newblock Pour une problématique théorique.
+\newblock In Isnard, H., Racine, J.~B., and Reymond, H., editors, {\em
+  Probl{\'e}matiques de la g{\'e}ographie}, volume~29. Presses Universitaires
+  de France-PUF.
+
+\bibitem[Rist, 1970]{rist1970student}
+Rist, R. (1970).
+\newblock Student social class and teacher expectations: The self-fulfilling
+  prophecy in ghetto education.
+\newblock {\em Harvard educational review}, 40(3):411--451.
+
+\bibitem[Rozenfeld et~al., 2008]{rozenfeld2008laws}
+Rozenfeld, H.~D., Rybski, D., Andrade, J.~S., Batty, M., Stanley, H.~E., and
+  Makse, H.~A. (2008).
+\newblock Laws of population growth.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(48):18702--18707.
+
+\bibitem[Sanders et~al., 2007]{sanders2007artificial}
+Sanders, L., Favaro, J., Glisse, B., Mathian, H., and Pumain, D. (2007).
+\newblock Artificial intelligence and collective agents: the eurosim model.
+\newblock {\em Cybergeo}, 392:15.
+
+\bibitem[Sanders et~al., 1997]{sanders1997simpop}
+Sanders, L., Pumain, D., Mathian, H., Gu{\'e}rin-Pace, F., and Bura, S. (1997).
+\newblock Simpop: a multiagent system for the study of urbanism.
+\newblock {\em Environment and Planning B: Planning and design},
+  24(2):287--305.
+
+\bibitem[Schmitt, 2014]{schmitt2014modelisation}
+Schmitt, C. (2014).
+\newblock {\em Mod{\'e}lisation de la dynamique des syst{\`e}mes de peuplement:
+  de SimpopLocal {\`a} SimpopNet}.
+\newblock PhD thesis, Universit{\'e} Panth{\'e}on-Sorbonne-Paris I.
+
+\bibitem[Schmitt et~al., 2015]{schmitt2015half}
+Schmitt, C., Rey-Coyrehourcq, S., Reuillon, R., and Pumain, D. (2015).
+\newblock Half a billion simulations: Evolutionary algorithms and distributed
+  computing for calibrating the simpoplocal geographical model.
+\newblock {\em Environment and Planning B: Planning and Design},
+  42(2):300--315.
+
+\bibitem[Sharma and Singh, 2006]{sharma2006multi}
+Sharma, S. and Singh, H. (2006).
+\newblock Multi-agent system for simulating human behavior in egress
+  simulations.
+\newblock In {\em Proceedings of NAACSOS, Annual Conference of the North
+  American Association for computational social and organizational sciences,
+  Notre Dame, Indiana}.
+
+\bibitem[Sloane, 2008]{sloane2008experiences}
+Sloane, T. (2008).
+\newblock Experiences with domain-specific language embedding in scala.
+\newblock In {\em Domain-Specific Program Development}, page~7.
+
+\bibitem[Solomatine et~al., 1999]{solomatine1999automatic}
+Solomatine, D., Dibike, Y., and Kukuric, N. (1999).
+\newblock Automatic calibration of groundwater models using global optimization
+  techniques.
+\newblock {\em Hydrological Sciences Journal}, 44(6):879--894.
+
+\bibitem[Stonedahl and Wilensky, 2010]{stonedahl2010evolutionary}
+Stonedahl, F. and Wilensky, U. (2010).
+\newblock Evolutionary robustness checking in the artificial anasazi model.
+\newblock In {\em 2010 AAAI Fall Symposium Series}.
+
+\bibitem[Stonedahl, 2011]{stonedahl2011genetic}
+Stonedahl, F.~J. (2011).
+\newblock {\em Genetic algorithms for the exploration of parameter spaces in
+  agent-based models}.
+\newblock PhD thesis, Northwestern University.
+
+\bibitem[Terrier, 1980]{terrier1980mirabelle}
+Terrier, C. (1980).
+\newblock Mirabelle.
+\newblock {\em Courrier des Statistiques}, 73.
+
+\bibitem[Tisue and Wilensky, 2004]{tisue2004netlogo}
+Tisue, S. and Wilensky, U. (2004).
+\newblock Netlogo: A simple environment for modeling complexity.
+\newblock In {\em International conference on complex systems}, volume~21,
+  pages 16--21. Boston, MA.
+
+\bibitem[Van~Deursen and Klint, 2002]{van2002domain}
+Van~Deursen, A. and Klint, P. (2002).
+\newblock Domain-specific language design requires feature descriptions.
+\newblock {\em Journal of Computing and Information Technology}, 10(1):1--17.
+
+\bibitem[White and Engelen, 1993]{white1993cellular}
+White, R. and Engelen, G. (1993).
+\newblock Cellular automata and fractal urban form: a cellular modelling
+  approach to the evolution of urban land-use patterns.
+\newblock {\em Environment and planning A}, 25(8):1175--1199.
+
+\bibitem[White et~al., 2015]{white2015modeling}
+White, R., Engelen, G., and Uljee, I. (2015).
+\newblock {\em Modeling cities and regions as complex systems: From theory to
+  planning applications}.
+\newblock MIT Press.
+
+\bibitem[Wilson, 2014]{wilson2014complex}
+Wilson, A.~G. (2014).
+\newblock {\em Complex spatial systems: the modelling foundations of urban and
+  regional analysis}.
+\newblock Routledge.
+
+\end{thebibliography}
+
 
 
 

@@ -1,0 +1,15 @@
+
+val i = Val[Double]
+val j = Val[Double]
+
+val model = PythonTask("""print(i)
+|j = 2*i
+|print(j)
+|print('Hello World from the PYTHONTASK')""".stripMargin,3) set (
+    inputs += i mapped "i",
+    outputs += i mapped "i",
+    outputs += j mapped  "j",
+    i := 666
+)
+
+model
