@@ -1,0 +1,19 @@
+
+Towards integrated urban models for sustainable policies
+----
+
+J. Raimbault
+----
+
+Keywords: Urban Modeling, Model Integration, Sustainability
+
+----
+
+This presentation describes a research project aiming at building integrated urban models. We illustrate such approaches with previous work on the modeling of interaction between transportation networks and territories, both at the mesoscopic and macroscopic scales.
+We then develop the different types of integrations required.
+Horizontal integration consists in developing interdisciplinary approaches, fostered by reflexivity. The coupling of models with different ontologies and purposes is an other aspect of horizontal integration, which can be implemented through multi-modeling.
+Vertical integration aims at constructing multi-scalar models.
+Finally, the integration of different knowledge domains is assumed to be induced by the use of simulation models exploration methods, the simulation models acting as intermediate to couple viewpoints and theories.
+We discuss how such integrated models and theories could be applied to the design of sustainable multi-scalar policies.
+
+
