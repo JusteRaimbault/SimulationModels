@@ -19,3 +19,6 @@
 [submodule "Docs/Communications/2019/ECTQG2019/ExModeloRetex"]
 	path = Docs/Communications/2019/ECTQG2019/ExModeloRetex
 	url = git@github.com:JusteRaimbault/ECTQG2019-Simulation.git
+[submodule "Docs/Papers/ABMExploration"]
+	path = Docs/Papers/ABMExploration
+	url = git@github.com:pioucyril/roadmapExplo.git
