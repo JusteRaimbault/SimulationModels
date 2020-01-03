@@ -22,3 +22,6 @@
 [submodule "Docs/Papers/ABMExploration"]
 	path = Docs/Papers/ABMExploration
 	url = git@github.com:pioucyril/roadmapExplo.git
+[submodule "Models/Misc/h24"]
+	path = Models/Misc/h24
+	url = git@github.com:Geographie-cites/h24.git
