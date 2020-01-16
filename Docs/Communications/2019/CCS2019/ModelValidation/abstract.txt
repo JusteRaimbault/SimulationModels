@@ -1,0 +1,15 @@
+
+       Validation levels and standards depending on models types and functions
+
+====
+keywords
+
+Model validation; Simulation models; Sensitivity analysis; Model function; Applied perspectivism
+
+====
+
+The concept of model validation is central to modeling but remains loosely defined and strongly dependent on context. We propose in this contribution an overview of what is considered as validation, depending on model type or function.
+We first review existing definition and criteria for a broad range of model types, including predictive models, statistical models, analytical models, simulation models. We develop in the last case the role of sensitivity analysis methods, and illustrate the development of new validation methods in the case of geosimulation models with spatial sensitivity analysis techniques.
+We then consider broad model function families introduced by (Varenne, 2017), and develop what model validation means for each class (which are observation, understanding, theory construction, communication, and decision-making) with specific cases for some subclasses. This typology of model validation depending on model function appears to be complementary to the approach by model type. We conclude by contextualizing modeling within a knowledge framework for complex systems (Raimbault, 2017), and how validation can be seen as an intermediate between different knowledge domains in the iterative process of the construction of a perspective.
+
+
