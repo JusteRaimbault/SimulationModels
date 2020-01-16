@@ -1,0 +1,18 @@
+
+- download md, download images, replace image url to local, pandoc : does not render styles
+- slide mode ?print-pdf => gives webpage to be exported
+- pdf save in chrome -> blank
+- download html
+- comment script tags (useful?)
+- still blank in chrome
+- open in firefox, pdf save: ok execpt first slide blank, but 105M !
+- reduce pdf size: https://gist.github.com/firstdoit/6390547 ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+(gs)
+- add first slide: screenshot
+convert exmod_firstslide.png -resize 1700x tmp.png
+convert tmp.png exmod_firstslide.pdf
+pdfextract tmp.pdf tmp2.pdf 2 30
+pdfmerge exmod_firstslide.pdf tmp2.pdf 
+- rm files; rm figures
+
+

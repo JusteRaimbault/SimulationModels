@@ -1,0 +1,38 @@
+
+Retour d'expérience de l'école OpenMOLE “ExModelo”, organisée en partenariat avec le méso-centre du CRIANN
+====
+
+Hélène Arduin 1, Paul Chapron 2, Béatrice Charton 3, Guillaume Chérel 4, Etienne Delay 5, Benoist Gaston 3, François Lavallée 6, Mathieu Leclaire 4, 7,  Jonathan Passerat-Palmbach 8, Pierre Peigne 9, Julien Perret 2, 4, Juste Raimbault 4, Romain Reuillon 4, 7, Sébastien Rey-Coyrehourcq 10
+1 : UMR Inserm 1037 CRCT
+2 : Univ. Paris-Est, LaSTIG STRUDEL, IGN, ENSG
+3 : Centre Régional Informatique et d'Applications Numériques de Normandie (CRIANN), Région Normandie
+4 :UPS CNRS 3611 ISC-PIF
+5 : CIRAD UPR GREEN
+6 : Irstea, LISC
+7 : UMR CNRS Géographie-cités 8504
+8 : Imperial College London / ConsenSys
+9 : Ecole 42
+10 : UMR CNRS IDEES 6266
+
+====
+
+https://prismes.univ-toulouse.fr/player.php?code=69Lk9ni5&width=100%&height=100%
+https://jcad2019.sciencesconf.org/resource/page/id/6
+
+====
+
+OpenMOLE [Reuillon2013] est une plateforme d’exploration automatique de modèles numériques. Elle permet d’étudier des programmes développés dans une très large gamme de langages. OpenMOLE permet aussi de distribuer la charge de calcul sur la plupart des environements de calcul (serveur, clusters, grille de calcul, cloud). La description de ces expériences sont décrits à l’aide DSL à destination d’utilisateurs non-informaticiens et non-spécialistes des environnements HPC.
+
+Alors que cette plateforme fête sa 10ème release salué par une communauté d’utilisateur en forte croissance, un nouveau pas vient d’être franchi avec l’organisation en 2019 d’une première école d’été dédiée à “l’exploration de modèles”. Durant la formation, la plateforme et l’écosystème de méthodes d’exploration qui l’accompagne sont utilisés de manière intensive.
+
+Les travaux pratiques mettent en oeuvre l’exploration d’un modèle “jouet” de dynamiques complexes développé pour l’occasion. Il s’agit d’un modèle multi-agent spatialisé de type proie/prédateur sur la thématique des zombies. Les apprenants pourront découvrir l’usage et la spécificité de chacune des méthodes d’explorations intégrés dans la plateforme de façon interactive : analyses de sensibilité (Saltelli, Morris), calibrage et optimisation (Profiles, NSGA2, ABC), diversité (PSE). Lors des deux derniers jours, les participants sont invités à formuler des questions sur le modèle de Zombies et à en proposer une étude en utilisant les outils découverts les jours précédents.
+
+La mise en oeuvre rapide de ces méthodes n’étant possible qu’avec l’appui d’un environnement HPC, un partenariat avec l’UMR IDEES et le méso-centre Normand du CRIANN a été mis en place pour assurer un accès rapide aux ressources de calcul nécessaires (1000 coeurs / 25 participants) pour les explorations menées pendant les 5 jours d’école.
+
+Développé avant tout pour accéder à des ressources de type grille, OpenMOLE s’est constamment adapté pour offrir des connecteurs capable de suivre l’offre croissante et très diversifiée en environnements de calcul. Il s’agit d’ajouter à la fois des nouveaux connecteurs (PBS, SLURM, etc.) mais aussi de nouveaux moyens d’encapsulation et de déploiement des programmes utilisateurs (Kubernetes, UDocker, PRoot, etc.). La collaboration entre les deux équipes du CRIANN et d’OpenMOLE s’inscrit dans ce cadre. Bénéfique pour les deux parties, elle a permis de soulever et résoudre des points de blocages représentatifs des diversités de pratiques qui peuvent exister sur le plan matériel et logiciels (Fortran/C vs Java/R/Python) entre les deux communautés (Grille / Cluster)
+
+Dans cette présentation nous proposons de faire une synthèse des résultats obtenus par les groupes sur le modèle jouet, ainsi qu’un retour sur cette collaboration originale entre les deux équipes techniques d’OpenMOLE et du CRIANN.
+
+[Reuillon2013] Reuillon, R., Leclaire, M., and Rey-Coyrehourcq, S. (2013). Openmole, a workflow engine specifically tailored for the distributed exploration of simulation models. Future Generation Computer Systems, 29(8):1981–1990.
+
+
