@@ -1,0 +1,46 @@
+
+
+
+val grid = Val[Array[Array[Double]]]
+
+val generateGrid = ScalaTask("""
+    import org.openmole.spatialdata.grid.real.OSMGridGenerator
+    
+    val lon =  -0.1
+    val lat = 51.50
+    
+    val grid = OSMGridGenerator(lon,lat,500,50).generateGrid(new util.Random)
+""") set (
+    plugins += pluginsOf[org.openmole.spatialdata.grid.real.OSMGridGenerator],
+    outputs += (grid)
+) hook MatrixHook(workDirectory / "world.csv",grid)
+
+
+val finalZombies = Val[Double]
+val oppPeakSize = Val[Double]
+
+val model = ScalaTask("""
+ import zombies._
+ import zombies.worldgen._
+ 
+ val rng = new util.Random
+ 
+ val worldArray = scala.io.Source.fromFile(workDirectory / "world.csv").getLines.map(_.split(",").map(_.toDouble)).toArray
+ val world = closeWorld(zombies.world.World(rasterToCellMatrix(worldArray),50))
+ val result = zombieInvasion(
+      world = world,
+      zombies = 4,
+      humans = 250,
+      steps = 500,
+      random = rng
+    )
+
+    val finalZombies = result.zombiesDynamic(1).toArray.takeRight(1)(0).toDouble
+    val oppPeakSize = result.peakSizeZombified(window = 5).toDouble * -1.0
+
+""") set (
+    resources += (workDirectory / "world.csv"),
+    outputs += (finalZombies,oppPeakSize)
+) hook display
+
+generateGrid -- model

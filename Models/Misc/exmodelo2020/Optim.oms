@@ -1,0 +1,93 @@
+
+
+
+val grid = Val[Array[Array[Double]]]
+
+val generateGrid = ScalaTask("""
+    import org.openmole.spatialdata.grid.real.OSMGridGenerator
+    
+    val lon =  -0.1
+    val lat = 51.50
+    
+    val grid = OSMGridGenerator(lon,lat,500,50).generateGrid(new util.Random)
+""") set (
+    plugins += pluginsOf[org.openmole.spatialdata.grid.real.OSMGridGenerator],
+    outputs += (grid)
+) hook MatrixHook(workDirectory / "world.csv",grid)
+
+
+val finalZombies = Val[Double]
+val oppPeakSize = Val[Double]
+
+val xt1 = Val[Int]
+val yt1 = Val[Int]
+val xt2 = Val[Int]
+val yt2 = Val[Int]
+
+val objder = Val[Double]
+val objpop = Val[Double]
+
+val seed = Val[Long]
+
+
+val model = ScalaTask("""
+ import zombies._
+ import zombies.worldgen._
+ 
+ val rng = new util.Random
+ 
+ val worldsize = 50
+ val entranceX = 20
+ val entranceY = 20
+ 
+ //val worldArray = scala.io.Source.fromFile(workDirectory / "world.csv").getLines.map(_.split(",").map(_.toDouble)).toArray
+ val worldArray = Array.tabulate(50,50){case (i,j) => 0.0}
+ val world = closeWorld(zombies.world.World(rasterToCellMatrix(worldArray),worldsize))
+ val worldWithTraps = zombies.world.World.setTraps(world,Seq(((input.xt1.toInt,input.yt1.toInt),DeathTrap),((input.xt2.toInt,input.yt2.toInt),DeathTrap)))
+ val finalWorld = zombies.worldgen.addEntrances(world,Seq((entranceX,entranceY)))
+ 
+ val result = zombieInvasion(
+      world = finalWorld,
+      zombies = 4,
+      humans = 250,
+      steps = 2000,
+      random = rng
+    )
+
+    val lastZombiesAbsoluteDerivatives = result.zombiesDynamic(20).dropRight(1).zip(result.zombiesDynamic(20).tail).map{case (zt1,zt2) => math.abs(zt2 - zt1)}.takeRight(50).toArray
+    val lastHumansAbsoluteDerivatives = result.humansDynamic(20).dropRight(1).zip(result.humansDynamic(20).tail).map{case (zt1,zt2) => math.abs(zt2 - zt1)}.takeRight(50).toArray
+    val objder = lastZombiesAbsoluteDerivatives.sum.toDouble  + lastHumansAbsoluteDerivatives.sum.toDouble
+    println(lastZombiesAbsoluteDerivatives.toSeq);println(lastHumansAbsoluteDerivatives.toSeq)
+    
+    val lastZombies = result.zombiesDynamic(1).takeRight(1000)
+    val lastHumans = result.humansDynamic(1).takeRight(1000)
+    println(lastZombies.toSeq);println(lastHumans.toSeq)
+    val objpop =  - ((lastZombies.sum.toDouble / lastZombies.length.toDouble) + (lastHumans.sum.toDouble / lastHumans.length.toDouble))
+
+""") set (
+    resources += (workDirectory / "world.csv"),
+    (inputs,outputs) += (xt1,yt1,xt2,yt2,seed),
+    outputs += (objder,objpop)
+)
+
+
+
+val optim = NSGA2Evolution(
+    evaluation = model,
+      genome = Seq(
+        xt1 in Range(5,45),
+        yt1 in Range(5,45),
+        xt2 in Range(5,45),
+        yt2 in Range(5,45)
+        ),
+      objective = Seq(objder,objpop),
+      termination = 1000,
+      //parallelism = 500,
+      //distribution = Island(15 minutes),
+      stochastic = Stochastic(seed = seed)
+    ) hook (workDirectory / ("optim_"+ ((new java.text.SimpleDateFormat("yyyyMMdd_HHmmss")).format(new java.util.Date()))))
+
+
+
+//generateGrid -- optim
+optim
