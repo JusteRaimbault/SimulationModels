@@ -25,3 +25,6 @@
 [submodule "Models/Misc/h24"]
 	path = Models/Misc/h24
 	url = git@github.com:Geographie-cites/h24.git
+[submodule "Docs/Papers/ScientificWorkflows"]
+	path = Docs/Papers/ScientificWorkflows
+	url = git@github.com:JusteRaimbault/ScientificWorkflows-paper.git
