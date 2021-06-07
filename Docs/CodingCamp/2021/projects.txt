@@ -1,0 +1,17 @@
+
+ - NSGA3: uniform reference points
+
+ - finish paper mgo benchmark
+
+ - paper OSE?
+
+ - work on surrogate models -> check lagun http://gdr-mascotnum.org/lagun/ https://gitlab.com/drti/lagun/-/blob/master/documentation/tutorials/Lagun_Tutorial0_Introduction.pd
+
+ - survey workflow computing engines?
+
+ - paper ML?
+
+ - validation luti models: standalone stylised facts - Lowry model (methodo mostly?)
+
+ - validation sim models - performative approach?
+
