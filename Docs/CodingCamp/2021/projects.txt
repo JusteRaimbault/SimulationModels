@@ -6,6 +6,7 @@
  - paper OSE?
 
  - work on surrogate models -> check lagun http://gdr-mascotnum.org/lagun/ https://gitlab.com/drti/lagun/-/blob/master/documentation/tutorials/Lagun_Tutorial0_Introduction.pd
+  Ten Broeke, G., van Voorn, G., Ligtenberg, A., & Molenaar, J. (2021). The use of surrogate models to analyse agent-based models. Journal of Artificial Societies and Social Simulation, 24(2). (in bib/AgentBasedModeling)
 
  - survey workflow computing engines?
 
@@ -14,4 +15,6 @@
  - validation luti models: standalone stylised facts - Lowry model (methodo mostly?)
 
  - validation sim models - performative approach?
+
+ - new methods in Carrella, E. (2021). No Free Lunch when Estimating Simulation Parameters. Journal of Artificial Societies and Social Simulation, 24(2). (bib/ModelValidation)
 
