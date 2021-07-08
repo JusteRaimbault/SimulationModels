@@ -7,6 +7,9 @@
 
  - work on surrogate models -> check lagun http://gdr-mascotnum.org/lagun/ https://gitlab.com/drti/lagun/-/blob/master/documentation/tutorials/Lagun_Tutorial0_Introduction.pd
   Ten Broeke, G., van Voorn, G., Ligtenberg, A., & Molenaar, J. (2021). The use of surrogate models to analyse agent-based models. Journal of Artificial Societies and Social Simulation, 24(2). (in bib/AgentBasedModeling)
+  Ozaki, Y., Tanigaki, Y., Watanabe, S., & Onishi, M. (2020, June). Multiobjective tree-structured parzen estimator for computationally expensive optimization problems. In Proceedings of the 2020 Genetic and Evolutionary Computation Conference (pp. 533-541).
+  Ha, S., & Jeong, H. (2020). Unraveling hidden interactions in complex systems with deep learning. (in bib/AgentBasedModeling)
+  fogliato2021maars in bib/Statistics => model as approximmations?
 
  - survey workflow computing engines?
 
@@ -15,6 +18,7 @@
  - validation luti models: standalone stylised facts - Lowry model (methodo mostly?)
 
  - validation sim models - performative approach?
+   chattoe2019drole in bib/ModelValidation
 
  - new methods in Carrella, E. (2021). No Free Lunch when Estimating Simulation Parameters. Journal of Artificial Societies and Social Simulation, 24(2). (bib/ModelValidation)
 
