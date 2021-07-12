@@ -4,6 +4,8 @@
  - finish paper mgo benchmark
 
  - paper OSE?
+  -> en cours paper on overleaf; implementation Neigborhood Algo? https://academic.oup.com/gji/article/138/2/479/596234?login=true
+
 
  - work on surrogate models -> check lagun http://gdr-mascotnum.org/lagun/ https://gitlab.com/drti/lagun/-/blob/master/documentation/tutorials/Lagun_Tutorial0_Introduction.pd
   Ten Broeke, G., van Voorn, G., Ligtenberg, A., & Molenaar, J. (2021). The use of surrogate models to analyse agent-based models. Journal of Artificial Societies and Social Simulation, 24(2). (in bib/AgentBasedModeling)
@@ -21,4 +23,15 @@
    chattoe2019drole in bib/ModelValidation
 
  - new methods in Carrella, E. (2021). No Free Lunch when Estimating Simulation Parameters. Journal of Artificial Societies and Social Simulation, 24(2). (bib/ModelValidation)
+
+
+----
+En cours:
+ - SPatialSampling Task : example schelling GA https://github.com/JusteRaimbault/SpaceMatters/tree/404231adfc0a21c5e0db3de482106a4fddb902f9/Schelling/schelling-netlogo
+https://next.openmole.org/Spatial+Task.html
+
+ - JuliaTask: ok running; example ants https://github.com/reyman/julia-antworld-model/blob/main/ants.jl
+
+Done:
+ JuliaTask; bib ose, benchmark OSE; spatialsampling: schelling NetLogo (Romain: switch to tasks)
 
