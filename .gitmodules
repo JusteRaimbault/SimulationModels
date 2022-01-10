@@ -8,19 +8,19 @@
 	path = Models/stylized-fact-checking
 	url = ssh://git@gitlab.iscpif.fr:20022/gcherel/stylized-fact-checking.git
 [submodule "Docs/Papers/LutiSensitivity"]
-	path = Docs/Papers/LutiSensitivity
+	path = Docs/Papers/LutiSensitivity-paper
 	url = git@github.com:JusteRaimbault/LutiSensitivity-paper.git
 [submodule "Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks"]
-	path = Docs/Communications/2019/ECTQG2019/SpecialSessionNetworks
+	path = Docs/Communications/2019/ECTQG2019/ECTQG2019-SessionNetwork
 	url = git@github.com:JusteRaimbault/ECTQG2019-SessionNetwork.git
 [submodule "Docs/Papers/UrbanPerspectives"]
-	path = Docs/Papers/UrbanPerspectives
+	path = Docs/Papers/UrbanPerspectives-paper
 	url = git@github.com:JusteRaimbault/UrbanPerspectives-paper.git
 [submodule "Docs/Communications/2019/ECTQG2019/ExModeloRetex"]
-	path = Docs/Communications/2019/ECTQG2019/ExModeloRetex
+	path = Docs/Communications/2019/ECTQG2019/ECTQG2019-Simulation
 	url = git@github.com:JusteRaimbault/ECTQG2019-Simulation.git
 [submodule "Docs/Papers/ABMExploration"]
-	path = Docs/Papers/ABMExploration
+	path = Docs/Papers/roadmapExplo
 	url = git@github.com:pioucyril/roadmapExplo.git
 [submodule "Models/Misc/h24"]
 	path = Models/Misc/h24
