@@ -1,0 +1,24 @@
+val alpha = Val[Double]
+val beta = Val[Double]
+
+val res = Val[Double]
+
+val juliaTask = JuliaTask(workDirectory / "script.jl") set(
+        inputs += alpha.mapped,
+	inputs += beta.mapped,
+	outputs += (alpha,beta),
+        outputs += res.mapped
+)
+
+val env = LocalEnvironment(5)
+
+val evolution =
+  NSGA2Evolution(
+    genome = Seq(alpha in (0.0 to 1.0), beta in (0.0 to 1.0)),
+    objective = Seq(res),
+    evaluation = (juliaTask on env),
+    parallelism = 5,
+    termination = 10
+  ) hook (workDirectory / "result" / "calibration")
+
+evolution
