@@ -31,3 +31,6 @@
 [submodule "Docs/Papers/ModelValidationBook"]
 	path = Docs/Papers/ModelValidationBook
 	url = ssh://git@gitlab.openmole.org:10000/exmodelo/ouvrage.git
+[submodule "Docs/Papers/ComplexitiesUrbanScience"]
+	path = Docs/Papers/ComplexitiesUrbanScience
+	url = git@github.com:JusteRaimbault/ComplexitiesUrbanScience.git
