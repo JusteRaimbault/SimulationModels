@@ -34,3 +34,6 @@
 [submodule "Docs/Papers/ComplexitiesUrbanScience"]
 	path = Docs/Papers/ComplexitiesUrbanScience
 	url = git@github.com:JusteRaimbault/ComplexitiesUrbanScience.git
+[submodule "Docs/Papers/BenchmarkMethods-paper"]
+	path = Docs/Papers/BenchmarkMethods-paper
+	url = git@github.com:JusteRaimbault/BenchmarkMethods-paper.git
