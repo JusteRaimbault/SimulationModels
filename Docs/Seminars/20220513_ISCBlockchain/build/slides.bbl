@@ -1,0 +1,43 @@
+\begin{thebibliography}{}
+
+\bibitem[Balasubramaniam et~al., 2021]{balasubramaniam2021blockchain}
+Balasubramaniam, A., Gul, M. J.~J., Menon, V.~G., and Paul, A. (2021).
+\newblock Blockchain for intelligent transport system.
+\newblock {\em IETE Technical Review}, 38(4):438--449.
+
+\bibitem[Jabbar et~al., 2022]{jabbar2022blockchain}
+Jabbar, R., Dhib, E., ben Said, A., Krichen, M., Fetais, N., Zaidan, E., and
+  Barkaoui, K. (2022).
+\newblock Blockchain technology for intelligent transportation systems: A
+  systematic literature review.
+\newblock {\em IEEE Access}.
+
+\bibitem[Kathrine et~al., 2021]{kathrine2021intelligent}
+Kathrine, G. J.~W., Javadi, B., Peter, J.~D., and Palmer, G.~M. (2021).
+\newblock An intelligent blockchain-based framework for securing smart grid.
+\newblock In {\em Industry 4.0 Interoperability, Analytics, Security, and Case
+  Studies}, pages 81--94. CRC Press.
+
+\bibitem[Kumar et~al., 2021]{kumar2021privacy}
+Kumar, R., Kumar, P., Tripathi, R., Gupta, G.~P., Kumar, N., and Hassan, M.~M.
+  (2021).
+\newblock A privacy-preserving-based secure framework using blockchain-enabled
+  deep-learning in cooperative intelligent transport system.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems}.
+
+\bibitem[Mezquita et~al., 2021]{mezquita2021review}
+Mezquita, Y., Gonz{\'a}lez-Briones, A., Casado-Vara, R., Wolf, P., Prieta, F.
+  d.~l., and Gil-Gonz{\'a}lez, A.-B. (2021).
+\newblock Review of privacy preservation with blockchain technology in the
+  context of smart cities.
+\newblock In {\em Sustainable Smart Cities and Territories International
+  Conference}, pages 68--77. Springer.
+
+\bibitem[Singh et~al., 2020]{singh2020convergence}
+Singh, S., Sharma, P.~K., Yoon, B., Shojafar, M., Cho, G.~H., and Ra, I.-H.
+  (2020).
+\newblock Convergence of blockchain and artificial intelligence in iot network
+  for the sustainable smart city.
+\newblock {\em Sustainable Cities and Society}, 63:102364.
+
+\end{thebibliography}
