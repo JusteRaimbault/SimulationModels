@@ -1,0 +1,43 @@
+
+SUBMISSION: 70
+TITLE: Multi-modeling urban systems dynamics to explore sustainability trade-offs
+
+
+----------------------- REVIEW 1 ---------------------
+SUBMISSION: 70
+TITLE: Multi-modeling urban systems dynamics to explore sustainability trade-offs
+AUTHORS: Juste Raimbault and Denise Pumain
+
+----------- Overall evaluation -----------
+SCORE: 3 (strong accept)
+----- TEXT:
+A partir de travaux bien connus, les auteurs proposent une exploration de modèles couplés pour une optimisation multi-objectif (4 indicateurs du SGD). Cela devrait donner lieu à des discussions intéressantes à la fois au niveau méthode (utilisation d'OpenMole pour l'identification de zones intéressantes) et au niveau des enjeux (que nous apprennent les résultats, i.e. que peut-on déduire du front de Pareto
+
+
+
+----------------------- REVIEW 2 ---------------------
+SUBMISSION: 70
+TITLE: Multi-modeling urban systems dynamics to explore sustainability trade-offs
+AUTHORS: Juste Raimbault and Denise Pumain
+
+----------- Overall evaluation -----------
+SCORE: 3 (strong accept)
+----- TEXT:
+Pertinence du travail présenté vis à vis des systèmes complexes : Très pertinent : thème de l’évolution des systèmes urbains et des compromis liés à la durabilité
+
+Clarté de l’état de l’art : Très clair : la combinaison de modèles connus pour appréhender les différents aspects de la durabilité
+
+Clarté de la contribution annoncée : Très clair : la mise en valeur de compromis sous la forme d’un front de Pareto
+
+
+
+----------------------- REVIEW 3 ---------------------
+SUBMISSION: 70
+TITLE: Multi-modeling urban systems dynamics to explore sustainability trade-offs
+AUTHORS: Juste Raimbault and Denise Pumain
+
+----------- Overall evaluation -----------
+SCORE: 3 (strong accept)
+----- TEXT:
+In few lines, authors draw clearly their project and its positioning in current research works. This abstract, focused on the modeling aspect is completely coherent with a conference on complex systems.
+
