@@ -630,39 +630,97 @@ Application of the urban evolution model, optimising with NSGA2 for conflicting 
 
 \sframe{City growth models: Gibrat's legacy}{
 
-\cite{gibrat1931inegalits} 
-\cite{eeckhout2004gibrat} % comprehensive review - framing
 
-Empirical investigations confirm Gibrat's law holds \cite{ioannides2003zipf}
+%\justify
+\footnotesize
 
+Simple law for city population growth proposed by R. Gibrat in 1931 \cite{gibrat1931inegalits} 
 
-Produces a log-normal size distribution (not a Pareto one - Zipf's law): extended model with new entrant cities yields Zipf \cite{gabaix1999zipf}; other model with heterogenous variances \cite{cordoba2008generalized}
+\[
+\frac{P_i (t + 1) - P_i(t)}{P_i(t)} \sim \eta (t)
+\]
 
+\textit{Proportional growth: growth rates statistical distribution independent of city size}
 
-Issues of city definition for estimation \cite{berry2012city} (as for scaling laws \cite{cottineau2017diverse})
+%\cite{eeckhout2004gibrat} % comprehensive review - framing
+
+\medskip
+
+$\rightarrow$ Produces a log-normal size distribution \cite{eeckhout2004gibrat} (not a Pareto one - Zipf's law)
+
+\medskip
+
+$\rightarrow$ Extended model with minimal size for cities yields Zipf \cite{gabaix1999zipf}; other model with heterogenous variances \cite{cordoba2008generalized}
+
+\medskip
+
+$\rightarrow$ Empirical investigations confirm Gibrat's law seems to hold: US \cite{ioannides2003zipf}, France \cite{pumain1997city}, but not for China on some time periods \cite{ning2022urban}
+
+\medskip
+
+$\rightarrow$ Issues of city definition for estimation \cite{berry2012city} (as for scaling laws \cite{cottineau2017diverse})
 
 }
 
-\sframe{Simon preferential attachment}{
+\sframe{Simon and preferential attachment}{
 
+Herbert Simon in 1955 proposed a model for city growth \cite{simon1955class}, which is analog to generalised preferential attachment with new entrants \cite{yamasaki2006preferential}
 
+\bigskip
+\bigskip
+
+$\rightarrow$ Extended to include inter-city migrations \cite{haran1973modified}
+
+\medskip
 
 % equivalence of Gibrat and Simon
 
+$\rightarrow$ Link between Gibrat model and generalised preferential attachment \cite{raimbault2018caracterisation}: preferential attachment at the individual level with strength $\lambda$ and new entrant probability $m$ yields a Gibrat's law in the limit $\lambda \ll 1$ such that
+
+\[
+\eta_i(t) = 1 + \frac{\lambda}{m \cdot (t - 1)}
+\]
+
+
 }
 
-\sframe{Models benchmarking and validation: towards multi-modeling?}{
+\sframe{Models benchmarking and validation issues}{
 
-More elaborated extensions, including urban interactions: 
+\footnotesize
+
+% : towards multi-modeling?
+
+\textbf{More elaborated extensions of city growth models, including urban interactions:}
+
+\smallskip
+
 % Pumain, Barth, Charlotte
+Synergetics and migrations \cite{haag1992interurban}, urban dynamics based on spatial interactions \cite{pumain2012multi}, stochastic model with Taylor's law (conditional variance scales with average) \cite{james2018zipf}, stochastic model with migrations \cite{verbavatz2020growth}, \ldots
 
+
+\bigskip
 
 % how to benchmark models?
-% - validation criteria
+% - validation criteria: pop stat distrib only? dynamics? non-linear indics: rank?
 % - which data to fit? just pop, or with mmigration? other dimmensions?
 % - which systems of cities - def of cities - def of systemms - cf benchmark macro - geo case study
 % - many exammple where models are commplementary - could be the same here? Then how to do umlti-modeling?
 
+\textbf{How to benchmark and validate models?}
+
+$\rightarrow$ Validation criteria: stationary distribution of population, dynamics, migrations, other dimensions (social, economic), non-linear indicators (rank dynamics), qualitative behavior, \ldots ?
+
+\smallskip
+
+$\rightarrow$ Data construction and quality: see Geodivercity ERC project \cite{pumain2020theories}
+
+\smallskip
+
+$\rightarrow$ Which geographical case studies: systems of cities, periods, definition of systems, of cities, \ldots ? \cite{raimbault2020empowering}
+
+\smallskip
+
+$\rightarrow$ Potential complementarity of models? Multi-modeling relevant at the mesoscopic scale for population density \cite{raimbault2020comparison}, road networks \cite{raimbault2021complementarity}, and building layouts \cite{raimbault2019generating}
 
 }
 
@@ -675,6 +733,30 @@ $\rightarrow$ \textbf{Integrated models} capturing complexity of \textbf{urban s
 \medskip
 
 $\rightarrow$ \textbf{Robust} knowledge from models obtained with the development of \textbf{validation and exploration methods}.
+
+
+\medskip
+
+$\rightarrow$ \textbf{Complementarity} of perspectives, models and theories in an \textbf{interdisciplinary} context.
+
+%\medskip
+
+%$\rightarrow$ Which kind of interdisciplinarity?
+% as a comment only: building bridges, while deep knowledge in each discipline? ~
+
+
+\bigskip
+\bigskip
+\bigskip
+
+\textbf{To use OpenMOLE (free and open software) and contribute: }\\
+\url{https://next.openmole.org}
+
+\bigskip
+
+\textbf{Presented model open source at }
+
+\url{https://github.com/JusteRaimbault/UrbanEvolution}
 
 }
 
