@@ -3,13 +3,13 @@ val y = Val[Double]
 
 val model = ScalaTask("val y = x + 1.0") set (inputs += (x), outputs += (y))
 
-//val env = SLURMEnvironment("ubuntu", "157.136.253.111", partition = "main")//, sshProxy = SSHProxy("ubuntu","localhost"))
+val env = SLURMEnvironment("ubuntu", "157.136.253.111", partition = "main", sshProxy = SSHProxy("ubuntu","134.158.74.194"))
 //val env = LocalEnvironment(16)
 //val env = SSHEnvironment("ubuntu", "134.158.74.194", 10, sshProxy = SSHProxy("ubuntu", "157.136.253.111"))
-val env = SSHEnvironment("ubuntu", "157.136.253.111", 1, sshProxy = SSHProxy("ubuntu", "134.158.74.194"))
+//val env = SSHEnvironment("ubuntu", "157.136.253.111", 1, sshProxy = SSHProxy("ubuntu", "134.158.74.194"))
 
 DirectSampling(
     //evaluation = (model on env by 10),
     evaluation = (model on env),
-    sampling = x in UniformDistribution[Double]() take 100//1000
+    sampling = x in UniformDistribution[Double]() take 1//1000
 ) hook display
