@@ -1,0 +1,15 @@
+val x1 = Val[Double]
+val x2 = Val[Double]
+val y = Val[Double]
+
+val model = ScalaTask("val y = x1 + x2;println(y)") set ((inputs,outputs) += (x1,x2),outputs += (y))
+
+//val env = LocalEnvironment(1)
+val env = EGIEnvironment("vo.complex-systems.eu")
+
+val expl = DirectSampling(
+    evaluation = (model on env by 100),
+    sampling = LHS(sample = 1000, factor = Seq(x1 in (0.0,1.0),x2 in (0.0,1.0)))
+) hook (workDirectory / "result.csv")
+    
+expl

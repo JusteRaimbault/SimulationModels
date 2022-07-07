@@ -1,0 +1,14 @@
+val x1 = Val[Double]
+val x2 = Val[Double]
+val y = Val[Double]
+
+val model = ScalaTask("val y = x1 + x2;println(y)") set ((inputs,outputs) += (x1,x2),outputs += (y))
+
+val env = LocalEnvironment(1)
+
+val expl = DirectSampling(
+    evaluation = (model on env),
+    sampling = LHS(1000,x1 in Range(0.0,1.0),x2 in Range(0.0,1.0))
+)
+    
+expl
