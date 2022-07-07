@@ -1,0 +1,15 @@
+val name = Val[String]
+val files = Val[Array[File]]
+
+val s1 = ListFilesSource(workDirectory / "directory", files)
+
+val s = ListFilesSource(workDirectory / "/${name}/", files) set (
+    inputs += name
+)
+
+val printTask = ScalaTask("println(input.files.toSeq.map(_.getAbsolutePath))") set (inputs += (files))
+
+DirectSampling(
+    evaluation = (printTask source s),
+    sampling = name in Seq("a","b")
+)
