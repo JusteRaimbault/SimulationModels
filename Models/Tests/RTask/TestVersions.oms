@@ -1,30 +1,36 @@
 
 
 /*
-val rTask1 =
- RTask("""
+val rTask1 = RTask("""
    sessionInfo()
    library(devtools)
    """,
-   forceUpdate=true,
-   install=Seq("apt update","apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev"),
+   install=Seq("apt update","fakeroot apt-get -y install libssl-dev libxml2-dev libcurl4-openssl-dev libssh2-1-dev fontconfig libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev"),
    libraries=Seq("devtools")
+   //libraries = Seq("systemfonts")
+   //libraries = Seq("textshaping", "ragg", "pkgdown")
+   //install=Seq("whoami","apt update","fakeroot apt-get -y install libxml2-dev"),
+   //libraries=Seq("xml2")//,
+   //version="4.0.3"
   )
 */
 
 
 
 val rTask2 =
-  RTask(script = "library(igraph);library(lubridate);sessionInfo();library(devtools)",
-    forceUpdate=true,
-    libraries = Seq(("igraph","0.7.0"),("lubridate","latest"))
+  RTask(script = "library(lubridate);sessionInfo();library(devtools)", // library(igraph);
+    //forceUpdate=true,
+    //libraries = Seq(("igraph","0.7.0"),("lubridate","latest"))
+    //libraries = Seq(("lubridate","latest")) // ! "latest" does not work, an explicit version must be provided
   )
 
+
 // only latest
+
 /*
   val rTask3 =
     RTask(script = "library(lubridate);sessionInfo();library(devtools)",
-      forceUpdate=true,
+      //forceUpdate=true,
       libraries = Seq("lubridate")
     )
 */
@@ -32,4 +38,6 @@ val rTask2 =
 
 //rTask1 -- rTask2
 
+//rTask1
 rTask2
+//rTask3

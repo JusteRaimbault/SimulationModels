@@ -1,0 +1,6 @@
+
+ContainerTask(
+  "debian:testing-20220125-slim",
+  """ls""",
+  install=Seq("whoami","apt update","apt-get install -y libxml2")
+)
