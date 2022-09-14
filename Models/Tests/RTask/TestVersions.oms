@@ -35,7 +35,7 @@ val rTask3 =
       //forceUpdate=true,
       //libraries = Seq("lubridate")
       //libraries = Seq("igraph")
-	libraries=Seq("sf") // harder (longer?) test for system deps (gdal etc)
+     libraries=Seq("sf") // harder (longer?) test for system deps (gdal etc)
 )
 
 
