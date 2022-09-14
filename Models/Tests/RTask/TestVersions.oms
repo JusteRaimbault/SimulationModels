@@ -16,28 +16,40 @@ val rTask1 = RTask("""
 */
 
 
-
+/*
 val rTask2 =
-  RTask(script = "library(lubridate);sessionInfo();library(devtools)", // library(igraph);
+  RTask(script = "library(lubridate);sessionInfo()", // library(igraph);
     //forceUpdate=true,
-    //libraries = Seq(("igraph","0.7.0"),("lubridate","latest"))
+    libraries = Seq(("lubridate","1.7.0"))
+    //libraries = Seq(("igraph","0.7.0"),("lubridate","1.7.0"))
     //libraries = Seq(("lubridate","latest")) // ! "latest" does not work, an explicit version must be provided
   )
+*/
 
 
 // only latest
 
-/*
-  val rTask3 =
-    RTask(script = "library(lubridate);sessionInfo();library(devtools)",
+
+val rTask3 =
+    RTask(script = "library(sf)",//"library(igraph)",//"library(lubridate);sessionInfo();library(devtools)",
       //forceUpdate=true,
-      libraries = Seq("lubridate")
-    )
-*/
+      //libraries = Seq("lubridate")
+      //libraries = Seq("igraph")
+	libraries=Seq("sf") // harder (longer?) test for system deps (gdal etc)
+)
+
+
+/*
+val rTask4 = RTask(script = "library(archeofrag);sessionInfo();",
+// "fakeroot apt update","fakeroot apt-get -y install git",
+      install=Seq("""R --slave -e 'install.packages("remotes", dependencies = T)' """, """R --slave -e 'library(remotes); remotes::install_github("sebastien-plutniak/archeofrag")' """)
+)*/
+
 
 
 //rTask1 -- rTask2
 
 //rTask1
-rTask2
-//rTask3
+//rTask2
+rTask3
+//rTask4
