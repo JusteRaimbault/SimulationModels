@@ -1,0 +1,7 @@
+
+// ! this does not work in a script context -> ok from the console
+ScalaTask("""
+|implicit val pref = org.openmole.core.preference.Preference(org.openmole.core.market.marketIndexLocation)
+|println(org.openmole.core.market.marketIndex)
+	""".stripMargin)
+
