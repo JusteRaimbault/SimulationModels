@@ -1,0 +1,15 @@
+
+val stringOutput = Val[String]
+val fileOutput = Val[File]
+
+//val s = HttpURLSource("https://api.ipify.org",stringOutput)
+//val s = HttpURLSource("http://api.ipify.org",stringOutput)
+//val s = HttpURLSource("https://api.openstreetmap.org/api/0.6/map?bbox=0.17436,38.78010,0.18278,38.78403",stringOutput)
+val s = HttpURLSource("https://api.openstreetmap.org/api/0.6/map?bbox=0.17436,38.78010,0.18278,38.78403",fileOutput)
+
+
+//ScalaTask("println(input.stringOutput)") set (inputs += (stringOutput)) source s
+ScalaTask("println(input.fileOutput)") set ((inputs,outputs) += (fileOutput)) source s hook CopyFileHook(fileOutput,"test.osm")
+
+
+
