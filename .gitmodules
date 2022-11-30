@@ -37,3 +37,6 @@
 [submodule "Docs/Papers/BenchmarkMethods-paper"]
 	path = Docs/Papers/BenchmarkMethods-paper
 	url = git@github.com:JusteRaimbault/BenchmarkMethods-paper.git
+[submodule "Docs/Papers/ValidationMethods-paper"]
+	path = Docs/Papers/ValidationMethods-paper
+	url = git@github.com:JusteRaimbault/ValidationMethods-paper.git
