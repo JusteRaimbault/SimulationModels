@@ -2,6 +2,15 @@
 
 
 ====
+2022/11/30
+
+
+[selfmail 06/09 : exploMap / uncertainty analysis?] [//classif methodes cat th] work more on uncertainty propagation?
+https://scholar.google.com/scholar?hl=fr&as_sdt=0%2C5&q=error+propagation+simulation+model+analysis&btnG=
+https://www.sciencedirect.com/science/article/pii/S0304380008003542?casa_token=j_mq-6xPOnwAAAAA:I4Veua_4v6zOFwiqsiNqD7LU9_PEPMdDbgeRXH-8N2HEM2AV3arR52GsYkabPEEtqSKGvkftiDI
+
+
+====
 2018/10/16
 
 Duboz, R., Versmisse, D., Travers, M., Ramat, E., & Shin, Y. J. (2010). Application of an evolutionary algorithm to the inverse parameter estimation of an individual-based model. Ecological modelling, 221(5), 840-849. => specific GA with stochastic model ? [not exactly inverse problem]
