@@ -40,3 +40,6 @@
 [submodule "Docs/Papers/ValidationMethods-paper"]
 	path = Docs/Papers/ValidationMethods-paper
 	url = git@github.com:JusteRaimbault/ValidationMethods-paper.git
+[submodule "Docs/Papers/GeosimValidation-paper"]
+	path = Docs/Papers/GeosimValidation-paper
+	url = git@github.com:JusteRaimbault/GeosimValidation-paper.git
