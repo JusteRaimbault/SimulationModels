@@ -1,0 +1,26 @@
+
+	title of the workshop or tutorial
+
+The OpenMOLE platform for model exploration and validation
+
+	name(s) and affiliation(s) of the organiser(s) with contact details
+
+Juste Raimbault, LASTIG, Univ. Gustave Eiffel, IGN-ENSG ; juste.raimbault@ign.fr
+Romain Reuillon, ISC-PIF, CNRS ; romain.reuillon@iscpif.fr
+Mathieu Leclaire, ISC-PIF, CNRS ; mathieu.leclaire@iscpif.fr
+
+
+	a short CV of the main organiser
+
+Juste Raimbault is a Permanent Research Fellow for Sustainable Development, at IGN (French National mapping agency), an Honorary Research Fellow at CASA, UCL, and an Associate Researcher at ISC-PIF, CNRS. Trained in complex systems and quantitative geography, his research focuses on spatial simulation models for social systems, and more particularly complex urban systems. He is a contributor to the OpenMOLE platform, by developping and integrating new methods for spatial sensitivity analysis of geosimulation models.
+
+	a brief description (about 300 words) of the workshop or tutorial
+
+The OpenMOLE platform is a free and open source software, developped for and by researchers for more than 10 years at the Complex Systems Institute in Paris. The main goal of the platform is to help researchers from any discipline interested in simulation models to explore and validate their models. It is based on three complementary axis: (i) model embedding for any programming language; (ii) transparent access to high performance computing infrastructures; and (iii) state-of-the-art methods in sensitivity analysis, design of experiments, exporation and validation (see https://openmole.org/). A high level workflow language based on scala facilitates model integration and numerical experiments. The platform can be run as a server on any commputer but also be set as a web service to easily monitor heavy computational experiments.
+This platform and associated model validation techniques and practices have value for the Artificial Life community, since simulation models are a key components of ALife research. The aim of this tutorial is to provide a first hands-on and basic knowledge of how to set up numerical experiments, starting with simple model embedding and standard design of experiments for parameter space exploration. It will then illustrate more advanced techniques, including model calibration using a multi-objective genetic algorithm and diversity search applied to model phase space. Finally, new methods for spatial sensitivity analysis will be briefly presented and illustrated.
+Depending on the number of participants and available time, some specific discussions on how to integrate participants' models into the platform, and what would be the appropriate methods for a given question, could be discussed.
+
+	potential target participants and audience and roughly approximated number of participants each on-site and online
+Target participants and audience: any modeller practicing simulation and needing to perform advanced numerical experiments with their model. Online only tutorial, no theoretical limitation on the number of participants (although a medium number, say below 20, would allow us to setup online OpenMOLE instance for participants, giving them a smoother experience).
+
+
