@@ -1,4 +1,4 @@
-setwd(paste0(Sys.getenv('CS_HOME'),'/QuantEpistemo/Models/UKMigration'))
+setwd(paste0(Sys.getenv('CS_HOME'),'/SimulationModels/Models/DigTwinsQuantEp'))
 
 library(dplyr)
 library(igraph)
@@ -11,8 +11,8 @@ source(paste0(Sys.getenv('CS_HOME'),'/Organisation/Models/Utils/R/plots.R'))
 source('functions.R')
 
 
-edge_file = 'export/corpus_filteredNonExcl_links.csv'
-node_file = 'export/corpus_filteredNonExcl.csv'
+edge_file = 'data/corpus_links.csv'
+node_file = 'data/corpus.csv'
 
 edges <- read.csv(edge_file,sep=";",header=F,colClasses = c('character','character'))
 nodes <- as.tbl(read.csv(node_file,sep=";",stringsAsFactors = F,quote = '"',colClasses = rep('character',9)))

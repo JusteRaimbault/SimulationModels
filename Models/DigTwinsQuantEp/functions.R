@@ -50,7 +50,7 @@ export_gml <- function(citnw,exportfile){
   V(citnw)$reduced_title = sapply(V(citnw)$title,function(s){paste0(substr(s,1,50),"...")})
   V(citnw)$reduced_title = ifelse(degree(citnw)>20,V(citnw)$reduced_title,rep("",vcount(citnw)))
   # remove empty attributes
-  for(attr in c('depth','citingFilled','numHorizontalDepth',kws)){
+  for(attr in c('depth','citingFilled',kws)){
     citnw = remove.vertex.attribute(citnw,attr)
   }
   write_graph(citnw,file=exportfile,format = 'gml')
