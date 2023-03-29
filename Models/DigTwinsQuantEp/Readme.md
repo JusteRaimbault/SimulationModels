@@ -12,4 +12,6 @@ java -jar bibliodata.jar --citation --mongo digtwinsustdev 10000 //2 true
 ! run the torpool in mongo mode, otherwise NullPointerException when try to get next port -> works at the beginning if remaining ports from a previous run
 java -jar torpool.jar 50 9050 --mongo
 
+ - export java -jar bibliodata.jar --database --export digtwinsustdev data/corpus -1 -1 2 false "" -1
+
 
