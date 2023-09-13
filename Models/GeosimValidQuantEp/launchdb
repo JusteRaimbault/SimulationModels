@@ -1,0 +1,2 @@
+sudo mongod --dbpath /var/mongodb/quantep
+
