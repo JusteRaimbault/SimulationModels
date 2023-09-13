@@ -11,7 +11,7 @@ val expl = DirectSampling(
     evaluation = (model on env by 100),
     sampling = LHS(sample=1000,factor=Seq(x1 in (0.0,1.0),x2 in (0.0,1.0))) // OML 14 syntax
          // LHS(1000, x1 in Range(0.0,1.0),x2 in Range(0.0,1.0)) // OML 12
-) hook (workDirectory / "result.csv")
+) hook display //(workDirectory / "result.csv")
     
 expl
 
