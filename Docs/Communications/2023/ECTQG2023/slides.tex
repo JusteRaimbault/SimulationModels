@@ -1,0 +1,160 @@
+\documentclass[english,11pt]{beamer}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Proba}{\mathbb{P}}
+
+\newcommand{\Covb}[2]{\ensuremath{\Cov\!\left[#1,#2\right]}}
+\newcommand{\Eb}[1]{\ensuremath{\E\!\left[#1\right]}}
+\newcommand{\Pb}[1]{\ensuremath{\Proba\!\left[#1\right]}}
+\newcommand{\Varb}[1]{\ensuremath{\Var\!\left[#1\right]}}
+
+% norm
+\newcommand{\norm}[1]{\| #1 \|}
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+
+
+
+
+\usepackage{mathptmx,amsmath,amssymb,graphicx,bibentry,bbm,babel,ragged2e}
+
+\makeatletter
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\newcommand{\jitem}[1]{\item \begin{justify} #1 \end{justify} \vfill{}}
+\newcommand{\sframe}[2]{\frame{\frametitle{#1} #2}}
+
+\newenvironment{centercolumns}{\begin{columns}[c]}{\end{columns}}
+%\newenvironment{jitem}{\begin{justify}\begin{itemize}}{\end{itemize}\end{justify}}
+
+\usetheme{Warsaw}
+\setbeamertemplate{footline}[text line]{}
+\setbeamercolor{structure}{fg=purple!50!blue, bg=purple!50!blue}
+
+\setbeamersize{text margin left=15pt,text margin right=15pt}
+
+\setbeamercovered{transparent}
+
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{multirow}
+
+
+\makeatother
+
+\begin{document}
+
+
+
+
+
+\title{Validation of geosimulation models: a systematic review}
+
+\author{J.~Raimbault$^{1,2,3,4,\ast}$\\
+\texttt{$\ast$ juste.raimbault@ign.fr}
+}
+
+
+\institute{$^{1}$ LASTIG, IGN-ENSG\\
+$^{2}$CASA, UCL\\
+$^{3}$UPS CNRS 3611 ISC-PIF\\
+$^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+
+
+\date{ECTQG 2023\\\smallskip
+September 15th 2023
+}
+
+\frame{\maketitle}
+
+
+ Juste Raimbault1,2,3,4
+1 LASTIG, Univ. Gustave Eiffel, IGN-ENSG, France, juste.raimbault@ign.fr (corresponding author) 2 Center for Advanced Spatial Analysis, University College London, UK
+3 UPS CNRS 3611 ISC-PIF, France
+4 UMR CNRS 8504 Géographie-cités, France
+
+
+%Keywords: Geosimulation models, Validation, Systematic review
+%Geosimulation models are a widely used tool in theoretical and quantitative geography, and deemed powerful for various reasons including their ability to capture spatial complexity, a heterogeneity of agent and processes, or multiple scales. One downside of their subsequent high parameter space or strong stochasticity, of the need to explicitly simulate them to understand their behaviour, and of their flexibility, is that their validation is less systematic than for their statistical, machine learning or analytical counterparts, for which robust criteria are available. Furthermore, the concept of model validation or evaluation seems to be contextual to the disciplinary environment in which the model is developed and used.
+%This contribution proposes a systematic review of how the concept of validation is defined and used for geosimulation models. Using the data collection tools provided by Raimbault (2019), we construct a corpus by querying google scholar. We follow the PRISMA guidelines for systematic reviews, and screen titles of a first corpus of around 1000 papers, and then abstracts, to obtain an exploitable corpus of around 200 papers with an explicit reference to validation methods for a geosimulation model. We extract from these papers characteristics including the method used, the type of model, and the discipline. We finally obtain a typology of validation methods in a broad sense, ranging from sensitivity analysis to uncertainty quantification or qualitative behavior regarding stylised facts. Methods used are correlated to the discipline and the type of model.
+%We then reconstruct the backward citation network from our initial corpus at depth two using the same data collection tool, to provide a more general literature mapping and an overview the diversity of disciplines using spatial simulation models, which include for example ecology, social and urban simulation or geosciences. The plurality of approaches confirms the need for a flexible concept of validation and the diversity of associated methods.
+
+
+
+
+\sframe{}{
+
+\justify
+
+	$\rightarrow$ 
+
+
+}
+
+
+\sframe{Systematic review flowchart}{
+
+% QUERY:
+% ("spatial simulation"OR"geosimulation")AND("validation"OR"calibration"OR"sensitivity analysis"OR"exploration"OR"evaluation"OR"assessment")
+% according to scholar: ~ 1840 results
+
+
+
+}
+
+
+\sframe{Discussion}{
+
+\justify
+
+$\rightarrow$ \textbf{Main results:}
+			
+\bigskip
+				
+$\rightarrow$ 
+
+\bigskip
+
+\textbf{Conclusion: } 
+
+}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{apalike}
+\bibliography{biblio}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
