@@ -1,0 +1,326 @@
+
+[1] "Community 1 ; corpus prop 2.76190476190476"
+                                                                                                                    titles
+3180741575806802252                     Digital twin technologies for turbomachinery in a life cycle perspective: A review
+18327672812394479848 Hybrid analysis and modeling, eclecticism, and multifidelity computing toward digital twin revolution
+12966515456373686910                                                              Digital twins of the natural environment
+1370056187873764611                                                       A digital twin of Earth for the green transition
+5040096781459075961                    Overview on digital twin for autonomous electrical vehicles propulsion drive system
+16626727546161199288                                                        The digital revolution of Earth-system science
+3998799660388164695          On closures for reduced order models—A spectrum of first-principle to machine-learned avenues
+16434875103751631032                                            Scaling digital twins from the artisanal to the industrial
+11755461482742214552                                                                           The digital twin revolution
+                     degree
+3180741575806802252      14
+18327672812394479848     11
+12966515456373686910     10
+1370056187873764611      62
+5040096781459075961       9
+16626727546161199288     21
+3998799660388164695      10
+16434875103751631032     29
+11755461482742214552     11
+[1] "Community 2 ; corpus prop 11.4761904761905"
+                                                                                                                                                titles
+16021081804500756518                                                              Digital twin and its implementations in the civil engineering sector
+16279080547845782403 Differentiating digital twin from digital shadow: Elucidating a paradigm shift to expedite a smart, sustainable built environment
+2118314677666981312                                        Developing a dynamic digital twin at a building level: Using Cambridge campus as case study
+18290041785319442327              Integrated digital twin and blockchain framework to support accountable information sharing in construction projects
+10645810105007277074                                    Digital twin-enabled anomaly detection for built asset monitoring in operation and maintenance
+10411547965913719932                                               A BIM-data mining integrated digital twin framework for advanced project management
+10710773989848032271                                                        Digital twin application in the construction industry: A literature review
+1820422473193605545     From BIM to digital twins: A systematic review of the evolution of intelligent building representations in the AEC-FM industry
+10171359342224813311                  Roles of artificial intelligence in construction engineering and management: A critical review and future trends
+                     degree
+16021081804500756518     71
+16279080547845782403     73
+2118314677666981312      56
+18290041785319442327     66
+10645810105007277074    106
+10411547965913719932     96
+10710773989848032271     91
+1820422473193605545      76
+10171359342224813311     65
+[1] "Community 3 ; corpus prop 4.23809523809524"
+                                                                                                                                            titles
+8080084118474611427                                                              A digital twin reference for mass personalization in industry 4.0
+1691157065255502698                                             Digital twin as a service (DTaaS) in industry 4.0: an architecture reference model
+11463887039381289134             Digital twin generation: Re-conceptualizing agent systems for behavior-centered cyber-physical system development
+862361553382361582                                    Efficient container virtualization-based digital twin simulation of smart industrial systems
+5855941559098431263                                                     Developing sensor signal-based digital twins for intelligent machine tools
+627797168574260682   Smart manufacturing in intelligent digital mesh: Integration of enterprise architecture and software product line engineering
+14350759182048731104                                            Mass personalisation as a service in industry 4.0: A resilient response case study
+14424665021619639175                                                                                          Implementing industry 4.0 principles
+                     degree
+8080084118474611427      18
+1691157065255502698     174
+11463887039381289134     19
+862361553382361582       17
+5855941559098431263      20
+627797168574260682       13
+14350759182048731104     23
+14424665021619639175     14
+[1] "Community 4 ; corpus prop 6.78571428571429"
+                                                                                                                                                                         titles
+3150910688764023272                                                                            Developing the physical distribution digital twin model within the trade network
+3279900397653657371                                                             A new concept of digital twin supporting optimization and resilience of factories of the future
+3499771112813340556                                                                        Disruptive technologies and operations management in the Industry 4.0 era and beyond
+11233350469363213480  Artificial intelligence-driven innovation for enhancing supply chain resilience and performance under the effect of supply chain dynamism: an empirical …
+13272636333750941969                                                                                                                    Concept for a supply chain digital twin
+15967236115843479851                                                 Building supply-chain resilience: an artificial intelligence-based technique and decision-making framework
+5426390754238103373                                                          Digital twins driven supply chain visibility within logistics: A new paradigm for future logistics
+11667299272650679974                                                    A digital supply chain twin for managing the disruption risks and resilience in the era of Industry 4.0
+10842062727263235807                                                                                              The place and role of digital twin in supply chain management
+                     degree
+3150910688764023272      37
+3279900397653657371      47
+3499771112813340556      23
+11233350469363213480     30
+13272636333750941969     39
+15967236115843479851     22
+5426390754238103373      21
+11667299272650679974    143
+10842062727263235807     32
+[1] "Community 5 ; corpus prop 21.8809523809524"
+                                                                                                                                                   titles
+8206649842759305419                         Smart manufacturing process and system automation–a critical review of the standards and envisioned scenarios
+14098329579291392225                              How to model and implement connections between physical and virtual models for digital twin application
+5411596275656657420                               Digital Twin-driven smart manufacturing: Connotation, reference model, applications and research issues
+9268264347747560160                    A generic tri-model-based approach for product-level digital twin development in a smart manufacturing environment
+8664430244379601252  Digital twin-based designing of the configuration, motion, control, and optimization model of a flow-type smart manufacturing system
+18374435688752052961                                                 A hybrid predictive maintenance approach for CNC machine tool driven by Digital Twin
+14119471496617293282                                                  Digital twin modeling method based on biomimicry for machining aerospace components
+8659408026109702130                                                       Digital twins-based smart manufacturing system design in Industry 4.0: A review
+10608580381328104207                                                           Digital Twin for rotating machinery fault diagnosis in smart manufacturing
+                     degree
+8206649842759305419      79
+14098329579291392225     62
+5411596275656657420     566
+9268264347747560160      64
+8664430244379601252     101
+18374435688752052961    129
+14119471496617293282     83
+8659408026109702130     124
+10608580381328104207    158
+[1] "Community 6 ; corpus prop 14.6190476190476"
+                                                                                                                                                   titles
+14118505464106266325                                                                      Characterising the Digital Twin: A systematic literature review
+7691533649706142264     The role of ai, machine learning, and big data in digital twinning: A systematic literature review, challenges, and opportunities
+16700813911804766314                                  Digital twin for the oil and gas industry: Overview, research trends, opportunities, and challenges
+12407925564094456605 A state-of-the-art survey of Digital Twin: techniques, engineering product lifecycle management and business innovation perspectives
+2157003858095331171                                                                                             Human digital twin for fitness management
+732108617287190718                                          A survey on digital twin: Definitions, characteristics, applications, and design implications
+14409830151244033                                                                       Digital twin: Enabling technologies, challenges and open research
+14944814965450037962                                                                                                       Digital twin: Origin to future
+418833766525169025                                                                                  Digital twin paradigm: A systematic literature review
+                     degree
+14118505464106266325    477
+7691533649706142264      61
+16700813911804766314     74
+12407925564094456605    218
+2157003858095331171      61
+732108617287190718      316
+14409830151244033       438
+14944814965450037962    124
+418833766525169025      138
+[1] "Community 7 ; corpus prop 5.64285714285714"
+                                                                                                                                                                   titles
+6755782344507844093                                                                            Industry 5.0: A survey on enabling technologies and potential applications
+10714278643637413675                                                          Towards proactive human–robot collaboration: A foreseeable cognitive manufacturing paradigm
+12071693294183763851                                                                                       Industry 4.0 Model for circular economy and cleaner production
+5714837596455826537                                                                                 Industry 4.0 and sustainability: Towards conceptualization and theory
+4020484489634771630                                                                          A big data-driven framework for sustainable and smart additive manufacturing
+13043578482845739391  Industry 4.0 and sustainable development: A systematic mapping of triple bottom line, Circular Economy and Sustainable Business Models perspectives
+7731074423843929100                                                                                           Outlook on human-centric manufacturing towards Industry 5.0
+18297914597643856680                                           Data-driven sustainable intelligent manufacturing based on demand response for energy-intensive industries
+3137183427122450910                                             Industrial digital twins at the nexus of nextG wireless networks and computational intelligence: A survey
+                     degree
+6755782344507844093     109
+10714278643637413675     29
+12071693294183763851     22
+5714837596455826537      38
+4020484489634771630      38
+13043578482845739391     37
+7731074423843929100      30
+18297914597643856680     46
+3137183427122450910      20
+[1] "Community 8 ; corpus prop 3.26190476190476"
+                                                                                                                                            titles
+5959639153793085993                                                            Research on Sports Dance Video Recommendation Method Based on Style
+10664332366253311954                                              Sustainability assessment of intelligent manufacturing supported by digital twin
+188512155293967478                                                                                             Digital twin in smart manufacturing
+5632785039624881213                          A novel embedding model based on a transition system for building industry-collaborative digital twin
+11717212659535408675                                              Coal mine safety evaluation based on machine learning: a BP neural network model
+10560263835400795529                                                                    Analysis of public big data management under text analysis
+2549000444272474435                                                   Innovative Design of Artificial Intelligence in Intangible Cultural Heritage
+17523587393458865828  Simulation Model on Network Public Opinion Communication Model of Major Public Health Emergency and Management System Design
+                     degree
+5959639153793085993       1
+10664332366253311954    146
+188512155293967478      148
+5632785039624881213       3
+11717212659535408675      3
+10560263835400795529      1
+2549000444272474435       2
+17523587393458865828      2
+[1] "Community 9 ; corpus prop 3.85714285714286"
+                                                                                                                                             titles
+6375634543873699465                                       Product sustainable design: a review from the environmental, economic, and social aspects
+10643618976721291493                                                             Digital twin-based sustainable intelligent manufacturing: A review
+6492168861898300559                                  A survey on AI-driven digital twins in industry 4.0: Smart manufacturing and advanced robotics
+16344016164155279923            Sustainable business model based on digital twin platform network: The inspiration from Haier's case study in China
+6538002957643242580                                             Data fusion-based sustainable digital twin system of intelligent detection robotics
+4015545250901524654                                   Exploiting the digital twin in the assessment and optimization of sustainability performances
+7757971217752228893                                                 Blockchain-empowered digital twins collaboration: smart transportation use case
+3799073388289112481                                 Digital twin-driven remaining useful life prediction for gear performance degradation: a review
+10653232392145418820 Digital twin for sustainable manufacturing supply chains: Current trends, future perspectives, and an implementation framework
+                     degree
+6375634543873699465      19
+10643618976721291493    181
+6492168861898300559      31
+16344016164155279923     29
+6538002957643242580      23
+4015545250901524654      31
+7757971217752228893      18
+3799073388289112481      20
+10653232392145418820     27
+[1] "Community 10 ; corpus prop 5.09523809523809"
+                                                                                                                             titles
+16495821314510649125                                                               Universal digital twin-a dynamic knowledge graph
+14510337762866805772                                               Digital twins from smart manufacturing to smart cities: A survey
+9248433107433618878                                                                               Smart city based on digital twins
+16936420062386997500                         A socio-technical perspective on urban analytics: The case of city-scale digital twins
+4726700829395005358  Disaster City Digital Twin: A vision for integrating artificial and human intelligence for disaster management
+14946322096630065565                                             Developing a city-level digital twin–propositions and a case study
+827886323968838658                A systematic review of a digital twin city: A new pattern of urban governance toward smart cities
+11839607606620302088                                                                 A digital twin smart city for citizen feedback
+5785243253071334989                                                      City digital twin potentials: A review and research agenda
+                     degree
+16495821314510649125     26
+14510337762866805772     40
+9248433107433618878      38
+16936420062386997500     40
+4726700829395005358      70
+14946322096630065565     24
+827886323968838658       75
+11839607606620302088     88
+5785243253071334989      79
+[1] "Community 11 ; corpus prop 4"
+                                                                                                                        titles
+653315646875416968                                                                          Digital twins in livestock farming
+5702436334435269959                                                                           A digital twin for smart farming
+9222516019607938646                                                                   Introducing digital twins to agriculture
+2224366218144490953                 Toward the next generation of digitalization in agriculture based on digital twin paradigm
+4859970634774330013                                                                             Digital twins in smart farming
+4398439667715640546                                   Systems architecture design pattern catalog for developing digital twins
+5315778023979408082                                     Data architecture for digital twin of commercial greenhouse production
+18145974730945992241 Digital Twin in Smart Farming: A categorical literature review and exploring possibilities in hydroponics
+                     degree
+653315646875416968       31
+5702436334435269959      41
+9222516019607938646      68
+2224366218144490953      17
+4859970634774330013      86
+4398439667715640546      20
+5315778023979408082      23
+18145974730945992241     16
+[1] "Community 12 ; corpus prop 5.11904761904762"
+                                                                                                                                               titles
+10538954067042774349                              Machine learning based digital twin framework for production optimization in petrochemical industry
+5242534510710727392                            Energy digital twin technology for industrial energy management: Classification, challenges and future
+6232795348744122919   Uses of the digital twins concept for energy services, intelligent recommendation systems, and demand side management: A review
+4623097322170626825             A data-driven digital-twin prognostics method for proton exchange membrane fuel cell remaining useful life prediction
+11255905289135530558                                                               Digital twin–driven aero-engine intelligent predictive maintenance
+6721224352185425511                                                                                  Digital twin and its application in power system
+6842346735337837640                     Multi-physics-resolved digital twin of proton exchange membrane fuel cells with a data-driven surrogate model
+10819145411267551932                                                           Towards the future of smart electric vehicles: Digital twin technology
+2555577821601142244                                           Digital twin and cloud-side-end collaboration for intelligent battery management system
+                     degree
+10538954067042774349    152
+5242534510710727392      17
+6232795348744122919      28
+4623097322170626825      30
+11255905289135530558     24
+6721224352185425511      20
+6842346735337837640      25
+10819145411267551932     76
+2555577821601142244      17
+[1] "Community 13 ; corpus prop 4.47619047619048"
+                                                                                                                                                           titles
+1234549126141062918                                                           Secure sharing of big digital twin data for smart manufacturing based on blockchain
+16346183647458061508                                                                                          A scoping review of metaverse in emergency medicine
+1961518102154519712                                                                         Metaverse: Perspectives from graphics, interactions and visualization
+10160815229362237497                                                               BIM information integration based VR modeling in digital twins in industry 5.0
+13168296976198818194                                                                            IoT and digital twin enabled smart tracking for safety management
+1116825978965145733                          Sustainable cyber-physical production systems in big data-driven smart urban economy: a systematic literature review
+2143047335646200982                 All one needs to know about metaverse: A complete survey on technological singularity, virtual ecosystem, and research agenda
+4862155259504847737                         Sustainable, smart, and sensing technologies for cyber-physical manufacturing systems: A systematic literature review
+4972177773505765537   Digital twin in energy industry: Proposed robust digital twin for power plant and other complex capital-intensive large engineering systems
+                     degree
+1234549126141062918      14
+16346183647458061508     17
+1961518102154519712      35
+10160815229362237497     19
+13168296976198818194     20
+1116825978965145733      69
+2143047335646200982      56
+4862155259504847737      68
+4972177773505765537      18
+[1] "Community 14 ; corpus prop 1.5952380952381"
+                                                                                                                                                        titles
+5138562640372055743                                                                       Digital twins supporting efficient digital industrial transformation
+16848074794171581907                                                     A knowledge-based Digital Shadow for machining industry in a Digital Twin perspective
+5894558997132576633                                      Deep learning in the industrial internet of things: Potentials, challenges, and emerging applications
+18384072709910085123 Synchronization of shop-floor logistics and manufacturing under IIoT and digital twin-enabled graduation intelligent manufacturing system
+15678967562033798959              Predictive maintenance system for production lines in manufacturing: A machine learning approach using IoT data in real-time
+15471881184075235421                                                              Designing an adaptive production control system using reinforcement learning
+607708418595179279                                                                               Open source control device for industry 4.0 based on RAMI 4.0
+15190577408424245273    Synchronization-oriented reconfiguration of FPAI under graduation intelligent manufacturing system in the COVID-19 pandemic and beyond
+                     degree
+5138562640372055743       9
+16848074794171581907     42
+5894558997132576633       9
+18384072709910085123      9
+15678967562033798959     23
+15471881184075235421      8
+607708418595179279        7
+15190577408424245273      8
+[1] "Community 15 ; corpus prop 2.92857142857143"
+                                                                                                                                     titles
+10576851944681953523 Recent progress on reliability analysis of offshore wind turbine support structures considering digital twin solutions
+6860078746192276144                                    On digital twin condition monitoring approach for drivetrains in marine applications
+17503147453308003735                                                                      Digital Twin for maintenance: A literature review
+3408972469311081191                                  The digital twin of discrete dynamic systems: Initial approaches and future challenges
+511325134625435800                                    Introduction of a comprehensive Structure Model for the Digital Twin in Manufacturing
+17310599844616267653                                                              Digital twin in aerospace industry: a gentle introduction
+1355190642566672259                            Overview of digital twin technology in wind turbine fault diagnosis and condition monitoring
+14719969664034189715                                                                                                  Digital twin modeling
+14360966007559898420                                    Machine learning based digital twin for dynamical systems with multiple time-scales
+                     degree
+10576851944681953523     22
+6860078746192276144      17
+17503147453308003735    147
+3408972469311081191      27
+511325134625435800        9
+17310599844616267653     11
+1355190642566672259      10
+14719969664034189715     26
+14360966007559898420     35
+[1] "Community 16 ; corpus prop 1.42857142857143"
+                                                                                                titles degree
+7126514613374539269  Semi-supervised support vector machine for digital twins based brain image fusion     66
+7319723059426081903           Fuzzy system based medical image processing for brain disease prediction     58
+[1] "Community 17 ; corpus prop 0.833333333333333"
+                                                                                                          titles
+18407439209447044097              Digital twins and parallel systems: state of the art, comparisons and prospect
+8997400529604277534         Review on the construction and application of digital twins in transportation scenes
+3869189470993686792   Design and optimization of smart factory control system based on digital twin system model
+3221089581502465114                                                     数字孪生与平行系统: 发展现状, 对比及展望
+13025013462658490887                                                      交通场景数字孪生构建与虚实融合应用研究
+                     degree
+18407439209447044097     32
+8997400529604277534       5
+3869189470993686792       2
+3221089581502465114      25
+13025013462658490887      2
+

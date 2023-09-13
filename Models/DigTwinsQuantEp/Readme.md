@@ -14,4 +14,13 @@ java -jar torpool.jar 50 9050 --mongo
 
  - export java -jar bibliodata.jar --database --export digtwinsustdev data/corpus -1 -1 2 false "" -1
 
+ - gephi vis: from core.gml file
+     * fruchterman reingold spatialisation (area 10000, gravity 10, speed 1)
+     * communities (res 1, randomise)
+     * force atlas bien mieux - tune params : ~ default: echelle 2, gravity 1, dissuader hubs
+     * taille degre entrant, spline most exag, taille min 1 max 10
+     * ajust labels / dilat / size label: eigen centrality
+     * visu: lab size, color ; export png 2048x2048 (will crop in slide)
+
+
 
