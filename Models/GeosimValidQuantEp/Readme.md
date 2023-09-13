@@ -13,4 +13,6 @@ java -jar torpool.jar 50 9050 --mongo>
 
  - export java -jar bibliodata.jar --database --export geosimvalid data/base_corpus -1 -1 2 false "" -1
 
+ - collect citnw:
+    java -jar bibliodata.jar --citation --mongo geosimvalid 10000
 
