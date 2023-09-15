@@ -16,3 +16,8 @@ java -jar torpool.jar 50 9050 --mongo>
  - collect citnw:
     java -jar bibliodata.jar --citation --mongo geosimvalid 10000
 
+ - PROV export [still running]:
+ java -jar bibliodata.jar --database --export geosimvalid data/corpus -1 -1 2 false "" -1
+[15/09, 14h35: 154302, 220535], remaining 19830~
+
+
