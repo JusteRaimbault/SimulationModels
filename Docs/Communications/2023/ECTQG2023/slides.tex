@@ -236,6 +236,7 @@ Relevant PRISMA reporting points:
 	\item[9] - \textbf{Data collection process: } manual extraction by one expert during screening (if included)
 	\item[10] - \textbf{Data items: } discipline (journal/affiliation), method (ad hoc typology), type of model, methodological work
 	\item[13] - \textbf{Synthesis methods: } statistical analysis of categorical variables
+	\item[27] - \textbf{Availability of data and code: } open repository at \texttt{https://github.com/JusteRaimbault/SimulationModels}
 \end{itemize}
 
 
@@ -361,6 +362,12 @@ environmental science & 2 & 2 & 0 & 0 & 0 & 0 & 2  & 8 & 1\\geosimulation   & 0
 
 % We then reconstruct the backward citation network from our initial corpus at depth two using the same data collection tool, to provide a more general literature mapping and an overview the diversity of disciplines using spatial simulation models, which include for example ecology, social and urban simulation or geosciences.
 
+{\footnotesize Reconstruct scientific neighborhood using backward citation propagation at level 2 from the SR corpus (see \cite{raimbault2019exploration}): preliminary citation network with 30434 nodes and 96806 edges} 
+
+
+\begin{center}
+	\includegraphics[height=0.82\textheight]{../../../../Models/GeosimValidQuantEp/data/core_screen.png}
+\end{center}
 
 
 }
@@ -397,29 +404,65 @@ environmental science & 2 & 2 & 0 & 0 & 0 & 0 & 2  & 8 & 1\\geosimulation   & 0
 
 % \textbf{Main results:}
 
-
-\justify
-
-$\rightarrow$ 
-			
-\bigskip
-				
-$\rightarrow$ 
+\textbf{Issues with systematic reviews and meta-analysis} on fuzzy/interdisciplinary/social science concepts (confirms observations made in \cite{raimbault2020systematic}:
 
 \bigskip
 
-% separated or not?
-%\textbf{Conclusion: } 
+$\rightarrow$ difficult to control corpus and disciplinary bias, translation between disciplines
+
+\bigskip
+
+$\rightarrow$ need new methodologies to build endogenous typologies of models and methodologies, for example based on expert model decomposition (see WIP with F. Le N{\'e}chet), or using new NLP techniques to extract concepts from full texts (but still issue of various languages)
+
+\bigskip
+
+$\rightarrow$ which level of generalisation/detail for methods and models
+
+\bigskip
+
+$\rightarrow$ need much more robustness check / multiple information sources cross-validation, than ``classical'' systematic reviews
+
+\bigskip
+
+$\rightarrow$ impossibility to proceed to meta-analysis when outcome measures are not uniformised (link with model equivalence, integration and interoperability)
 
 }
 
 
-\sframe{Discussion: towards interdisciplinary validation standards?}{
+\sframe{Conclusion: towards interdisciplinary validation standards?}{
 
 % ! role of reflexivity and quantep/lit mapping: cit cybnws! ; knowledge domains?
 
+$\rightarrow$ although with quite (unquantifiable) bias, we find a wide diversity of validation methodologies across a variety of disciplines
+
+\bigskip
+
+$\rightarrow$ importance of reflexivity and quantitative epistemology when working in such interdisciplinary settings (cf the CybergeoNetworks tool \cite{raimbault2021empowering})
+
+\bigskip
+
+$\rightarrow$ towards ``unified'' interdisciplinary validation standards and methods? Importance of model coupling and integration. The \textbf{OpenMOLE platform} provides already most of validation methods found in the typology (participatory under development by P. Chapron et al., visualisation being improved, surrogate and uncertainty being tested, novel methods such as spatial sensitivity analysis being developed \cite{raimbault2020scala}): \texttt{https://openmole.org}.
+
+\centering
+
+\includegraphics[width=0.15\textwidth]{../../../Seminars/20211123_IGN/figures/iconOM.png}\includegraphics[width=0.6\textwidth]{../../../Seminars/20211123_IGN/figures/openmole.png}
+
+
 }
 
+
+\sframe{ExModelo workshop in November: still time to apply, directly contact me if interested!}{
+
+
+\texttt{https://workshop.exmodelo.org/}
+
+\bigskip
+
+\centering
+
+\includegraphics[width=\textwidth]{figures/exmod.png}
+
+}
 
 
 

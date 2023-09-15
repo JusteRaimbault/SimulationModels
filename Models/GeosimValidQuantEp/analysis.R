@@ -29,4 +29,4 @@ mainmeth = c('prediction','SA','uncertainty','multiple','benchmark','calibration
 
 main = corpus[corpus$discipline%in%maindisc&corpus$method%in%mainmeth,]
 
-table(main[,c("discipline","method'")])
+table(main[,c("discipline","method")])

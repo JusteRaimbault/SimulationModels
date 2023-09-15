@@ -20,4 +20,11 @@ java -jar torpool.jar 50 9050 --mongo>
  java -jar bibliodata.jar --database --export geosimvalid data/corpus -1 -1 2 false "" -1
 [15/09, 14h35: 154302, 220535], remaining 19830~
 
+  - gephi vis: from core.gml file
+     * communities (res 1, randomise)
+     * force atlas 2 spatialisation- tune params : ~ default: echelle 2, gravity 1, dissuader hubs
+     * taille degre entrant, spline most exag, taille min 1 max 10
+     * ajust labels / dilat / size label: eigen centrality
+     * visu: lab size, color ; export png 2048x2048 (will crop in slide)
+
 
