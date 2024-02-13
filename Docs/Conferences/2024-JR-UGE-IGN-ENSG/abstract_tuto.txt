@@ -1,0 +1,15 @@
+
+----
+Exploration et validation des modèles de simulation avec OpenMOLE
+
+----
+Juste Raimbault [IGN/ENSG - LaSTIG]
+
+----
+juste.raimbault@ign.fr
+
+----
+Les modèles de simulation sont des outils essentiels pour la construction de théories scientifiques ou l'aide à la décision, mais leur utilisation reste limitée par une incertitude liée à leur nombreux paramètres. Les méthodes d'analyse de sensibilité et de plans d'expériences ont été développées pour mieux connaître leur comportement et réduire cette incertitude.
+Dans ce cadre, le logiciel libre et ouvert OpenMOLE (https://openmole.org) est développé depuis 2008 par l'Institut des Systèmes Complexes, pour l'exploration et la validation des modèles de simulation. Il se fonde sur 3 axes complémentaires qui sont l'embarquement de tout modèle (agnostique au langage de programmation), la mise à disponibilité de méthodes *state-of-the-art* d'analyse de sensibilité, de calibration et de validation, et un accès transparent à tout environnement de calcul intensif.
+Ce tutoriel aura pour objectif une prise en main du logiciel, de son langage de script basé sur scala, et une démonstration de ses principales fonctionnalités. Des instances du logiciel en ligne seront mises à disposition des participants, qui pourront y accéder via leur ordinateur personnel ou des machines mises à disposition.
+
