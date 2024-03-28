@@ -7,7 +7,7 @@
 #AUTHDB=`cat authdb`
 #PORT=`cat port`
 
-DB='digtwinsustdev'
+DB='urbsimdigtwins'
 COLLECTION='references'
 
 #QUERYFILE=$1
