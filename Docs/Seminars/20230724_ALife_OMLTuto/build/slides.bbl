@@ -1,0 +1,126 @@
+\begin{thebibliography}{}
+
+\bibitem[Arduin, 2018]{arduin2018modelisation}
+Arduin, H. (2018).
+\newblock {\em Mod{\'e}lisation math{\'e}matique des interactions entre
+  pathog{\`e}nes chez l’h{\^o}te humain: Application aux virus de la grippe
+  et au pneumocoque}.
+\newblock PhD thesis, Universit{\'e} Paris-Saclay.
+
+\bibitem[Batty and Milton, 2021]{batty2021new}
+Batty, M. and Milton, R. (2021).
+\newblock A new framework for very large-scale urban modelling.
+\newblock {\em Urban Studies}, 58(15):3071--3094.
+
+\bibitem[Brasebin et~al., 2017]{brasebin2017apports}
+Brasebin, M., Chapron, P., Ch{\'e}rel, G., Leclaire, M., Lokhat, I., Perret,
+  J., and Reuillon, R. (2017).
+\newblock Apports des m{\'e}thodes d'exploration et de distribution
+  appliqu{\'e}es {\`a} la simulation des droits {\`a} b{\^a}tir.
+\newblock In {\em Spatial Analysis and GEOmatics 2017}.
+
+\bibitem[Ch{\'e}rel et~al., 2015]{10.1371/journal.pone.0138212}
+Ch{\'e}rel, G., Cottineau, C., and Reuillon, R. (2015).
+\newblock Beyond corroboration: Strengthening model validation by looking for
+  unexpected patterns.
+\newblock {\em PLoS ONE}, 10(9):e0138212.
+
+\bibitem[Cottineau, 2014]{cottineau2014evolution}
+Cottineau, C. (2014).
+\newblock {\em L'{\'e}volution des villes dans l'espace post-sovi{\'e}tique.
+  Observation et mod{\'e}lisations.}
+\newblock PhD thesis, Universit{\'e} Paris 1 Panth{\'e}on-Sorbonne.
+
+\bibitem[Lavall{\'e}e et~al., 2018]{lavallee2018dynamical}
+Lavall{\'e}e, F., Alvarez, I., Dommanget, F., Martin, S., Reineking, B., and
+  Smadi, C. (2018).
+\newblock A dynamical model for the growth of a stand of japanese knotweed
+  including mowing as a management technique.
+\newblock In {\em Conference on Complex Systems 2018}.
+
+\bibitem[Passerat-Palmbach et~al., 2017]{passerat2017reproducible}
+Passerat-Palmbach, J., Reuillon, R., Leclaire, M., Makropoulos, A., Robinson,
+  E.~C., Parisot, S., and Rueckert, D. (2017).
+\newblock Reproducible large-scale neuroimaging studies with the openmole
+  workflow management system.
+\newblock {\em Frontiers in neuroinformatics}, 11:21.
+
+\bibitem[Pumain, 2018]{pumain2018evolutionary}
+Pumain, D. (2018).
+\newblock An evolutionary theory of urban systems.
+\newblock In {\em International and Transnational Perspectives on Urban
+  Systems}, pages 3--18. Springer.
+
+\bibitem[Raimbault, 2018]{raimbault2018extracting}
+Raimbault, J. (2018).
+\newblock Extracting knowledge from simulation models: trends and perspectives
+  from the viewpoint of quantitative geography.
+\newblock In {\em Conference on Complex Systems 2018}.
+
+\bibitem[Raimbault, 2019]{raimbault2019second}
+Raimbault, J. (2019).
+\newblock Second-order control of complex systems with correlated synthetic
+  data.
+\newblock {\em Complex Adaptive Systems Modeling}, 7(1):1--19.
+
+\bibitem[Raimbault, 2021a]{raimbault2021multiscale}
+Raimbault, J. (2021a).
+\newblock A multiscale model of urban morphogenesis.
+\newblock {\em arXiv preprint arXiv:2103.17241}.
+
+\bibitem[Raimbault, 2021b]{raimbault2021strong}
+Raimbault, J. (2021b).
+\newblock Strong coupling between scales in a multi-scalar model of urban
+  dynamics.
+\newblock {\em arXiv preprint arXiv:2101.12725}.
+
+\bibitem[Raimbault and Batty, 2021]{raimbault2021estimating}
+Raimbault, J. and Batty, M. (2021).
+\newblock Estimating public transport congestion in uk urban areas with open
+  transport models.
+\newblock GIS Research UK (GISRUK).
+
+\bibitem[Raimbault et~al., 2019]{raimbault2019space}
+Raimbault, J., Cottineau, C., Le~Texier, M., Le~Nechet, F., and Reuillon, R.
+  (2019).
+\newblock Space matters: Extending sensitivity analysis to initial spatial
+  conditions in geosimulation models.
+\newblock {\em Journal of Artificial Societies and Social Simulation}, 22(4).
+
+\bibitem[Raimbault and Perret, 2019]{raimbault2019generating}
+Raimbault, J. and Perret, J. (2019).
+\newblock Generating urban morphologies at large scales.
+\newblock In {\em Artificial Life Conference Proceedings}, pages 179--186. MIT
+  Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~….
+
+\bibitem[Raimbault et~al., 2020]{raimbault2020scala}
+Raimbault, J., Perret, J., and Reuillon, R. (2020).
+\newblock A scala library for spatial sensitivity analysis.
+\newblock GISRUK.
+
+\bibitem[Reuillon et~al., 2015]{reuillon2015}
+Reuillon, R., Schmitt, C., De~Aldama, R., and Mouret, J.-B. (2015).
+\newblock A new method to evaluate simulation models: The calibration profile
+  (cp) algorithm.
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  18(1):12.
+
+\bibitem[Schmitt et~al., 2015]{schmitt2014half}
+Schmitt, C., Rey-Coyrehourcq, S., Reuillon, R., and Pumain, D. (2015).
+\newblock Half a billion simulations: Evolutionary algorithms and distributed
+  computing for calibrating the simpoplocal geographical model.
+\newblock {\em Environment and Planning B: Planning and Design},
+  42(2):300--315.
+
+\bibitem[Spooner et~al., 2021]{spooner2021dynamic}
+Spooner, F., Abrams, J.~F., Morrissey, K., Shaddick, G., Batty, M., Milton, R.,
+  Dennett, A., Lomax, N., Malleson, N., Nelissen, N., et~al. (2021).
+\newblock A dynamic microsimulation model for epidemics.
+\newblock {\em Social Science \& Medicine}, 291:114461.
+
+\bibitem[W~Axhausen et~al., 2016]{w2016multi}
+W~Axhausen, K., Horni, A., and Nagel, K. (2016).
+\newblock {\em The multi-agent transport simulation MATSim}.
+\newblock Ubiquity Press.
+
+\end{thebibliography}
