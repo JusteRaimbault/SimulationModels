@@ -1,0 +1,307 @@
+
+[1] "Community 1 ; corpus prop 21.4787430683919"
+                                                                                                                                                                              titles
+2568159197182258393                                                                                     A review of entomological sampling methods and indicators for dengue vectors
+8059703142291136643                                           Modelling adult Aedes aegypti and Aedes albopictus survival at different temperatures in laboratory and field settings
+9416071066471984495                                                                           Impact of daily temperature fluctuations on dengue virus transmission by Aedes aegypti
+3704109771280564031                                                                                                                         The incubation periods of dengue viruses
+797697870357214849   A simulation model of the epidemiology of urban dengue fever: literature analysis, model development, preliminary validation, and samples of simulation results
+3818455448543675544                                                                                                       Climate and dengue transmission: evidence and implications
+6123878148269337889                                                    Detecting the impact of temperature on transmission of Zika, dengue, and chikungunya using mechanistic models
+6456058319510691720                                                  Longitudinal Studies of Aedes aegypti (Diptera: Culicidae) in Thailand and Puerto Rico: Blood Feeding Frequency
+2655505579044647314                      Transmission thresholds for dengue in terms of Aedes aegypti pupae per person with discussion of their utility in source reduction efforts.
+                    degree
+2568159197182258393    401
+8059703142291136643    357
+9416071066471984495    524
+3704109771280564031    405
+797697870357214849     545
+3818455448543675544    412
+6123878148269337889    356
+6456058319510691720    403
+2655505579044647314    395
+[1] "Community 2 ; corpus prop 20.9040497395396"
+                                                                                                                                      titles
+3925485684598323744                                       Surface urban heat island in China's 32 major cities: Spatial patterns and drivers
+16215012207634403128          Thermal infrared remote sensing for urban climate and environmental studies: Methods, applications, and trends
+12793375023664493195                                         The urban heat island and its impact on heat waves and human health in Shanghai
+13909056650700649943                                                                                Thermal remote sensing of urban climates
+9695158033326313774  Two decades of urban climate research: a review of turbulence, exchanges of energy and water, and the urban heat island
+9958557059558001137         Urban heat island effect: A systematic review of spatio-temporal factors, data, methods, and mitigation measures
+3373170947873916693                                         The heat island of the urban boundary layer: characteristics, causes and effects
+9480472578232766132                                            A review on the generation, determination and mitigation of Urban Heat Island
+15891749438301535146                                          The thermal regime of urban parks in two cities with different summer climates
+                     degree
+3925485684598323744     549
+16215012207634403128    658
+12793375023664493195    688
+13909056650700649943    885
+9695158033326313774     836
+9958557059558001137     426
+3373170947873916693     434
+9480472578232766132     817
+15891749438301535146    464
+[1] "Community 3 ; corpus prop 8.86909763065031"
+                                                                                                                                                                      titles
+10978509149021451451                                                                                          Temperature response to future urbanization and climate change
+2232076129394329470                                                                                                   Modeling and simulation of the Tokyo urban heat island
+7166917404903584847  Development of a numerical simulation system toward comprehensive assessments of urban warming countermeasures including their impacts upon the urban …
+10503702660318508968                Coupling a single-layer urban canopy model with a simple atmospheric model: Impact on urban heat island simulation for an idealized case
+3687884711113781043                                    Simulation of surface urban heat islands under 'IDEAL'conditions at night part 1: Theory and tests against field data
+6193754140309422566                                                                                                           Simulation of a summer urban breeze over Paris
+12821381657526614830                                          A coupled energy transport and hydrological model for urban canopies evaluated using a wireless sensor network
+1360144041074506772                                                                                   Anthropogenic heating of the urban environment due to air conditioning
+17300884766114560877                                                                           A vegetated urban canopy model for meteorological and environmental modelling
+                     degree
+10978509149021451451    203
+2232076129394329470     234
+7166917404903584847     234
+10503702660318508968    362
+3687884711113781043     169
+6193754140309422566     203
+12821381657526614830    175
+1360144041074506772     213
+17300884766114560877    174
+[1] "Community 4 ; corpus prop 18.1919005209209"
+                                                                                                                                                              titles
+10407466412037194712               A new global land-use and land-cover change product at a 1-km resolution for 2010 to 2100 based on human–environment interactions
+13243427167108790909                                          Delineating multi-scenario urban growth boundaries with a CA-based FLUS model and morphological method
+3219300975629116091                                                                                Cellular automata and urban simulation: where do we go from here?
+16454535119097977078                                                        Modeling urban land use change by the integration of cellular automaton and Markov model
+16662672171581300448                                             Modelling dynamic spatial processes: simulation of urban future scenarios through cellular automata
+10888690208776820605                                                           Global projections of future urban land expansion under shared socioeconomic pathways
+1237021536113587089                                                 Cellular automata models for the simulation of real-world urban processes: A review and analysis
+11878713206725822629                      A future land use simulation model (FLUS) for simulating multiple land use scenarios by coupling human and natural effects
+2156307166805757147  Understanding the drivers of sustainable land expansion using a patch-generating land use simulation (PLUS) model: A case study in Wuhan, China
+                     degree
+10407466412037194712    243
+13243427167108790909    316
+3219300975629116091     239
+16454535119097977078    417
+16662672171581300448    410
+10888690208776820605    276
+1237021536113587089     691
+11878713206725822629    841
+2156307166805757147     457
+[1] "Community 5 ; corpus prop 18.3633002856663"
+                                                                                                                                                              titles
+13964519094576708199                                                                                 Approaches to study urban heat island–abilities and limitations
+9453876916722816263                                                                            On the impact of urban climate on the energy consumption of buildings
+10979080081214775647                                    Using cool pavements as a mitigation strategy to fight urban heat island—A review of the actual developments
+11890633619540559498 Cooling the cities–a review of reflective and green roof mitigation technologies to fight heat island and improve comfort in urban environments
+4153016319425692479                                         Simulation of surface urban heat islands under 'ideal'conditions at night part 2: Diagnosis of causation
+5069139677649548758                                             Influence of urban geometry on outdoor thermal comfort in a hot dry climate: A study in Fez, Morocco
+12708406653445552673                                                                                      Urban microclimate: designing the spaces between buildings
+14241430975843430506                                                                                               Energy and climate in the urban built environment
+3026780367883993520                     Using advanced cool materials in the urban built environment to mitigate heat islands and improve thermal comfort conditions
+                     degree
+13964519094576708199    651
+9453876916722816263     722
+10979080081214775647    581
+11890633619540559498    705
+4153016319425692479     815
+5069139677649548758     508
+12708406653445552673    492
+14241430975843430506    611
+3026780367883993520     713
+[1] "Community 6 ; corpus prop 1.97613846412368"
+                                                                                                                                                                           titles
+442997395565739402                                                                       CitySim: Comprehensive micro-simulation of resource flows for sustainable urban planning
+8407722697457918044                          Automatic generation and simulation of urban building energy models based on city datasets for city-scale building retrofit analysis
+17394108688227399426 Data-driven Urban Energy Simulation (DUE-S): A framework for integrating engineering simulation and machine learning methods in a multi-scale urban energy …
+8497957942254185774                                                                      UMI–an urban simulation environment for building energy use, daylighting and walkability
+9033778833454299763                                                                                       The influence of urban form on GHG emissions in the US household sector
+3429194104039416353                                                                                                                             The changing metabolism of cities
+5650382619320148974                                         Urban data and building energy modeling: A GIS-based urban building energy modeling system using the urban-EPC engine
+3630960301759939119                                                                                          Urban form and household electricity consumption: A multilevel study
+                     degree
+442997395565739402      219
+8407722697457918044     163
+17394108688227399426     78
+8497957942254185774     204
+9033778833454299763      77
+3429194104039416353     108
+5650382619320148974      58
+3630960301759939119      55
+[1] "Community 7 ; corpus prop 1.35103343975802"
+                                                                                                                                                                              titles
+14485384197259550109                                                                                     Sky view factor analysis–implications for urban air temperature differences
+18170976888621654844                                                                                     Urban-suburban-rural air temperature differences related to street geometry
+8356496218963412557                                                                                                                        Die thermische Komponente des Stadtklimas
+12671846465223572902                                                                 Modelling of road surface temperature from a geographical parameter database. Part 2: Numerical
+14024512846932939710                                                                          Rapid determination of canyon geometry parameters for use in surface radiation budgets
+4717429354040522073  Influence of geographical factors and meteorological variables on nocturnal urban-park temperature differences--a case study of summer 1995 in Göteborg, Sweden
+12859520402556623290                                                               Modelling of road surface temperature from a geographical parameter database. Part 1: Statistical
+3805440967642193535                                                                                                                Sky‐view factor approximation using GPS receivers
+15509953460092623832                                                                                                      Urban nocturnal temperatures, street geometry and land use
+                     degree
+14485384197259550109    273
+18170976888621654844     49
+8356496218963412557      66
+12671846465223572902     53
+14024512846932939710     93
+4717429354040522073     102
+12859520402556623290     66
+3805440967642193535      53
+15509953460092623832    352
+[1] "Community 8 ; corpus prop 0.571332549151403"
+                                                                                                                                                                    titles
+1563533405741987723                                              Is there a “tipping point” between simulated nontornadic and tornadic supercells in VORTEX2 environments?
+11252791679597590240                                                                                Evolution of a long-track violent tornado within a simulated supercell
+4017195200169716504                                              A numerical study of the 6 May 2012 Tsukuba City supercell tornado. Part II: Mechanisms of tornadogenesis
+15573744736355764003                            The role of surface drag in mesocyclone intensification leading to tornadogenesis within an idealized supercell simulation
+2400582827012518288                                The cause of internal outflow surges in a high-resolution simulation of the 8 May 2003 Oklahoma City tornadic supercell
+6675515457364059526                                     Volatility of tornadogenesis: An ensemble of simulated nontornadic and tornadic supercells in VORTEX2 environments
+6724973976312723795                                                                   LES of laminar flow in the PBL: A potential problem for convective storm simulations
+10193228104994946416                                                                             What is the intrinsic predictability of tornadic supercell thunderstorms?
+5470051692497820506   An investigation of the Goshen County, Wyoming, tornadic supercell of 5 June 2009 using EnKF assimilation of mobile mesonet and radar observations …
+                     degree
+1563533405741987723      43
+11252791679597590240     72
+4017195200169716504      30
+15573744736355764003     32
+2400582827012518288      41
+6675515457364059526      64
+6724973976312723795      28
+10193228104994946416     30
+5470051692497820506      20
+[1] "Community 9 ; corpus prop 4.2581078810284"
+                                                                                                                     titles
+3954282515992094773                            Towards a semantic Construction Digital Twin: Directions for future research
+5785243253071334989                                              City digital twin potentials: A review and research agenda
+5536605405547855152                                               The digital twin of the city of Zurich for urban planning
+10635477121935531695 Smart city digital twin–enabled energy management: Toward real-time urban building energy benchmarking
+1125415077280994594              Developing a digital twin at building and city levels: Case study of West Cambridge campus
+827886323968838658        A systematic review of a digital twin city: A new pattern of urban governance toward smart cities
+11827397631793614871                                                                                          Digital twins
+11839607606620302088                                                         A digital twin smart city for citizen feedback
+11889514480558328373               Urban digital twins for smart cities and citizens: The case study of Herrenberg, Germany
+                     degree
+3954282515992094773     250
+5785243253071334989     158
+5536605405547855152     151
+10635477121935531695    126
+1125415077280994594     199
+827886323968838658      154
+11827397631793614871    154
+11839607606620302088    189
+11889514480558328373    173
+[1] "Community 10 ; corpus prop 0.0840194925222652"
+                                                                                                                                                    titles
+2570414037611256042                Identification of urban park activity intensity at different thermal environments and visible sky by using sound levels
+15779674631948905352                                            Factors influencing perceptions and use of urban nature: Surveys of park visitors in Delhi
+7185956323843348388   City in the park,” Greenway Network Concept of High-Density Cities: Adaptation of Singapore Park Connector Network in Chinese Cities
+1246242175210168736                                                                       Integrating ecosystem services into urban park planning & design
+8334770992622471976                                             Mapping the spatial disparities in urban health care services using taxi trajectories data
+8121083919855750416                           Mapping the Impact of Urbanization on Green Spaces: The Human Drivers of Land Use/Land Cover Change in Delhi
+                     degree
+2570414037611256042       7
+15779674631948905352     12
+7185956323843348388       1
+1246242175210168736       5
+8334770992622471976       1
+8121083919855750416       1
+[1] "Community 11 ; corpus prop 0.618383464963872"
+                                                                                                                                                                       titles
+3847626968015166187                                                                                                 Traffic simulation with SUMO–simulation of urban mobility
+2230323631336643597                                                                                        Microscopic simulation of urban traffic based on cellular automata
+2602998652949126134                                                                                      Integrated co-evolution model of land use and traffic network design
+16345815595110240774                                                                                       City expansion model based on population diffusion and road growth
+17833863414294086817                                                                                 Recent development and applications of SUMO-Simulation of Urban MObility
+12530460820459794223                                                          Augmented urban planning workbench: overlaying drawings, physical models and digital simulation
+5957016313204338138  The Urban CoBuilder–A mobile augmented reality tool for crowd-sourced simulation of emergent urban development patterns: Requirements, prototyping and …
+13565708992724463970                                                  Urban simulation and the luminous planning table: Bridging the gap between the digital and the tangible
+1737110784351335073                                                                       Environmental design studies on perception and simulation: an urban design approach
+                     degree
+3847626968015166187      18
+2230323631336643597      21
+2602998652949126134      23
+16345815595110240774     24
+17833863414294086817     26
+12530460820459794223     27
+5957016313204338138      19
+13565708992724463970     22
+1737110784351335073      32
+[1] "Community 12 ; corpus prop 0.867081162829777"
+                                                                                                                                       titles
+10106849175477282849                         MODIS-based air temperature estimation in the southeastern Tibetan Plateau and neighboring areas
+7989217955621435275                                                                     基于 Modis 地表温度的横断山区气温估算及其时空规律分析
+11290729162370756443   Statistical estimation of daily maximum and minimum air temperatures from MODIS LST data over the state of Mississippi
+7453341660650448547                                                          MODIS-based estimation of air temperature of the Tibetan Plateau
+11115769929642195748         Statistical estimation of high-resolution surface air temperature from MODIS over the Yangtze River Delta, China
+17323469516361245957 Integrating AVHRR satellite data and NOAA ground observations to predict surface air temperature: a statistical approach
+866886161514875720                                                                                    Observed climate variability and change
+8378597018265921288         Evaluation of MODIS land surface temperature data to estimate air temperature in different ecosystems over Africa
+2147717836505526521      Estimating daily minimum, maximum, and mean near surface air temperature using hybrid satellite models across Israel
+                     degree
+10106849175477282849     16
+7989217955621435275      10
+11290729162370756443    167
+7453341660650448547      23
+11115769929642195748     16
+17323469516361245957     85
+866886161514875720       40
+8378597018265921288     314
+2147717836505526521      25
+[1] "Community 13 ; corpus prop 1.77785246177113"
+                                                                                                                                                         titles
+10542036363443296999                           GLOBE students, teachers, and scientists demonstrate variable differences between urban and rural leaf phenology
+4609420227824257844                                                                              Mapping urban extent using Luojia 1-01 nighttime light imagery
+5167800695574964828                                             A 30-year (1984–2013) record of annual urban dynamics of Beijing City derived from Landsat data
+2522318209297279207                                                Urban built-up area extraction from log-transformed NPP-VIIRS nighttime light composite data
+7501829096654382014                  High-resolution multi-temporal mapping of global urban land using Landsat images based on the Google Earth Engine Platform
+10220398991125919888   Satellite evidence of phenological differences between urbanized and rural areas of the eastern United States deciduous broadleaf forest
+4400089131248619461   An efficient approach to capture continuous impervious surface dynamics using spatial-temporal rules and dense Landsat time series stacks
+1828707097913498485                                                                  Phenological responses of plants to climate change in an urban environment
+                     degree
+10542036363443296999     44
+4609420227824257844      58
+5167800695574964828     164
+2522318209297279207      56
+7501829096654382014     219
+10220398991125919888    124
+4400089131248619461      43
+1828707097913498485      68
+[1] "Community 14 ; corpus prop 0.426819022013107"
+                                                                                                                 titles
+14518935556873258045 Flood risk assessment, future trend modeling, and risk communication: a review of ongoing research
+17004798691988193195                                          Green infrastructure for London: A review of the evidence
+5981856556949325109            Integrating simulation models with a view to optimal control of urban wastewater systems
+4306704983088087245                                       Modelling, simulation and control of urban wastewater systems
+2890126745284009392                                Stochastic generation of urban water systems for case study analysis
+4815985957181911424             CITY DRAIN©–An open source approach for simulation of integrated urban drainage systems
+1662032945265492698        Quantifying the impact of impervious surface location on flood peak discharge in urban areas
+11133382901130465861                                                                                 Urban heat islands
+4296175906665740643        The influence of climate on the effectiveness of low impact development: A systematic review
+                     degree
+14518935556873258045      7
+17004798691988193195      4
+5981856556949325109      73
+4306704983088087245      63
+2890126745284009392       4
+4815985957181911424      44
+1662032945265492698      15
+11133382901130465861      4
+4296175906665740643      12
+[1] "Community 15 ; corpus prop 0.228533019660561"
+                                                                                                                                             titles
+1145004204210933143   Integrating Temperature-Dependent Life Table Data into a Matrix Projection Model for Drosophila suzukii Population Estimation
+6908462152286582955                                                 Drosophila suzukii population response to environment and management strategies
+10026488685226432267                             Seasonal Reproductive Biology of Drosophila suzukii (Diptera: Drosophilidae) in Temperate Climates
+                     degree
+1145004204210933143      55
+6908462152286582955      57
+10026488685226432267     37
+[1] "Community 16 ; corpus prop 0.0336077970089061"
+                                                                                                                                                                       titles
+14478585363280144501 Influência do uso e cobertura do solo no clima de Piracicaba, São Paulo: análise de séries históricas, ilhas de calor e técnicas de sensoriamento remoto
+14154611154166998233        Considerações sobre variabilidade e mudança climática no Distrito Federal, suas repercussões nos recursos hídricos e informação ao grande público
+4024800126811657721                                                              Ilha de Calor Urbana e Simulações: aplicação metodológica para o reordenamento do território
+795365862272699476                                                                      Estudo de ilhas de calor no município de Maceió/AL usando dados orbitais do Landsat 5
+                     degree
+14478585363280144501      3
+14154611154166998233      2
+4024800126811657721       1
+795365862272699476        3
+
+

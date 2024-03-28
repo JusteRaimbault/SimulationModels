@@ -1,0 +1,10 @@
+
+Visu du graphe gml sous gephi:
+     * communities (res 1, randomise)
+     * spatialisation force atlas - tune params : ~ default: echelle 1, gravity 0.15, higher gravity, dissuader hubs
+     * taille degre entrant, spline most exag, taille min 1 max 10
+     * ajust labels / dilat / size label: eigen centrality - spline most exag (milieu) 
+     * visu: lab size 18~, color 100~ ; export png 2048x2048 (will crop in slide)
+
+
+

@@ -106,12 +106,51 @@ $^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 
 % Bib sys rev dig twins domaines
 
+\justify
+
+\textit{\textbf{Urban Digital Twins } (broad sense of coupled physical system and virtual representation) proposed as a tool for sustainable smart cities with urban planning, design and management impacts in various fields.}
+
+\bigskip
+
+\textbf{Adoption in practice: } still mostly prototypes, linked to funding availability, models of socio-technical systems at short time scales (ex. urban climate, buildings, roads, energy, mobility and transport infrastructure, \ldots) \cite{ferre2022adoption}
+
+
+\bigskip
+
+\textbf{Challenges for urban digital twins:}  interoperability and semantics, infrastructure, data acquisition and actuation, data quality and data fusion, planning and prediction, visualization / information display, Resources, ethical/legal/social aspects \cite{weil2023systemic}
+
 }
 
 \sframe{Urban simulation models}{
 
 % A priori bib simu
 %Autres aspects simu
+
+\begin{columns}
+	\begin{column}{0.6\linewidth}
+		Long history in urban simulation models:
+
+\medskip		
+		
+		\begin{itemize}
+			\item Urban growth and cellular automata
+			\item Agent-based models
+			\item Microsimulation
+			\item Land-use transport interaction models
+			\item Urban mobility
+			\item Environmental sciences: Urban Heat Island, pollution, \ldots
+			\item \ldots
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.39\linewidth}
+		\includegraphics[width=\linewidth]{figures/computable_city.png}
+		
+		\cite{batty2024computable}
+	\end{column}
+
+	
+\end{columns}
+
 
 
 }
@@ -122,11 +161,51 @@ $^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 %Rappel last y
 %Q rech liens
 
+% Following the trend of smart cities, urban systems have been under an extensive focus for the development of urban digital twins, which are particularly relevant given their complex nature, the abundance of real-time data within cities, and the difficulty of decision-making to manage and design cities over several time scales. In that context, urban simulation models, which have been largely studied for several decades, should be at the core of such approaches, following the standard definition of a twin which mirrors the processes of the twinned system, and for these to have any interest for decision-making. We propose in this contribution a scientometric analysis of effective linkages between these two streams of literature, namely urban digital twins and urban simulation models.
+
+$\rightarrow$ digital twins as a trend similar to smart cities, hype or solid ground for future sustainable cities?
+
+\bigskip
+
+$\rightarrow$ urban simulation models to understand urban dynamics on several timescales, including long time.
+
+\bigskip
+\bigskip
+
+\textbf{Research question: }
+
+\textit{Which effective links between the fields of urban digital twins and urban simulation, in terms of effective scientific practice? How do these links exist in terms of citation networks?}
+
+\medskip
+
+$\rightarrow$ scientometric analysis of citation networks of these literature streams.
+
+
 }
 
 \sframe{Data and methods}{
 
 % corpus construction and scim tools - cit nw
+
+% We construct a large citation network using open bibliographic data collection tools
+
+$\rightarrow$ collection of bibliographic data from google scholar, using open source data collection tools developped by \cite{raimbault2020empowering} \cite{raimbault2019exploration}
+
+\medskip
+
+$\rightarrow$ initial queries: ``urban digital twins'', 100 papers; ``urban simulation model'', 100 papers
+
+\medskip
+
+$\rightarrow$ reconstruct backward citation network (``cited by'') up to depth two
+
+\medskip
+
+$\rightarrow$ citation network with 99562 papers, 182479 citation links, with basic metadata (title, authors, year); average degree 3.7
+
+\medskip
+
+$\rightarrow$ remove single branches to keep network core: 29755 papers and 112670 links
 
 }
 
@@ -135,37 +214,116 @@ $^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 
 \sframe{Citation network}{
 
+% properties
+%
+% size 99562 182479
+%
+% components(citation)$csize = 98037   389   782    79    49    84    93    49
+%
+% summary(degree(citation))
+%    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+%   1.000    1.000    1.000    3.692    2.000 1013.000 
+% -> data bias with cutoff > 1000 -> todo specific collection with year
+% 
+% all straight branches removed:
+% citation core : 29755 112670
+% TODO rq: semble plus de structure -> etude plus poussee dans papier specifique (ou data lake?)
+
+\begin{center}
+
+%\vspace{-1cm}
+	\includegraphics[height=\textheight,trim={0 0 0 8cm},clip]{figures/core_20240328.png}
+\end{center}
+
+
+
 }
 
 \sframe{Main fields}{
 
 %Grde commus
 
-}
+% directedmodularity(com$membership,A)
+%[1] 0.6576961
 
-\sframe{}{
+% Epidemiological simulation 21.5
+% Urban Climate 20.9
+% Climate change impacts 8.87
+% Cellular automata and land-use change 18.2
+% Urban Heat Island 18.4
+% Building energy use 1.98
+% Sky view factor 1.35
+% Rare meteorological events 0.57
+% Digital twins 4.26
+% urban parks 0.08
+% Traffic simulation 0.62
+% air temperature 0.87
+% teledetection 1.78
+% hydrology 0.43
+% bio 0.22 
+% espagnol 0.03
+
+\textbf{Communities} obtained through modularity maximisation (directed modularity 0.657):
+
+\medskip
+
+\begin{itemize}
+		    \item Epidemiological simulation - 21.5\%
+			\item Urban Climate - 20.9\%
+			\item Urban Heat Island - 18.4\%
+			\item Cellular automata and land-use change - 18.2\%
+			\item Climate change impacts - 8.87\%
+			\item Digital twins - 4.26\%
+			\item Building energy use  - 1.98\%
+			\item Remote sensing - 1.78\%
+			\item Urban morphology - 1.35\%
+		\end{itemize}
+
+
+\bigskip
 
 %pct par origine [cbien both]
 
+% and find that despite the fact that many twins use simulation, connections between the fields remain relatively low
+
+%         both digital_twin   simulation 
+%         710          576        28469 
+
+% -> highly unbalanced!
+
+\textbf{Proportion by initial query:} simulation 28469, digital twin 576, both 710 $\rightarrow$ strong imbalance on terms of field size, good correspondence with endogenous communities.
+
+\bigskip
+
+\textbf{Publication temporality: } oldest year 2017 for digital twin (median 2022); oldest 1982 for simulation (median 2019)
+
+
+
 }
 
-\sframe{}{
 
+%\sframe{}{
 %Composition comus par original
+%}% not needed - unbalanced
 
-}
 
-
-\sframe{}{
+\sframe{Citations flows between fields}{
 
 %Echange cits entre comes
 %[Check alife paper]
+
+\begin{center}
+	\includegraphics[height=\textheight]{figures/citflows_20240328.png}
+\end{center}
 
 }
 
 
 
 \sframe{Perspectives}{
+
+
+% This may reflect the fact that existing twins operate mainly at a short time scale, whereas urban simulation deals with slower dynamics. This highlights the need for a higher interoperability and integration between these approaches.
 
 %Perspective : analyse a la Florent timescales et types de modeles
 %Rappel simu essentielle pour le jumeau - def 
@@ -174,11 +332,31 @@ $^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 
 \justify
 
-$\rightarrow$ 
+\textbf{Results}
 
 \medskip
 
-$\rightarrow$ 
+$\rightarrow$ low integration in terms of scientific practice (citation flows), may be due to DT recency, or different communities of practitioners
+
+\medskip
+
+$\rightarrow$ difference in terms of temporal and spatial scales may also hinder integration, while it is one reason for stronger links (long term territorial planning)
+
+
+\bigskip
+\bigskip
+
+
+\textbf{Perspectives}
+
+\medskip
+
+$\rightarrow$ modelography and systematic analysis of processes, time scales, model types, for a similar corpus; link it with a sociology of science approach
+
+\medskip
+
+$\rightarrow$ simulation at the core of many DT definitions, crucial for sustainability application; can not be used in practice without systematic exploration and validation practices, methods and tools (see e.g. OpenMOLE)
+
 
 
 }
