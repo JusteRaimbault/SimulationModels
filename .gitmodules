@@ -43,3 +43,9 @@
 [submodule "Docs/Papers/GeosimValidation-paper"]
 	path = Docs/Papers/GeosimValidation-paper
 	url = git@github.com:JusteRaimbault/GeosimValidation-paper.git
+[submodule "Models/SwarmChemistrySpatialSensitivity"]
+	path = Models/SwarmChemistrySpatialSensitivity
+	url = git@github.com:JusteRaimbault/SwarmChemistrySpatialSensitivity.git
+[submodule "Docs/Communications/2024/SwarmChem-ALife2024"]
+	path = Docs/Communications/2024/SwarmChem-ALife2024
+	url = git@github.com:JusteRaimbault/SwarmChem-ALife2024.git
