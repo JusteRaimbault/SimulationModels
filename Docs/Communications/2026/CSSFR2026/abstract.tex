@@ -1,0 +1,45 @@
+
+\documentclass[11pt,longbibliography]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=1.7cm]{geometry}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks]{hyperref}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{authblk}
+
+
+
+\title{\vspace{-2cm}Quantifying emergence in systems of cities multiscale simulation models}
+\author[1,2,3,4]{Juste Raimbault}
+\affil[1]{Lastig, Univ. Gustave Eiffel, IGN-ENSG}
+\affil[2]{CASA, University College London}
+\affil[3]{UAR CNRS 3611 ISC-PIF}
+\affil[4]{UMR CNRS 8504 G{\'e}ographie-cit{\'e}s}
+
+\begin{document}
+
+\date{}
+\maketitle
+
+
+%\section{Introduction}
+%\label{sec:intro}
+
+
+Simulation models for systems of cities have been extensively used to test geographical theories and link them to empirical data \citep{pumain2017urban}. Most of these approaches however still remain far from real world planning applications, on the contrary to models at larger scales like Land-use Transport Interaction models \citep{wegener2020urban}. \cite{rozenblat2018conclusion} suggest that multi-scalar models are needed for urban policies that account for territorial specificities. Such models are sparse in the litterature, and most of the time do not include both bottom-up and top-down feedbacks between the simulated scales. \cite{raimbault2023innovation} introduces a multiscale model with such strong coupling, where cities dynamics are driven by innovation diffusion. Similarly, \cite{raimbault2021strong} couples urban morphogenesis with interactions between cities. Such model structure however does not necessarily imply that the model captures effectively weak emergence and downward causation \citep{bedau2002downward}, which are needed for the model to capture complexity and its multiscale ontology to be useful.
+
+This contribution proposes to systematically quantify wether causal emergence and downward causation are present in several multiscale models for systems of cities. We use the method proposed by \cite{raimbault2023innovation}, by computing the 3 emergence indicators developped by \cite{rosas2020reconciling} on micro and macro time-series of urban dynamics, and searching for the feasible space of these indicators to unveil the variety of emergence regimes by applying the Pattern Space Exploration algorithm \citep{cherel2015beyond}. We apply the method on 3 different explicitly multiscale models: \citep{raimbault2023innovation}, \citep{raimbault2021strong}, and \cite{raimbault2021multiscale}. The models are implemented in scala and integrated into the OpenMOLE platform to run the PSE algorithm. First simulation results confirm that all models are able to produce a broad set of emergence regimes, including downard causation, with however less diversity for models based on urban morphology. This confirms that such models are useful to effectively capture urban complexity, and may be used in the future as a basis for more elaborated models for multiscale planning and policies.
+
+
+\footnotesize
+
+\bibliographystyle{unsrt}
+\bibliography{biblio}
+
+
+\end{document}
+
+
+
