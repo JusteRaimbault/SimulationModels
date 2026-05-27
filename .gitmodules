@@ -49,3 +49,6 @@
 [submodule "Docs/Communications/2024/SwarmChem-ALife2024"]
 	path = Docs/Communications/2024/SwarmChem-ALife2024
 	url = git@github.com:JusteRaimbault/SwarmChem-ALife2024.git
+[submodule "Models/EmergenceSystemsOfCities"]
+	path = Models/EmergenceSystemsOfCities
+	url = git@github.com:JusteRaimbault/EmergenceSystemsOfCities.git
