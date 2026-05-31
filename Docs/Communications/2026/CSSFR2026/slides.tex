@@ -1,0 +1,290 @@
+\documentclass[english,11pt]{beamer}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Proba}{\mathbb{P}}
+
+\newcommand{\Covb}[2]{\ensuremath{\Cov\!\left[#1,#2\right]}}
+\newcommand{\Eb}[1]{\ensuremath{\E\!\left[#1\right]}}
+\newcommand{\Pb}[1]{\ensuremath{\Proba\!\left[#1\right]}}
+\newcommand{\Varb}[1]{\ensuremath{\Var\!\left[#1\right]}}
+
+% norm
+\newcommand{\norm}[1]{\| #1 \|}
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+
+
+
+
+\usepackage{mathptmx,amsmath,amssymb,graphicx,bibentry,bbm,babel,ragged2e}
+
+\makeatletter
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\newcommand{\jitem}[1]{\item \begin{justify} #1 \end{justify} \vfill{}}
+\newcommand{\sframe}[2]{\frame{\frametitle{#1} #2}}
+
+\newenvironment{centercolumns}{\begin{columns}[c]}{\end{columns}}
+%\newenvironment{jitem}{\begin{justify}\begin{itemize}}{\end{itemize}\end{justify}}
+
+\usetheme{Warsaw}
+\setbeamertemplate{footline}[text line]{}
+\setbeamercolor{structure}{fg=purple!50!blue, bg=purple!50!blue}
+
+\setbeamersize{text margin left=15pt,text margin right=15pt}
+
+\setbeamercovered{transparent}
+
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{multirow}
+
+
+\makeatother
+
+\begin{document}
+
+
+
+
+
+\title{}
+
+\author{Juste Raimbault$^{1,2,3,4,\ast}$\\
+\texttt{$\ast$ juste.raimbault@ign.fr}
+}
+
+
+\institute{$^{1}$ LASTIG, Université Gustave Eiffel, IGN-Géodata Paris\\
+$^{2}$CASA, UCL\\
+$^{3}$UPS CNRS 3611 ISC-PIF\\
+$^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
+}
+
+
+\date{CSS/France 2026\\\smallskip
+Session Urbain\\\smallskip
+June 1st, 2026
+}
+
+\frame{\maketitle}
+
+
+
+\sframe{An evolutionary theory for urban systems}{
+
+
+\begin{center}
+	\begin{columns}
+	\begin{column}{0.49\linewidth}
+	\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/evoltheory_scales.png}
+	\end{column}
+	\begin{column}{0.3\linewidth}
+	%\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/simpop1.png}\\\medskip
+	%\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/setup_synth_1_tick100.png}
+	
+	% processes between scales	
+		
+	\end{column}
+	\end{columns}
+\end{center}
+
+%\footnotesize
+An evolutionary urban theory considering cities as systems within systems of cities \cite{pumain2018evolutionary}
+
+%; Simpop 1 model \cite{sanders1997simpop}; SimpopNet model \cite{schmitt2014modelisation}
+
+
+
+}
+
+\sframe{Systems of cities simulation models}{
+
+% apercu general de l'ensemble des modeles issus de la th evol urb
+
+}
+
+
+\sframe{Hybrid models mixing scales}{
+
+% Lutecia and physical network: "semi-multiscale"
+
+\begin{center}
+	\includegraphics[width=0.49\textwidth]{../../../../../CityNetwork/Docs/ThesisMemoire/Final/Figures/Final/7-3-3-fig-lutecia-governance.jpg}
+	\includegraphics[width=0.49\textwidth]{../../../../../NetworksTerritories/CoevolutionNwTerritories/Docs/Papers/HierarchyCoevolution/chapter/figuresraw/ex_realphysical_1975_tf.png}
+\end{center}
+
+Simulation models for systems of cities and transportation networks making a slight bridge between scales: transportation governance modeling \cite{raimbault2021introducing}; physical network self-reinforcment \cite{raimbault2020hierarchy}
+
+}
+
+
+\sframe{Multiscalar models}{
+
+}
+
+
+
+\sframe{Towards applied multiscalar models}{
+
+
+%TODO why is it crucial to capture emergence? effets rebonds? second order? strong emergence and autonomy? Examples? Check epistemo des sci sociales generatives.
+
+$\rightarrow$ multi-scale simulation models are needed to explore sustainable policies \cite{rozenblat2018conclusion}
+
+\bigskip
+
+
+$\rightarrow$ multi-scale urban models remain however underexplored in the literature
+
+\bigskip
+\bigskip
+
+\textbf{This contribution: } \textit{}
+
+
+}
+
+\sframe{Urban morphology and inter-city interactions}{
+
+
+
+% broad description of morph-intgib model: cit ccs19 and preprint
+
+\begin{center}
+\includegraphics[width=\textwidth]{../../../../../UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig1.jpg}
+\end{center}
+
+A strong coupling explored by \cite{raimbault2021strong} between urban morphogenesis agregation-diffusion processes at the meso scale \cite{raimbault2018calibration} and interactions between cities at the macro scale \cite{raimbault2020indirect}
+
+
+}
+
+
+\sframe{Multi-scale innovation dynamics}{
+
+
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{../../../Papers/InnovationMultiscale/InnovationMultiscale-paper/slides/figures/model_4.png}
+\end{center}
+
+
+A bi-scale model explored by \cite{raimbault2023innovation}, coupling urban evolution based on innovation diffusion at the macro scale \cite{raimbault2020model}, with intra-urban innovation cluster dynamics between firms for the emergence of new innovations \cite{raimbault2022innovation}; quantification of strong emergence using indicators by \cite{rosas2020reconciling}
+
+
+}
+
+
+\sframe{Indicators to quantify emergence}{
+
+}
+
+
+\sframe{Results: baseline}{
+
+}
+
+\sframe{Results: innovation regimes in the innovation model}{
+
+}
+
+\sframe{Results: innovation regimes in the meso-macro model}{
+
+}
+
+%TODO comparative stats on PSE populations if time?
+
+
+
+
+
+\sframe{Discussion}{
+
+
+%\textbf{Main results:}
+
+
+\justify
+
+$\rightarrow$ 
+			
+\bigskip
+
+$\rightarrow$ 
+
+\bigskip
+
+$\rightarrow$ 
+
+\bigskip
+\bigskip
+
+%\textbf{Conclusion: } 
+
+\textbf{Open repositories for presented models:}
+
+\texttt{https://github.com/JusteRaimbault/UrbanGrowth}
+
+\texttt{https://github.com/JusteRaimbault/InnovationMultiscale-model}
+
+}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{apalike}
+\bibliography{biblio}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+
+
+%\sframe{Model exploration}{
+% salient results for urbmorph-intgib
+%\begin{center}
+%\includegraphics[width=0.58\textwidth]{../../../../../UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig5.jpg}
+%\includegraphics[width=0.4\textwidth]{../../../../../UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig7.jpg}
+%\end{center}
+%\bigskip
+%(Left) Non-monotonous effect of policy parameters linking scales; (Right) Bi-objective optimisation of contradictory objectives across scales
+%}
+
+
+
+%\sframe{Model exploration}{
+%\begin{center}
+%\includegraphics[width=0.49\textwidth]{../../../Papers/InnovationMultiscale/InnovationMultiscale-paper/figures/paretoDiversity-Fitness_colordG_sizetheta.png}
+%\includegraphics[width=0.49\textwidth]{../../../Papers/InnovationMultiscale/InnovationMultiscale-paper/figures/pse-psi-delta-utility_colorGamma_sizetheta.png}
+%\end{center}
+%\bigskip
+%(Left) bi-optimisation between contradictory objectives across scales; (Right) diversity of emergence regimes obtained with a diversity search algorithm
+%}
+
+
+
+
+
+
+
+
+

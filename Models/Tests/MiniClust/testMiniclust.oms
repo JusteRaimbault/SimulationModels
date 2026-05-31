@@ -1,0 +1,18 @@
+val x1 = Val[Double]
+val x2 = Val[Double]
+val s = Val[Double]
+
+val model = ScalaTask("val s = x1 + x2") set ((inputs, outputs) += (x1,x2), outputs += (s))
+
+val env = MiniClustEnvironment("login","https://babar.openmole.org")
+
+DirectSampling(
+    evaluation = model,
+    sampling = LHS(
+        sample = 10000,
+        factor = Seq(
+          x1 in (0.0, 1.0),
+          x2 in (0.0, 1.0)
+        )
+    )
+) on env by 100 hook display
