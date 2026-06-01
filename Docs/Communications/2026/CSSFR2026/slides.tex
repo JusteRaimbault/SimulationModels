@@ -57,22 +57,22 @@
 
 
 
-\title{}
+\title{Quantifying emergence in systems of cities multiscale simulation models}
 
 \author{Juste Raimbault$^{1,2,3,4,\ast}$\\
 \texttt{$\ast$ juste.raimbault@ign.fr}
 }
 
 
-\institute{$^{1}$ LASTIG, Université Gustave Eiffel, IGN-Géodata Paris\\
+\institute{$^{1}$ LaSTIG, Université Gustave Eiffel, IGN-Géodata Paris\\
 $^{2}$CASA, UCL\\
 $^{3}$UPS CNRS 3611 ISC-PIF\\
 $^{4}$UMR CNRS 8504 G{\'e}ographie-cit{\'e}s
 }
 
 
-\date{CSS/France 2026\\\smallskip
-Session Urbain\\\smallskip
+\date{\textit{Journées françaises des Systèmes Complexes 2026}\\\smallskip
+\textit{Session Milieu Urbain 1}\\\smallskip
 June 1st, 2026
 }
 
@@ -80,26 +80,25 @@ June 1st, 2026
 
 
 
-\sframe{An evolutionary theory for urban systems}{
+\sframe{Scales in Systems of Cities}{
 
 
 \begin{center}
 	\begin{columns}
 	\begin{column}{0.49\linewidth}
-	\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/evoltheory_scales.png}
+	\includegraphics[width=\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Communications/2020/ALife2020/figures/evoltheory_scales.png}
 	\end{column}
-	\begin{column}{0.3\linewidth}
-	%\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/simpop1.png}\\\medskip
-	%\includegraphics[width=\textwidth]{../../2020/ALife2020/figures/setup_synth_1_tick100.png}
+	\begin{column}{0.49\linewidth}
 	
 	% processes between scales	
+\includegraphics[width=0.9\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Seminars/20201209_UTorontoUGP/communication/figures/evolth_feedbacks.png}	
 		
 	\end{column}
 	\end{columns}
 \end{center}
 
 %\footnotesize
-An evolutionary urban theory considering cities as systems within systems of cities \cite{pumain2018evolutionary}
+An evolutionary urban theory for cities as systems within systems of cities \cite{pumain2018evolutionary} \cite{pumain1997pour}
 
 %; Simpop 1 model \cite{sanders1997simpop}; SimpopNet model \cite{schmitt2014modelisation}
 
@@ -111,6 +110,45 @@ An evolutionary urban theory considering cities as systems within systems of cit
 
 % apercu general de l'ensemble des modeles issus de la th evol urb
 
+
+\begin{center}
+	\begin{columns}
+	\begin{column}{0.8\linewidth}
+	
+		\begin{itemize}
+			\item Agent-based models with economic processes: Simpop1 \cite{sanders1997simpop}, Simpop2 \cite{bretagnolle2006theory}, Marius \cite{cottineau2015modular}
+            \item Diffusion of innovations: SimpopLocal \cite{schmitt2015half}, innovation cycles \cite{favaro2011gibrat}, urban evolution \cite{raimbault2020model}
+			\item Transport infrastructure: SimpopNet \cite{schmitt2014modelisation}, Network effects \cite{raimbault2020indirect}, Co-evolution \cite{raimbault2021modeling}
+			\item Multi-modelling fo sustainability trade-offs \cite{raimbault2022trade}
+		\end{itemize}			
+	
+	
+	\end{column}
+	\begin{column}{0.2\linewidth}
+	
+	% simpop1
+\includegraphics[width=\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Communications/2020/ALife2020/figures/simpop1.png}
+
+\textit{Simpop1}
+
+
+\bigskip
+\bigskip
+% Simpopnet
+
+\includegraphics[width=\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Communications/2020/ALife2020/figures/setup_synth_1_tick100.png}
+
+\textit{SimpopNet}
+		
+	\end{column}
+	\end{columns}
+\end{center}
+
+
+
+
+
+
 }
 
 
@@ -119,18 +157,17 @@ An evolutionary urban theory considering cities as systems within systems of cit
 % Lutecia and physical network: "semi-multiscale"
 
 \begin{center}
-	\includegraphics[width=0.49\textwidth]{../../../../../CityNetwork/Docs/ThesisMemoire/Final/Figures/Final/7-3-3-fig-lutecia-governance.jpg}
+	\includegraphics[width=0.49\textwidth]{../../../../../NetworksTerritories/CityNetwork/Docs/ThesisMemoire/Final/Figures/Final/7-3-3-fig-lutecia-governance.jpg}
 	\includegraphics[width=0.49\textwidth]{../../../../../NetworksTerritories/CoevolutionNwTerritories/Docs/Papers/HierarchyCoevolution/chapter/figuresraw/ex_realphysical_1975_tf.png}
 \end{center}
 
-Simulation models for systems of cities and transportation networks making a slight bridge between scales: transportation governance modeling \cite{raimbault2021introducing}; physical network self-reinforcment \cite{raimbault2020hierarchy}
+Simulation models for systems of cities and transportation networks bridging between scales: transportation governance modeling \cite{raimbault2021introducing}; physical network self-reinforcment \cite{raimbault2020hierarchy}
 
 }
 
 
-\sframe{Multiscalar models}{
-
-}
+%\sframe{Multiscalar models}{
+%}
 
 
 
@@ -139,12 +176,20 @@ Simulation models for systems of cities and transportation networks making a sli
 
 %TODO why is it crucial to capture emergence? effets rebonds? second order? strong emergence and autonomy? Examples? Check epistemo des sci sociales generatives.
 
-$\rightarrow$ multi-scale simulation models are needed to explore sustainable policies \cite{rozenblat2018conclusion}
+$\rightarrow$ multi-scalar simulation models are needed to explore sustainable policies \cite{rozenblat2018conclusion}
+% specificities of territories within an integrated urban system
 
-\bigskip
+
+\medskip
+
+$\rightarrow$ stylised multi-scale urban models focusing on (i) urban form and interurban interactions \cite{raimbault2021strong}; (ii) innovation diffusion within and between cities \cite{raimbault2023innovation}
 
 
-$\rightarrow$ multi-scale urban models remain however underexplored in the literature
+\medskip
+
+$\rightarrow$ multi-scalar models must capture bottom-up and top-down feedbacks and a certain independance between ontologies at each scale, but how can they behave regarding the type of emergence? (downward causation, causal decoupling \cite{bedau2022downward} \cite{rosas2020reconciling})
+
+%TODO thought: rules are fixed before, so strong emergence is somehow built-in; what about emerging rules?
 
 \bigskip
 \bigskip
@@ -161,8 +206,10 @@ $\rightarrow$ multi-scale urban models remain however underexplored in the liter
 % broad description of morph-intgib model: cit ccs19 and preprint
 
 \begin{center}
-\includegraphics[width=\textwidth]{../../../../../UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig1.jpg}
+\includegraphics[width=\textwidth]{../../../../../UrbanSystems/UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig1.jpg}
 \end{center}
+
+\footnotesize
 
 A strong coupling explored by \cite{raimbault2021strong} between urban morphogenesis agregation-diffusion processes at the meso scale \cite{raimbault2018calibration} and interactions between cities at the macro scale \cite{raimbault2020indirect}
 
@@ -174,17 +221,26 @@ A strong coupling explored by \cite{raimbault2021strong} between urban morphogen
 
 
 \begin{center}
-	\includegraphics[width=0.75\textwidth]{../../../Papers/InnovationMultiscale/InnovationMultiscale-paper/slides/figures/model_4.png}
+	\includegraphics[width=0.75\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Papers/InnovationMultiscale/InnovationMultiscale-paper/slides/figures/model_4.png}
 \end{center}
 
 
-A bi-scale model explored by \cite{raimbault2023innovation}, coupling urban evolution based on innovation diffusion at the macro scale \cite{raimbault2020model}, with intra-urban innovation cluster dynamics between firms for the emergence of new innovations \cite{raimbault2022innovation}; quantification of strong emergence using indicators by \cite{rosas2020reconciling}
+A bi-scale model explored by \cite{raimbault2023innovation}, coupling urban evolution based on innovation diffusion at the macro scale \cite{raimbault2020model}, with intra-urban innovation cluster dynamics between firms for the emergence of new innovations \cite{raimbault2022innovation}
 
 
 }
 
 
 \sframe{Indicators to quantify emergence}{
+
+Quantification of emergence using information-theoretic indicators proposed by \cite{rosas2020reconciling}:
+
+\begin{align}
+\Psi_{\tau}(V) &= I(V_t; V_{t+\tau}) - \sum_{j} I(X_t^j; V_{t+\tau}) \\
+\Delta_{\tau}(V) &= \max_j \left( I(V_t; X_{t+\tau}^j) - \sum_i I(X_t^i; X_{t+\tau}^j) \right) \\
+\Gamma_{\tau}(V) &= \max_j I(V_t ; X_{t+\tau}^j)
+\end{align}
+
 
 }
 
@@ -252,6 +308,66 @@ $\rightarrow$
 \bibliography{biblio}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\sframe{Innovation: macroscopic dynamics}{
+%\begin{center}
+%	\includegraphics[width=\textwidth]{figures/model_4}	
+%\end{center}
+%\footnotesize
+%Raimbault, J. (2020). A model of urban evolution based on innovation diffusion. In Artificial Life Conference Proceedings 32 (pp. 500-508).
+%}
+
+\sframe{Innovation mesoscopic dynamics}{
+
+\justify
+
+Mesoscopic dynamics from \cite{raimbault2022innovation}: \textbf{Innovation clusters} composed of firms, sets of employees (real-valued genome representing ideas); aim at optimising a fixed random fitness (Rastrigin function).
+
+\bigskip
+
+\textbf{Meso cycle:} in each innovation cluster (city) for $t_m$ meso time steps:
+
+    \begin{itemize}
+        \item employee exchange ideas within firms (genome crossovers)
+        \item idea with best fitness is chosen by each company
+        \item ideas are informally exchanged between firms
+	\end{itemize}
+
+}
+
+\sframe{Innovation inter-scale dynamics}{
+
+\justify
+
+\textbf{Iterated steps}, for $t_f$ macro time steps:
+
+            \begin{enumerate}
+\item Mesoscopic cycle
+\item \textbf{Bottom-up feedback:} if relative fitness gain of the best firm exceeds a parameter  ($\delta f_i > \theta$), the corresponding city will innovate at the macro scale.
+\item Macroscopic step: innovation diffusion; population migration and growth; new innovations.
+\item \textbf{Top-down feedback:} firm strategy is updated by changing crossover probability and mutation probability, and the urban environment in terms of informal exchanges, both depending on relative population growth.
+\end{enumerate}
+
+
+}
+
+
+\sframe{Innovation model indicators}{
+
+\begin{itemize}
+	\item Macro observables: utility and diversity of innovations
+    \item Meso observables: best fitness and diversity of ideas
+    %\item Indicators for downward causation from \cite{rosas2020reconcilingshort} on these observables to quantify the strength of emergence: ($\Delta$, $\Psi$, $\Gamma$)
+\end{itemize}
+
+\bigskip
+
+\textbf{Model setup} on synthetic systems of cities resembling real systems \cite{raimbault2019space}
+
+}
 
 
 
