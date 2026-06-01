@@ -174,9 +174,14 @@ Simulation models for systems of cities and transportation networks bridging bet
 \sframe{Towards applied multiscalar models}{
 
 
+% Simulation models for systems of cities have been extensively used to test geographical theories and link them to empirical data [1]. Most of these approaches however still remain far from real world planning applications, on the contrary to models at larger scales like Land-use Transport Interaction models [2]. [3] suggest that multi-scalar models are needed for urban policies that account for territorial specificities. Such models are sparse in the litterature, and most of the time do not include both bottom-up and top- down feedbacks between the simulated scales. [4] introduces a multiscale model with such strong coupling,where cities dynamics are driven by innovation diffusion. Similarly, [5] couples urban morphogenesis with interactions between cities. Such model structure however does not necessarily imply that the model captures effectively weak emergence and downward causation [6], which are needed for the model to capture complexity and its multiscale ontology to be useful.
+%This contribution proposes to systematically quantify wether causal emergence and downward causation are present in several multiscale models for systems of cities. We use the method proposed by [4], by computing the 3 emergence indicators developped by [7] on micro and macro time-series of urban dynamics, and searching for the feasible space of these indicators to unveil the variety of emergence regimes by applying the Pattern Space Exploration algorithm [8]. We apply the method on 3 different explicitly multiscale models: [4], [5], and [9]. The models are implemented in scala and integrated into the OpenMOLE platform to run the PSE algorithm. First simulation results confirm that all models are able to produce a broad set of emergence regimes, including downard causation, with however less diversity for models based on urban morphology. This confirms that such models are useful to effectively capture urban complexity, and may be used in the future as a basis for more elaborated models for multiscale planning and policies.
+
+%\justify
+
 %TODO why is it crucial to capture emergence? effets rebonds? second order? strong emergence and autonomy? Examples? Check epistemo des sci sociales generatives.
 
-$\rightarrow$ multi-scalar simulation models are needed to explore sustainable policies \cite{rozenblat2018conclusion}
+$\rightarrow$ multi-scalar simulation models are needed to explore sustainable policies (territorial specificities, processes across scales, \ldots) \cite{rozenblat2018conclusion}
 % specificities of territories within an integrated urban system
 
 
@@ -187,19 +192,40 @@ $\rightarrow$ stylised multi-scale urban models focusing on (i) urban form and i
 
 \medskip
 
-$\rightarrow$ multi-scalar models must capture bottom-up and top-down feedbacks and a certain independance between ontologies at each scale, but how can they behave regarding the type of emergence? (downward causation, causal decoupling \cite{bedau2022downward} \cite{rosas2020reconciling})
+$\rightarrow$ multi-scalar models must capture bottom-up and top-down feedbacks and a certain independance between ontologies at each scale \cite{raimbault2023multiscalar}, but how can they behave regarding the type of emergence? (downward causation, causal decoupling \cite{bedau2002downward})
 
 %TODO thought: rules are fixed before, so strong emergence is somehow built-in; what about emerging rules?
 
-\bigskip
+%TODO systematic review of potential processes across scale. Rq: an applied model should prioritise usch evidence-based main processes? still Q of ontological choice. Other way around: build model around these inter-scale processes. Typology of processes inter, intra scale, not classifiable ; agents/ontologies with defined scales?
+
+%TODO proper definition of multi-scale (cf confusion Gemini): here means dynamics and ontological independance between scales; agents across scales is also somehow multiscale => TODO systematic review and robust definition also
+
+%TODO check application of Rosas et al. measures, if same situation (mico/macro ~ indep): different from ex ds macro model populations, avg population or any macro observable on population. Rq: if causal decoupling AND entities/rules have emerged from micro scale, effective strong emergence? (pb here adhoc rules). Link with complexity literature on emergence! (ck Bedau, sci debate)
+
+
 \bigskip
 
-\textbf{This contribution: } \textit{}
+\textbf{This contribution: } \textit{systematically quantify regimes of emergence with metrics from \cite{rosas2020reconciling}, using a diversity search algorithm \cite{cherel2015beyond} on two stylised multi-scalar urban simulation models \cite{raimbault2021strong}\cite{raimbault2023innovation}.}
 
 
 }
 
-\sframe{Urban morphology and inter-city interactions}{
+
+
+\sframe{Model 1: multi-scale innovation dynamics}{
+
+
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Papers/InnovationMultiscale/InnovationMultiscale-paper/slides/figures/model_4.png}
+\end{center}
+
+
+Model by \cite{raimbault2023innovation} coupling urban evolution based on innovation diffusion at the macro scale \cite{raimbault2020model}, with intra-urban innovation cluster dynamics between firms for the emergence of new innovations \cite{raimbault2022innovation}
+
+
+}
+
+\sframe{Model 2: urban morphology and inter-city interactions}{
 
 
 
@@ -209,31 +235,22 @@ $\rightarrow$ multi-scalar models must capture bottom-up and top-down feedbacks 
 \includegraphics[width=\textwidth]{../../../../../UrbanSystems/UrbanGrowth/Docs/Papers/Multiscale/paper/figures/Fig1.jpg}
 \end{center}
 
-\footnotesize
+%\footnotesize
 
-A strong coupling explored by \cite{raimbault2021strong} between urban morphogenesis agregation-diffusion processes at the meso scale \cite{raimbault2018calibration} and interactions between cities at the macro scale \cite{raimbault2020indirect}
-
-
-}
-
-
-\sframe{Multi-scale innovation dynamics}{
-
-
-\begin{center}
-	\includegraphics[width=0.75\textwidth]{../../../../../UrbanSystems/UrbanEvolution/Docs/Papers/InnovationMultiscale/InnovationMultiscale-paper/slides/figures/model_4.png}
-\end{center}
-
-
-A bi-scale model explored by \cite{raimbault2023innovation}, coupling urban evolution based on innovation diffusion at the macro scale \cite{raimbault2020model}, with intra-urban innovation cluster dynamics between firms for the emergence of new innovations \cite{raimbault2022innovation}
+Strong coupling by \cite{raimbault2021strong} between urban morphogenesis agregation-diffusion processes at the meso scale \cite{raimbault2018calibration} and interactions between cities at the macro scale \cite{raimbault2020indirect}
 
 
 }
+
 
 
 \sframe{Indicators to quantify emergence}{
 
 Quantification of emergence using information-theoretic indicators proposed by \cite{rosas2020reconciling}:
+
+\medskip
+
+With $V_t$ time-serie of a macro observable, $X_t^j$ time-series of micro observables, $I$ an estimator of mutual information, $\tau$ a delay:
 
 \begin{align}
 \Psi_{\tau}(V) &= I(V_t; V_{t+\tau}) - \sum_{j} I(X_t^j; V_{t+\tau}) \\
@@ -241,19 +258,105 @@ Quantification of emergence using information-theoretic indicators proposed by \
 \Gamma_{\tau}(V) &= \max_j I(V_t ; X_{t+\tau}^j)
 \end{align}
 
+\medskip
+
+$\Psi > 0$: \textbf{causal emergence}; $\Delta > 0$: \textbf{downward causation}; $\Gamma = 0$: \textbf{causal decoupling}
+
 
 }
 
 
-\sframe{Results: baseline}{
+\sframe{Implementation and experiments}{
+
+
+%\justify
+
+$\rightarrow$ models implemented in \texttt{scala}
+
+\bigskip
+
+$\rightarrow$ integration into the OpenMOLE model exploration and validation open source software \cite{reuillon2013openmole} (\textit{seamless (i) model embedding; (ii) access to HPC resources; (iii) exploration and optimisation algorithms})
+
+
+\begin{center}
+\includegraphics[height=0.13\textheight]{../../../../../UrbanSystems/UrbanGrowth/Docs/Communications/2019/CCS2019/Communication/figures/iconOM.png}
+\includegraphics[height=0.13\textheight]{../../../../../UrbanSystems/UrbanGrowth/Docs/Communications/2019/CCS2019/Communication/figures/openmole.png}
+\end{center}
+
+
+\bigskip
+
+$\rightarrow$ both model initialised on synthetic systems of cities with realistic features (Zipf's rank-size law, Clarke's law, spatial distribution) \cite{raimbault2019space}
+
+\bigskip
+
+$\rightarrow$ run the PSE algorithm \cite{cherel2015beyond} on emergence indicators
+
 
 }
+
+
+
+%\sframe{Results: baseline}{
+%}
+%TODO too much noise due to other parameters -> grid explo on other params also?
+
 
 \sframe{Results: innovation regimes in the innovation model}{
+
+
+	\begin{columns}
+	\begin{column}{0.75\linewidth}
+	\includegraphics[width=\linewidth]{../../../../Models/EmergenceSystemsOfCities/analysis/pse/20260530_164254_PSE-Innovation/pse-psi-delta-utility_colorGamma_sizetheta.png}
+	\end{column}
+	\begin{column}{0.25\linewidth}
+		
+		\footnotesize		
+		
+		$\rightarrow$ most regimes with $\Psi > 0$ and $\Delta > 0$ effective emergence with downward causation
+		
+		\medskip		
+		
+		$\rightarrow$ difficult to get $\Delta \simeq 0$ (min 0.17)
+		
+		\medskip	
+		
+		$\rightarrow$ causal decoupling $\Gamma \simeq 0$ occurs at various $\Psi,\Delta$ values
+	
+	\end{column}
+	\end{columns}
+
 
 }
 
 \sframe{Results: innovation regimes in the meso-macro model}{
+
+
+	\begin{columns}
+	\begin{column}{0.75\linewidth}
+	\includegraphics[width=\linewidth]{../../../../Models/EmergenceSystemsOfCities/analysis/pse/20260531_160006_PSE-MesoMacro-Populations/pse-psi-delta-population_colorGamma_sizedeltad.png}
+	\end{column}
+	\begin{column}{0.25\linewidth}
+
+%TODO no causal decoupling : of course populations, condition initialisation of each meso growth rate => should try with other indics? Access? [No time now]
+		
+		\footnotesize		
+		
+		$\rightarrow$ similarly most regimes with emergence and downward causation
+		
+		\medskip		
+		
+		$\rightarrow$ minimal $\Delta$ even higher (min 1.56): more structural constraints
+		
+		\medskip	
+		
+		$\rightarrow$ no regime with causal decoupling
+	
+	\end{column}
+	\end{columns}
+
+
+
 
 }
 
@@ -265,32 +368,37 @@ Quantification of emergence using information-theoretic indicators proposed by \
 
 \sframe{Discussion}{
 
+% \justify
+\footnotesize
 
-%\textbf{Main results:}
+\textbf{Discussion}
 
+$\rightarrow$ models capture effectve emergence with downward causation, with a great diversity of regimes including causal decoupling
 
-\justify
+$\rightarrow$ both models behave differently, with stronger constraints for the meso-macro model (no causal decoupling)
 
-$\rightarrow$ 
+\bigskip
+
+\textbf{Work in progress:}
+
+$\rightarrow$ extension of the method to a micro-meso simulation model with developpers and road network morphogenesis \cite{raimbault2021multiscale} \cite{raimbault2014hybrid}
 			
-\bigskip
-
-$\rightarrow$ 
+$\rightarrow$ statistical tests, more explorations and optimisations, link between parameter values and emergence regimes
 
 \bigskip
 
-$\rightarrow$ 
+\textbf{Future work:}
+
+$\rightarrow$ test of the method on observed time-series and on data-parametrised models
+
+$\rightarrow$ systematic review of inter-scale processes to build new models around these
 
 \bigskip
-\bigskip
 
-%\textbf{Conclusion: } 
+\textbf{Open repository:}
 
-\textbf{Open repositories for presented models:}
+\texttt{https://github.com/JusteRaimbault/EmergenceSystemsOfCities}
 
-\texttt{https://github.com/JusteRaimbault/UrbanGrowth}
-
-\texttt{https://github.com/JusteRaimbault/InnovationMultiscale-model}
 
 }
 
@@ -368,6 +476,157 @@ Mesoscopic dynamics from \cite{raimbault2022innovation}: \textbf{Innovation clus
 \textbf{Model setup} on synthetic systems of cities resembling real systems \cite{raimbault2019space}
 
 }
+
+
+
+\sframe{Meso-macro model rationale}{
+
+
+\textbf{Model scales and objects: }
+
+\begin{itemize}
+	\item Cities as agents at the macroscopic scale
+	\item Cities as population density grids at the mesoscopic scale
+\end{itemize}
+
+\medskip
+
+\textbf{Processes: }
+
+\begin{itemize}
+	\item Interaction flows between cities and endogenous growth
+	\item Urban sprawl and aggregation within urban areas
+	\item \textbf{Downward feedback} Adaptation of urban form parameters to population and accessibility growth (``policy response'')
+	\item \textbf{Upward feedback} Adaptation of city interaction range depending on internal performance (congested flows)
+\end{itemize}
+
+
+}
+
+
+
+\sframe{Meso-macro model formalization}{
+
+At each time step:
+
+\medskip
+
+\begin{enumerate}
+	\item Macroscopic population are evolved with the interaction model
+	\item Population and accessibility differences modify the mesoscopic parameter of diffusion (sprawl) and aggregation (metropolization) \textbf{\textit{(downward feedback)}}
+	\item Urban forms are evolved for each city at the mesoscopic scale to match population increases
+	\item City interaction ranges are modified according to the internal performance of each city (congested flows) \textbf{\textit{(upward feedback)}}
+\end{enumerate}
+
+
+}
+
+
+\sframe{Meso-macro: macroscopic model}{
+
+% rq : does the macro mmodel captures many rank clock inversions ? kind of given variations of the rank correlation (cite macrocoevol)
+
+% + detail indicators here
+
+\justify
+
+\textit{System of cities interaction model including network evolution; production of multiple co-evolution regimes and calibration for France.} 
+
+\cite{raimbault2020indirect}
+
+\medskip
+
+\begin{center}
+\includegraphics[width=0.72\textwidth]{../../../../../UrbanSystems/UrbanGrowth/Docs/Communications/2019/CCS2019/Communication/figures/macrocoevol_en.png}
+\end{center}
+
+%\nocite{raimbault2019modeling}
+
+
+%\bigskip
+%\tiny
+
+%Raimbault, J. (2018). Indirect evidence of network effects in a system of cities. Environment and Planning B: Urban Analytics and City Science, 2399808318774335.
+
+%\smallskip
+
+%Raimbault, J. (2019). Modeling the co-evolution of cities and networks. In Niel, Z., Rozenblat, C., eds. \textit{Handbook of Cities and Networks}, Edwar Elgar Publishing, \textit{in press}.
+
+\footnotesize
+\textit{Indicators at the macroscopic scale: distributions of population, accessibilities, centralities (summarized by average, hierarchy, entropy)}
+
+
+}
+
+
+\sframe{Meso-macro : mesoscopic model}{
+
+% + detail urban form indicators
+
+
+\textit{Aggregation-diffusion model at the mescoscopic scale, covering most existing urban forms in Europe} \cite{raimbault2018calibration}
+
+\medskip
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../../../../../UrbanSystems/UrbanGrowth/Docs/Communications/2019/CCS2019/Communication/figures/density_Fig2}
+\end{center}
+
+%\footnotesize\textit{Examples of generated territorial shapes}
+
+\footnotesize 
+\textit{Indicators at the mesoscopic scale: urban form captured by Moran index, average distance, hierarchy, entropy}
+
+}
+
+
+
+\sframe{Meso-macro: model parameters}{
+
+\centering
+
+
+		\begin{tabular}{|c|c|c|c|}
+	\hline %\tiny
+		Type & Parameter & Process & Range \\\hline
+		\multirow{4}{*}{Macro} & $g_i \textrm{ = } g_0$ & Endogenous growth & $\left[0 ; 0.05 \right]$ \\
+		& $w_i \textrm{ = } w_G$ & Interactions weight & $\left[0 ; 0.01 \right]$  \\
+		& $\gamma_i \textrm{ = } \gamma_G$ & Interactions hierarchy & $\left[0 ; 5 \right]$  \\
+		& $d_i$ & Interactions decay & $\left[0 ; 1000 \right]$  \\ \hline
+		\multirow{4}{*}{Meso} & $\alpha_i$ & Aggregation & $\left[0 ; 5 \right]$  \\
+		& $\beta_i$ & Diffusion & $\left[0 ; 0.1 \right]$  \\
+		& $t_m$ & Urban growth speed & $\{1 ; 20 \}$  \\
+		& $n_d$ & Diffusion steps &  $\left[1 ; 5 \right]$ \\ \hline
+		\multirow{4}{*}{Multiscale} & $\delta\alpha$ & Metropolization (downward) & $\left[-0.2 ; 0.2 \right]$  \\
+		& $\delta\beta$ & Sprawl (downward) & $\left[-0.2 ; 0.2 \right]$ \\
+		& $\delta d$ & Efficiency (upward) &$\left[-0.2 ; 0.2 \right]$ \\
+		& $\lambda$ & Congestion cost (upward) & $\left[0 ; 10 \right]$ \\\hline
+	\end{tabular}
+
+}
+
+
+\sframe{Meso-macro: synthetic configuration}{
+
+% The model is applied on synthetic systems of cities typical of a continental range (500km, hierarchy around 1, 20 cities), with initial local population grid configurations as monocentric.
+
+Model applied on synthetic systems of cities:
+
+\medskip
+
+\begin{itemize}
+	\item random positions and rank-size hierarchy ($\alpha \textrm{ = } 1.0$ and $P_0 \textrm{ = } 100,000$)
+	\item countrywide urban system scale: 500km and 20 cities
+	\item initial population grids as monocentric (grid of size 50 and center cell density 1000 units)
+	\item simulated for 20 macroscopic time steps (order of magnitude of half a century)
+\end{itemize}
+
+
+
+}
+
+
+
 
 
 
